@@ -1,0 +1,62 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Glaxion.Libraries.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MainColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Silver</Value>
+    </Setting>
+    <Setting Name="PlaylistDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">
+                    &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+                        &lt;string&gt;/output&lt;/string&gt;
+                    &lt;/ArrayOfString&gt;
+                </Value>
+    </Setting>
+    <Setting Name="MusicDirectories" Type="System.String" Scope="User">
+      <Value Profile="(Default)">
+                    &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+                        &lt;string&gt;Output&lt;/string&gt;
+                    &lt;/ArrayOfString&gt;
+                </Value>
+    </Setting>
+    <Setting Name="ProjectDirectories" Type="System.String" Scope="User">
+      <Value Profile="(Default)">
+                    &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" /&gt;
+                </Value>
+    </Setting>
+    <Setting Name="ProjectIndex" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="SceneInex" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TextBoxColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="ButtonColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">224, 224, 224</Value>
+    </Setting>
+    <Setting Name="ToolStripColor" Type="System.String" Scope="User">
+      <Value Profile="(Default)">224, 224, 224</Value>
+    </Setting>
+    <Setting Name="SolutionFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LastPlaylistIndex" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Projects" Type="System.String" Scope="User">
+      <Value Profile="(Default)">
+                    &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+                        &lt;string&gt;"Harbinger"&lt;/string&gt;
+                    &lt;/ArrayOfString&gt;
+                </Value>
+    </Setting>
+    <Setting Name="LastTrack" Type="System.String" Scope="User">
+      <Value Profile="(Default)">""</Value>
+    </Setting>
+    <Setting Name="VegasPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

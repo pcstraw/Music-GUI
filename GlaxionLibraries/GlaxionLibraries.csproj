@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54EFB305-6959-48D2-B833-5093CD390824}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Glaxion.Libraries</RootNamespace>
+    <AssemblyName>GlaxionLibraries</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocX">
+      <HintPath>.\DocX.dll</HintPath>
+    </Reference>
+    <Reference Include="gTrackBar">
+      <HintPath>..\GlaxionMusic\gTrackBar\gTrackBar\bin\Debug\gTrackBar.dll</HintPath>
+    </Reference>
+    <Reference Include="ID3">
+      <HintPath>ID3Class\ID3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="MP3Info">
+      <HintPath>mp3info\MP3Info.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="taglib-sharp">
+      <HintPath>taglib\taglib-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComboList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComboList.Designer.cs">
+      <DependentUpon>ComboList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileOrFolderDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImageManager.cs" />
+    <Compile Include="InterlopUtil.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayBox.Designer.cs">
+      <DependentUpon>DisplayBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlaxFile.cs" />
+    <Compile Include="ListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListControl.Designer.cs">
+      <DependentUpon>ListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListGUI.Designer.cs">
+      <DependentUpon>ListGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelSwitch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelSwitch.Designer.cs">
+      <DependentUpon>PanelSwitch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Scene.cs" />
+    <Compile Include="SwitchBoxControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SwitchBoxControl.Designer.cs">
+      <DependentUpon>SwitchBoxControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextGUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextGUI.Designer.cs">
+      <DependentUpon>TextGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool.cs" />
+    <Compile Include="TreeViewMS.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XFileClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ComboList.resx">
+      <DependentUpon>ComboList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayBox.resx">
+      <DependentUpon>DisplayBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListControl.resx">
+      <DependentUpon>ListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListGUI.resx">
+      <DependentUpon>ListGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelSwitch.resx">
+      <DependentUpon>PanelSwitch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SwitchBoxControl.resx">
+      <DependentUpon>SwitchBoxControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextGUI.resx">
+      <DependentUpon>TextGUI.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\video-play-2-xxl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\86423-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\last-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\retweet_318-11148.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\first-256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nikon-small-world-photography-winners-2016-580f493ae0cca__880.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Media-Controls-Pause.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo-file_318-309461.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\media-play-pause-resume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cell.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

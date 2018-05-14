@@ -1,0 +1,1760 @@
+C:\Users\Solo\Desktop\Glaxion\GlaxionCore\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Glaxion\GlaxionCore\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Glaxion\GlaxionCore\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo\Desktop\Glaxion\GlaxionCore\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Glaxion\GlaxionCore\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Glaxion\GlaxionCore\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+E:\Laptop Backup\Glaxion\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+E:\Laptop Backup\Glaxion\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+E:\Laptop Backup\Glaxion\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+E:\Laptop Backup\Glaxion\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+E:\Laptop Backup\Glaxion\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+E:\Laptop Backup\Glaxion\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+E:\Laptop Backup\Glaxion\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Glaxion\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Glaxion\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Glaxion\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Glaxion\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo\Desktop\Glaxion\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo\Desktop\Glaxion\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo\Desktop\Glaxion\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo\Desktop\Glaxion\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo\Desktop\Glaxion\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Glaxion\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Glaxion\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Desktop\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Solo2\Desktop\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Solo2\Desktop\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\bin\Debug\GlaxionLibraries.dll
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\bin\Debug\GlaxionLibraries.pdb
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\bin\Debug\DocX.dll
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Interop.WMPLib.dll
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\GlaxionLibraries.dll
+C:\Users\mmPhil\Google Drive\GlaxionLibraries (1)\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TestGUI.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo2\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Solo\Desktop\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TestGUI.resources
+C:\Users\Solo\Desktop\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\bin\Debug\DocX.dll
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.TestGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Google Drive\GlaxionLibraries (1)\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Google Drive\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Google Drive\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Google Drive\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Google Drive\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Google Drive\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Solo\Google Drive\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TestGUI.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Google Drive\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Google Drive\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo2\Google Drive\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Google Drive\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Google Drive\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo2\Google Drive\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Solo2\Google Drive\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Solo2\Google Drive\GlaxionLibraries\bin\Debug\TreeViewMS.dll
+C:\Users\Solo2\Google Drive\GlaxionLibraries\bin\Debug\TreeViewMS.pdb
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TestGUI.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Google Drive\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\GlaxionLibraries\bin\Debug\TreeViewMS.dll
+C:\Users\Solo\Desktop\GlaxionLibraries\bin\Debug\TreeViewMS.pdb
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\bin\Debug\TreeViewMS.dll
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\bin\Debug\TreeViewMS.pdb
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TestGUI.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Desktop\Repo\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\bin\Debug\TreeViewMS.dll
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\bin\Debug\TreeViewMS.pdb
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TestGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\bin\Debug\TreeViewMS.dll
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\bin\Debug\TreeViewMS.pdb
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TestGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\mmPhil\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Google Drive\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo2\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\mmPhil\Desktop\Music GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+I:\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+I:\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+I:\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+I:\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\DocX.dll
+I:\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.dll
+I:\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+I:\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\WinWordControl.dll
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Interop.Word.dll
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Interop.Office.dll
+C:\Users\Solo\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Interop.VBIDE.dll
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\WinWordControl.dll
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Interop.Word.dll
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Interop.Office.dll
+C:\Users\mmPhil\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\GemBox.Document.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\RicherTextBox.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\WinWordControl.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\RicherTextBox.pdb
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Interop.EDOfficeLib.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\AxInterop.EDOfficeLib.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Interop.EDOfficeLib.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\AxInterop.EDOfficeLib.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Interop.EDWordLib.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\AxInterop.EDWordLib.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\Interop.EDWordLib.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\obj\Debug\AxInterop.EDWordLib.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\stdole.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\bin\Debug\WinWordControl.pdb
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\WinWordControl.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\stdole.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\WinWordControl.pdb
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\WinWordControl.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\Interop.VBIDE.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\stdole.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\WinWordControl.pdb
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\WinWordControl.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\stdole.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\WinWordControl.pdb
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+H:\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+H:\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+H:\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\DocX.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\WinWordControl.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.VBIDE.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\stdole.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\WinWordControl.pdb
+H:\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+H:\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.WordControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\WinWordControl.dll
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.VBIDE.dll
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\stdole.dll
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\WinWordControl.pdb
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.WordControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\WinWordControl.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\WinWordControl.pdb
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.WordControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\WinWordControl.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.VBIDE.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\stdole.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\WinWordControl.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.WordControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.WordControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.WordControl.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.WordControl.resources
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo2\Desktop\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\Glaxion.Libraries.WordControl.resources
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\mmPhil\Google Drive\Music GUI 21-02-17 (1)\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.UserControl1.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.WordControl.resources
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Google Drive\Music GUI 21-02-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.CreateSceneGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListBox.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicStripControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.MusicGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackStateControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackTrackbarControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaybackVolumeControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PlaylistControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ProjectGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControlOld.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SceneGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SplitterControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TracklistControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.WordControl.resources
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.WordControl.resources
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Google Drive\Music GUI 05-April-17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.WordControl.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\Glaxion.Libraries.WordControl.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassGUI.resources
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Glaxion.GUI.ClassTree.resources
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Glaxion.GUI.DataGUI.resources
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ViewBox.resources
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Glaxion.GUI.Editor.resources
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Glaxion.GUI.GUIControl.resources
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\Glaxion.Libraries.WordControl.resources
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 29 May 2017\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.DisplayBox.resources
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.DisplayBox.resources
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Google Drive\Music Controller\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.DisplayBox.resources
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 11 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.DisplayBox.resources
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 15 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.DisplayBox.resources
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 16 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.DisplayBox.resources
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 17 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.DisplayBox.resources
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 24 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.DisplayBox.resources
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.CoreCompileInputs.cache
+C:\Users\Solo\Desktop\Music Controller 27 april\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.CopyComplete
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.DisplayBox.resources
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.cache
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.CoreCompileInputs.cache
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.CopyComplete
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 1 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.DisplayBox.resources
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.cache
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.CoreCompileInputs.cache
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.CopyComplete
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 2 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\gTrackBar.dll
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\gTrackBar.pdb
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\gTrackBar.xml
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.DisplayBox.resources
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.cache
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.CoreCompileInputs.cache
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.CopyComplete
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 6 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\gTrackBar.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\gTrackBar.pdb
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\gTrackBar.xml
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.DisplayBox.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.cache
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.CoreCompileInputs.cache
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.CopyComplete
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 7 May\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll.config
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\bin\Debug\ID3.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\bin\Debug\taglib-sharp.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\bin\Debug\gTrackBar.pdb
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\bin\Debug\gTrackBar.xml
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\bin\Debug\ID3.pdb
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\bin\Debug\taglib-sharp.pdb
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\bin\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ComboList.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.DisplayBox.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListControl.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.ListGUI.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.PanelSwitch.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.SwitchBoxControl.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\Glaxion.Libraries.TextGUI.resources
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.GenerateResource.cache
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.CoreCompileInputs.cache
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.csproj.CopyComplete
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\GlaxionLibraries\obj\Debug\GlaxionLibraries.pdb

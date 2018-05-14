@@ -1,0 +1,66 @@
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\bin\Debug\MusicController.dll
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\bin\Debug\MusicController.pdb
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\obj\Debug\MusicController.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\obj\Debug\MusicController.dll
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\obj\Debug\MusicController.pdb
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\obj\Debug\MusicController.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\obj\Debug\Glaxion.Music.MusicControlGUI.resources
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\obj\Debug\MusicController.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\bin\Debug\MusicController.dll.config
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music GUI\Music GUI\MusicController\obj\Debug\Glaxion.Music.PlaylistFileManager.resources
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\bin\Debug\MusicController.dll
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\bin\Debug\MusicController.pdb
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\obj\Debug\MusicController.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\obj\Debug\MusicController.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\obj\Debug\Glaxion.Music.MusicControlGUI.resources
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\obj\Debug\Glaxion.Music.PlaylistFileManager.resources
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\obj\Debug\MusicController.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\obj\Debug\MusicController.dll
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\obj\Debug\MusicController.pdb
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\obj\Debug\Glaxion.Music.TrackManager.resources
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\obj\Debug\Glaxion.Music.PlaybackStateControl.resources
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\obj\Debug\MusicController.g.resources
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\obj\Debug\Glaxion.Music.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\obj\Debug\Glaxion.Music.PlaybackTrackbarControl.resources
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\obj\Debug\Glaxion.Music.PlaybackVolumeControl.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\bin\Debug\MusicController.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\bin\Debug\MusicController.pdb
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\bin\Debug\GlaxionLibraries.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\bin\Debug\Microsoft.WindowsAPICodePack.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\bin\Debug\MP3Info.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\bin\Debug\DocX.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\bin\Debug\GlaxionLibraries.pdb
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\bin\Debug\MP3Info.pdb
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\obj\Debug\MusicController.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\obj\Debug\Interop.WMPLib.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\obj\Debug\MusicController.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\obj\Debug\MusicController.g.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\obj\Debug\Glaxion.Music.MusicControlGUI.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\obj\Debug\Glaxion.Music.PlaybackStateControl.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\obj\Debug\Glaxion.Music.PlaybackTrackbarControl.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\obj\Debug\Glaxion.Music.PlaybackVolumeControl.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\obj\Debug\Glaxion.Music.PlaylistFileManager.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\obj\Debug\Glaxion.Music.Properties.Resources.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\obj\Debug\Glaxion.Music.TrackManager.resources
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\obj\Debug\MusicController.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\obj\Debug\MusicController.dll
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\obj\Debug\MusicController.pdb
+C:\Users\Solo\Desktop\Music Controller 27-May 17\Music GUI\MusicController\bin\Debug\MusicController.dll.config
+C:\Users\Solo\Desktop\Music Controller\Music GUI\MusicController\bin\Debug\MusicController.dll.config

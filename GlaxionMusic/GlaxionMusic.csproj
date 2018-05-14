@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A60FF69E-E506-4FC2-A6CE-5891409B0EB7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Glaxion.Music</RootNamespace>
+    <AssemblyName>MusicController</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>raphael_music_simple-black_512x512 %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="gTrackBar, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Additoinal Libs\gTrackBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Id3">
+      <HintPath>ID3-0.3-bin\Id3.dll</HintPath>
+    </Reference>
+    <Reference Include="Id3.Files">
+      <HintPath>ID3-0.3-bin\Id3.Files.dll</HintPath>
+    </Reference>
+    <Reference Include="Id3.WinForms">
+      <HintPath>ID3-0.3-bin\Id3.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="taglib-sharp">
+      <HintPath>Additoinal Libs\taglib-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Album.cs" />
+    <Compile Include="EntryBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntryBox.Designer.cs">
+      <DependentUpon>EntryBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileLoader.cs" />
+    <Compile Include="ID3Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ID3Control.Designer.cs">
+      <DependentUpon>ID3Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusicControl.cs" />
+    <Compile Include="MusicControlGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusicControlGUI.Designer.cs">
+      <DependentUpon>MusicControlGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusicFileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MusicFileControl.Designer.cs">
+      <DependentUpon>MusicFileControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusicFileManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PicturePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PicturePanel.Designer.cs">
+      <DependentUpon>PicturePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlaybackVolumeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlaybackVolumeControl.Designer.cs">
+      <DependentUpon>PlaybackVolumeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlaylistManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReorganiserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReorganiserControl.Designer.cs">
+      <DependentUpon>ReorganiserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SongControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SongControl.Designer.cs">
+      <DependentUpon>SongControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SquasherControlDesigner.cs" />
+    <Compile Include="Tests.cs" />
+    <Compile Include="Song.cs" />
+    <Compile Include="SquashBoxControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SquashBoxControl.Designer.cs">
+      <DependentUpon>SquashBoxControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrackManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TrackUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TrackUserControl.Designer.cs">
+      <DependentUpon>TrackUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MusicPlayer.cs" />
+    <Compile Include="PlaybackStateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlaybackStateControl.Designer.cs">
+      <DependentUpon>PlaybackStateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlaybackTrackbarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlaybackTrackbarControl.Designer.cs">
+      <DependentUpon>PlaybackTrackbarControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Playlist.cs" />
+    <Compile Include="PlaylistFileManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TotalClipboard.cs" />
+    <Compile Include="TreeViewMS.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EntryBox.resx">
+      <DependentUpon>EntryBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ID3Control.resx">
+      <DependentUpon>ID3Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusicControlGUI.resx">
+      <DependentUpon>MusicControlGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusicFileControl.resx">
+      <DependentUpon>MusicFileControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusicFileManager.resx">
+      <DependentUpon>MusicFileManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PicturePanel.resx">
+      <DependentUpon>PicturePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaybackVolumeControl.resx">
+      <DependentUpon>PlaybackVolumeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaylistManager.resx">
+      <DependentUpon>PlaylistManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReorganiserControl.resx">
+      <DependentUpon>ReorganiserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SongControl.resx">
+      <DependentUpon>SongControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SquashBoxControl.resx">
+      <DependentUpon>SquashBoxControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackManager.resx">
+      <DependentUpon>TrackManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackUserControl.resx">
+      <DependentUpon>TrackUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeViewMS.resx">
+      <DependentUpon>TreeViewMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBox.resx">
+      <DependentUpon>ViewBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaybackStateControl.resx">
+      <DependentUpon>PlaybackStateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaybackTrackbarControl.resx">
+      <DependentUpon>PlaybackTrackbarControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaylistFileManager.resx">
+      <DependentUpon>PlaylistFileManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons8-Windows-8-Media-Controls-Pause.ico" />
+    <Content Include="raphael_music_simple-black_512x512 %281%29.ico" />
+    <Content Include="Resources\Icons8-Windows-8-Media-Controls-Pause.ico" />
+    <None Include="Resources\music_gui_logo.png" />
+    <Resource Include="Resources\_86423-2001.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Include="Resources\video-play-2-xxl.png" />
+    <None Include="Resources\undo-file_318-309461.png" />
+    <None Include="Resources\undo-file_318-30946.png" />
+    <None Include="Resources\Treetog-Junior-Folder-blue-music.ico" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\retweet_318-11148.png" />
+    <None Include="Resources\raphael_music_simple-black_512x512.png" />
+    <None Include="Resources\raphael_music_simple-black_512x512.ico" />
+    <None Include="Resources\raphael_music_simple-black_512x512 %281%29.ico" />
+    <None Include="Resources\play-256.png" />
+    <None Include="Resources\play1.png" />
+    <None Include="Resources\pause-play-music-arrow-512.png" />
+    <None Include="Resources\nikon-small-world-photography-winners-2016-580f493ae0cca__880.jpg" />
+    <None Include="Resources\music-player_318-134972.jpg" />
+    <None Include="Resources\musical-notes-symbols_318-29778.jpg" />
+    <None Include="Resources\music.png" />
+    <None Include="Resources\music.ico" />
+    <None Include="Resources\media-play-pause-resume.png" />
+    <None Include="Resources\last-512.png" />
+    <None Include="Resources\itunes_sheet_music_icon_by_purds.jpg" />
+    <None Include="Resources\itunes_sheet_music_icon_by_purds.ico" />
+    <None Include="Resources\images.jpg" />
+    <None Include="Resources\images.ico" />
+    <None Include="Resources\Graphicloads-100-Flat-Play.ico" />
+    <None Include="Resources\Google_Play_Music.0.0.jpg" />
+    <None Include="Resources\first-256.png" />
+    <None Include="Resources\cell.jpg" />
+    <Resource Include="Resources\86423-200.png" />
+    <Resource Include="Resources\2873-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GlaxionLibraries\GlaxionLibraries.csproj">
+      <Project>{54efb305-6959-48d2-b833-5093cd390824}</Project>
+      <Name>GlaxionLibraries</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

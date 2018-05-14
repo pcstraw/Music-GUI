@@ -1,0 +1,121 @@
+C:\Users\Solo2\Downloads\Programs\winwordcontrol_src\obj\Debug\WinWordControl.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Downloads\Programs\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Solo2\Downloads\Programs\winwordcontrol_src\obj\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Downloads\Programs\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Downloads\Programs\winwordcontrol_src\obj\Debug\WinWordControl.csproj.ResolveComReference.cache
+C:\Users\Solo2\Downloads\Programs\winwordcontrol_src\obj\Debug\WinWordControl.DocumentInstanceException.resources
+C:\Users\Solo2\Downloads\Programs\winwordcontrol_src\obj\Debug\WinWordControl.csproj.GenerateResource.Cache
+C:\Users\Solo2\Downloads\Programs\winwordcontrol_src\bin\Debug\WinWordControl.dll
+C:\Users\Solo2\Downloads\Programs\winwordcontrol_src\bin\Debug\WinWordControl.pdb
+C:\Users\Solo2\Downloads\Programs\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Solo2\Downloads\Programs\winwordcontrol_src\bin\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Downloads\Programs\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Downloads\Programs\winwordcontrol_src\obj\Debug\WinWordControl.dll
+C:\Users\Solo2\Downloads\Programs\winwordcontrol_src\obj\Debug\WinWordControl.pdb
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\WinWordControl.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\WinWordControl.pdb
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.ResolveComReference.cache
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.DocumentInstanceException.resources
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.GenerateResource.Cache
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.dll
+C:\Users\Solo2\Desktop\Music GUI 18-01-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.pdb
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\WinWordControl.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\WinWordControl.pdb
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.ResolveComReference.cache
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.DocumentInstanceException.resources
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.GenerateResource.Cache
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.dll
+C:\Users\Solo2\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.pdb
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\WinWordControl.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\WinWordControl.pdb
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.VBIDE.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csprojResolveAssemblyReference.cache
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.VBIDE.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.ResolveComReference.cache
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.DocumentInstanceException.resources
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.GenerateResource.Cache
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.dll
+C:\Users\Solo\Desktop\Music GUI 02-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.pdb
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\WinWordControl.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\WinWordControl.pdb
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.ResolveComReference.cache
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.DocumentInstanceException.resources
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.GenerateResource.Cache
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.dll
+C:\Users\Solo2\Desktop\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.pdb
+H:\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\WinWordControl.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\WinWordControl.pdb
+H:\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Core.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.VBIDE.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csprojResolveAssemblyReference.cache
+H:\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Core.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.VBIDE.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Interop.Word.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.ResolveComReference.cache
+H:\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.DocumentInstanceException.resources
+H:\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.GenerateResource.Cache
+H:\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.dll
+H:\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.pdb
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\WinWordControl.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\WinWordControl.pdb
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.ResolveComReference.cache
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.DocumentInstanceException.resources
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.GenerateResource.Cache
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.dll
+C:\Users\Solo2\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\WinWordControl.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\WinWordControl.pdb
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.VBIDE.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\bin\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csprojResolveAssemblyReference.cache
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.VBIDE.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.ResolveComReference.cache
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.DocumentInstanceException.resources
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.GenerateResource.Cache
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.dll
+C:\Users\mmPhil\Google Drive\Music GUI 05-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.pdb
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csprojResolveAssemblyReference.cache
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.VBIDE.dll
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.ResolveComReference.cache
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.DocumentInstanceException.resources
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.csproj.GenerateResource.Cache
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.dll
+C:\Users\Solo2\Google Drive\Music GUI 21-02-17\GlaxionLibraries\winwordcontrol_src\obj\Debug\WinWordControl.pdb
