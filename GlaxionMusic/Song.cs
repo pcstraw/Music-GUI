@@ -129,7 +129,6 @@ namespace Glaxion.Music
             {
                try
                {
-                    //if(isMP3())
                     file = TagLib.File.Create(path);
                     file.GetTag(TagTypes.AllTags);
                     album = file.Tag.Album;
@@ -146,11 +145,14 @@ namespace Glaxion.Music
                         genres = new string[] { "" };
                     }
                     year = file.Tag.Year.ToString();
-                    failed = false;
                     return loaded = true;
                 }
                 catch (Exception e)
                 {
+                    TagLoadingLog.Add(string.Concat("--> Failed to Get All Tags: \n", path, "\n", e.Message));
+                    failed = true;
+                    return loaded = false;
+                    /*
                     try
                     {
                         //if(isMP3())
@@ -175,9 +177,10 @@ namespace Glaxion.Music
                         failed = true;
                         return loaded = false;
                     }
+                    */
                     //TagLoadingLog.Add(string.Concat("Failed to Get ID3 Tag: \n", path, "\n", e.Message));
                     //failed = true;
-                   // return loaded = false;
+                    // return loaded = false;
                 }
             }
             failed = true;
@@ -238,7 +241,6 @@ namespace Glaxion.Music
             {
                 tool.show(5, e.Message);
             }
-            
             // tool.show(3, "ID Tag Saved: ",path);
         }
 
@@ -294,8 +296,6 @@ namespace Glaxion.Music
         public string artist;
         public string year;
         public string title;
-       // public long length;
-        //public int genreID;
         public int trackNo;
         public uint track;
         public string folderImage;
@@ -304,7 +304,6 @@ namespace Glaxion.Music
         public string comment;
         public IPicture[] pictures;
         public string lyrics;
-        //public Id3Tag tag;
         public TagLib.File file;
         public bool loaded;
         public bool failed;
