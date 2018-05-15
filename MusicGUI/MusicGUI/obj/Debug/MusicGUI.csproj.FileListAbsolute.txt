@@ -5,16 +5,12 @@ C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\bin\Deb
 C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\MusicGUI.pdb
 C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\MusicController.dll
 C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\Microsoft.WindowsAPICodePack.Shell.dll
-C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\GlaxionLibraries.dll
 C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\taglib-sharp.dll
 C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\Microsoft.WindowsAPICodePack.dll
-C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\DocX.dll
 C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\MusicController.pdb
 C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\MusicController.dll.config
 C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\gTrackBar.pdb
 C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\gTrackBar.xml
-C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\GlaxionLibraries.pdb
-C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\GlaxionLibraries.dll.config
 C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\obj\Debug\MusicGUI.csproj.CopyComplete
 C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\obj\Debug\MusicGUI.exe
 C:\Users\Solo\Desktop\Music Controller 7 May\Music-GUI\MusicGUI\MusicGUI\obj\Debug\MusicGUI.pdb

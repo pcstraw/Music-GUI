@@ -30,7 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>raphael_music_simple-black_512x512 %281%29.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="gTrackBar, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
@@ -75,49 +76,65 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Album.cs" />
-    <Compile Include="EntryBox.cs">
+    <Compile Include="GUI\SquasherControlDesigner.cs" />
+    <Compile Include="Media Classes\Album.cs" />
+    <Compile Include="GUI\EntryBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EntryBox.Designer.cs">
+    <Compile Include="GUI\EntryBox.Designer.cs">
       <DependentUpon>EntryBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="FileLoader.cs" />
-    <Compile Include="ID3Control.cs">
+    <Compile Include="Media Classes\FileLoader.cs" />
+    <Compile Include="Tools\FileOrFolderDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\ID3Control.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ID3Control.Designer.cs">
+    <Compile Include="GUI\ID3Control.Designer.cs">
       <DependentUpon>ID3Control.cs</DependentUpon>
     </Compile>
-    <Compile Include="MusicControl.cs" />
+    <Compile Include="GUI\ListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ListControl.Designer.cs">
+      <DependentUpon>ListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ListGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ListGUI.Designer.cs">
+      <DependentUpon>ListGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI Managers\MusicControl.cs" />
     <Compile Include="MusicControlGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MusicControlGUI.Designer.cs">
       <DependentUpon>MusicControlGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="MusicFileControl.cs">
+    <Compile Include="GUI\MusicFileControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MusicFileControl.Designer.cs">
+    <Compile Include="GUI\MusicFileControl.Designer.cs">
       <DependentUpon>MusicFileControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="MusicFileManager.cs">
+    <Compile Include="UI Managers\MusicFileManager.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PicturePanel.cs">
+    <Compile Include="GUI\PicturePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PicturePanel.Designer.cs">
+    <Compile Include="GUI\PicturePanel.Designer.cs">
       <DependentUpon>PicturePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlaybackVolumeControl.cs">
+    <Compile Include="GUI\PlaybackVolumeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PlaybackVolumeControl.Designer.cs">
+    <Compile Include="GUI\PlaybackVolumeControl.Designer.cs">
       <DependentUpon>PlaybackVolumeControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlaylistManager.cs">
+    <Compile Include="UI Managers\PlaylistManager.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -125,54 +142,55 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ReorganiserControl.cs">
+    <Compile Include="GUI\ReorganiserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ReorganiserControl.Designer.cs">
+    <Compile Include="GUI\ReorganiserControl.Designer.cs">
       <DependentUpon>ReorganiserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="SongControl.cs">
+    <Compile Include="Tools\InterlopUtil.cs" />
+    <Compile Include="GUI\SongControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SongControl.Designer.cs">
+    <Compile Include="GUI\SongControl.Designer.cs">
       <DependentUpon>SongControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="SquasherControlDesigner.cs" />
     <Compile Include="Tests.cs" />
-    <Compile Include="Song.cs" />
-    <Compile Include="SquashBoxControl.cs">
+    <Compile Include="Media Classes\Song.cs" />
+    <Compile Include="GUI\SquashBoxControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SquashBoxControl.Designer.cs">
+    <Compile Include="GUI\SquashBoxControl.Designer.cs">
       <DependentUpon>SquashBoxControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="TrackManager.cs">
+    <Compile Include="Tools\Tool.cs" />
+    <Compile Include="UI Managers\TrackManager.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TrackUserControl.cs">
+    <Compile Include="GUI\TrackUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TrackUserControl.Designer.cs">
+    <Compile Include="GUI\TrackUserControl.Designer.cs">
       <DependentUpon>TrackUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewBox.cs">
+    <Compile Include="Tools\ViewBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="MusicPlayer.cs" />
-    <Compile Include="PlaybackStateControl.cs">
+    <Compile Include="Media Classes\MusicPlayer.cs" />
+    <Compile Include="GUI\PlaybackStateControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PlaybackStateControl.Designer.cs">
+    <Compile Include="GUI\PlaybackStateControl.Designer.cs">
       <DependentUpon>PlaybackStateControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlaybackTrackbarControl.cs">
+    <Compile Include="GUI\PlaybackTrackbarControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PlaybackTrackbarControl.Designer.cs">
+    <Compile Include="GUI\PlaybackTrackbarControl.Designer.cs">
       <DependentUpon>PlaybackTrackbarControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Playlist.cs" />
-    <Compile Include="PlaylistFileManager.cs">
+    <Compile Include="Media Classes\Playlist.cs" />
+    <Compile Include="UI Managers\PlaylistFileManager.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -181,64 +199,70 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="TotalClipboard.cs" />
-    <Compile Include="TreeViewMS.cs">
+    <Compile Include="Tools\TotalClipboard.cs" />
+    <Compile Include="Tools\TreeViewMS.cs">
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="EntryBox.resx">
+    <EmbeddedResource Include="GUI\EntryBox.resx">
       <DependentUpon>EntryBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ID3Control.resx">
+    <EmbeddedResource Include="GUI\ID3Control.resx">
       <DependentUpon>ID3Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ListControl.resx">
+      <DependentUpon>ListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ListGUI.resx">
+      <DependentUpon>ListGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MusicControlGUI.resx">
       <DependentUpon>MusicControlGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MusicFileControl.resx">
+    <EmbeddedResource Include="GUI\MusicFileControl.resx">
       <DependentUpon>MusicFileControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MusicFileManager.resx">
+    <EmbeddedResource Include="UI Managers\MusicFileManager.resx">
       <DependentUpon>MusicFileManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PicturePanel.resx">
+    <EmbeddedResource Include="GUI\PicturePanel.resx">
       <DependentUpon>PicturePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlaybackVolumeControl.resx">
+    <EmbeddedResource Include="GUI\PlaybackVolumeControl.resx">
       <DependentUpon>PlaybackVolumeControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlaylistManager.resx">
+    <EmbeddedResource Include="UI Managers\PlaylistManager.resx">
       <DependentUpon>PlaylistManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReorganiserControl.resx">
+    <EmbeddedResource Include="GUI\ReorganiserControl.resx">
       <DependentUpon>ReorganiserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SongControl.resx">
+    <EmbeddedResource Include="GUI\SongControl.resx">
       <DependentUpon>SongControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SquashBoxControl.resx">
+    <EmbeddedResource Include="GUI\SquashBoxControl.resx">
       <DependentUpon>SquashBoxControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TrackManager.resx">
+    <EmbeddedResource Include="UI Managers\TrackManager.resx">
       <DependentUpon>TrackManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TrackUserControl.resx">
+    <EmbeddedResource Include="GUI\TrackUserControl.resx">
       <DependentUpon>TrackUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TreeViewMS.resx">
+    <EmbeddedResource Include="Tools\TreeViewMS.resx">
       <DependentUpon>TreeViewMS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewBox.resx">
+    <EmbeddedResource Include="Tools\ViewBox.resx">
       <DependentUpon>ViewBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlaybackStateControl.resx">
+    <EmbeddedResource Include="GUI\PlaybackStateControl.resx">
       <DependentUpon>PlaybackStateControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlaybackTrackbarControl.resx">
+    <EmbeddedResource Include="GUI\PlaybackTrackbarControl.resx">
       <DependentUpon>PlaybackTrackbarControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlaylistFileManager.resx">
+    <EmbeddedResource Include="UI Managers\PlaylistFileManager.resx">
       <DependentUpon>PlaylistFileManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -266,8 +290,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Icons8-Windows-8-Media-Controls-Pause.ico" />
-    <Content Include="raphael_music_simple-black_512x512 %281%29.ico" />
     <Content Include="Resources\Icons8-Windows-8-Media-Controls-Pause.ico" />
     <None Include="Resources\music_gui_logo.png" />
     <Resource Include="Resources\_86423-2001.png">
@@ -303,12 +325,7 @@
     <Resource Include="Resources\86423-200.png" />
     <Resource Include="Resources\2873-200.png" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GlaxionLibraries\GlaxionLibraries.csproj">
-      <Project>{54efb305-6959-48d2-b833-5093cd390824}</Project>
-      <Name>GlaxionLibraries</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
