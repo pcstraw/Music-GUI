@@ -22,6 +22,7 @@ namespace Glaxion.Music
         public bool debugSave;
         private List<List<String>> StoredLists = new List<List<String>>();
         public List<string> tracks = new List<string>();
+        public List<Song> songs = new List<Song>();
         public static string DefaultPlaylistDirectory = @"Output\Playlists";
 
         public Playlist()
@@ -176,7 +177,7 @@ namespace Glaxion.Music
             return path;
         }
 
-        public void SetDefaultPlaylistPath()
+        public void SetDefaultPath()
         {
             path = GetDefaultPlaylistPath();
         }

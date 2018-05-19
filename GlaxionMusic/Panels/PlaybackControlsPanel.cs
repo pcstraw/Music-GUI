@@ -33,7 +33,7 @@ namespace Glaxion.Music
 
         protected void On_MediaLoaded(object o, EventArgs e)
         {
-            if(MusicPlayer.Player.Get && currentTrack != MusicPlayer.Player.currentTrack)
+            if(MusicPlayer.Player  != null && currentTrack != MusicPlayer.Player.currentTrack)
                 currentTrack = MusicPlayer.Player.currentTrack;
         }
         
@@ -55,7 +55,7 @@ namespace Glaxion.Music
 
         public void UpdateName()
         {
-            if (MusicPlayer.Player.Get)
+            if (MusicPlayer.Player  != null)
             {
                 nameLabel.Text = Path.GetFileNameWithoutExtension(MusicPlayer.Player.currentTrackString);
             }
@@ -63,24 +63,20 @@ namespace Glaxion.Music
 
         public void Play(int track)
         {
-            if (MusicPlayer.Player.Get)
-                MusicPlayer.Player.Play(track);
+            MusicPlayer.Player.Play(track);
             if (currentTrack != MusicPlayer.Player.currentTrack)
                  UpdateName();
         }
 
         public void Resume()
         {
-            if (MusicPlayer.Player.Get)
+            if (currentTrack == MusicPlayer.Player.currentTrack)
             {
-                if (currentTrack == MusicPlayer.Player.currentTrack)
-                {
-                    MusicPlayer.Player.Resume(MusicPlayer.Player.currentTrackString, MusicPlayer.Player.positionIndex);
-                }
-                else
-                {
-                    MusicPlayer.Player.Play(currentTrack);
-                }
+                MusicPlayer.Player.Resume(MusicPlayer.Player.currentTrackString, MusicPlayer.Player.positionIndex);
+            }
+            else
+            {
+                MusicPlayer.Player.Play(currentTrack);
             }
         }
 
@@ -96,9 +92,6 @@ namespace Glaxion.Music
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!MusicPlayer.Player.Get)
-                return;
-
             if (MusicPlayer.Player.IsPlaying)
             {
                 Pause();
@@ -125,25 +118,19 @@ namespace Glaxion.Music
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            if(MusicPlayer.Player.Get)
-            {
                 MusicPlayer.Player.NextTrack();
                // currentTrack = MusicPlayer.Player.currentTrack;
                 if(MusicPlayer.Player.IsPlaying)
                     resumeButton.BackgroundImage = Properties.Resources.Icons8_Windows_8_Media_Controls_Pause.ToBitmap();
   
-            }
+            
         }
 
         private void prevButton_Click(object sender, EventArgs e)
         {
-            if (MusicPlayer.Player.Get )
-            {
-                MusicPlayer.Player.PrevTrack();
-                currentTrack = MusicPlayer.Player.currentTrack;
-                resumeButton.BackgroundImage = Properties.Resources.Icons8_Windows_8_Media_Controls_Pause.ToBitmap();
-
-            }
+            MusicPlayer.Player.PrevTrack();
+            currentTrack = MusicPlayer.Player.currentTrack;
+            resumeButton.BackgroundImage = Properties.Resources.Icons8_Windows_8_Media_Controls_Pause.ToBitmap();
         }
 
         private void PlaybackStateControl_Load(object sender, EventArgs e)
@@ -185,11 +172,6 @@ namespace Glaxion.Music
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            if (MusicPlayer.Player.playlist == null)
-            {
-                tool.show();
-                return;
-            }
             MusicPlayer.Player.PlayPlaylist(MusicPlayer.Player.playlist, MusicPlayer.Player.playlist.trackIndex);
         }
 

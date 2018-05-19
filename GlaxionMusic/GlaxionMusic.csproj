@@ -76,65 +76,66 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\SquasherControlDesigner.cs" />
+    <Compile Include="Panels\SquasherControlDesigner.cs" />
     <Compile Include="Media Classes\Album.cs" />
-    <Compile Include="GUI\EntryBox.cs">
+    <Compile Include="Panels\EntryPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\EntryBox.Designer.cs">
-      <DependentUpon>EntryBox.cs</DependentUpon>
+    <Compile Include="Panels\EntryPanel.Designer.cs">
+      <DependentUpon>EntryPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Media Classes\FileLoader.cs" />
+    <Compile Include="PlaylistInterface.cs" />
     <Compile Include="Tools\FileOrFolderDialog.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="GUI\ID3Control.cs">
+    <Compile Include="Panels\ID3Panel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\ID3Control.Designer.cs">
-      <DependentUpon>ID3Control.cs</DependentUpon>
+    <Compile Include="Panels\ID3Panel.Designer.cs">
+      <DependentUpon>ID3Panel.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ListControl.cs">
+    <Compile Include="Panels\ListPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\ListControl.Designer.cs">
-      <DependentUpon>ListControl.cs</DependentUpon>
+    <Compile Include="Panels\ListPanel.Designer.cs">
+      <DependentUpon>ListPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ListGUI.cs">
+    <Compile Include="Panels\ListGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\ListGUI.Designer.cs">
+    <Compile Include="Panels\ListGUI.Designer.cs">
       <DependentUpon>ListGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI Managers\MusicControl.cs" />
+    <Compile Include="View Components\MusicControl.cs" />
     <Compile Include="MusicControlGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MusicControlGUI.Designer.cs">
       <DependentUpon>MusicControlGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\MusicFileControl.cs">
+    <Compile Include="Panels\MusicFileSquashPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\MusicFileControl.Designer.cs">
-      <DependentUpon>MusicFileControl.cs</DependentUpon>
+    <Compile Include="Panels\MusicFileSquashPanel.Designer.cs">
+      <DependentUpon>MusicFileSquashPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI Managers\MusicFileManager.cs">
+    <Compile Include="View Components\MusicFileView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="GUI\PicturePanel.cs">
+    <Compile Include="Panels\PicturePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\PicturePanel.Designer.cs">
+    <Compile Include="Panels\PicturePanel.Designer.cs">
       <DependentUpon>PicturePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\PlaybackVolumeControl.cs">
+    <Compile Include="Panels\VolumePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\PlaybackVolumeControl.Designer.cs">
-      <DependentUpon>PlaybackVolumeControl.cs</DependentUpon>
+    <Compile Include="Panels\VolumePanel.Designer.cs">
+      <DependentUpon>VolumePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI Managers\PlaylistManager.cs">
+    <Compile Include="View Components\PlaylistManagerView.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -142,55 +143,55 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ReorganiserControl.cs">
+    <Compile Include="Panels\ReorganiserPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\ReorganiserControl.Designer.cs">
-      <DependentUpon>ReorganiserControl.cs</DependentUpon>
+    <Compile Include="Panels\ReorganiserPanel.Designer.cs">
+      <DependentUpon>ReorganiserPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\InterlopUtil.cs" />
-    <Compile Include="GUI\SongControl.cs">
+    <Compile Include="Panels\SongPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\SongControl.Designer.cs">
-      <DependentUpon>SongControl.cs</DependentUpon>
+    <Compile Include="Panels\SongPanel.Designer.cs">
+      <DependentUpon>SongPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Tests.cs" />
     <Compile Include="Media Classes\Song.cs" />
-    <Compile Include="GUI\SquashBoxControl.cs">
+    <Compile Include="Panels\SquashBoxUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\SquashBoxControl.Designer.cs">
-      <DependentUpon>SquashBoxControl.cs</DependentUpon>
+    <Compile Include="Panels\SquashBoxUserControl.Designer.cs">
+      <DependentUpon>SquashBoxUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\Tool.cs" />
-    <Compile Include="UI Managers\TrackManager.cs">
+    <Compile Include="View Components\PlaylistView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="GUI\TrackUserControl.cs">
+    <Compile Include="Panels\PlaylistPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\TrackUserControl.Designer.cs">
-      <DependentUpon>TrackUserControl.cs</DependentUpon>
+    <Compile Include="Panels\PlaylistPanel.Designer.cs">
+      <DependentUpon>PlaylistPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\ViewBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Media Classes\MusicPlayer.cs" />
-    <Compile Include="GUI\PlaybackStateControl.cs">
+    <Compile Include="Panels\PlaybackControlsPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\PlaybackStateControl.Designer.cs">
-      <DependentUpon>PlaybackStateControl.cs</DependentUpon>
+    <Compile Include="Panels\PlaybackControlsPanel.Designer.cs">
+      <DependentUpon>PlaybackControlsPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\PlaybackTrackbarControl.cs">
+    <Compile Include="Panels\TrackDurationPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\PlaybackTrackbarControl.Designer.cs">
-      <DependentUpon>PlaybackTrackbarControl.cs</DependentUpon>
+    <Compile Include="Panels\TrackDurationPanel.Designer.cs">
+      <DependentUpon>TrackDurationPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Media Classes\Playlist.cs" />
-    <Compile Include="UI Managers\PlaylistFileManager.cs">
+    <Compile Include="View Components\PlaylistFileView.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -205,50 +206,50 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GUI\EntryBox.resx">
-      <DependentUpon>EntryBox.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\EntryPanel.resx">
+      <DependentUpon>EntryPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ID3Control.resx">
-      <DependentUpon>ID3Control.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\ID3Panel.resx">
+      <DependentUpon>ID3Panel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ListControl.resx">
-      <DependentUpon>ListControl.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\ListPanel.resx">
+      <DependentUpon>ListPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ListGUI.resx">
+    <EmbeddedResource Include="Panels\ListGUI.resx">
       <DependentUpon>ListGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MusicControlGUI.resx">
       <DependentUpon>MusicControlGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\MusicFileControl.resx">
-      <DependentUpon>MusicFileControl.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\MusicFileSquashPanel.resx">
+      <DependentUpon>MusicFileSquashPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI Managers\MusicFileManager.resx">
-      <DependentUpon>MusicFileManager.cs</DependentUpon>
+    <EmbeddedResource Include="View Components\MusicFileView.resx">
+      <DependentUpon>MusicFileView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\PicturePanel.resx">
+    <EmbeddedResource Include="Panels\PicturePanel.resx">
       <DependentUpon>PicturePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\PlaybackVolumeControl.resx">
-      <DependentUpon>PlaybackVolumeControl.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\VolumePanel.resx">
+      <DependentUpon>VolumePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI Managers\PlaylistManager.resx">
-      <DependentUpon>PlaylistManager.cs</DependentUpon>
+    <EmbeddedResource Include="View Components\PlaylistManagerView.resx">
+      <DependentUpon>PlaylistManagerView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ReorganiserControl.resx">
-      <DependentUpon>ReorganiserControl.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\ReorganiserPanel.resx">
+      <DependentUpon>ReorganiserPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SongControl.resx">
-      <DependentUpon>SongControl.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\SongPanel.resx">
+      <DependentUpon>SongPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\SquashBoxControl.resx">
-      <DependentUpon>SquashBoxControl.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\SquashBoxUserControl.resx">
+      <DependentUpon>SquashBoxUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI Managers\TrackManager.resx">
-      <DependentUpon>TrackManager.cs</DependentUpon>
+    <EmbeddedResource Include="View Components\PlaylistView.resx">
+      <DependentUpon>PlaylistView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\TrackUserControl.resx">
-      <DependentUpon>TrackUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\PlaylistPanel.resx">
+      <DependentUpon>PlaylistPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\TreeViewMS.resx">
       <DependentUpon>TreeViewMS.cs</DependentUpon>
@@ -256,14 +257,14 @@
     <EmbeddedResource Include="Tools\ViewBox.resx">
       <DependentUpon>ViewBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\PlaybackStateControl.resx">
-      <DependentUpon>PlaybackStateControl.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\PlaybackControlsPanel.resx">
+      <DependentUpon>PlaybackControlsPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\PlaybackTrackbarControl.resx">
-      <DependentUpon>PlaybackTrackbarControl.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\TrackDurationPanel.resx">
+      <DependentUpon>TrackDurationPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI Managers\PlaylistFileManager.resx">
-      <DependentUpon>PlaylistFileManager.cs</DependentUpon>
+    <EmbeddedResource Include="View Components\PlaylistFileView.resx">
+      <DependentUpon>PlaylistFileView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

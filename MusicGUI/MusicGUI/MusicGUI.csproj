@@ -35,7 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>raphael_music_simple-black_512x512 %281%29.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="gTrackBar">
@@ -65,7 +66,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="raphael_music_simple-black_512x512 %281%29.ico" />
     <Content Include="images.ico" />
     <Content Include="music.ico" />
   </ItemGroup>

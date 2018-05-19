@@ -20,6 +20,8 @@ namespace Glaxion.Music
         }
 
         public Song song;
+        public List<EntryBox> entries = new List<EntryBox>();
+
         public Song SetSong(Song songInfo)
         {
             song = songInfo;
@@ -39,20 +41,9 @@ namespace Glaxion.Music
         {
             if (entries.Count == 0)
                 return this.Font;
-            return entries[0].label1.Font;
+            return entries[0].MainLabel.Font;
         }
-
-        void ResetAllEntries()
-        {
-            /*
-            albumEntryBox.textChanged = false;
-            artistEntryBox.textChanged = false;
-            yearEntryBox.textChanged = false;
-            genreEntryBox.textChanged = false;
-            titleEntryBox.textChanged = false;
-            */
-        }
-        public List<EntryBox> entries = new List<EntryBox>();
+        
         void ShowSongInfo()
         {
             foreach (EntryBox entry in entries)
@@ -79,17 +70,6 @@ namespace Glaxion.Music
                     entry.SetTextbox(song.genres[0]);
                 }
             }
-
-            /*
-            if (song != null)
-            {
-                albumEntryBox.SetTextbox(song.album);
-                artistEntryBox.SetTextbox(song.artist);
-                yearEntryBox.SetTextbox(song.year);
-                genreEntryBox.SetTextbox(song.genre[0]);
-                titleEntryBox.SetTextbox(song.title);
-            }
-            */
         }
 
         void Save()
@@ -97,20 +77,30 @@ namespace Glaxion.Music
             bool modified = false;
             foreach (EntryBox entry in entries)
             {
-                string s = entry.Tag as string;
-                if (!entry.textChanged)
+                if (!entry._textChanged)
                     continue;
-                if (s == "artist")
-                    song.SetArtist(entry.GetEntry());
-                if (s == "album")
-                    song.SetAlbum(entry.GetEntry());
-                if (s == "title")
-                    song.SetTitle(entry.GetEntry());
-                if (s == "year")
-                    song.SetYear(entry.GetEntry());
-                if (s == "genre")
-                    song.SetGenre(entry.GetEntry());
-                entry.textChanged = false;
+                string s = entry.Tag as string;
+
+                switch (s)
+                {
+                    case "artist":
+                        AssignEntry(entry, "Artist");
+                        break;
+                    case "album":
+                        AssignEntry(entry, "Album");
+                        break;
+                    case "title":
+                        AssignEntry(entry, "Title");
+                        break;
+                    case "year":
+                        AssignEntry(entry, "Year");
+                        break;
+                    case "genre":
+                        AssignEntry(entry, "Genre");
+                        break;
+                }
+                
+                entry._textChanged = false;
                 modified = true;
             }
             if (modified)
@@ -128,7 +118,7 @@ namespace Glaxion.Music
                     c.BringToFront();
                 }
             }
-            entries.Reverse();
+            //entries.Reverse();
             for (int i = 0; i < entries.Count; i++)
             {
                 switch (i)
@@ -154,7 +144,7 @@ namespace Glaxion.Music
 
         private void AssignEntry(EntryBox entry, string identifier)
         {
-            entry.label1.Text = identifier;
+            entry.MainLabel.Text = identifier;
             entry.Tag = identifier.ToLower();
         }
 

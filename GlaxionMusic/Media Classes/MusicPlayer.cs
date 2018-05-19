@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using WMPLib;
-using Timer = System.Windows.Forms.Timer;
 using Glaxion.Tools;
 using System.Drawing;
 using System.Windows.Forms;
@@ -27,11 +26,11 @@ namespace Glaxion.Music
             PlaybackFailedEvent += On_PlaybackFailed;
             BeforePlayEvent += MusicPlayer_BeforePlayEvent;
             MusicUpdatedEvent += MusicPlayer_MusicUpdated;
-            timer = new Timer();
+            timer = new System.Windows.Forms.Timer();
             timer.Interval = 100;
             timer.Tick += t_Tick;
             CreateTempPlaybackFiles = true;
-            initialized = false;
+            _isRunning = false;
             //initialise to -1.  If we start at 0 then loading trackmanager
             //will highlight the  first track of the playlist before we start playing anything
             currentTrack = -1; 
@@ -41,11 +40,12 @@ namespace Glaxion.Music
         {
         }
 
-        public static void Start(string[] args)
+        
+        public static void Create(string[] args)
         {
-            MusicPlayer.Player = new MusicPlayer();
-            MusicPlayer.Player.StartPlayer = true;
-            MusicPlayer.Player.startArguments = args;
+            Player = new MusicPlayer();
+           // Player._startPlayer = true;
+            Player.startArguments = args;
         }
 
         public MusicPlayer()
@@ -53,10 +53,11 @@ namespace Glaxion.Music
             Construction();
         }
 
+        
         public static MusicPlayer Player;
         public static MusicControlGUI WinFormApp;
         public static Image MusicGUILogo = Glaxion.Music.Properties.Resources.music_gui_logo;
-        public static string SolutionLink = "..\\..\\..\\MusicForge.sln";
+        public bool CreateTempPlaybackFiles { get; private set; }
         public WindowsMediaPlayer windowsMediaPlayer;
         public double positionIndex;
         public double trackDuration;
@@ -69,7 +70,10 @@ namespace Glaxion.Music
         public bool NodeDrop;
         public bool Loop;
         public bool Muted;
-        public bool initialized;
+        //bool _startPlayer;
+        public bool InitializeDirectories;
+        public bool Initialized;
+        bool _isRunning;
         public string prevTrack;
         public string currentTrackString;
         public string[] startArguments;
@@ -79,7 +83,7 @@ namespace Glaxion.Music
         public int Volume;
         public Playlist playlist;
         public FileLoader fileLoader;
-        public Timer timer;
+        public System.Windows.Forms.Timer timer;
         public static Color PlayColor = Color.Aquamarine;
         public static Color PreviousPlayColor = Color.DarkCyan;
         public static Color OldPlayColor = Color.MediumTurquoise;
@@ -194,8 +198,61 @@ namespace Glaxion.Music
             // Specify what is done when a file is renamed.
             tool.debug("File: {0} renamed to {1}", e.OldFullPath, e.FullPath);
         }
-        
-        
+
+        public bool Start()
+        {
+            //needs to be called from music file manager
+            //GetSavedDirectories();
+            fileLoader = new FileLoader();
+            fileLoader.Load();
+            timer.Start();
+            return true;
+        }
+
+        public void UseMediaKeys(Keys KeyCode)
+        {
+           // Tool.Debug(k.KeyCode.ToString());
+            if (KeyCode == Keys.MediaPlayPause)
+            {
+                if (IsPlaying)
+                {
+                    Pause();
+                    return;
+                }
+                if (IsPaused)
+                {
+                    Resume(currentTrackString, positionIndex);
+                    return;
+                }
+                if (!IsPlaying && !IsPaused)
+                {
+                    Play(currentTrack);
+                    return;
+                }
+            }
+
+            if (KeyCode == Keys.MediaNextTrack)
+            {
+                NextTrack();
+                return;
+            }
+            if (KeyCode == Keys.MediaPreviousTrack)
+            {
+                PrevTrack();
+                return;
+            }
+            if (KeyCode == Keys.MediaStop)
+            {
+                Stop();
+                return;
+            }
+            if (KeyCode == Keys.VolumeMute)
+            {
+                Mute();
+                return;
+            }
+        }
+
         //save the last played playlist??
         public void SetLastPlaylistTrack()
         {
@@ -272,9 +329,7 @@ namespace Glaxion.Music
         public bool PlayPlaylist(Playlist p,int index)
         {
             if (p == null)
-            {
                 return false;
-            }
             
             p.trackIndex = index;
             
@@ -287,18 +342,6 @@ namespace Glaxion.Music
                 MusicUpdatedEvent(p, EventArgs.Empty);
             }
             return Play(index);
-        }
-
-        public static void EditSolutionLink()
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            string path = null;
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                path = ofd.FileName;
-            }
-            Properties.Settings.Default.SolutionFile = path;
-            SolutionLink = path;
         }
         
         public bool Mute()
@@ -321,18 +364,17 @@ namespace Glaxion.Music
         
         void t_Tick(object sender, EventArgs e)
         {
-            if(!initialized)
+            if(!_isRunning)
             {
-                SetVolume(Volume); //default volume may have been set through the designer.  Update here 
-                initialized = true;
+                SetVolume(Volume); //default volume may have been set through the playbackVolumeConbtrol.  Update it here 
+                _isRunning = true;
             }
+
             TickEvent(sender, e);
             if (windowsMediaPlayer.playState == WMPPlayState.wmppsStopped)
             {
                 if (IsPlaying)
-                {
                     NextTrack();
-                }
             }
             
             if (windowsMediaPlayer != null && windowsMediaPlayer.currentMedia != null)
@@ -353,47 +395,10 @@ namespace Glaxion.Music
                 }
             }
         }
-
-        public bool StartPlayer;
-        public bool InitializeDirectories;
-        public bool PlayerInitialized;
-
-        public void BeginPlayer()
-        {
-            Construction();
-            //needs to be called from music file manager
-            //GetSavedDirectories();
-            fileLoader = new FileLoader();
-            fileLoader.Load();
-            timer.Start();
-        }
-
-        public bool GetPlayer()
-        {
-            if (!StartPlayer)
-                return PlayerInitialized = false;
-
-            if (PlayerInitialized)
-                return true;
-            else
-            {
-                BeginPlayer();
-                return PlayerInitialized = true;
-            }
-        }
-
-        public bool Get
-        {
-            get { return GetPlayer(); }
-        }
-
-        public bool CreateTempPlaybackFiles { get; private set; }
-
+        
+        
         public bool IsPlayingTrack(string path)
         {
-            if (!Get)
-                return false;
-
             if (path == currentTrackString)
                 return true;
             return false;
@@ -418,12 +423,6 @@ namespace Glaxion.Music
                 return true;
             else
                 return false;
-        }
-
-        public void Begin()
-        {
-            if (playlist.tracks.Count > 0)
-                Play(0);
         }
         
         public void NextTrack()
@@ -472,7 +471,11 @@ namespace Glaxion.Music
                 }
             }
         }
-        
+        public bool Play()
+        {
+            return Play(currentTrack);
+        }
+
         public bool Play(int index)
         {
             if(playlist == null)

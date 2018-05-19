@@ -5,9 +5,6 @@ using Glaxion.Tools;
 using System.IO;
 using System.Drawing;
 using item_ = System.Windows.Forms.ListViewItem;
-using System.Windows.Automation;
-using System.Diagnostics;
-using System.Text.RegularExpressions;
 
 namespace Glaxion.Music
 {
@@ -41,29 +38,29 @@ namespace Glaxion.Music
 
         public PlaylistFileManager playlistFileManager;
         public PlaylistManager playlistManager;
-        public TrackUserControl trackUser;
+        public PlaylistPanel CurrentPlaylistPanel;
         public ContextMenuStrip trackContext;
         public MusicFileManager musicFileManager;
-        public List<TrackUserControl> dockedTrackManagers = new List<TrackUserControl>();
+        public List<PlaylistPanel> dockedTrackManagers = new List<PlaylistPanel>();
        // private Process _vegas_process;
 
-        public TrackManager trackManager
+        public PlaylistView trackManager
         {
             get
             {
-                if (trackUser == null)
+                if (CurrentPlaylistPanel == null)
                 {
                     tool.show(5, "Error:  accessing track manager but no current track user control");
                     return null;
                 }
-                return trackUser.trackManager;
+                return CurrentPlaylistPanel.playlistView;
             }
         }
         
         public void LoadMusicControl()
         {
             //string s = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Music";
-            MusicPlayer.Player.GetPlayer();
+            MusicPlayer.Player.Start();
             playlistFileManager.LoadManager();
             musicFileManager.LoadManager();
             playlistManager.LoadManager();
@@ -72,14 +69,13 @@ namespace Glaxion.Music
         
         public void RemoveSelectedTracks()
         {
-            trackUser.trackManager.RemoveSelectedTracks();
-            trackUser.trackManager.UpdateCurrentListTracks();
-            trackUser.trackManager.UpdateMusicPlayer();
+            CurrentPlaylistPanel.playlistView.RemoveSelectedTracks();
+            //CurrentPlaylistPanel.UpdateTracks();
         }
         
         public void UpdateDockedPlaylistNames()
         {
-            foreach (TrackUserControl tm in dockedTrackManagers)
+            foreach (PlaylistPanel tm in dockedTrackManagers)
             {
                 tm.UpdatePlaylistTitle();
             }
@@ -87,49 +83,34 @@ namespace Glaxion.Music
 
         public void UpdateDockedPlaylistTracks()
         {
-            foreach (TrackUserControl tm in dockedTrackManagers)
+            foreach (PlaylistPanel tm in dockedTrackManagers)
             {
-                if (tm.trackManager.currentList.dirty)
+                if (tm.CurrentList.dirty)
                 {
-                    tm.trackManager.LoadPlaylistIntoView(tm.trackManager.currentList);
-                    tm.trackManager.currentList.dirty = false;
+                    tm.DisplayPlaylist();
+                    tm.CurrentList.dirty = false;
                 }
             }
         }
 
-        public TrackUserControl CreatePlaylistPanel(Control control, Playlist p)
+        //used to create a panel playlistPanel embedded in the right of the control
+        public PlaylistPanel CreatePlaylistPanel(Control control, Playlist p)
         {
-            TrackUserControl dp = new TrackUserControl();
-            TrackManager tm = dp.trackManager;
-            tm.LoadManager();
-            tm.BackColor = dp.trackManager.BackColor;
-            tm.ForeColor = dp.trackManager.ForeColor;
-            tm.LoadIntoView(p);
-           // tm.Dock = DockStyle.Top;
-           // tm.SendToBack();
-            tm.View = View.Details;
-            tm.ContextMenuStrip = trackContext;
-            tm.AllowDrop = true;
-            dp.UpdatePlaylistTitle();
+            PlaylistPanel dp = new PlaylistPanel();
+            dp.CurrentList = p;
+            dp.playlistView.ContextMenuStrip = trackContext;
             dp.Dock = DockStyle.Right;
             dp.Show();
-            dp.Controls.Add(tm);
-            
+            dp.DisplayPlaylist();
             Splitter sp = new Splitter();
             sp.Size = new Size(5, sp.Size.Height);
             sp.BackColor = Color.Gray;
             sp.Dock = DockStyle.Right;
             dp.dockSplitter = sp;
             dp.Dock = DockStyle.Right;
-            //dp.Controls.Add(tm);
             control.Controls.Add(sp);
             control.Controls.Add(dp);
-           // tm.SendToBack();
-            //tm.BringToFront();
-            tm.Show();
             sp.Show();
-            //tm.Invalidate();
-            tm.UpdatePlayStateColours();
             return dp;
         }
 
@@ -258,11 +239,11 @@ namespace Glaxion.Music
         {
             if (playlistManager.hoveredItem != null)
             {
-                
                 Playlist p = playlistManager.hoveredItem.Tag as Playlist;
                 if (p != null)
                 {
-                    trackManager.LoadPlaylistIntoView(p);
+                    //trackManager.LoadPlaylistIntoView(p);
+                    throw new NotImplementedException("update panel loading");
                 }
             }
         }
@@ -301,16 +282,16 @@ namespace Glaxion.Music
 
         public void OpenTracksInVegas()
         {
-            ListViewItem item = trackUser.trackManager.hoveredItem;
+            ListViewItem item = CurrentPlaylistPanel.playlistView.hoveredItem;
             if (item != null)
                 tool.OpenVegas(item.SubItems[1].Text);
             else
             {
 
-                if (trackUser.trackManager.SelectedItems.Count > 0)
+                if (CurrentPlaylistPanel.playlistView.SelectedItems.Count > 0)
                 {
                     List<string> list = new List<string>();
-                    foreach (ListViewItem i in trackUser.trackManager.SelectedItems)
+                    foreach (ListViewItem i in CurrentPlaylistPanel.playlistView.SelectedItems)
                     {
                         list.Add(i.SubItems[1].Text);
                     }

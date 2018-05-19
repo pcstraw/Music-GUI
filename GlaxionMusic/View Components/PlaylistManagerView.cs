@@ -1,13 +1,8 @@
 ﻿using Glaxion.Tools;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Glaxion.Music
@@ -18,21 +13,21 @@ namespace Glaxion.Music
         {
             CheckBoxes = true;
             AllowDrop = true;
+            Columns[1].Width = 1000;
         }
 
         private new void InitializeComponent()
         {
             this.SuspendLayout();
             this.ResumeLayout(false);
-
         }
 
         public Dictionary<string, string> tmpPlaylists = new Dictionary<string, string>();
         public Color ContainsTrackColor = Color.SkyBlue;
         public bool ClearTMPFiles = false;
         public Dictionary<string, Playlist> Playlists = new Dictionary<string, Playlist>();
-        public ListViewItem lastWaitSlectedItem;
-        public int hoverSelectThreshold = 25;
+        //public ListViewItem lastWaitSlectedItem;
+       // public int hoverSelectThreshold = 25;
 
         public ListViewItem FindPlaylistItem(Playlist list)
         {
@@ -164,27 +159,13 @@ namespace Glaxion.Music
                 }
             }
         }
-
-        [DllImport("user32")]
-        private static extern bool ShowScrollBar(IntPtr hwnd, int wBar, bool bShow);
-        private const uint SB_HORZ = 0;
-        private const uint SB_VERT = 1;
-        private const uint ESB_DISABLE_BOTH = 0x3;
-        private const uint ESB_ENABLE_BOTH = 0x0;
-
-        private void HideHorizontalScrollBar()
-        {
-           this.Scrollable = false;
-            ShowScrollBar(this.Handle, (int)SB_VERT,true);
-            //this.Scrollable = true;
-        }
-
+        
         public void LoadManager()
         {
             MusicPlayer.Player.fileLoader.PlaylistDirectories = tool.GetPropertyList(Properties.Settings.Default.PlaylistDirectories);
             LoadTmpPlaylists();
             AssignEventHandlers();
-            //HideHorizontalScrollBar();
+            HideHorizontalScrollBar();
         }
 
         public void AssignEventHandlers()
@@ -309,7 +290,6 @@ namespace Glaxion.Music
 
         private void PlaylistManager_DragEnter(object sender, DragEventArgs e)
         {
-            // tool.show();
             if (!TotalClipboard.IsEmpty)
             {
                 e.Effect = e.AllowedEffect;

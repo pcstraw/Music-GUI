@@ -15,6 +15,20 @@ namespace Glaxion.Music
 {
     public class ViewBox : System.Windows.Forms.ListView
     {
+
+        [DllImport("user32")]
+        private static extern bool ShowScrollBar(IntPtr hwnd, int wBar, bool bShow);
+        private const uint SB_HORZ = 0;
+        private const uint SB_VERT = 1;
+        private const uint ESB_DISABLE_BOTH = 0x3;
+        private const uint ESB_ENABLE_BOTH = 0x0;
+
+        public void HideHorizontalScrollBar()
+        {
+            this.Scrollable = false;
+            ShowScrollBar(this.Handle, (int)SB_VERT, true);
+        }
+        
         private System.ComponentModel.IContainer components;
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern int SendMessage(IntPtr hWnd, int wMsg, IntPtr wParam, IntPtr lParam);
@@ -53,7 +67,6 @@ namespace Glaxion.Music
         public Color ConflictColor = Color.Purple;
         private Color oldhoveritemcolor;
         public ColorScheme defaultColorScheme;
-        public Playlist currentList;
         public ListViewItem targetItem;
 
         private void Construction()
@@ -94,15 +107,6 @@ namespace Glaxion.Music
         {
             Construction();
         }
-
-        public void StoreTopVisibleItem()
-        {
-            currentList.lastVisible = FirstVisible()-1;
-           // Point tp = PointToClient(point);
-            //ListViewItem targetItem = GetItemAt(tp.X, tp.Y);
-          //  tool.Show(visibleIndex);
-        }
-        
         
         public int FirstVisible()
         {
@@ -302,7 +306,7 @@ namespace Glaxion.Music
             return;
         }
 
-        public List<string> GetTracksFromListView()
+        public List<string> GetTrackItems()
         {
             List<string> list = new List<string>();
             foreach (ListViewItem li in Items)
@@ -489,15 +493,6 @@ namespace Glaxion.Music
             {
                 UpdateTrackPath(li);
             }
-        }
-
-        public Playlist UpdateCurrentListTracks()
-        {
-            if (currentList == null)
-                return null;
-            currentList.tracks.Clear();
-            currentList.tracks = GetTracksFromListView();
-            return currentList;
         }
         
         public ListViewItem GetItemAtPoint(Point point)

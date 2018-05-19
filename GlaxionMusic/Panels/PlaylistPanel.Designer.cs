@@ -1,6 +1,6 @@
 ﻿namespace Glaxion.Music
 {
-    partial class TrackUserControl
+    partial class PlaylistPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -38,7 +38,7 @@
             this.close_update_toopTip = new System.Windows.Forms.ToolTip(this.components);
             this.close_save_toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.update_music_tooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.trackManager = new Glaxion.Music.TrackManager();
+            this.playlistView = new Glaxion.Music.PlaylistView();
             this.trackMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +70,7 @@
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(25, 23);
             this.closeButton.TabIndex = 1;
-            this.closeButton.Text = "X";
+            this.closeButton.Text = "C";
             this.close_toolTip.SetToolTip(this.closeButton, "Close this panel and discard whatever changes you\'ve made");
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
@@ -120,34 +120,33 @@
             // 
             this.update_music_tooltip.ToolTipTitle = "Update Music Player";
             // 
-            // trackManager
+            // playlistView
             // 
-            this.trackManager.AllowDrop = true;
-            this.trackManager.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.playlistView.AllowDrop = true;
+            this.playlistView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trackManager.BackColor = System.Drawing.Color.LemonChiffon;
-            this.trackManager.ForeColor = System.Drawing.Color.Black;
-            this.trackManager.FullRowSelect = true;
-            this.trackManager.Location = new System.Drawing.Point(0, 29);
-            this.trackManager.Name = "trackManager";
-            this.trackManager.OwnerDraw = true;
-            this.trackManager.Size = new System.Drawing.Size(310, 308);
-            this.trackManager.TabIndex = 3;
-            this.trackManager.UseCompatibleStateImageBehavior = false;
-            this.trackManager.View = System.Windows.Forms.View.Details;
-            this.trackManager.MouseEnter += new System.EventHandler(this.trackManager_MouseEnter);
+            this.playlistView.BackColor = System.Drawing.Color.LemonChiffon;
+            this.playlistView.ForeColor = System.Drawing.Color.Black;
+            this.playlistView.FullRowSelect = true;
+            this.playlistView.Location = new System.Drawing.Point(0, 29);
+            this.playlistView.Name = "playlistView";
+            this.playlistView.Size = new System.Drawing.Size(310, 308);
+            this.playlistView.TabIndex = 3;
+            this.playlistView.UseCompatibleStateImageBehavior = false;
+            this.playlistView.View = System.Windows.Forms.View.Details;
+            this.playlistView.MouseEnter += new System.EventHandler(this.trackManager_MouseEnter);
             // 
-            // TrackUserControl
+            // PlaylistPanelView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.trackManager);
+            this.Controls.Add(this.playlistView);
             this.Controls.Add(this.saveAndCloseButton);
             this.Controls.Add(this.updateAndCloseButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.trackMenuStrip);
-            this.Name = "TrackUserControl";
+            this.Name = "PlaylistPanelView";
             this.Size = new System.Drawing.Size(310, 337);
             this.Load += new System.EventHandler(this.TrackUserControl_Load);
             this.MouseEnter += new System.EventHandler(this.TrackUserControl_MouseEnter);
@@ -162,7 +161,7 @@
 
         private System.Windows.Forms.MenuStrip trackMenuStrip;
         private System.Windows.Forms.Button closeButton;
-        public TrackManager trackManager;
+        public Glaxion.Music.PlaylistView playlistView;
         private System.Windows.Forms.Button updateAndCloseButton;
         private System.Windows.Forms.Button saveAndCloseButton;
         public System.Windows.Forms.ToolStripMenuItem textLabel;

@@ -114,9 +114,9 @@
             this.consoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openTempDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openAlbumArtFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setSongInfoFontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.playlistControlContainer = new System.Windows.Forms.SplitContainer();
-            this.setSongInfoFontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.squashBoxControl1 = new Glaxion.Music.SquashBoxControl();
             this.fileViewLabel = new System.Windows.Forms.Label();
             this.songControl1 = new Glaxion.Music.SongControl();
@@ -858,6 +858,13 @@
             this.openAlbumArtFolderToolStripMenuItem.Text = "Open Album Art Folder";
             this.openAlbumArtFolderToolStripMenuItem.Click += new System.EventHandler(this.openAlbumArtFolderToolStripMenuItem_Click);
             // 
+            // setSongInfoFontToolStripMenuItem
+            // 
+            this.setSongInfoFontToolStripMenuItem.Name = "setSongInfoFontToolStripMenuItem";
+            this.setSongInfoFontToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.setSongInfoFontToolStripMenuItem.Text = "Set Song Info Font";
+            this.setSongInfoFontToolStripMenuItem.Click += new System.EventHandler(this.setSongInfoFontToolStripMenuItem_Click);
+            // 
             // splitter1
             // 
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -886,13 +893,6 @@
             this.playlistControlContainer.Size = new System.Drawing.Size(881, 428);
             this.playlistControlContainer.SplitterDistance = 174;
             this.playlistControlContainer.TabIndex = 0;
-            // 
-            // setSongInfoFontToolStripMenuItem
-            // 
-            this.setSongInfoFontToolStripMenuItem.Name = "setSongInfoFontToolStripMenuItem";
-            this.setSongInfoFontToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.setSongInfoFontToolStripMenuItem.Text = "Set Song Info Font";
-            this.setSongInfoFontToolStripMenuItem.Click += new System.EventHandler(this.setSongInfoFontToolStripMenuItem_Click);
             // 
             // squashBoxControl1
             // 
@@ -1008,6 +1008,7 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "MusicControlGUI";
             this.Text = " ";
@@ -1016,6 +1017,7 @@
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.MusicControlGUI_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.MusicControlGUI_DragEnter);
             this.DragLeave += new System.EventHandler(this.MusicControlGUI_DragLeave);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MusicControlGUI_KeyUp);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MusicControlGUI_MouseUp);
             this.playlistFileContext.ResumeLayout(false);
             this.playlistContext.ResumeLayout(false);

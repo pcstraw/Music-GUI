@@ -30,7 +30,7 @@ namespace Glaxion.Music
             Application.EnableVisualStyles();
             //Application.VisualStyleState = System.Windows.Forms.VisualStyles.VisualStyleState.NonClientAreaEnabled;
             Application.SetCompatibleTextRenderingDefault(false);
-            MusicPlayer.Start(args);
+            MusicPlayer.Create(args);
             Application.Run(new MusicControlGUI());
         }
     }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.MainLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -38,14 +38,14 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Tw Cen MT", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 38);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Label";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.MainLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MainLabel.Font = new System.Drawing.Font("Tw Cen MT", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainLabel.Location = new System.Drawing.Point(3, 3);
+            this.MainLabel.Name = "label1";
+            this.MainLabel.Size = new System.Drawing.Size(145, 38);
+            this.MainLabel.TabIndex = 1;
+            this.MainLabel.Text = "Label";
+            this.MainLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBox1
             // 
@@ -70,7 +70,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.textBox1);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.MainLabel);
             this.splitContainer1.Panel1MinSize = 10;
             this.splitContainer1.Panel2MinSize = 10;
             this.splitContainer1.Size = new System.Drawing.Size(692, 47);
@@ -94,7 +94,7 @@
         }
 
         #endregion
-        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label MainLabel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.SplitContainer splitContainer1;
     }

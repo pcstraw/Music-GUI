@@ -10,6 +10,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,7 +35,7 @@ namespace Glaxion.Music
         }
 
         public MusicControl musicControl;
-        public List<TrackUserControl> dockedTrackManagers;
+        public List<PlaylistPanel> dockedTrackManagers;
         public string[] startArgs;
         public Panel musicPanel;
         
@@ -96,8 +97,7 @@ namespace Glaxion.Music
 
             squashBoxControl1.MakeBackPanel(musicControl.musicFileManager);
             squashBoxControl1.MakeFrontPanel(musicControl.playlistFileManager);
-
-
+            
             /*
             typeof(Panel).InvokeMember("DoubleBuffered",
     BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic,
@@ -452,7 +452,7 @@ namespace Glaxion.Music
         public void SendTracksToCheckedPlaylists()
         {
             List<string> sl = new List<string>();
-            foreach (ListViewItem i in musicControl.trackUser.trackManager.SelectedItems)
+            foreach (ListViewItem i in musicControl.CurrentPlaylistPanel.playlistView.SelectedItems)
             {
                 string s = i.SubItems[1].Text;
                 sl.Add(s);
@@ -476,14 +476,14 @@ namespace Glaxion.Music
 
         public void QuickSaveTrackManager()
         {
-            musicControl.trackManager.currentList.Save();
+            musicControl.trackManager.CurrentList.Save();
         }
 
         //save to the global playlist directory
         public void DefaultSaveTrackManager()
         {
-            musicControl.trackManager.currentList.SetDefaultPlaylistPath();
-            musicControl.trackManager.currentList.Save();
+            musicControl.trackManager.CurrentList.SetDefaultPath();
+            musicControl.trackManager.CurrentList.Save();
         }
 
         private void quickSaveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -493,29 +493,30 @@ namespace Glaxion.Music
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TrackUserControl tm = musicControl.trackUser;
-            tm.trackManager.UpdatePlaylist();
-            bool saved = tm.trackManager.currentList.SaveAs();
+            PlaylistPanel pm = musicControl.CurrentPlaylistPanel;
+
+            pm.UpdateTracks();
+            bool saved = pm.CurrentList.SaveAs();
             if (saved)
             {
                 //tm.SetTitle(tm.currentList.name);
                 //update track manager container name here
-                ListViewItem item = musicControl.playlistManager.FindItemByPath(tm.trackManager.currentList.path);
+                ListViewItem item = musicControl.playlistManager.FindItemByPath(pm.CurrentList.path);
                 if (item == null)
                 {
-                    tm.UpdatePlaylistTitle();
-                    musicControl.playlistManager.AddItemFromPlaylist(tm.trackManager.currentList);
+                    pm.UpdatePlaylistTitle();
+                    musicControl.playlistManager.AddItemFromPlaylist(pm.CurrentList);
                     musicControl.playlistFileManager.LoadPlaylistDirectories();
                 }else
                 {
-                    tm.trackManager.currentList.ReadFile();
+                    pm.CurrentList.ReadFile();
                 }
             }
         }
         
         private void updateMusicPlayerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            musicControl.trackUser.trackManager.UpdateMusicPlayer();
+            musicControl.CurrentPlaylistPanel.playlistView.UpdateMusicPlayer();
         }
 
         private void toolStripTextBox1_KeyUp(object sender, KeyEventArgs e)
@@ -586,7 +587,7 @@ namespace Glaxion.Music
         
         private void goToEndToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            musicControl.trackUser.trackManager.EnsureVisible(musicControl.trackManager.Items.Count - 1);
+            musicControl.CurrentPlaylistPanel.playlistView.EnsureVisible(musicControl.trackManager.Items.Count - 1);
         }
 
         private void sendToCheckedToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -603,7 +604,7 @@ namespace Glaxion.Music
 
         private void dockToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            musicControl.CreatePlaylistPanel(this, musicControl.trackManager.currentList);
+            musicControl.CreatePlaylistPanel(this, musicControl.trackManager.CurrentList);
         }
 
         private void mainFormToolStripMenuItem_Click(object sender, EventArgs e)
@@ -687,9 +688,9 @@ namespace Glaxion.Music
         public void BookmarkDockedPlaylists(ToolStripMenuItem tsm)
         {
             tsm.DropDownItems.Clear();
-            foreach (TrackUserControl tm in musicControl.dockedTrackManagers)
+            foreach (PlaylistPanel tm in musicControl.dockedTrackManagers)
             {
-                ToolStripMenuItem t = new ToolStripMenuItem(tm.trackManager.currentList.name);
+                ToolStripMenuItem t = new ToolStripMenuItem(tm.CurrentList.name);
                 t.Tag = tm;
                 tsm.DropDownItems.Add(t);
             }
@@ -697,6 +698,8 @@ namespace Glaxion.Music
 
         private void trackContext_Opening(object sender, CancelEventArgs e)
         {
+            foreach(ListViewItem i in musicControl.trackManager.preContextSelection)
+                i.BackColor = Color.LightSkyBlue;
             BookmarkDockedPlaylists(sendToDockedContext);
         }
 
@@ -731,27 +734,29 @@ namespace Glaxion.Music
             //tool.Show("Need to use the current track manager");
             //System.Diagnostics.Debugger.Break();
             
-            TrackUserControl tm = e.ClickedItem.Tag as TrackUserControl;
-            if (tm != null && tm != musicControl.trackUser)
+            PlaylistPanel tm = e.ClickedItem.Tag as PlaylistPanel;
+            if (tm != null && tm != musicControl.CurrentPlaylistPanel)
             {
                 for (int i = musicControl.trackManager.SelectedItems.Count - 1; i > -1; i--)
                 {
-                    tm.trackManager.currentList.tracks.Insert(0, musicControl.trackManager.SelectedItems[i].Text);
+                    tm.CurrentList.tracks.Insert(0, musicControl.trackManager.SelectedItems[i].Text);
                 }
-                tm.trackManager.LoadIntoView(tm.trackManager.currentList);
+                throw new NotImplementedException("update panel loading");
+                //tm.playlistView.LoadIntoView(tm.playlistView.currentList);
             }
         }
 
         public void LoadIntoDocked(ToolStripItemClickedEventArgs e,List<string> list)
         {
-            TrackManager tm = e.ClickedItem.Tag as TrackManager;
+            PlaylistView tm = e.ClickedItem.Tag as PlaylistView;
             if (tm != null)
             {
                 for (int i = list.Count - 1; i > -1; i--)
                 {
-                    tm.currentList.tracks.Insert(0, list[i]);
+                    tm.CurrentList.tracks.Insert(0, list[i]);
                 }
-                tm.LoadIntoView(tm.currentList);
+                throw new NotImplementedException("update panel loading");
+                //tm.LoadIntoView(tm.currentList);
             }
         }
         
@@ -771,7 +776,7 @@ namespace Glaxion.Music
         
         private void topToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            musicControl.trackUser.trackManager.MoveSelectedToTop();
+            musicControl.CurrentPlaylistPanel.playlistView.MoveSelectedToTop();
             return;
         }
 
@@ -782,7 +787,7 @@ namespace Glaxion.Music
 
         private void bottomToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            musicControl.trackUser.trackManager.MoveSelectedToBottom();
+            musicControl.CurrentPlaylistPanel.playlistView.MoveSelectedToBottom();
         }
 
         public void DockNewPlaylist(Control control)
@@ -813,9 +818,9 @@ namespace Glaxion.Music
 
         private void allToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach(TrackUserControl tm in musicControl.dockedTrackManagers)
+            foreach(PlaylistPanel tm in musicControl.dockedTrackManagers)
             {
-                tm.trackManager.currentList.Save();
+                tm.CurrentList.Save();
             }
         }
         
@@ -889,7 +894,7 @@ namespace Glaxion.Music
         
         private void musicFilContext_send_button_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            TrackUserControl tm = e.ClickedItem.Tag as TrackUserControl;
+            PlaylistPanel tm = e.ClickedItem.Tag as PlaylistPanel;
             if (tm == null)
                 return;
             
@@ -897,10 +902,11 @@ namespace Glaxion.Music
             {
                 List<string> list = tool.GetAllAudioFiles(n);
                 foreach (string s in list)
-                    tm.trackManager.currentList.tracks.Insert(0,s);
+                    tm.CurrentList.tracks.Insert(0,s);
             }
-            tm.trackManager.LoadIntoView(tm.trackManager.currentList);
-          //  tm.trackManager.EnsureVisible(0);
+            // tm.playlistView.LoadIntoView(tm.playlistView.currentList);
+            throw new NotImplementedException("update panel loading");
+            //  tm.trackManager.EnsureVisible(0);
         }
 
         private void invertSelectionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1011,17 +1017,17 @@ namespace Glaxion.Music
 
         private void trackContext_goToBottom_button_Click(object sender, EventArgs e)
         {
-            musicControl.trackUser.trackManager.EnsureVisible(musicControl.trackManager.Items.Count - 1);
+            musicControl.CurrentPlaylistPanel.playlistView.EnsureVisible(musicControl.trackManager.Items.Count - 1);
         }
 
         private void trackContext_goToTop_button_Click(object sender, EventArgs e)
         {
-            musicControl.trackUser.trackManager.EnsureVisible(0);
+            musicControl.CurrentPlaylistPanel.playlistView.EnsureVisible(0);
         }
 
         private void trackContext_play_button_Click(object sender, EventArgs e)
         {
-            musicControl.trackManager.PlayHoveredNode();
+            musicControl.CurrentPlaylistPanel.PlayHoveredItem();
         }
 
         private void trackContext_vegas_button_Click(object sender, EventArgs e)
@@ -1031,7 +1037,7 @@ namespace Glaxion.Music
 
         private void iD3TagToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ListViewItem item = musicControl.trackUser.trackManager.hoveredItem;
+            ListViewItem item = musicControl.CurrentPlaylistPanel.playlistView.hoveredItem;
             if (item == null)
                 return;
 
@@ -1234,6 +1240,11 @@ namespace Glaxion.Music
         private void setSongInfoFontToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoadFont();
+        }
+        
+        private void MusicControlGUI_KeyUp(object sender, KeyEventArgs e)
+        {
+            MusicPlayer.Player.UseMediaKeys(e.KeyCode);
         }
     }
 }

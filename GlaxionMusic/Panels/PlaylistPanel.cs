@@ -8,23 +8,47 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Glaxion.Tools;
+using System.IO;
 
 namespace Glaxion.Music
 {
-    public partial class TrackUserControl : UserControl
+    public partial class PlaylistPanel : UserControl,IPlaylistView
     {
-        public TrackUserControl()
+        public PlaylistPanel()
         {
+            playlistView = new PlaylistView();
             InitializeComponent();
-            trackManager.ItemDrag += TrackManager_ItemDrag;
+            
              playlistChangedColor = Color.Orange;
             _backColor = this.BackColor;
+            //Controller = new PlaylistController(this);
+            playlistView.DoubleClick += PlaylistView_DoubleClick;
+            playlistView.ItemDrag += TrackManager_ItemDrag;
+        }
+
+        
+        public void PlayHoveredItem()
+        {
+            ListViewItem item = playlistView.hoveredItem;
+            if (item != null)
+            {
+                UpdateTracks();
+                MusicPlayer.Player.UpdateMusicPlayer(CurrentList, item.Index);
+                MusicPlayer.Player.Play();
+                item.Selected = false;
+            }
+        }
+
+        private void PlaylistView_DoubleClick(object sender, EventArgs e)
+        {
+            PlayHoveredItem();
         }
 
         public Splitter dockSplitter;
         public Color playlistChangedColor;
         private Color _backColor;
-        
+        public Playlist CurrentList { get; set; }
+
         private void Player_MusicUpdatedEvent(object sender, EventArgs args)
         {
             HideListChangeHighlight();
@@ -32,7 +56,7 @@ namespace Glaxion.Music
         
         private void HideListChangeHighlight()
         {
-            if (trackManager.currentList == MusicPlayer.Player.playlist)
+            if (CurrentList == MusicPlayer.Player.playlist)
             {
                 trackMenuStrip.BackColor = _backColor;
             }
@@ -40,20 +64,19 @@ namespace Glaxion.Music
 
         private void TrackManager_ItemDrag(object sender, ItemDragEventArgs e)
         {
-            if(trackManager.currentList == MusicPlayer.Player.playlist)
+            if (CurrentList == MusicPlayer.Player.playlist)
                 trackMenuStrip.BackColor = playlistChangedColor;
         }
         
         public void CloseDockedPanel()
         {
-            trackManager.ItemDrag -= TrackManager_ItemDrag;
+            playlistView.ItemDrag -= TrackManager_ItemDrag;
             if (dockSplitter != null)
                 dockSplitter.Dispose();
 
             if (MusicPlayer.WinFormApp.dockedTrackManagers.Contains(this))
                 MusicPlayer.WinFormApp.dockedTrackManagers.Remove(this);
-            trackManager.currentList = null;
-            trackManager.Dispose();
+            playlistView.Dispose();
             this.Dispose();
         }
 
@@ -90,43 +113,57 @@ namespace Glaxion.Music
 
         private void saveAndCloseButton_Click(object sender, EventArgs e)
         {
-            trackManager.UpdatePlaylist();
-            trackManager.currentList.Save();
+            UpdateTracks();
+            CurrentList.Save();
             CloseDockedPanel();
         }
 
         private void UpdateAndCloseButton_Click(object sender, EventArgs e)
         {
-            trackManager.UpdatePlaylist();
+            UpdateTracks();
             CloseDockedPanel();
         }
 
         public void UpdatePlaylistTitle()
         {
-            textLabel.Text = trackManager.currentList.name;
+            textLabel.Text = CurrentList.name;
         }
 
         private void TrackUserControl_MouseEnter(object sender, EventArgs e)
         {
-            if (MusicPlayer.WinFormApp != null && MusicPlayer.WinFormApp.musicControl.trackUser != this)
-                MusicPlayer.WinFormApp.musicControl.trackUser = this;
+            if (MusicPlayer.WinFormApp != null && MusicPlayer.WinFormApp.musicControl.CurrentPlaylistPanel != this)
+                MusicPlayer.WinFormApp.musicControl.CurrentPlaylistPanel = this;
         }
 
         private void trackManager_MouseEnter(object sender, EventArgs e)
         {
-            if (MusicPlayer.WinFormApp != null && MusicPlayer.WinFormApp.musicControl.trackUser != this)
-                MusicPlayer.WinFormApp.musicControl.trackUser = this;
+            if (MusicPlayer.WinFormApp != null && MusicPlayer.WinFormApp.musicControl.CurrentPlaylistPanel != this)
+                MusicPlayer.WinFormApp.musicControl.CurrentPlaylistPanel = this;
         }
 
         private void textLabel_Click(object sender, EventArgs e)
         {
-            trackManager.UpdateMusicPlayer();
+            playlistView.UpdateMusicPlayer();
         }
 
         private void TrackUserControl_Load(object sender, EventArgs e)
         {
             MusicPlayer.Player.MusicUpdatedEvent += Player_MusicUpdatedEvent;
-            
+            MusicPlayer.Player.PlayEvent += playlistView.MusicPlayer_PlayEvent;
+        }
+        
+
+        public void DisplayPlaylist()
+        {
+            playlistView.CurrentList = CurrentList;
+            playlistView.DisplayPlaylist();
+            UpdatePlaylistTitle();
+        }
+        
+
+        public void UpdateTracks()
+        {
+            CurrentList.tracks = playlistView.GetTrackItems();
         }
     }
 }

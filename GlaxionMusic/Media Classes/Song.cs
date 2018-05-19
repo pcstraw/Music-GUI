@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using Glaxion.Tools;
 using System.Diagnostics;
 using System.Drawing;
 using TagLib;
-
 
 //id3 info class example
 //https://www.codeproject.com/Articles/17890/Do-Anything-With-ID
@@ -33,12 +31,30 @@ using TagLib;
 //https://github.com/moumar/ruby-mp3info
 //https://stackoverflow.com/questions/13404957/loading-album-art-with-taglib-sharp-and-then-saving-it-to-same-different-file-in/13612644?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
 
-
-
 namespace Glaxion.Music
 {
     public class Song
     {
+        public string path;
+        public string[] genres;
+        public string genre;
+        public string album;
+        public string artist;
+        public string year;
+        public string title;
+        public int trackNo;
+        public uint track;
+        public string folderImage;
+        public Image image;
+        public string name;
+        public string comment;
+        public IPicture[] pictures;
+        public string lyrics;
+        public TagLib.File file;
+        public bool loaded;
+        public bool failed;
+        public static List<string> TagLoadingLog = new List<string>();
+        
         private void Construction()
         {
             title = "Something";
@@ -57,7 +73,7 @@ namespace Glaxion.Music
             Construction();
         }
 
-        public void Reset()
+        private void Reset()
         {
             loaded = false;
             failed = false;
@@ -68,9 +84,8 @@ namespace Glaxion.Music
         {
             byte[] buf = System.IO.File.ReadAllBytes(path);
             if (buf[0] == 0xFF && (buf[1] & 0xF6) > 0xF0 && (buf[2] & 0xF0) != 0xF0)
-            {
                 return true;
-            }
+
             return false;
         }
 
@@ -140,13 +155,14 @@ namespace Glaxion.Music
                     lyrics = file.Tag.Lyrics;
                     pictures = file.Tag.Pictures;
                     title = file.Tag.Title;
+
                     if (string.IsNullOrWhiteSpace(title))
                         title = Path.GetFileNameWithoutExtension(path);
+
                     genres = file.Tag.Genres;
                     if(genres.Count() == 0)
-                    {
                         genres = new string[] { "" };
-                    }
+
                     year = file.Tag.Year.ToString();
                     return loaded = true;
                 }
@@ -155,35 +171,6 @@ namespace Glaxion.Music
                     TagLoadingLog.Add(string.Concat("--> Failed to Get All Tags: \n", e.Message, "\n", path));
                     failed = true;
                     return loaded = false;
-                    /*
-                    try
-                    {
-                        //if(isMP3())
-                        file = TagLib.File.Create(path);
-                        file.GetTag(TagTypes.Id3v2);
-                        album = file.Tag.Album;
-                        artist = file.Tag.FirstAlbumArtist;
-                        track = file.Tag.Track;
-                        lyrics = file.Tag.Lyrics;
-                        pictures = file.Tag.Pictures;
-                        title = file.Tag.Title;
-                        genres = file.Tag.Genres;
-                        year = file.Tag.Year.ToString();
-                        failed = false;
-                        return loaded = true;
-                    }
-                    catch (Exception e2)
-                    {
-                        TagLoadingLog.Add(string.Concat("--> Failed to Get All Tags: \n", path, "\n", e.Message));
-                   
-                        TagLoadingLog.Add(string.Concat("--> Also Failed to Get ID3v2 Tag: \n", path, "\n", e2.Message));
-                        failed = true;
-                        return loaded = false;
-                    }
-                    */
-                    //TagLoadingLog.Add(string.Concat("Failed to Get ID3 Tag: \n", path, "\n", e.Message));
-                    //failed = true;
-                    // return loaded = false;
                 }
             }
             failed = true;
@@ -294,38 +281,6 @@ namespace Glaxion.Music
         {
             file.Tag.Lyrics = text;
         }
-
-        public string path;
-        public string[] genres;
-        public string genre;
-        public string album;
-        public string artist;
-        public string year;
-        public string title;
-        public int trackNo;
-        public uint track;
-        public string folderImage;
-        public Image image;
-        public string name;
-        public string comment;
-        public IPicture[] pictures;
-        public string lyrics;
-        public TagLib.File file;
-        public bool loaded;
-        public bool failed;
-        public static List<string> TagLoadingLog = new List<string>();
-        
-        /*
-        public static Task<TrackInfo> GetInfoAsync(string path)
-        {
-            if (Tracks.ContainsKey(path))
-                return Tracks[path];
-            TrackInfo ti = new TrackInfo(path);
-            ti.ReadID3Info();
-            Tracks.Add(path, ti);
-            return ti;
-        }
-        */
     }
 
     public class TrackInfoManager
@@ -364,11 +319,8 @@ namespace Glaxion.Music
             AddAlbum(info.album);
             AddArtist(info.artist);
             AddYear(info.year);
-            //AddGenre(info.genre);
-            //AddGenreID(info.genreID);
+            AddGenre(info.genre);
             trackInfos.Add(info.path, info);
-            Process p = new Process();
-            
         }
 
         public string AddAlbum(string albumName)

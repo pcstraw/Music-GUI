@@ -384,7 +384,7 @@ namespace Glaxion.Music
         //save all components
         public void Save()
         {
-            if (MusicPlayer.Player.Get && !String.IsNullOrEmpty(MusicPlayer.Player.currentTrackString))
+            if (!String.IsNullOrEmpty(MusicPlayer.Player.currentTrackString))
             {
                 Properties.Settings.Default.LastTrack = MusicPlayer.Player.currentTrackString;
             }
@@ -393,7 +393,7 @@ namespace Glaxion.Music
         
         private void MusicControl_Load(object sender, EventArgs e)
         {
-            if (MusicPlayer.Player.Get)
+            if (MusicPlayer.Player != null)
             {
                 LoadDirectoriesToTree();
                 if (!String.IsNullOrEmpty(Properties.Settings.Default.LastTrack))

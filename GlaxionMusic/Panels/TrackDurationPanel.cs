@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Glaxion.Tools;
-using System.IO;
-using System.Diagnostics;
-using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace Glaxion.Music
 {
@@ -29,16 +20,13 @@ namespace Glaxion.Music
 
         public void Resume()
         {
-            if (MusicPlayer.Player.Get)
+            if (currentTrack == MusicPlayer.Player.currentTrack)
             {
-                if (currentTrack == MusicPlayer.Player.currentTrack)
-                {
-                    MusicPlayer.Player.Resume(MusicPlayer.Player.currentTrackString, MusicPlayer.Player.positionIndex);
-                }
-                else
-                {
-                    MusicPlayer.Player.Play(currentTrack);
-                }
+                MusicPlayer.Player.Resume(MusicPlayer.Player.currentTrackString, MusicPlayer.Player.positionIndex);
+            }
+            else
+            {
+                MusicPlayer.Player.Play(currentTrack);
             }
         }
 
@@ -143,11 +131,8 @@ namespace Glaxion.Music
 
         public void SetTrackPosition()
         {
-            if (MusicPlayer.Player != null)
-            {
-                MusicPlayer.Player.windowsMediaPlayer.controls.currentPosition = gTrackBarMain.Value;
-                startLabel.Text = MusicPlayer.Player.windowsMediaPlayer.controls.currentPositionString;
-            }
+            MusicPlayer.Player.windowsMediaPlayer.controls.currentPosition = gTrackBarMain.Value;
+            startLabel.Text = MusicPlayer.Player.windowsMediaPlayer.controls.currentPositionString;
         }
 
         private void trackBar_Scroll(object sender, EventArgs e)
@@ -157,7 +142,7 @@ namespace Glaxion.Music
         
         private void axWindowsMediaPlayer1_OpenStateChange(object sender, WMPLib.WMPOpenState e)
         {
-            if (MusicPlayer.Player.Get && MusicPlayer.Player.windowsMediaPlayer.openState == WMPLib.WMPOpenState.wmposMediaOpen)
+            if (MusicPlayer.Player.windowsMediaPlayer.openState == WMPLib.WMPOpenState.wmposMediaOpen)
             {
                 startLabel.Text = MusicPlayer.Player.windowsMediaPlayer.controls.currentPositionString;
                 gTrackBarMain.MaxValue = (int)MusicPlayer.Player.trackDuration/100;
@@ -198,9 +183,6 @@ namespace Glaxion.Music
 
         private void resumeButton_Click(object sender, EventArgs e)
         {
-            if (!MusicPlayer.Player.Get)
-                return;
-
             if (MusicPlayer.Player.IsPlaying)
             {
                 Pause();
@@ -226,25 +208,18 @@ namespace Glaxion.Music
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            if (MusicPlayer.Player.Get)
-            {
-                MusicPlayer.Player.NextTrack();
-                // currentTrack = MusicPlayer.Player.currentTrack;
-                if (MusicPlayer.Player.IsPlaying)
-                    resumeButton.BackgroundImage = Properties.Resources.Icons8_Windows_8_Media_Controls_Pause.ToBitmap();
+            MusicPlayer.Player.NextTrack();
+            // currentTrack = MusicPlayer.Player.currentTrack;
+            if (MusicPlayer.Player.IsPlaying)
+                resumeButton.BackgroundImage = Properties.Resources.Icons8_Windows_8_Media_Controls_Pause.ToBitmap();
 
-            }
         }
 
         private void prevButton_Click(object sender, EventArgs e)
         {
-            if (MusicPlayer.Player.Get)
-            {
-                MusicPlayer.Player.PrevTrack();
-                currentTrack = MusicPlayer.Player.currentTrack;
-                resumeButton.BackgroundImage = Properties.Resources.Icons8_Windows_8_Media_Controls_Pause.ToBitmap();
-
-            }
+            MusicPlayer.Player.PrevTrack();
+            currentTrack = MusicPlayer.Player.currentTrack;
+            resumeButton.BackgroundImage = Properties.Resources.Icons8_Windows_8_Media_Controls_Pause.ToBitmap();
         }
         /*
         public void SetPlayIcon()

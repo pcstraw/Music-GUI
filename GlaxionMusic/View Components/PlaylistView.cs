@@ -10,30 +10,37 @@ using System.Windows.Forms;
 
 namespace Glaxion.Music
 {
-    public class TrackManager : ViewBox
+    public class PlaylistView : ViewBox, IPlaylistView
     {
         public void Construction()
         {
             InitializeComponent();
             lastSelectedIndidex = new SelectedIndexCollection(this);
-            if(this.Columns[1] != null)
-            this.Columns[1].Width = 750;
+           // if(this.Columns[1] != null)
+           // this.Columns[1].Width = 100;
+           // ColumnHeader c1 = new ColumnHeader();
+            //c1.Text = "Name";
+           // ColumnHeader c2 = new ColumnHeader();
+           // c2.Text = "Path";
+            //this.Columns.Add(c2);
+            OwnerDraw = true;
+            DrawItem += TrackManager_CustomDraw;
+            DrawColumnHeader += TrackManager_DrawColumnHeader;
+            DragDrop += TrackManager_DragDrop;
+            DragEnter += ListBox_DragEnter;
+            DrawItem += TrackManager_CustomDraw;
+            DrawColumnHeader += TrackManager_DrawColumnHeader;
+            ColumnClick += listbox_ColumnClick;
+            this.Columns[1].Width = 1000;
         }
 
-        public TrackManager()
+        public PlaylistView()
         {
             Construction();
-        }
-
-        public TrackManager(Playlist playList)
-        {
-            Construction();
-            currentList = playList;
         }
         
         public Color prevRightClickedItemForeColor;
         public string currentTrack;
-        public string playlistName;
         public bool autoUpdateTracks;
         public bool autoUpdateMusicPlayer;
         public bool IsDockedPanel;
@@ -43,60 +50,46 @@ namespace Glaxion.Music
         public int lastVisible;
         public string editingProgram;
         ListViewItem unselectItem;
-        ListViewItem doubleClickedItem;
-        ListViewItem contextItem;
         public List<ListViewItem> CopiedList = new List<ListViewItem>();
         List<ListViewItem> contextItems = new List<ListViewItem>();
         public ContextMenuStrip currentListContext;
         SelectedIndexCollection lastSelectedIndidex;
-        //set up the manager
-        public void LoadManager()
-        {
-            // MusicPlayer.Player.SetLastPlaylistTrack();
-            LoadPlaylistIntoView(MusicPlayer.Player.playlist);
-            AssignEventHandlers();
-            autoUpdateTracks = true;
-            autoUpdateMusicPlayer = false;
-        }
-
-        public void AssignEventHandlers()
-        {
-            FindEvent += new FindTrackEventHander(On_FindTrackInTreeView);
-            MusicPlayer.Player.PlayEvent += MusicPlayer_PlayEvent;
-            //UpdatePlaylistEvent += new UpdatePlaytlistHandler(on_Updateplaylist);
-            DragDrop += TrackManager_DragDrop;
-
-            DragEnter += ListBox_DragEnter;
-            DrawItem += TrackManager_CustomDraw;
-            DrawColumnHeader += TrackManager_DrawColumnHeader;
-            // DrawSubItem += TrackManager_DrawSubItem;
-            ColumnClick += listbox_ColumnClick;
-        }
-
+        
         private void TrackManager_DragDrop(object sender, DragEventArgs e)
         {
             ClearLastSelectedDisplay();
         }
 
-        private void TrackManager_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
+        public void Load()
         {
-            e.DrawDefault = true;
-            //e.DrawBackground();
+            MusicPlayer.Player.PlayEvent += MusicPlayer_PlayEvent;
         }
 
-        public void UpdatePlayStateColours()
+        /*
+        public void StoreTopVisibleItem()
+        {
+            controller.CurrentList.lastVisible = FirstVisible() - 1;
+            // Point tp = PointToClient(point);
+            //ListViewItem targetItem = GetItemAt(tp.X, tp.Y);
+            //  tool.Show(visibleIndex);
+        }
+        */
+
+        public void UpdateColours()
         {
             //find the current playing item
             foreach (ListViewItem i in Items)
             {
-                if (i.Index == MusicPlayer.Player.currentTrack)
+                string track_path = i.Tag as string;
+                if (track_path == MusicPlayer.Player.currentTrackString)
                 {
-                    string track_path = i.Tag as string;
-                    if (track_path == MusicPlayer.Player.currentTrackString)
+                    if (CurrentList == MusicPlayer.Player.playlist && i.Index == MusicPlayer.Player.currentTrack)
                     {
                         i.SubItems[0].Tag = 1;
                         continue;
                     }
+                    i.SubItems[0].Tag = 10; //track is playing in another docked panel
+                    continue;
                 }
                 //last played tracks from 0-3 with 0 being the current track
                 else if (i.SubItems[0].Tag != null)
@@ -113,58 +106,23 @@ namespace Glaxion.Music
                                 i.BackColor = this.BackColor;
                             }
                             break;
+                        case 10:
+                            {
+                                i.SubItems[0].Tag = null;
+                                i.BackColor = this.BackColor;
+                            }
+                            break;
                         default:
                             break;
                     }
                 }
             }
-        }
-
-        //load the current playlist into the list box
-        public Playlist LoadIntoView(Playlist list)
-        {
-            if (list == null)
-                return null;
-            currentList = list;
-            list.UpdatePaths();
-            Items.Clear();
-            foreach (string track in list.tracks)
-            {
-                ListViewItem i = AddFileAsItem(track);
-                if (!File.Exists(track))
-                {
-                    i.SubItems[0].Tag = -1;
-                }
-            }
-            currentList = list;
-            return list;
-        }
-
-        private void MusicPlayer_PlayEvent(object sender, EventArgs args)
-        {
-            if (currentList == MusicPlayer.Player.playlist)
-                UpdatePlayStateColours();
-            else
-            {
-                foreach (ListViewItem i in Items)
-                {
-                    string s = i.Tag as string;
-                    if (tool.StringCheck(s))
-                    {
-                        if (s == MusicPlayer.Player.currentTrackString)
-                            i.SubItems[0].Tag = 10; //track is playing in another playlist
-                        else
-                        {
-                            if (i.SubItems[0].Tag != null)
-                            {
-                                i.SubItems[0].Tag = null;
-                                i.BackColor = BackColor;
-                            }
-                        }
-                    }
-                }
-            }
             this.Invalidate();
+        }
+
+        internal void MusicPlayer_PlayEvent(object sender, EventArgs args)
+        {
+            UpdateColours();
         }
 
         protected void listbox_ColumnClick(object sender, ColumnClickEventArgs e)
@@ -192,16 +150,7 @@ namespace Glaxion.Music
                 }
             }
         }
-
-        public void UpdateListView()
-        {
-            Items.Clear();
-            foreach (string s in currentList.tracks)
-            {
-                AddFileAsItem(s);
-            }
-        }
-
+        
         protected override void e_KeyUp(object sender, KeyEventArgs e)
         {
             base.e_KeyUp(sender, e);
@@ -220,30 +169,6 @@ namespace Glaxion.Music
 
         private void TrackManager_CustomDraw(object sender, DrawListViewItemEventArgs e)
         {
-            
-            /*
-            if (e.Item.BackColor != Color.DarkBlue)
-            {
-                if(e.Item.ForeColor == Color.White)
-                    e.Item.ForeColor = Color.Black;
-            }else if(e.Item.ForeColor == Color.Black)
-            {
-                e.Item.ForeColor = Color.White;
-            }
-            */
-            //show last selected item when the control has lost focus
-            /*
-            if (e.Item.SubItems[1].Tag != null)
-            {
-                e.Item.BackColor = Color.DarkBlue;
-                e.Item.ForeColor = Color.White;
-            }else
-            {
-                e.Item.BackColor = ForeColor;
-                e.Item.ForeColor = BackColor;
-            }
-            */
-
             if (e.Item.SubItems[0].Tag != null)
             {
                 int i = (int)e.Item.SubItems[0].Tag;
@@ -269,70 +194,18 @@ namespace Glaxion.Music
             e.DrawBackground();
             //base.OnDrawItem(e);
         }
-
-        public void PlayHoveredNode()
-        {
-            if (hoveredItem == null)
-            {
-                tool.show(1, "Nothing Selected");
-                return;
-            }
-            UpdateCurrentListTracks();
-            hoveredItem.Selected = false;
-            if (!MusicPlayer.Player.PlayPlaylist(currentList, hoveredItem.Index))
-            {
-                MusicPlayer.Player.NextTrack();
-            }
-        }
-
-        private void TrackManager_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            doubleClicked = true;
-            doubleClickedItem = _selectedItem;
-            if (_selectedItem == null)
-                return;
-            string s = _selectedItem.Tag as string;
-            doubleClickedItem.Selected = false;
-        }
-
+        
+        
         public void MoveSelectedTracksToRightClickedItem()
         {
-            if (hoveredItem == null)
-            {
-                tool.Show("null");
-                return;
-            }
             preContextSelection.Reverse();
             foreach (ListViewItem i in preContextSelection)
             {
                 i.Remove();
                 Items.Insert(hoveredItem.Index + 1, i);
                 i.Selected = true;
+                i.BackColor = this.BackColor;
             }
-        }
-
-        public bool LoadPlaylistIntoView(Playlist p)
-        {
-            if (p == null)
-                return false;
-
-            if (currentList != p)
-            {
-                LoadIntoView(p);
-                if (currentList.lastVisible > 0)
-                    EnsureVisible(currentList.lastVisible);
-                UpdatePlayStateColours();
-                return true;
-            }
-            return false;
-        }
-
-        public void GrabContextItems()
-        {
-            contextItems.Clear();
-            contextItem = hoveredItem;
-            foreach (ListViewItem i in SelectedItems)
-                contextItems.Add(i);
         }
 
         public void RemoveSelectedTracks()
@@ -341,11 +214,10 @@ namespace Glaxion.Music
             foreach (ListViewItem item in SelectedItems)
                 item.Remove();
         }
-
+        
         public void UpdateMusicPlayer()
         {
             //load the list view items into the playlist
-            UpdateCurrentListTracks();
             int current_track_index = MusicPlayer.Player.currentTrack;
             //find the item who's first subtag is 1.  this is the currently playing track
             //storing it on the item allows us to track the last played song as the user re-orders the playlist
@@ -366,120 +238,33 @@ namespace Glaxion.Music
                     }
                 }
             }
-            //update the media player with the new song and the new index of the current track
-            MusicPlayer.Player.UpdateMusicPlayer(currentList, current_track_index);
+            CurrentList.tracks = GetTrackItems();
+            MusicPlayer.Player.PlayPlaylist(CurrentList, current_track_index);
         }
 
         //call when changing the playlist name.  This will not save the file, only uipdate the name
         public void UpdatePlaylistName(string name)
         {
-            currentList.UpdateName(name);
-            playlistName = name;
+            CurrentList.UpdateName(name);
         }
-
-        public void Save()
-        {
-            Playlist p = MakePlaylistFromListbox();
-            Playlist t = MusicPlayer.Player.fileLoader.GetPlaylist(p.path, true);
-            t.tracks = p.tracks;
-            if (t != null)
-            {
-                t.SaveTo(t.path);
-            }
-        }
-
-        //what is this used for?
-        public Playlist MakePlaylistFromListbox()
-        {
-            if (currentList == null)
-                return null;
-            UpdatePlaylist();
-            Playlist p = MusicPlayer.Player.fileLoader.GetPlaylist(currentList.path, false);
-            p.name = currentList.name;
-            string dir = Path.GetDirectoryName(currentList.path);
-            p.path = dir + @"\" + p.name + p.ext;
-            return p;
-        }
-
-        public void UpdatePlaylist()
-        {
-            currentList.tracks = GetTracksFromListView();
-        }
-
-        public void SaveTrackBox()
-        {
-            Playlist p = MakePlaylistFromListbox();
-            p.Save();
-        }
-
-        public void SaveAsTrackBox()
-        {
-            Playlist p = MakePlaylistFromListbox();
-            p.SaveAs();
-        }
-
+        
         public void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveTrackBox();
+            CurrentList.Save();
             currentListContext.Close();
         }
 
         public void saveAsMenu_Click(object sender, EventArgs e)
         {
             currentListContext.Close();
-            SaveAsTrackBox();
+            CurrentList.SaveAs();
         }
-
-        public void Resume()
-        {
-            MusicPlayer.Player.Resume(MusicPlayer.Player.currentTrackString, MusicPlayer.Player.positionIndex);
-            currentTrack = MusicPlayer.Player.currentTrackString;
-        }
-
-        public void Pause()
-        {
-            MusicPlayer.Player.Pause();
-        }
-
-        public void Stop()
-        {
-            MusicPlayer.Player.Stop();
-        }
-
-        public void stopToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Stop();
-        }
-
-        public void PlayOrResume()
-        {
-            if (!MusicPlayer.Player.Get)
-                return;
-
-            if (MusicPlayer.Player.IsPlaying)
-            {
-                Pause();
-                return;
-            }
-            if (!MusicPlayer.Player.IsPaused)
-            {
-                PlayHoveredNode();
-                return;
-            }
-            else
-            {
-                Resume();
-                return;
-            }
-        }
-
+        
         public void DropMusicFiles(List<string> files, Point point)
         {
-            //store the current track state
             StoreCurrentState();
             ListViewItem targetItem = GetItemAtPoint(point);
             SelectedItems.Clear();
-            // files.Reverse();
             foreach (string file in files)
             {
                 if (tool.IsAudioFile(file))
@@ -522,37 +307,18 @@ namespace Glaxion.Music
 
         protected override void ViewBox_DragDrop(object sender, DragEventArgs e)
         {
-            /*
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-            {
-
-                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-             // TotalClipboard.CopyFile(files.ToList());
-                //DropMusicFiles(files.ToList(), new Point(e.X, e.Y));
-                //TotalClipboard.Files.Clear();
-                try
-                {
-                    e.Data.SetData(null);
-                }
-                catch { }
-            }
-            */
-
             if (TotalClipboard.Files.Count > 0)
             {
                 SelectedItems.Clear();
                 DropMusicFiles(TotalClipboard.Files, new Point(e.X, e.Y));
                 TotalClipboard.Files.Clear();
                 StoreCurrentState();
-                //  UpdateMusicPlayer();
                 return;
             }
             else
             {
-
                 base.ViewBox_DragDrop(sender, e);
                 StoreCurrentState();
-                //  tool.Show();
                 return;
             }
         }
@@ -561,11 +327,6 @@ namespace Glaxion.Music
         public delegate void FindTrackEventHander(object sender, EventArgs args);
         public event FindTrackEventHander FindEvent;
 
-        //dummy delegate do not delete
-        protected virtual void On_FindTrackInTreeView(object sender, EventArgs e)
-        {
-
-        }
 
         /*
         public void currentListBox_DragOver(object sender, DragEventArgs e)
@@ -576,6 +337,8 @@ namespace Glaxion.Music
 
         public ListViewItem rightClickedItem;
         public ListViewItem leftClickedItem;
+        
+        public Playlist CurrentList { get; set ; }
 
         public void currentListBox_MouseClick(object sender, MouseEventArgs e)
         {
@@ -643,12 +406,7 @@ namespace Glaxion.Music
         {
             OpenVegas();
         }
-
-        public void replayToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MusicPlayer.Player.Replay();
-        }
-
+        
         public void currentListBox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             if (doubleClicked)
@@ -764,55 +522,12 @@ namespace Glaxion.Music
         {
             autoUpdateMusicPlayer = !autoUpdateMusicPlayer;
         }
-
-        public void playToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            PlayHoveredNode();
-        }
-
-        public void quickSaveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SaveTrackBox();
-            currentListContext.Close();
-        }
-
+        
         public void updateFilePathsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             UpdateTrackFilePaths();
         }
-
-        public void pauseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            PlayOrResume();
-        }
-
-        public void nextToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            if (MusicPlayer.Player != null)
-                MusicPlayer.Player.NextTrack();
-        }
-
-        public void prevToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            if (MusicPlayer.Player != null)
-                MusicPlayer.Player.PrevTrack();
-        }
-
-        public void stopToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            if (MusicPlayer.Player != null)
-                MusicPlayer.Player.Stop();
-        }
-
-        public void removeToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            RemoveSelectedTracks();
-        }
-
-        public void removeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            RemoveSelectedTracks();
-        }
+        
 
         public void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -831,34 +546,16 @@ namespace Glaxion.Music
             TotalClipboard.CopyToSystemClipboard(items.ToList());
         }
 
-        public void MoveItem(ListViewItem item, int index, bool move)
-        {
-            if (move)
-            {
-                item.Remove();
-                Items.Insert(index, item);
-                item.Selected = true;
-            }
-            else
-            {
-                item.Selected = false;
-                ListViewItem i = item.Clone() as ListViewItem;
-                Items.Insert(index, i);
-                i.Selected = true;
-            }
-        }
-
         new private void InitializeComponent()
         {
             this.SuspendLayout();
             // 
-            // TrackManager
+            // PlaylistView
             // 
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ForeColor = System.Drawing.Color.Black;
-            this.OwnerDraw = true;
             this.DragOver += new System.Windows.Forms.DragEventHandler(this.TrackManager_DragOver);
-            this.DoubleClick += new System.EventHandler(this.TrackManager_DoubleClick);
+            //this.DoubleClick += new System.EventHandler(this.TrackManager_DoubleClick);
             this.Enter += new System.EventHandler(this.TrackManager_Enter);
             this.Validating += new System.ComponentModel.CancelEventHandler(this.TrackManager_Validating);
             this.ResumeLayout(false);
@@ -879,11 +576,6 @@ namespace Glaxion.Music
             }
         }
 
-        private void TrackManager_DoubleClick(object sender, EventArgs e)
-        {
-            PlayHoveredNode();
-        }
-
         private void TrackManager_DragOver(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.All;
@@ -892,7 +584,6 @@ namespace Glaxion.Music
 
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
                 //DropMusicFiles(files.ToList(), new Point(e.X, e.Y));
-                //  tool.Show();
                 TotalClipboard.Files.Clear();
                 TotalClipboard.Files = files.ToList();
                 try
@@ -931,6 +622,20 @@ namespace Glaxion.Music
         private void TrackManager_Enter(object sender, EventArgs e)
         {
             ClearLastSelectedDisplay();
+        }
+
+        public void DisplayPlaylist()
+        {
+            Items.Clear();
+            foreach (string track in CurrentList.tracks)
+            {
+                ListViewItem i = AddFileAsItem(track);
+                if (!File.Exists(track))
+                {
+                    i.SubItems[0].Tag = -1; //track does not exist
+                }
+            }
+            UpdateColours();
         }
     }
 }
