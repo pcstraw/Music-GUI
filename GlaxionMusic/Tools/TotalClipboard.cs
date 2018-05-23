@@ -163,12 +163,12 @@ namespace Glaxion.Music
             foreach (TreeNode t in tree.SelectedNodes)
             {
                 // tool.Show(t.Tag as string);
-                string s = t.Tag as string;
+                string s = t.Name;
                 if (string.IsNullOrEmpty(s))
                     continue;
                 //List<string> ls = tool.GetAllAudioFiles(t);
                 //foreach (string text in ls)
-                    Files.Add(s);
+                Files.Add(s);
             }
         }
 

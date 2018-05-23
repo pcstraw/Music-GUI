@@ -151,7 +151,6 @@ namespace Glaxion.Music
         private void ID3Control_Load(object sender, EventArgs e)
         {
             //titleEntryBox.BringToFront();
-            
         }
 
         private void updateButton_Click(object sender, EventArgs e)

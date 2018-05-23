@@ -47,17 +47,17 @@ namespace Glaxion.Tools
         public Color foreColor;
         public object tag;
 
-        public ColorScheme(Color col1,Color col2,object t)
+        public ColorScheme(Color ForeColor,Color BackColor,object t)
         {
-            backColor = col1;
-            foreColor = col2;
+            foreColor = ForeColor;
+            backColor = BackColor;
             tag = t;
         }
 
-        public ColorScheme(Color col1, Color col2)
+        public ColorScheme(Color ForeColor, Color BackColor)
         {
-            backColor = col1;
-            foreColor = col2;
+            foreColor = ForeColor;
+            backColor = BackColor;
         }
     }
     
@@ -770,11 +770,24 @@ namespace Glaxion.Tools
             return false;
         }
 
+        public static bool AudioFileCheck(string path)
+        {
+            return true;
+            string ext = Path.GetExtension(path);
+            if (ext == ".wav"
+                    || ext == ".mp3"
+                    || ext == ".wma"
+                    || ext == ".flac"
+                    || ext == ".m4a")
+                return true;
+            return false;
+        }
+
         public static bool IsAudioFile(string path)
         {
             if (!StringCheck(path))
                 return false;
-            if (!File.Exists(path)||!Path.HasExtension(path))
+            if (!Path.HasExtension(path))
                 return false;
             string ext = Path.GetExtension(path);
             if (ext == ".wav"
@@ -975,9 +988,13 @@ namespace Glaxion.Tools
             List<string> fs = new List<string>();
             if (Path.HasExtension(path))
             {
+                if(!File.Exists(path))
+                    return fs;
                 fs.Add(path);
                 return fs;
             }
+            if (!Directory.Exists(path))
+                return fs;
             IEnumerable<string> files =
                 Directory.EnumerateFiles(path, "*.*", option).Where(s => s.EndsWith(".mp3") 
             || s.EndsWith(".flac") 

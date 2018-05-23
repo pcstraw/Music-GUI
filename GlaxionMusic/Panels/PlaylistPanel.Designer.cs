@@ -38,7 +38,8 @@
             this.close_update_toopTip = new System.Windows.Forms.ToolTip(this.components);
             this.close_save_toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.update_music_tooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.playlistView = new Glaxion.Music.PlaylistView();
+            this.tracklistView = new Glaxion.Music.TracklistView();
+            this.updateMusicPlayerButton = new System.Windows.Forms.Button();
             this.trackMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,31 +123,49 @@
             // 
             // playlistView
             // 
-            this.playlistView.AllowDrop = true;
-            this.playlistView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tracklistView.AllowDrop = true;
+            this.tracklistView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.playlistView.BackColor = System.Drawing.Color.LemonChiffon;
-            this.playlistView.ForeColor = System.Drawing.Color.Black;
-            this.playlistView.FullRowSelect = true;
-            this.playlistView.Location = new System.Drawing.Point(0, 29);
-            this.playlistView.Name = "playlistView";
-            this.playlistView.Size = new System.Drawing.Size(310, 308);
-            this.playlistView.TabIndex = 3;
-            this.playlistView.UseCompatibleStateImageBehavior = false;
-            this.playlistView.View = System.Windows.Forms.View.Details;
-            this.playlistView.MouseEnter += new System.EventHandler(this.trackManager_MouseEnter);
+            this.tracklistView.BackColor = System.Drawing.Color.LemonChiffon;
+            this.tracklistView.ForeColor = System.Drawing.Color.Black;
+            this.tracklistView.FullRowSelect = true;
+            this.tracklistView.Location = new System.Drawing.Point(0, 29);
+            this.tracklistView.Name = "playlistView";
+            this.tracklistView.OwnerDraw = true;
+            this.tracklistView.Size = new System.Drawing.Size(310, 308);
+            this.tracklistView.TabIndex = 3;
+            this.tracklistView.UseCompatibleStateImageBehavior = false;
+            this.tracklistView.View = System.Windows.Forms.View.Details;
+            this.tracklistView.MouseEnter += new System.EventHandler(this.trackManager_MouseEnter);
             // 
-            // PlaylistPanelView
+            // updateMusicPlayerButton
+            // 
+            this.updateMusicPlayerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.updateMusicPlayerButton.BackColor = System.Drawing.Color.Blue;
+            this.updateMusicPlayerButton.Enabled = false;
+            this.updateMusicPlayerButton.ForeColor = System.Drawing.Color.White;
+            this.updateMusicPlayerButton.Location = new System.Drawing.Point(189, 0);
+            this.updateMusicPlayerButton.Name = "updateMusicPlayerButton";
+            this.updateMusicPlayerButton.Size = new System.Drawing.Size(25, 23);
+            this.updateMusicPlayerButton.TabIndex = 1;
+            this.updateMusicPlayerButton.Text = "U";
+            this.update_music_tooltip.SetToolTip(this.updateMusicPlayerButton, "Update Music Player");
+            this.updateMusicPlayerButton.UseVisualStyleBackColor = false;
+            this.updateMusicPlayerButton.Visible = false;
+            this.updateMusicPlayerButton.Click += new System.EventHandler(this.saveAndCloseButton_Click);
+            // 
+            // PlaylistPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.playlistView);
+            this.Controls.Add(this.tracklistView);
+            this.Controls.Add(this.updateMusicPlayerButton);
             this.Controls.Add(this.saveAndCloseButton);
             this.Controls.Add(this.updateAndCloseButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.trackMenuStrip);
-            this.Name = "PlaylistPanelView";
+            this.Name = "PlaylistPanel";
             this.Size = new System.Drawing.Size(310, 337);
             this.Load += new System.EventHandler(this.TrackUserControl_Load);
             this.MouseEnter += new System.EventHandler(this.TrackUserControl_MouseEnter);
@@ -161,7 +180,7 @@
 
         private System.Windows.Forms.MenuStrip trackMenuStrip;
         private System.Windows.Forms.Button closeButton;
-        public Glaxion.Music.PlaylistView playlistView;
+        public Glaxion.Music.TracklistView tracklistView;
         private System.Windows.Forms.Button updateAndCloseButton;
         private System.Windows.Forms.Button saveAndCloseButton;
         public System.Windows.Forms.ToolStripMenuItem textLabel;
@@ -169,5 +188,6 @@
         private System.Windows.Forms.ToolTip close_update_toopTip;
         private System.Windows.Forms.ToolTip close_save_toolTip;
         private System.Windows.Forms.ToolTip update_music_tooltip;
+        private System.Windows.Forms.Button updateMusicPlayerButton;
     }
 }

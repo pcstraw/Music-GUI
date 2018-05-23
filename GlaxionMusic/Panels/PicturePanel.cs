@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Glaxion.Tools;
 using System.Diagnostics;
@@ -21,28 +15,22 @@ namespace Glaxion.Music
             imagePath = "";
             PictureChangedEvent += OnPictureChanged;
         }
+        public string imagePath;
+        public bool pictureChanged;
+        Song trackInfo;
+
         public delegate void PictureChangedEventHandler(object sender, EventArgs args);
         public event PictureChangedEventHandler PictureChangedEvent;
         protected void OnPictureChanged(object sender,EventArgs e)
         {
 
         }
-
-        public string imagePath;
-        public bool pictureChanged;
-
+        
         public void SaveInfo()
         {
             if (trackInfo == null)
                 return;
-            /*
-            if (trackInfo.path == MusicPlayer.Player.currentTrackString)
-            {
-                tool.show(5, "Cannot save info while the tarck is playing");
-                return;
-            }
-            */
-            //trackInfo.info.ReadID3v1();
+
             if (pictureChanged)
             {
                 pictureChanged = false;
@@ -51,20 +39,11 @@ namespace Glaxion.Music
             trackInfo.SaveInfo();
         }
 
-        /*
-        public void ShowInfo(string file)
-        {
-            
-        }
-        */
-
         private void PicturePanel_DoubleClick(object sender, EventArgs e)
         {
             string dp = Path.GetDirectoryName(imagePath);
             if (Directory.Exists(dp))
-            {
                 tool.OpenFileDirectory(dp);
-            }
         }
 
         public void SetPicture(Image i)
@@ -79,8 +58,7 @@ namespace Glaxion.Music
             SetDefaultImageAsync();
             return s;
         }
-
-        Song trackInfo;
+        
         private async void SetDefaultImageAsync()
         {
             await trackInfo.LoadAlbumArtAsync();

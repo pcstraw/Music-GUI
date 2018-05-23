@@ -49,7 +49,7 @@
             this.squashBoxControl1.BackPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.squashBoxControl1.BackPanel.Location = new System.Drawing.Point(0, 0);
             this.squashBoxControl1.BackPanel.Name = "backPanel";
-            this.squashBoxControl1.BackPanel.Size = new System.Drawing.Size(583, 281);
+            this.squashBoxControl1.BackPanel.Size = new System.Drawing.Size(583, 343);
             this.squashBoxControl1.BackPanel.TabIndex = 0;
             this.squashBoxControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             // 
@@ -84,7 +84,7 @@
             this.squashBoxControl1.MainSplitContainer.Panel2.Controls.Add(this.picturePanel1);
             this.squashBoxControl1.MainSplitContainer.Panel2MinSize = 0;
             this.squashBoxControl1.MainSplitContainer.Size = new System.Drawing.Size(583, 690);
-            this.squashBoxControl1.MainSplitContainer.SplitterDistance = 281;
+            this.squashBoxControl1.MainSplitContainer.SplitterDistance = 343;
             this.squashBoxControl1.MainSplitContainer.TabIndex = 2;
             this.squashBoxControl1.Name = "squashBoxControl1";
             this.squashBoxControl1.Size = new System.Drawing.Size(583, 728);
@@ -110,7 +110,7 @@
             this.iD3Control1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.iD3Control1.Location = new System.Drawing.Point(0, 0);
             this.iD3Control1.Name = "iD3Control1";
-            this.iD3Control1.Size = new System.Drawing.Size(583, 281);
+            this.iD3Control1.Size = new System.Drawing.Size(583, 343);
             this.iD3Control1.TabIndex = 1;
             // 
             // picturePanel1
@@ -122,7 +122,7 @@
             this.picturePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picturePanel1.Location = new System.Drawing.Point(0, 0);
             this.picturePanel1.Name = "picturePanel1";
-            this.picturePanel1.Size = new System.Drawing.Size(583, 405);
+            this.picturePanel1.Size = new System.Drawing.Size(583, 343);
             this.picturePanel1.TabIndex = 1;
             this.picturePanel1.PictureChangedEvent += new Glaxion.Music.PicturePanel.PictureChangedEventHandler(this.picturePanel1_PictureChangedEvent);
             this.picturePanel1.Click += new System.EventHandler(this.picturePanel1_Click);

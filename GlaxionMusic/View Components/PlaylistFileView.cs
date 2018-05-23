@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Glaxion.Tools;
 using System.IO;
 using System.Windows.Forms;
@@ -12,96 +8,30 @@ using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace Glaxion.Music
 {
-    public class PlaylistFileManager : TreeViewMS
+    public class PlaylistFileView : TreeViewMS, ITreeView
     {
-        public PlaylistFileManager()
+        public PlaylistFileView()
         {
             InitializeComponent();
+            manager = new PlaylistFileManager(this);
+            AllowDrop = true;
+            AssignEventHandlers();
         }
 
-       // List<string> playlistfiles = new List<string>();
-        public ListViewItem hoveredPlaylistItem;
-        public List<string> playlistDir = new List<string>();
-        public Dictionary<string, string> PlaylistFiles = new Dictionary<string, string>();
-        public FileLoader fileLoader;
-
+        // List<string> playlistfiles = new List<string>();
+        public PlaylistFileManager manager;
+        
         private void InitializeComponent()
         {
             this.SuspendLayout();
             // 
-            // PlaylistFileManager
+            // PlaylistFileView
             // 
             this.BackColor = System.Drawing.Color.Bisque;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
-            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.playlistFileView_DragEnter);
-            this.DragLeave += new System.EventHandler(this.playlistFileView_DragLeave);
             this.ResumeLayout(false);
 
-        }
-
-        public void LoadPlaylistDirectories()
-        {
-            Nodes.Clear();
-            PlaylistFiles.Clear();
-            int count = fileLoader.PlaylistDirectories.Count;
-            for (int i = 0;i < count;i++)
-                PopulateTreeFromDirectory(fileLoader.PlaylistDirectories[i]);
-
-            if (Nodes.Count > 0)
-            {
-                foreach(TreeNode t in Nodes)
-                {
-                    if (t.Tag as string == Playlist.FindDefaultDirectory())
-                        t.Expand();
-                }
-            }
-
-            if(fileLoader.PlaylistDirectories.Count > 0)
-                Playlist.DefaultPlaylistDirectory = Playlist.FindDefaultDirectory();
-            CacheNodes();
-        }
-        
-        public void PopulateTreeFromDirectory(string path)
-        {
-            if (!Directory.Exists(path))
-                return;
-            TreeNode tn = LoadDirectoryToNode(path, "*.m3u*");
-            SetTree(tn, searchText);
-        }
-
-        public TreeNode LoadDirectoryToNode(string dir, string fileExtention)
-        {
-            if (!Directory.Exists(dir))
-            {
-                tool.debug("Error in tool.LoadDirectory: ", dir, " Does not exist");
-                return new TreeNode("No Directory: " + dir);
-            }
-            else
-            {
-                string[] files = Directory.GetFiles(dir, fileExtention);
-                string[] dirs = Directory.GetDirectories(dir);
-                PlaylistFiles.Clear();
-                TreeNode rn = new TreeNode(Path.GetFileName(dir));
-                rn.Tag = dir;
-                foreach (string s in dirs)
-                {
-                    TreeNode tn = LoadDirectoryToNode(s, fileExtention);
-                    tn.Tag = s;
-                    if (tn.Nodes.Count > 0)
-                        rn.Nodes.Add(tn);
-                }
-
-                foreach (string f in files)
-                {
-                    TreeNode tn = new TreeNode();
-                    tn.Text = Path.GetFileName(f);
-                    tn.Tag = f;
-                    rn.Nodes.Add(tn);
-                    Playlist p = fileLoader.GetPlaylist(f,true);
-                    PlaylistFiles.Add(f, p.name);
-                }
-                return rn;
-            }
         }
         
         public void OpenFolder(ListViewItem item)
@@ -112,28 +42,6 @@ namespace Glaxion.Music
                 if (p != null && Directory.Exists(Path.GetDirectoryName(p.path)))
                     Process.Start(Path.GetDirectoryName(p.path));
             }
-        }
-        
-        public void SelectDirectory()
-        {
-            List<string> sl = new List<string>();
-            CommonOpenFileDialog cd = new CommonOpenFileDialog();
-            cd.IsFolderPicker = true;
-            cd.Multiselect = true;
-            cd.RestoreDirectory = true;
-            List<string> l = new List<string>();
-            if (cd.ShowDialog() == CommonFileDialogResult.Ok)
-            {
-                foreach (string s in cd.FileNames)
-                    playlistDir.Add(s);
-            }
-        }
-        
-        public void LoadManager()
-        {
-            fileLoader = MusicPlayer.Player.fileLoader;
-            LoadPlaylistDirectories();
-            AssignEventHandlers();
         }
         
         private void playlistFileView_DragEnter(object sender, DragEventArgs e)
@@ -182,52 +90,6 @@ namespace Glaxion.Music
             selectedNode = tool.SelectNode(this);
         }
         
-        public string FindPlaylistDirectory()
-        {
-            string dir = "Null";
-            if (selectedNode != null)
-            {
-                dir = Path.GetDirectoryName(selectedNode.Tag as string);
-                return dir;
-            }
-            else
-            {
-                if (Nodes.Count > 0)
-                {
-                    string d = Nodes[0].Tag as string;
-                    if (Directory.Exists(d))
-                        return d;
-                }
-            }
-            return "Null";
-        }
-        
-        public void DeleteSelectedFiles(bool AllowConfirmation)
-        {
-            bool deleted = false;
-            foreach (TreeNode node in SelectedNodes)
-            {
-                string path = node.Tag as string;
-
-                if (tool.IsPlaylistFile(path) && File.Exists(path))
-                {
-                    if(AllowConfirmation)
-                    { 
-                        bool confirm = tool.askConfirmation(path);
-                        if (!confirm)
-                            continue;
-                    }
-                    File.Delete(path);
-                    string message = string.Concat("file deleted: ", path);
-                    tool.show(1000,message);
-                    tool.debug(message);
-                    deleted = true;
-                }
-            }
-            if(deleted)
-                LoadPlaylistDirectories();
-        }
-        
         public TreeNode GetNodeAtCursorPosition()
         {
             //the hovered over node
@@ -235,29 +97,15 @@ namespace Glaxion.Music
             hoveredNode = GetNodeAt(PointToClient(p));
             return hoveredNode; 
         }
-        
-        public List<string> GetSelectedPlaylists()
-        {
-            List<string> list = new List<string>();
-            foreach (TreeNode node in SelectedNodes)
-            {
-                string s = node.Tag as string;
-                if (tool.IsPlaylistFile(s))
-                    list.Add(s);
-            }
-            return list;
-        }
 
-        private void DuplicatePlaylistFile()
+        public void PopulateTree(List<VNode> tree)
         {
-            if (selectedNode != null)
+            List<TreeNode> nodes = new List<TreeNode>();
+            foreach (VNode n in tree)
             {
-                string path = selectedNode.Tag as string;
-                string s = tool.AppendFileName(path, "+");
-                if (!File.Exists(s))
-                    File.Copy(path, s);
-                LoadPlaylistDirectories();
+                nodes.Add(WinFormUtils.GetTreeNode(n));
             }
+            Populate(nodes);
         }
     }
 }

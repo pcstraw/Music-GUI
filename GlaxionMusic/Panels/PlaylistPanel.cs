@@ -12,24 +12,24 @@ using System.IO;
 
 namespace Glaxion.Music
 {
-    public partial class PlaylistPanel : UserControl,IPlaylistView
+    public partial class PlaylistPanel : UserControl
     {
         public PlaylistPanel()
         {
-            playlistView = new PlaylistView();
+            tracklistView = new TracklistView();
             InitializeComponent();
             
              playlistChangedColor = Color.Orange;
             _backColor = this.BackColor;
             //Controller = new PlaylistController(this);
-            playlistView.DoubleClick += PlaylistView_DoubleClick;
-            playlistView.ItemDrag += TrackManager_ItemDrag;
+            tracklistView.DoubleClick += PlaylistView_DoubleClick;
+            tracklistView.ItemDrag += TrackManager_ItemDrag;
         }
 
         
         public void PlayHoveredItem()
         {
-            ListViewItem item = playlistView.hoveredItem;
+            ListViewItem item = tracklistView.hoveredItem;
             if (item != null)
             {
                 UpdateTracks();
@@ -70,13 +70,13 @@ namespace Glaxion.Music
         
         public void CloseDockedPanel()
         {
-            playlistView.ItemDrag -= TrackManager_ItemDrag;
+            tracklistView.ItemDrag -= TrackManager_ItemDrag;
             if (dockSplitter != null)
                 dockSplitter.Dispose();
 
             if (MusicPlayer.WinFormApp.dockedTrackManagers.Contains(this))
                 MusicPlayer.WinFormApp.dockedTrackManagers.Remove(this);
-            playlistView.Dispose();
+            tracklistView.Dispose();
             this.Dispose();
         }
 
@@ -104,6 +104,13 @@ namespace Glaxion.Music
         private void closeButton_MouseEnter(object sender, EventArgs e)
         {
             closeButton.Visible = true;
+        }
+
+        internal void SetPlaylist(Playlist p)
+        {
+            CurrentList = p;
+            tracklistView.manager.CurrentList = p;
+            UpdatePlaylistTitle();
         }
 
         private void closeButton_MouseLeave(object sender, EventArgs e)
@@ -143,27 +150,19 @@ namespace Glaxion.Music
 
         private void textLabel_Click(object sender, EventArgs e)
         {
-            playlistView.UpdateMusicPlayer();
+            tracklistView.manager.UpdateMusicPlayer();
         }
 
         private void TrackUserControl_Load(object sender, EventArgs e)
         {
             MusicPlayer.Player.MusicUpdatedEvent += Player_MusicUpdatedEvent;
-            MusicPlayer.Player.PlayEvent += playlistView.MusicPlayer_PlayEvent;
+            MusicPlayer.Player.PlayEvent += tracklistView.MusicPlayer_PlayEvent;
         }
         
-
-        public void DisplayPlaylist()
-        {
-            playlistView.CurrentList = CurrentList;
-            playlistView.DisplayPlaylist();
-            UpdatePlaylistTitle();
-        }
-        
-
         public void UpdateTracks()
         {
-            CurrentList.tracks = playlistView.GetTrackItems();
+            CurrentList.tracks = tracklistView.GetTrackItems();
         }
+        
     }
 }

@@ -99,6 +99,8 @@
             this.playToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.iD3TagToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fileContainer = new System.Windows.Forms.SplitContainer();
+            this.squashBoxControl1 = new Glaxion.Music.SquashBoxControl();
+            this.fileViewLabel = new System.Windows.Forms.Label();
             this.mainToolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.addDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -117,8 +119,6 @@
             this.setSongInfoFontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.playlistControlContainer = new System.Windows.Forms.SplitContainer();
-            this.squashBoxControl1 = new Glaxion.Music.SquashBoxControl();
-            this.fileViewLabel = new System.Windows.Forms.Label();
             this.songControl1 = new Glaxion.Music.SongControl();
             this.playbackTrackbarControl = new Glaxion.Music.PlaybackTrackbarControl();
             this.playbackVolumeControl = new Glaxion.Music.PlaybackVolumeControl();
@@ -131,14 +131,14 @@
             this.fileContainer.Panel1.SuspendLayout();
             this.fileContainer.Panel2.SuspendLayout();
             this.fileContainer.SuspendLayout();
-            this.mainToolStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playlistControlContainer)).BeginInit();
-            this.playlistControlContainer.Panel2.SuspendLayout();
-            this.playlistControlContainer.SuspendLayout();
             this.squashBoxControl1.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.squashBoxControl1.MainSplitContainer)).BeginInit();
             this.squashBoxControl1.MainSplitContainer.SuspendLayout();
             this.squashBoxControl1.SuspendLayout();
+            this.mainToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playlistControlContainer)).BeginInit();
+            this.playlistControlContainer.Panel2.SuspendLayout();
+            this.playlistControlContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // playlistFileContext
@@ -209,7 +209,7 @@
             this.playlistContext_folder_button,
             this.playlistContext_rename_button});
             this.playlistContext.Name = "playlistContext";
-            this.playlistContext.Size = new System.Drawing.Size(118, 136);
+            this.playlistContext.Size = new System.Drawing.Size(181, 158);
             this.playlistContext.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.playlistContext_ItemClicked);
             // 
             // playlistContext_dock_button
@@ -217,7 +217,7 @@
             this.playlistContext_dock_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playlistContext_dockItem_inAppItem});
             this.playlistContext_dock_button.Name = "playlistContext_dock_button";
-            this.playlistContext_dock_button.Size = new System.Drawing.Size(117, 22);
+            this.playlistContext_dock_button.Size = new System.Drawing.Size(180, 22);
             this.playlistContext_dock_button.Text = "Open";
             this.playlistContext_dock_button.Click += new System.EventHandler(this.playlistContext_dockItem_Click);
             // 
@@ -233,7 +233,7 @@
             this.playlistContext_new_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playlistContext_newItem_inAppItem});
             this.playlistContext_new_button.Name = "playlistContext_new_button";
-            this.playlistContext_new_button.Size = new System.Drawing.Size(117, 22);
+            this.playlistContext_new_button.Size = new System.Drawing.Size(180, 22);
             this.playlistContext_new_button.Text = "New";
             this.playlistContext_new_button.Click += new System.EventHandler(this.playlistContext_newItem_Click);
             // 
@@ -249,7 +249,7 @@
             this.playlistContext_remove_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playlistContext_delete_button});
             this.playlistContext_remove_button.Name = "playlistContext_remove_button";
-            this.playlistContext_remove_button.Size = new System.Drawing.Size(117, 22);
+            this.playlistContext_remove_button.Size = new System.Drawing.Size(180, 22);
             this.playlistContext_remove_button.Text = "Remove";
             this.playlistContext_remove_button.Click += new System.EventHandler(this.playlistContext_removeItem_Click);
             // 
@@ -263,14 +263,14 @@
             // playlistContext_add_button
             // 
             this.playlistContext_add_button.Name = "playlistContext_add_button";
-            this.playlistContext_add_button.Size = new System.Drawing.Size(117, 22);
+            this.playlistContext_add_button.Size = new System.Drawing.Size(180, 22);
             this.playlistContext_add_button.Text = "Add";
             this.playlistContext_add_button.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // playlistContext_folder_button
             // 
             this.playlistContext_folder_button.Name = "playlistContext_folder_button";
-            this.playlistContext_folder_button.Size = new System.Drawing.Size(117, 22);
+            this.playlistContext_folder_button.Size = new System.Drawing.Size(180, 22);
             this.playlistContext_folder_button.Text = "Folder";
             this.playlistContext_folder_button.Click += new System.EventHandler(this.folderToolStripMenuItem3_Click);
             // 
@@ -279,8 +279,9 @@
             this.playlistContext_rename_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.renameContextTextBox});
             this.playlistContext_rename_button.Name = "playlistContext_rename_button";
-            this.playlistContext_rename_button.Size = new System.Drawing.Size(117, 22);
+            this.playlistContext_rename_button.Size = new System.Drawing.Size(180, 22);
             this.playlistContext_rename_button.Text = "Rename";
+            this.playlistContext_rename_button.DropDownOpening += new System.EventHandler(this.playlistContext_rename_button_DropDownOpening);
             this.playlistContext_rename_button.Click += new System.EventHandler(this.renameToolStripMenuItem_Click);
             // 
             // renameContextTextBox
@@ -722,6 +723,66 @@
             this.fileContainer.SplitterDistance = 288;
             this.fileContainer.TabIndex = 0;
             // 
+            // squashBoxControl1
+            // 
+            // 
+            // 
+            // 
+            this.squashBoxControl1.BackPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.squashBoxControl1.BackPanel.Location = new System.Drawing.Point(0, 0);
+            this.squashBoxControl1.BackPanel.Name = "backPanel";
+            this.squashBoxControl1.BackPanel.Size = new System.Drawing.Size(288, 90);
+            this.squashBoxControl1.BackPanel.TabIndex = 0;
+            this.squashBoxControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            // 
+            // squashBoxControl1.Panel
+            // 
+            this.squashBoxControl1.TopPanel.BackColor = System.Drawing.Color.Silver;
+            this.squashBoxControl1.TopPanel.Controls.Add(this.fileViewLabel);
+            this.squashBoxControl1.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.squashBoxControl1.TopPanel.Location = new System.Drawing.Point(0, 0);
+            this.squashBoxControl1.TopPanel.Name = "Panel";
+            this.squashBoxControl1.TopPanel.Size = new System.Drawing.Size(288, 38);
+            this.squashBoxControl1.TopPanel.TabIndex = 0;
+            this.squashBoxControl1.TopPanel.Click += new System.EventHandler(this.squashBoxControl1_TopPanel_Click_1);
+            this.squashBoxControl1.Location = new System.Drawing.Point(0, 28);
+            // 
+            // squashBoxControl1.SplitContainer
+            // 
+            this.squashBoxControl1.MainSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.squashBoxControl1.MainSplitContainer.Location = new System.Drawing.Point(0, 38);
+            this.squashBoxControl1.MainSplitContainer.Name = "SplitContainer";
+            this.squashBoxControl1.MainSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // squashBoxControl1.SplitContainer.Panel1
+            // 
+            this.squashBoxControl1.MainSplitContainer.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.squashBoxControl1.MainSplitContainer.Panel1MinSize = 0;
+            // 
+            // squashBoxControl1.SplitContainer.Panel2
+            // 
+            this.squashBoxControl1.MainSplitContainer.Panel2.BackColor = System.Drawing.Color.Gray;
+            this.squashBoxControl1.MainSplitContainer.Panel2MinSize = 0;
+            this.squashBoxControl1.MainSplitContainer.Size = new System.Drawing.Size(288, 362);
+            this.squashBoxControl1.MainSplitContainer.SplitterDistance = 90;
+            this.squashBoxControl1.MainSplitContainer.TabIndex = 2;
+            this.squashBoxControl1.Name = "squashBoxControl1";
+            this.squashBoxControl1.Size = new System.Drawing.Size(288, 400);
+            this.squashBoxControl1.TabIndex = 3;
+            this.squashBoxControl1.OnSwapEvent += new Glaxion.Music.SquashBoxControl.OnSwapEventHandler(this.squashBoxControl1_OnSwapEvent);
+            this.squashBoxControl1.Load += new System.EventHandler(this.squashBoxControl1_Load);
+            // 
+            // fileViewLabel
+            // 
+            this.fileViewLabel.Font = new System.Drawing.Font("OCR A Extended", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileViewLabel.ForeColor = System.Drawing.Color.Black;
+            this.fileViewLabel.Location = new System.Drawing.Point(3, 0);
+            this.fileViewLabel.Name = "fileViewLabel";
+            this.fileViewLabel.Size = new System.Drawing.Size(283, 39);
+            this.fileViewLabel.TabIndex = 0;
+            this.fileViewLabel.Text = "See Music Files";
+            this.fileViewLabel.Click += new System.EventHandler(this.fileViewLabel_Click);
+            // 
             // mainToolStrip
             // 
             this.mainToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -885,7 +946,7 @@
             // 
             // playlistControlContainer.Panel1
             // 
-            this.playlistControlContainer.Panel1.BackColor = System.Drawing.Color.PowderBlue;
+            this.playlistControlContainer.Panel1.BackColor = System.Drawing.Color.LightBlue;
             // 
             // playlistControlContainer.Panel2
             // 
@@ -893,66 +954,6 @@
             this.playlistControlContainer.Size = new System.Drawing.Size(881, 428);
             this.playlistControlContainer.SplitterDistance = 174;
             this.playlistControlContainer.TabIndex = 0;
-            // 
-            // squashBoxControl1
-            // 
-            // 
-            // 
-            // 
-            this.squashBoxControl1.BackPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.squashBoxControl1.BackPanel.Location = new System.Drawing.Point(0, 0);
-            this.squashBoxControl1.BackPanel.Name = "backPanel";
-            this.squashBoxControl1.BackPanel.Size = new System.Drawing.Size(288, 90);
-            this.squashBoxControl1.BackPanel.TabIndex = 0;
-            this.squashBoxControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            // 
-            // squashBoxControl1.Panel
-            // 
-            this.squashBoxControl1.TopPanel.BackColor = System.Drawing.Color.Silver;
-            this.squashBoxControl1.TopPanel.Controls.Add(this.fileViewLabel);
-            this.squashBoxControl1.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.squashBoxControl1.TopPanel.Location = new System.Drawing.Point(0, 0);
-            this.squashBoxControl1.TopPanel.Name = "Panel";
-            this.squashBoxControl1.TopPanel.Size = new System.Drawing.Size(288, 38);
-            this.squashBoxControl1.TopPanel.TabIndex = 0;
-            this.squashBoxControl1.TopPanel.Click += new System.EventHandler(this.squashBoxControl1_TopPanel_Click_1);
-            this.squashBoxControl1.Location = new System.Drawing.Point(0, 28);
-            // 
-            // squashBoxControl1.SplitContainer
-            // 
-            this.squashBoxControl1.MainSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.squashBoxControl1.MainSplitContainer.Location = new System.Drawing.Point(0, 38);
-            this.squashBoxControl1.MainSplitContainer.Name = "SplitContainer";
-            this.squashBoxControl1.MainSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // squashBoxControl1.SplitContainer.Panel1
-            // 
-            this.squashBoxControl1.MainSplitContainer.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.squashBoxControl1.MainSplitContainer.Panel1MinSize = 0;
-            // 
-            // squashBoxControl1.SplitContainer.Panel2
-            // 
-            this.squashBoxControl1.MainSplitContainer.Panel2.BackColor = System.Drawing.Color.Gray;
-            this.squashBoxControl1.MainSplitContainer.Panel2MinSize = 0;
-            this.squashBoxControl1.MainSplitContainer.Size = new System.Drawing.Size(288, 362);
-            this.squashBoxControl1.MainSplitContainer.SplitterDistance = 90;
-            this.squashBoxControl1.MainSplitContainer.TabIndex = 2;
-            this.squashBoxControl1.Name = "squashBoxControl1";
-            this.squashBoxControl1.Size = new System.Drawing.Size(288, 400);
-            this.squashBoxControl1.TabIndex = 3;
-            this.squashBoxControl1.OnSwapEvent += new Glaxion.Music.SquashBoxControl.OnSwapEventHandler(this.squashBoxControl1_OnSwapEvent);
-            this.squashBoxControl1.Load += new System.EventHandler(this.squashBoxControl1_Load);
-            // 
-            // fileViewLabel
-            // 
-            this.fileViewLabel.Font = new System.Drawing.Font("OCR A Extended", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fileViewLabel.ForeColor = System.Drawing.Color.Black;
-            this.fileViewLabel.Location = new System.Drawing.Point(3, 0);
-            this.fileViewLabel.Name = "fileViewLabel";
-            this.fileViewLabel.Size = new System.Drawing.Size(283, 39);
-            this.fileViewLabel.TabIndex = 0;
-            this.fileViewLabel.Text = "See Music Files";
-            this.fileViewLabel.Click += new System.EventHandler(this.fileViewLabel_Click);
             // 
             // songControl1
             // 
@@ -1028,15 +1029,15 @@
             this.fileContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fileContainer)).EndInit();
             this.fileContainer.ResumeLayout(false);
+            this.squashBoxControl1.TopPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.squashBoxControl1.MainSplitContainer)).EndInit();
+            this.squashBoxControl1.MainSplitContainer.ResumeLayout(false);
+            this.squashBoxControl1.ResumeLayout(false);
             this.mainToolStrip.ResumeLayout(false);
             this.mainToolStrip.PerformLayout();
             this.playlistControlContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.playlistControlContainer)).EndInit();
             this.playlistControlContainer.ResumeLayout(false);
-            this.squashBoxControl1.TopPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.squashBoxControl1.MainSplitContainer)).EndInit();
-            this.squashBoxControl1.MainSplitContainer.ResumeLayout(false);
-            this.squashBoxControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

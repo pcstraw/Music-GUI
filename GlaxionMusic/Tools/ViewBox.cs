@@ -13,7 +13,7 @@ using item_ = System.Windows.Forms.ListViewItem;
 
 namespace Glaxion.Music
 {
-    public class ViewBox : System.Windows.Forms.ListView
+    public class EnhancedListView : System.Windows.Forms.ListView
     {
 
         [DllImport("user32")]
@@ -97,13 +97,45 @@ namespace Glaxion.Music
             DragLeave += e_DragLeave;
         }
 
+
+        public VItem GetVListItem(ListViewItem item)
+        {
+            VItem v_item = new VItem();
+            v_item.Columns.Add(item.SubItems[0].Text);
+            v_item.Columns.Add(item.SubItems[1].Text);
+            v_item.SetColors(new ColorScheme(ForeColor, BackColor));
+            v_item.Checked = item.Checked;
+            v_item.Selected = item.Selected;
+            v_item.Tag = item.Tag;
+            return v_item;
+        }
+
+        public void RefreshList(List<VItem> VItems)
+        {
+            Items.Clear();
+            SelectedItems.Clear();
+            foreach (VItem i in VItems)
+            {
+                ListViewItem item = new ListViewItem();
+                item.SubItems[0].Text = i.Columns[0];
+                item.SubItems.Add(new ListViewItem.ListViewSubItem());
+                item.SubItems[1].Text = i.Columns[1];
+                item.Checked = i.Checked;
+                item.Selected = i.Selected;
+                item.BackColor = i.CurrentColor.backColor;
+                item.ForeColor = i.CurrentColor.foreColor;
+                item.Tag = i.Tag;
+                Items.Add(item);
+            }
+        }
+
         public void InvertSelection()
         {
             foreach (item_ i in Items)
                 i.Selected = !i.Selected;
         }
 
-        public ViewBox()
+        public EnhancedListView()
         {
             Construction();
         }
@@ -180,6 +212,7 @@ namespace Glaxion.Music
 
         public void RestoreLastState()
         {
+            tool.show(3, "Implement proper undo/redo");
             if (states.Count == 0)
                 return;
             stateindex -= 1;
@@ -191,6 +224,7 @@ namespace Glaxion.Music
 
         public void RestoreNextState()
         {
+            tool.show(3, "Implement proper undo/redo");
             if (states.Count == 0)
                 return;
 
@@ -351,15 +385,17 @@ namespace Glaxion.Music
             i.SubItems[0].Text = Path.GetFileNameWithoutExtension(s);
             i.SubItems.Add(new ListViewItem.ListViewSubItem());
             i.SubItems[1].Text = s;
+            i.Name = s;
             i.Tag = s;
             return i;
         }
-       
+        /*
         public void AddItem(ListViewItem item)
         {
             this.Items.Add(item);
         //    BoxChanged(this, EventArgs.Empty);
         }
+        */
 
         public void InsertItem(int index, ListViewItem item)
         {
@@ -411,7 +447,7 @@ namespace Glaxion.Music
             return false;
         }
         
-        public void CopyFrom(ViewBox listBox)
+        public void CopyFrom(EnhancedListView listBox)
         {
             if (listBox == null)
                 return;
@@ -533,7 +569,7 @@ namespace Glaxion.Music
             }
         }
         
-        public void CacheLastSelectedIndices(ViewBox box)
+        public void CacheLastSelectedIndices(EnhancedListView box)
         {
             lastSelectedIndices.Clear();
             foreach (int i in box.SelectedIndices)
@@ -650,6 +686,8 @@ namespace Glaxion.Music
                 {
                     foreach (ListViewItem item in SelectedItems)
                         TotalClipboard.Add(item.SubItems[1].Text);
+
+                   // TotalClipboard.Files.Reverse();
                 }
             }
         }
@@ -718,6 +756,8 @@ namespace Glaxion.Music
         {
             if (e.Button == MouseButtons.Left)
             {
+                foreach (ListViewItem i in preContextSelection)
+                    i.BackColor = this.BackColor;
                 preContextSelection.Clear();
                 foreach (ListViewItem i in SelectedItems)
                     preContextSelection.Add(i);

@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Glaxion.Tools;
-using System.Collections;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Diagnostics;
 

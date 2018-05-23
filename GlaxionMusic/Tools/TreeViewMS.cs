@@ -37,7 +37,20 @@ namespace Glaxion.Music
             m_coll = new ArrayList();
             AllowDrop = true;
             FileColor = Color.LightYellow;
-            DirectoryColor = this.ForeColor;
+            DirectoryColor = ForeColor;
+            DragLeave += TreeViewMS_DragLeave;
+            DragEnter += TreeViewMS_DragEnter;
+        }
+
+        private void TreeViewMS_DragEnter(object sender, DragEventArgs e)
+        {
+            tool.AllowDragEffect(e);
+        }
+
+        private void TreeViewMS_DragLeave(object sender, EventArgs e)
+        {
+            TotalClipboard.CopyTree(this);
+           //otalClipboard.Files.Reverse();
         }
 
         protected override void OnHandleCreated(EventArgs e)
@@ -65,6 +78,8 @@ namespace Glaxion.Music
             return panel;
         }
 
+
+
         //gets the colour from whatever we assigned to panel
         public void UpdateBackColor()
         {
@@ -80,34 +95,40 @@ namespace Glaxion.Music
             return selectedNode;
         }
        
+        //dep
+        /*
         public void SetTree(List<TreeNode> nodes, string searchText)
         {
-            PopulateTree(nodes);
-            if (tool.StringCheck(searchText))
-                SearchForText(searchText);
+            Populate(nodes);
+            //if (tool.StringCheck(searchText))
+           //     SearchForText(searchText);
         }
         
+        //dep
         public void SetTree(TreeNode node, string searchText)
         {
             AddToTree(node);
-            if (tool.StringCheck(searchText))
-                SearchForText(searchText);
+           // if (tool.StringCheck(searchText))
+           //     SearchForText(searchText);
         }
-        
+        */
+        /*
         public void CacheNodes()
         {
             cachedNodes.Clear();
             cachedNodes = new List<TreeNode>(CopyTree());
         }
-        
+        */
+        //dep
         public void AddToTree(TreeNode node)
         {
             if (node == null)
                 return;
             Nodes.Add(node); //should thiss be a copy function?
         }
+        
 
-        public void PopulateTree(List<TreeNode> nodes)
+        public void Populate(List<TreeNode> nodes)
         {
             if (nodes == null)
                 return;
@@ -124,7 +145,8 @@ namespace Glaxion.Music
                 Nodes.Add(nodes[i]);
             }
         }
-        public void PopulateTree(TreeNodeCollection nodes)
+
+        public void Populate(TreeNodeCollection nodes)
         {
             if (nodes.Count < 1)
                 return;
@@ -148,11 +170,13 @@ namespace Glaxion.Music
             TreeNode n = new TreeNode();
             n.Text = node.Text;
             n.Tag = node.Tag;
+            n.Name = node.Name;
             n.BackColor = node.BackColor;
             n.ForeColor = node.ForeColor;
             return n;
         }
-
+        //dep?
+        /*
         public void SearchTree(string text, List<TreeNode> nodes, List<TreeNode> results)
         {
             foreach (TreeNode t in nodes)
@@ -164,7 +188,9 @@ namespace Glaxion.Music
                 SearchTree(text, t.Nodes, results);
             }
         }
-        
+        */
+        //dep?
+        /*
         public void SearchTree(string text,TreeNodeCollection nodes, List<TreeNode> results)
         {
             foreach (TreeNode t in nodes)
@@ -176,14 +202,16 @@ namespace Glaxion.Music
                 SearchTree(text, t.Nodes, results);
             }
         }
-
+        */
+        /*
         public void SearchForText(string text)
         {
+            //if we send in null then repopulate the default tree
             if (string.IsNullOrEmpty(text))
             {
                 if (!_useCahcedNodes)
                 {
-                    PopulateTree(cachedNodes);
+                    Populate(cachedNodes);
                     _useCahcedNodes = true;
                     //TODO: restore last opened nodes
                     if (Nodes.Count > 0)
@@ -194,15 +222,15 @@ namespace Glaxion.Music
                 return;
             }
             List<TreeNode> results = new List<TreeNode>();
-            SearchTree(text,cachedNodes,results);
+            SearchTree(text, cachedNodes, results);
             if (results.Count > 0)
             {
-                PopulateTree(results);
+                Populate(results);
                 _useCahcedNodes = false;
             }
         }
-
-        //Not being used.  Check if they woprk
+        */
+        //Not being used.  Check if they work
         public TreeNode FindFileByName(string name, TreeNodeCollection nodes)
         {
             foreach (TreeNode node in nodes)
@@ -216,9 +244,8 @@ namespace Glaxion.Music
                 //   continue;
                 string n = Path.GetFileNameWithoutExtension(node.Text);
                 if (name == n)
-                {
                     return node;
-                }
+
                 if (node.Nodes.Count > 0)
                 {
                     TreeNode tn = FindFileByName(name, node.Nodes);
@@ -228,18 +255,18 @@ namespace Glaxion.Music
             }
             return null;
         }
-
+        //dep
         public TreeNode FindFileByPath(string path, TreeNodeCollection nodes)
         {
             foreach (TreeNode node in nodes)
             {
-                if (!tool.StringCheck(node.Tag as string))
+                string n = node.Name;
+                //tool.show(2, n);
+                if (string.IsNullOrEmpty(n))
                     continue;
-                string n = Path.GetFileNameWithoutExtension(node.Tag as string);
                 if (path == n)
-                {
                     return node;
-                }
+
                 if (node.Nodes.Count > 0)
                 {
                     TreeNode tn = FindFileByPath(path, node.Nodes);
@@ -263,22 +290,7 @@ namespace Glaxion.Music
             {
                 if (SelectedNodes.Contains(tn))
                 {
-                    //tn.BackColor = tn.TreeView.BackColor;
-                    //tn.ForeColor = DirectoryColor;
-                    if (tn.Tag != null && tn.Tag is string)
-                    {
-                        //this check should be moved to the musicFileManager class
-                        bool isDir = (File.GetAttributes(tn.Tag as string) & FileAttributes.Directory)
-                                            == FileAttributes.Directory;
-                        if (!isDir)
-                        {
-                            tn.ForeColor = FileColor;
-                        }
-                        else
-                        {
-                            tn.ForeColor = DirectoryColor;
-                        }
-                    }
+                   tn.ForeColor = GetFileColor(tn.Name);
                 }
             }
         }
@@ -412,7 +424,6 @@ namespace Glaxion.Music
                     }
 
                     m_coll.AddRange(myQueue);
-
                     paintSelectedNodes();
                     m_firstNode = e.Node; // let us chain several SHIFTs if we like it
                 } // end if m_bShift
@@ -456,7 +467,6 @@ namespace Glaxion.Music
         public void RemovePaintFromNodes(Color back, Color fore)
         {
             if (m_coll.Count == 0) return;
-
             TreeNode n0 = (TreeNode)m_coll[0];
             // Color back = n0.TreeView.BackColor;
             // Color fore = n0.TreeView.ForeColor;
@@ -477,12 +487,10 @@ namespace Glaxion.Music
             this.LineColor = System.Drawing.Color.Black;
             this.NodeMouseHover += new System.Windows.Forms.TreeNodeMouseHoverEventHandler(this.TreeViewMS_NodeMouseHover);
             this.ResumeLayout(false);
-
         }
         
         public virtual void TreeViewMS_NodeMouseHover(object sender, TreeNodeMouseHoverEventArgs e)
         {
-           
             hoveredNode = e.Node;
         }
 
@@ -491,21 +499,7 @@ namespace Glaxion.Music
             if (m_coll.Count == 0) return;
 
             TreeNode n0 = (TreeNode)m_coll[0];
-            Color fore = ForeColor;
-            
-            if (n0.Tag != null && n0.Tag is string && File.Exists(n0.Tag as string))
-            {
-                bool isDir = (File.GetAttributes(n0.Tag as string) & FileAttributes.Directory)
-                                    == FileAttributes.Directory;
-                if (!isDir)
-                {
-                    fore = FileColor;
-                }
-                else
-                {
-                    fore = DirectoryColor;
-                }
-            }
+            Color fore = GetFileColor(n0.Name);
             
             Color back = this.BackColor;
             foreach (TreeNode n in m_coll)
@@ -513,6 +507,18 @@ namespace Glaxion.Music
                 n.BackColor = back;
                 n.ForeColor = fore;
             }
+        }
+
+        private Color GetFileColor(string name)
+        {
+            Color fore = FileColor;
+            //bool isDir = (File.GetAttributes(name) & FileAttributes.Directory)
+            //                    == FileAttributes.Directory;
+            bool isDir = Directory.Exists(name);
+            if (isDir)
+                fore = ForeColor;
+
+            return fore;
         }
     }
 }

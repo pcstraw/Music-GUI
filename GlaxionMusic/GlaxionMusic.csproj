@@ -76,6 +76,7 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MusicFileManager.cs" />
     <Compile Include="Panels\SquasherControlDesigner.cs" />
     <Compile Include="Media Classes\Album.cs" />
     <Compile Include="Panels\EntryPanel.cs">
@@ -85,7 +86,9 @@
       <DependentUpon>EntryPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Media Classes\FileLoader.cs" />
+    <Compile Include="PlaylistFileManager.cs" />
     <Compile Include="PlaylistInterface.cs" />
+    <Compile Include="PlaylistManager.cs" />
     <Compile Include="Tools\FileOrFolderDialog.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -107,6 +110,7 @@
     <Compile Include="Panels\ListGUI.Designer.cs">
       <DependentUpon>ListGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="TrackManager.cs" />
     <Compile Include="View Components\MusicControl.cs" />
     <Compile Include="MusicControlGUI.cs">
       <SubType>Form</SubType>
@@ -165,7 +169,7 @@
       <DependentUpon>SquashBoxUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\Tool.cs" />
-    <Compile Include="View Components\PlaylistView.cs">
+    <Compile Include="View Components\TracklistView.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Panels\PlaylistPanel.cs">
@@ -204,6 +208,8 @@
     <Compile Include="Tools\TreeViewMS.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="VirtualUI.cs" />
+    <Compile Include="WinFormUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Panels\EntryPanel.resx">
@@ -245,8 +251,8 @@
     <EmbeddedResource Include="Panels\SquashBoxUserControl.resx">
       <DependentUpon>SquashBoxUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View Components\PlaylistView.resx">
-      <DependentUpon>PlaylistView.cs</DependentUpon>
+    <EmbeddedResource Include="View Components\TracklistView.resx">
+      <DependentUpon>TracklistView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Panels\PlaylistPanel.resx">
       <DependentUpon>PlaylistPanel.cs</DependentUpon>
@@ -292,6 +298,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Icons8-Windows-8-Media-Controls-Pause.ico" />
+    <EmbeddedResource Include="Resources\Exo Expanded\Exo2-RegularExpanded.otf" />
+    <None Include="Resources\exo-expanded.zip" />
     <None Include="Resources\music_gui_logo.png" />
     <Resource Include="Resources\_86423-2001.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

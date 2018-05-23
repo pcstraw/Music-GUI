@@ -221,12 +221,6 @@ namespace Glaxion.Music
             currentTrack = MusicPlayer.Player.currentTrack;
             resumeButton.BackgroundImage = Properties.Resources.Icons8_Windows_8_Media_Controls_Pause.ToBitmap();
         }
-        /*
-        public void SetPlayIcon()
-        {
-            resumeButton.BackgroundImage = Properties.Resources.media_play_pause_resume;
-        }
-        */
 
         private void stopButton_Click(object sender, EventArgs e)
         {
@@ -237,11 +231,6 @@ namespace Glaxion.Music
         private void fileButton_Click(object sender, EventArgs e)
         {
             tool.OpenFileDirectory(MusicPlayer.Player.currentTrackString);
-        }
-
-        private void loopCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void gTrackBarMain_MouseUp(object sender, MouseEventArgs e)
