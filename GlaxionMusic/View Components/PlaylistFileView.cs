@@ -30,8 +30,8 @@ namespace Glaxion.Music
             this.BackColor = System.Drawing.Color.Bisque;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.PlaylistFileView_DragDrop);
             this.ResumeLayout(false);
-
         }
         
         public void OpenFolder(ListViewItem item)
@@ -70,19 +70,29 @@ namespace Glaxion.Music
         {
             DoDragDrop(sender, DragDropEffects.Copy);
         }
-        
+        //Go to TreeViewMS DragLeave
+        /*
+        protected override void TreeViewMS_DragLeave(object sender, EventArgs e)
+        {
+            InternalClipboard.CopyTree(this);
+            //otalClipboard.Files.Reverse();
+        }
+        */
+
         private void playlistFileView_DragLeave(object sender, EventArgs e)
         {
             //if the clipbaord is not empty, then we are already dragging something in the clipboard
-            if (TotalClipboard.IsEmpty)
+            /*
+            if (InternalClipboard.IsEmpty)
             {
                 foreach (TreeNode node in SelectedNodes)
                 {
-                    string s = node.Tag as string;
-                    if(tool.StringCheck(s))
-                        TotalClipboard.Files.Add(s);
+                    string s = node.Name;
+                    if (tool.IsPlaylistFile(s))
+                        InternalClipboard.Files.Add(s);
                 }
             }
+            */
         }
         
         private void treeView_NodeMouseHover(object sender, TreeNodeMouseHoverEventArgs e)
@@ -106,6 +116,11 @@ namespace Glaxion.Music
                 nodes.Add(WinFormUtils.GetTreeNode(n));
             }
             Populate(nodes);
+        }
+
+        private void PlaylistFileView_DragDrop(object sender, DragEventArgs e)
+        {
+            
         }
     }
 }

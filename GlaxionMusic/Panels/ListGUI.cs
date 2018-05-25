@@ -6,13 +6,15 @@ using Glaxion.Tools;
 
 namespace Glaxion.Music
 {
+    public delegate void ListGUICallBack(bool ok);
+
     public partial class ListGUI : Form
     {
         public ListGUI()
         {
             InitializeComponent();
         }
-
+        public ListGUICallBack callback;
         public ListGUI(List<string> list, bool folderPicker)
         {
             InitializeComponent();
@@ -49,7 +51,10 @@ namespace Glaxion.Music
 
         protected void OkClose(object o, EventArgs e)
         {
+            if (callback != null)
+                callback.Invoke(true);
             this.Close();
+            
         }
 
         private void ListGUI_Load(object sender, EventArgs e)

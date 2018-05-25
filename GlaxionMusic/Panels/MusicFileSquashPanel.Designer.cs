@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
-            this.splitContainer.Panel1.SuspendLayout();
-            this.splitContainer.Panel2.SuspendLayout();
+            this.MainSplitContainer.Panel1.SuspendLayout();
+            this.MainSplitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,13 +38,9 @@
             // 
             this.backPanel.Size = new System.Drawing.Size(333, 0);
             // 
-            // fontPanel
+            // frontPanel
             // 
             this.frontPanel.Size = new System.Drawing.Size(333, 269);
-            // 
-            // panel1
-            // 
-            this.topPanel.Size = new System.Drawing.Size(326, 76);
             // 
             // splitContainer
             // 
@@ -57,9 +53,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            // 
+            // topPanel
+            // 
+            this.FontPanel.Size = new System.Drawing.Size(326, 141);
             this.Name = "MusicFileControl";
-            this.splitContainer.Panel1.ResumeLayout(false);
-            this.splitContainer.Panel2.ResumeLayout(false);
+            this.MainSplitContainer.Panel1.ResumeLayout(false);
+            this.MainSplitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
             this.ResumeLayout(false);

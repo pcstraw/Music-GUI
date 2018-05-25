@@ -44,10 +44,11 @@ namespace Glaxion.Music
             Properties.Settings.Default.Save();
         }
 
-        public void BrowseMusicDirectory()
+        public bool BrowseMusicDirectory()
         {
             if (!HasLoadedTags())
-                return;
+                return false;
+            bool directory_added = false;
             CommonOpenFileDialog cd = new CommonOpenFileDialog();
             cd.RestoreDirectory = true;
             cd.IsFolderPicker = true;
@@ -58,9 +59,13 @@ namespace Glaxion.Music
                 foreach (string s in cd.FileNames)
                 {
                     if (!MusicDirectories.Contains(s))
+                    {
                         MusicDirectories.Add(s);
+                        directory_added = true;
+                    }
                 }
             }
+            return directory_added;
         }
         //performace critical loop ahead
         //album and artist lists should be stored in the trackinfo class
@@ -106,13 +111,7 @@ namespace Glaxion.Music
             if (!MusicFiles.ContainsKey(path))
                 MusicFiles.Add(path, Path.GetFileNameWithoutExtension(path));
         }
-
-        //use delegate to reload library
-        public void EditMusicDirectories()
-        {
-            ListGUI lg = new ListGUI(MusicDirectories, true);
-        }
-
+        
         public async void LoadID3Library()
         {
             Console.WriteLine("Reading ID3 tags...");
@@ -177,14 +176,7 @@ namespace Glaxion.Music
         {
             Playlists.Remove(playlist.name);
         }
-
-        public void EditPlaylistDirectories()
-        {
-            ListGUI lg = new ListGUI(PlaylistDirectories, true);
-        }
-
         
-
         public void AddPlaylistDirectory(string directory)
         {
             if (!PlaylistDirectories.Contains(directory))

@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Glaxion.Tools;
-using System.Drawing;
 using System.IO;
 using System.Diagnostics;
-using System.Collections.Specialized;
 
 namespace Glaxion.Music
 {
@@ -37,19 +33,13 @@ namespace Glaxion.Music
         //some of these cam be made virtual functions
         public void AssignEventHandlers()
         {
-            //agLeave += MusicFileManager_DragLeave;
-            DragLeave += MusicFileView_DragLeave;
             ItemDrag += MusicFileManager_ItemDrag;
            // DragEnter += MusicFileManager_DragEnter;
             MouseDoubleClick += MusicFileManager_MouseDoubleClick;
             MouseDown += MusicFileManager_MouseDown;
             DragDrop += MusicFileManager_DragDrop;
         }
-
-        private void MusicFileView_DragLeave(object sender, EventArgs e)
-        {
-        }
-
+        
         private void MusicFileManager_DragDrop(object sender, DragEventArgs e)
         {
             manager.DropDirectoriesFromClipboard();
@@ -89,21 +79,16 @@ namespace Glaxion.Music
             }
         }
         */
-
         
         public void OpenContaingFolder()
         {
             if (selectedNode != null)
             {
-                if (selectedNode.Tag != null && selectedNode.Tag is string)
-                {
-                    string s = selectedNode.Tag as string;
-
-                    if (Path.HasExtension(s))
-                        Process.Start(Path.GetDirectoryName(s));
-                    else
-                        Process.Start(s);
-                }
+                string s = selectedNode.Name;
+                if (Path.HasExtension(s))
+                    Process.Start(Path.GetDirectoryName(s));
+                else
+                    Process.Start(s);
             }
         }
 
@@ -143,7 +128,7 @@ namespace Glaxion.Music
 
         public void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            manager.fileLoader.EditMusicDirectories();
+            manager.EditMusicDirectories();
         }
         
         private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -155,14 +140,14 @@ namespace Glaxion.Music
         {
             if (selectedNode != null)
             {
-                string s = selectedNode.Tag as string;
+                string s = selectedNode.Name;
                 SongControl.CreateTagEditor(s,MusicPlayer.WinFormApp);
             }
         }
         
         public void GetNodesFolderJPG(TreeNode n)
         {
-            string path = n.Tag as string;
+            string path = n.Name;
             if (!tool.StringCheck(path))
                 return;
             string result = tool.GetFolderJPGFile(path);
@@ -194,7 +179,6 @@ namespace Glaxion.Music
                 //    node.ForeColor = FileColor;
                 Nodes.Add(node);
             }
-            
             EndUpdate();
             //manager.CacheNodes(manager.Nodes);
             //Populate(nodes);

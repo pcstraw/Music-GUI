@@ -138,7 +138,7 @@ namespace Glaxion.Music
             List<Playlist> list = LoadPlaylistFromFileManager();
             if (list.Count > 0)
             {
-                playlistView.SelectedItems.Clear();
+                //playlistView.SelectedItems.Clear();
                 foreach (Playlist p in list)
                 {
                     VItem item = playlistView.manager.AddItemFromPlaylist(p);
@@ -153,9 +153,9 @@ namespace Glaxion.Music
             TreeNode n = playlistFileView.MouseSelectNode();
             if (n == null)
                 return;
-            if (tool.StringCheck(n.Tag as string))
+            if (tool.StringCheck(n.Name))
             {
-                string path = n.Tag as string;
+                string path = n.Name;
                 Playlist p = new Playlist(path, true);
                 CreatePlaylistPanel(MusicPlayer.WinFormApp.musicPanel, p);
                 playlistView.manager.AddItemFromPlaylist(p);
@@ -211,9 +211,9 @@ namespace Glaxion.Music
             {
                 foreach (TreeNode node in playlistFileView.SelectedNodes)
                 {
-                    if (tool.StringCheck(node.Tag as string))
+                    if (tool.StringCheck(node.Name))
                     {
-                        string path = node.Tag as string;
+                        string path = node.Name;
                         Playlist p = new Playlist(path, true);
                         list.Add(p);
                     }
@@ -229,9 +229,9 @@ namespace Glaxion.Music
             {
                 foreach (TreeNode node in playlistFileView.SelectedNodes)
                 {
-                    if (tool.StringCheck(node.Tag as string))
+                    if (tool.StringCheck(node.Name))
                     {
-                        string path = node.Tag as string;
+                        string path = node.Name;
                         if(tool.StringCheck(path))
                             list.Add(path);
                     }
@@ -343,7 +343,7 @@ namespace Glaxion.Music
             List<string> selectedFiles = new List<string>();
             foreach (TreeNode n in musicFileView.SelectedNodes)
             {
-                string path = n.Tag as string;
+                string path = n.Name;
                 if (string.IsNullOrEmpty(path))
                     continue;
                 if (!Path.HasExtension(path))
@@ -377,7 +377,7 @@ namespace Glaxion.Music
             if (item == null)
                 return;
 
-            string path = item.Tag as string;
+            string path = item.Name;
 
             if (!tool.StringCheck(path))
                 return;
@@ -386,7 +386,7 @@ namespace Glaxion.Music
 
             foreach (item_ i in trackManager.Items)
             {
-                string s = i.Tag as string;
+                string s = i.Name;
                 if (!tool.StringCheck(s))
                     continue;
 
@@ -401,7 +401,7 @@ namespace Glaxion.Music
             if (item == null)
                 return;
 
-            string path = item.Tag as string;
+            string path = item.Name;
 
             if (!tool.StringCheck(path))
                 return;
@@ -411,7 +411,7 @@ namespace Glaxion.Music
 
             foreach (item_ i in trackManager.Items)
             {
-                string s = i.Tag as string;
+                string s = i.Name;
                 if (!tool.StringCheck(s))
                     continue;
                 Song s_info = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(s);
@@ -426,7 +426,7 @@ namespace Glaxion.Music
             if (item == null)
                 return;
 
-            string path = item.Tag as string;
+            string path = item.Name;
 
             if (!tool.StringCheck(path))
                 return;
@@ -436,7 +436,7 @@ namespace Glaxion.Music
 
             foreach (item_ i in trackManager.Items)
             {
-                string s = i.Tag as string;
+                string s = i.Name;
                 if (!tool.StringCheck(s))
                     continue;
                 Song s_info = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(s);

@@ -17,7 +17,7 @@ namespace Glaxion.Music
         public PlaylistManagerView()
         {
             InitializeComponent();
-            CheckBoxes = true;
+            //CheckBoxes = true;
             AllowDrop = true;
             Columns[1].Width = 1000;
             AssignEventHandlers();
@@ -34,38 +34,12 @@ namespace Glaxion.Music
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Click += new System.EventHandler(this.PlaylistManagerView_Click);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.PlaylistManagerView_DragDrop);
             this.ResumeLayout(false);
 
         }
 
-        [DllImport("gdi32.dll")]
-        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont,
-            uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
-
-        FontFamily ff;
-        Font font;
-
-        public void LoadFont()
-        {
-            // Use this if you can not find your resource System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceNames();
-
-            byte[] fontArray = Properties.Resources.Exo2_RegularExpanded;
-            int dataLength = Properties.Resources.Exo2_RegularExpanded.Length; //use font array length instead
-
-            IntPtr ptr = Marshal.AllocCoTaskMem(dataLength);
-            Marshal.Copy(fontArray, 0, ptr, dataLength);
-
-            uint cFont = 0;
-
-            AddFontMemResourceEx(ptr, (uint)fontArray.Length, IntPtr.Zero, ref cFont);
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddMemoryFont(ptr, dataLength);
-
-            Marshal.FreeCoTaskMem(ptr);
-
-            ff = pfc.Families[0];
-            Font = new Font(ff, Font.Size, FontStyle.Bold);
-        }
+        
 
         public void AssignEventHandlers()
         {
@@ -75,7 +49,7 @@ namespace Glaxion.Music
             this.DragEnter += PlaylistManager_DragEnter;
             this.DragDrop += PlaylistManager_DragDrop;
             this.DragLeave += PlaylistManager_DragLeave;
-            LoadFont();
+            Font = new Font(CustomFont.Exo.ff, Font.Size);
         }
 
         private void PlaylistManager_DragLeave(object sender, EventArgs e)
@@ -114,17 +88,17 @@ namespace Glaxion.Music
         
         protected override void ViewBox_DragDrop(object sender, DragEventArgs e)
         {
-            if (!TotalClipboard.IsEmpty)
+            if (!InternalClipboard.IsEmpty)
             {
                // SelectedItems.Clear();
-                foreach (string file in TotalClipboard.Files)
+                foreach (string file in InternalClipboard.Files)
                 {
                     VItem i = manager.AddPlaylistFromPath(file);
                     if (i == null)
                         continue;
                     i.Selected = true;
                 }
-                TotalClipboard.Clear();
+                InternalClipboard.Files.Clear();
                 UpdateList();
                 return;
             }
@@ -136,7 +110,7 @@ namespace Glaxion.Music
 
         private void PlaylistManager_DragEnter(object sender, DragEventArgs e)
         {
-            if (!TotalClipboard.IsEmpty)
+            if (!InternalClipboard.IsEmpty)
             {
                 e.Effect = e.AllowedEffect;
                 e.Effect = DragDropEffects.All;
@@ -237,6 +211,18 @@ namespace Glaxion.Music
         private void PlaylistManagerView_Click(object sender, EventArgs e)
         {
             manager.DisplayTrackInfo();
+        }
+
+        private void PlaylistManagerView_DragDrop(object sender, DragEventArgs e)
+        {
+            foreach(string s in InternalClipboard.Files)
+            {
+                tool.show(3, s);
+                if(tool.IsPlaylistFile(s))
+                {
+                    tool.show(2, s);
+                }
+            }
         }
     }
 }

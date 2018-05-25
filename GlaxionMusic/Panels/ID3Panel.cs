@@ -17,10 +17,19 @@ namespace Glaxion.Music
         {
             InitializeComponent();
             InitializeEntryBoxes();
+            updateButton.Hide();
         }
-
+        
         public Song song;
         public List<EntryBox> entries = new List<EntryBox>();
+        public TextChangedDelegate textChangedDelegate;
+
+        public void OnDelegateTextChanged()
+        {
+            if (song == null)
+                return;
+            updateButton.Show();
+        }
 
         public Song SetSong(Song songInfo)
         {
@@ -74,6 +83,8 @@ namespace Glaxion.Music
 
         void Save()
         {
+            if (song == null) return;
+
             bool modified = false;
             foreach (EntryBox entry in entries)
             {
@@ -110,6 +121,8 @@ namespace Glaxion.Music
         public void InitializeEntryBoxes()
         {
             entries.Clear();
+            textChangedDelegate = new TextChangedDelegate(OnDelegateTextChanged);
+            
             foreach (Control c in this.Controls)
             {
                 if (c is EntryBox)
@@ -146,16 +159,20 @@ namespace Glaxion.Music
         {
             entry.MainLabel.Text = identifier;
             entry.Tag = identifier.ToLower();
+            entry.DelegateTextChanged = textChangedDelegate;
         }
 
         private void ID3Control_Load(object sender, EventArgs e)
         {
             //titleEntryBox.BringToFront();
+            CustomFont.LoadCustomFonts();
+            SetFont(CustomFont.Exo.font);
         }
 
         private void updateButton_Click(object sender, EventArgs e)
         {
             Save();
+            updateButton.Hide();
         }
 
         private void entryBox1_FontChanged(object sender, EventArgs e)

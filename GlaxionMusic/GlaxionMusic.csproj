@@ -38,15 +38,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Additoinal Libs\gTrackBar.dll</HintPath>
     </Reference>
-    <Reference Include="Id3">
-      <HintPath>ID3-0.3-bin\Id3.dll</HintPath>
-    </Reference>
-    <Reference Include="Id3.Files">
-      <HintPath>ID3-0.3-bin\Id3.Files.dll</HintPath>
-    </Reference>
-    <Reference Include="Id3.WinForms">
-      <HintPath>ID3-0.3-bin\Id3.WinForms.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\Microsoft.WindowsAPICodePack.dll</HintPath>
@@ -169,14 +160,12 @@
       <DependentUpon>SquashBoxUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\Tool.cs" />
-    <Compile Include="View Components\TracklistView.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Panels\PlaylistPanel.cs">
+    <Compile Include="View Components\TracklistView.cs" />
+    <Compile Include="Panels\TracklistPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Panels\PlaylistPanel.Designer.cs">
-      <DependentUpon>PlaylistPanel.cs</DependentUpon>
+    <Compile Include="Panels\TracklistPanel.Designer.cs">
+      <DependentUpon>TracklistPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\ViewBox.cs">
       <SubType>Component</SubType>
@@ -254,8 +243,8 @@
     <EmbeddedResource Include="View Components\TracklistView.resx">
       <DependentUpon>TracklistView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Panels\PlaylistPanel.resx">
-      <DependentUpon>PlaylistPanel.cs</DependentUpon>
+    <EmbeddedResource Include="Panels\TracklistPanel.resx">
+      <DependentUpon>TracklistPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\TreeViewMS.resx">
       <DependentUpon>TreeViewMS.cs</DependentUpon>
@@ -334,7 +323,12 @@
     <Resource Include="Resources\86423-200.png" />
     <Resource Include="Resources\2873-200.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\ObjectListView\ObjectListView\ObjectListView2012.csproj">
+      <Project>{18FEDA0C-D147-4286-B39A-01204808106A}</Project>
+      <Name>ObjectListView2012</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

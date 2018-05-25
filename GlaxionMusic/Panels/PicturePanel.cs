@@ -98,7 +98,7 @@ namespace Glaxion.Music
                     }
                 }
             }
-            TotalClipboard.Clear();
+            InternalClipboard.Clear();
         }
         public static string GetAlbumArtDirectory()
         {

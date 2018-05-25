@@ -81,6 +81,8 @@
             this.trackContext_goToTop_button = new System.Windows.Forms.ToolStripMenuItem();
             this.trackContext_goToBottom_button = new System.Windows.Forms.ToolStripMenuItem();
             this.iD3TagToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.musicFileContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.musicfileContext_dock_button = new System.Windows.Forms.ToolStripMenuItem();
             this.musicFileContext_search_button = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,8 +101,6 @@
             this.playToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.iD3TagToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fileContainer = new System.Windows.Forms.SplitContainer();
-            this.squashBoxControl1 = new Glaxion.Music.SquashBoxControl();
-            this.fileViewLabel = new System.Windows.Forms.Label();
             this.mainToolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.addDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,15 +110,15 @@
             this.addDirectoryToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editDirectoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.findPlaylistDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setDefaultDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsStripDropDownButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.consoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openTempDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openAlbumArtFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setSongInfoFontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.playlistControlContainer = new System.Windows.Forms.SplitContainer();
+            this.squashBoxControl1 = new Glaxion.Music.SquashBoxControl();
+            this.fileViewLabel = new System.Windows.Forms.Label();
             this.songControl1 = new Glaxion.Music.SongControl();
             this.playbackTrackbarControl = new Glaxion.Music.PlaybackTrackbarControl();
             this.playbackVolumeControl = new Glaxion.Music.PlaybackVolumeControl();
@@ -131,14 +131,14 @@
             this.fileContainer.Panel1.SuspendLayout();
             this.fileContainer.Panel2.SuspendLayout();
             this.fileContainer.SuspendLayout();
-            this.squashBoxControl1.TopPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.squashBoxControl1.MainSplitContainer)).BeginInit();
-            this.squashBoxControl1.MainSplitContainer.SuspendLayout();
-            this.squashBoxControl1.SuspendLayout();
             this.mainToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.playlistControlContainer)).BeginInit();
             this.playlistControlContainer.Panel2.SuspendLayout();
             this.playlistControlContainer.SuspendLayout();
+            this.squashBoxControl1.TopPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.squashBoxControl1.MainSplitContainer)).BeginInit();
+            this.squashBoxControl1.MainSplitContainer.SuspendLayout();
+            this.squashBoxControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // playlistFileContext
@@ -209,7 +209,7 @@
             this.playlistContext_folder_button,
             this.playlistContext_rename_button});
             this.playlistContext.Name = "playlistContext";
-            this.playlistContext.Size = new System.Drawing.Size(181, 158);
+            this.playlistContext.Size = new System.Drawing.Size(118, 136);
             this.playlistContext.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.playlistContext_ItemClicked);
             // 
             // playlistContext_dock_button
@@ -217,7 +217,7 @@
             this.playlistContext_dock_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playlistContext_dockItem_inAppItem});
             this.playlistContext_dock_button.Name = "playlistContext_dock_button";
-            this.playlistContext_dock_button.Size = new System.Drawing.Size(180, 22);
+            this.playlistContext_dock_button.Size = new System.Drawing.Size(117, 22);
             this.playlistContext_dock_button.Text = "Open";
             this.playlistContext_dock_button.Click += new System.EventHandler(this.playlistContext_dockItem_Click);
             // 
@@ -233,7 +233,7 @@
             this.playlistContext_new_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playlistContext_newItem_inAppItem});
             this.playlistContext_new_button.Name = "playlistContext_new_button";
-            this.playlistContext_new_button.Size = new System.Drawing.Size(180, 22);
+            this.playlistContext_new_button.Size = new System.Drawing.Size(117, 22);
             this.playlistContext_new_button.Text = "New";
             this.playlistContext_new_button.Click += new System.EventHandler(this.playlistContext_newItem_Click);
             // 
@@ -249,7 +249,7 @@
             this.playlistContext_remove_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.playlistContext_delete_button});
             this.playlistContext_remove_button.Name = "playlistContext_remove_button";
-            this.playlistContext_remove_button.Size = new System.Drawing.Size(180, 22);
+            this.playlistContext_remove_button.Size = new System.Drawing.Size(117, 22);
             this.playlistContext_remove_button.Text = "Remove";
             this.playlistContext_remove_button.Click += new System.EventHandler(this.playlistContext_removeItem_Click);
             // 
@@ -263,14 +263,14 @@
             // playlistContext_add_button
             // 
             this.playlistContext_add_button.Name = "playlistContext_add_button";
-            this.playlistContext_add_button.Size = new System.Drawing.Size(180, 22);
+            this.playlistContext_add_button.Size = new System.Drawing.Size(117, 22);
             this.playlistContext_add_button.Text = "Add";
             this.playlistContext_add_button.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
             // playlistContext_folder_button
             // 
             this.playlistContext_folder_button.Name = "playlistContext_folder_button";
-            this.playlistContext_folder_button.Size = new System.Drawing.Size(180, 22);
+            this.playlistContext_folder_button.Size = new System.Drawing.Size(117, 22);
             this.playlistContext_folder_button.Text = "Folder";
             this.playlistContext_folder_button.Click += new System.EventHandler(this.folderToolStripMenuItem3_Click);
             // 
@@ -279,7 +279,7 @@
             this.playlistContext_rename_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.renameContextTextBox});
             this.playlistContext_rename_button.Name = "playlistContext_rename_button";
-            this.playlistContext_rename_button.Size = new System.Drawing.Size(180, 22);
+            this.playlistContext_rename_button.Size = new System.Drawing.Size(117, 22);
             this.playlistContext_rename_button.Text = "Rename";
             this.playlistContext_rename_button.DropDownOpening += new System.EventHandler(this.playlistContext_rename_button_DropDownOpening);
             this.playlistContext_rename_button.Click += new System.EventHandler(this.renameToolStripMenuItem_Click);
@@ -316,17 +316,18 @@
             this.redoToolStripMenuItem1,
             this.trackContext_play_button,
             this.trackContext_goTo_button,
-            this.iD3TagToolStripMenuItem});
+            this.iD3TagToolStripMenuItem,
+            this.copyToolStripMenuItem,
+            this.pasteToolStripMenuItem});
             this.trackContext.Name = "trackContext";
-            this.trackContext.Size = new System.Drawing.Size(118, 312);
+            this.trackContext.Size = new System.Drawing.Size(118, 356);
             this.trackContext.Opening += new System.ComponentModel.CancelEventHandler(this.trackContext_Opening);
             // 
             // trackContext_move_button
             // 
             this.trackContext_move_button.Name = "trackContext_move_button";
-            this.trackContext_move_button.Size = new System.Drawing.Size(117, 22);
+            this.trackContext_move_button.Size = new System.Drawing.Size(180, 22);
             this.trackContext_move_button.Text = "Move";
-            this.trackContext_move_button.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.moveContextButton_DropDownItemClicked);
             this.trackContext_move_button.Click += new System.EventHandler(this.moveContextButton_Click);
             // 
             // trackContext_send_button
@@ -337,7 +338,7 @@
             this.bottomToolStripMenuItem,
             this.checkedToolStripMenuItem});
             this.trackContext_send_button.Name = "trackContext_send_button";
-            this.trackContext_send_button.Size = new System.Drawing.Size(117, 22);
+            this.trackContext_send_button.Size = new System.Drawing.Size(180, 22);
             this.trackContext_send_button.Text = "Send...";
             this.trackContext_send_button.Click += new System.EventHandler(this.sendToPlaylistsToolStripMenuItem_Click);
             // 
@@ -375,7 +376,7 @@
             this.saveAsToolStripMenuItem,
             this.fullSaveToolStripMenuItem});
             this.trackContext_save_button.Name = "trackContext_save_button";
-            this.trackContext_save_button.Size = new System.Drawing.Size(117, 22);
+            this.trackContext_save_button.Size = new System.Drawing.Size(180, 22);
             this.trackContext_save_button.Text = "Save";
             this.trackContext_save_button.Click += new System.EventHandler(this.quickSaveToolStripMenuItem_Click);
             // 
@@ -398,7 +399,7 @@
             this.trackContext_search_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.trackContext_search_textBox});
             this.trackContext_search_button.Name = "trackContext_search_button";
-            this.trackContext_search_button.Size = new System.Drawing.Size(117, 22);
+            this.trackContext_search_button.Size = new System.Drawing.Size(180, 22);
             this.trackContext_search_button.Text = "Search";
             // 
             // trackContext_search_textBox
@@ -416,7 +417,7 @@
             this.trackContext_filter_artist_button,
             this.trackContext_filter_album_button});
             this.trackContext_filter_button.Name = "trackContext_filter_button";
-            this.trackContext_filter_button.Size = new System.Drawing.Size(117, 22);
+            this.trackContext_filter_button.Size = new System.Drawing.Size(180, 22);
             this.trackContext_filter_button.Text = "Filter";
             this.trackContext_filter_button.Click += new System.EventHandler(this.filterToolStripMenuItem_Click);
             // 
@@ -437,7 +438,7 @@
             // trackContext_find_button
             // 
             this.trackContext_find_button.Name = "trackContext_find_button";
-            this.trackContext_find_button.Size = new System.Drawing.Size(117, 22);
+            this.trackContext_find_button.Size = new System.Drawing.Size(180, 22);
             this.trackContext_find_button.Text = "Find";
             this.trackContext_find_button.Click += new System.EventHandler(this.findToolStripMenuItem1_Click);
             // 
@@ -448,7 +449,7 @@
             this.invertSelectionToolStripMenuItem,
             this.checkDuplicatesToolStripMenuItem});
             this.trackContext_tracks_button.Name = "trackContext_tracks_button";
-            this.trackContext_tracks_button.Size = new System.Drawing.Size(117, 22);
+            this.trackContext_tracks_button.Size = new System.Drawing.Size(180, 22);
             this.trackContext_tracks_button.Text = "Tracks";
             // 
             // updateMusicPlayerToolStripMenuItem
@@ -475,7 +476,7 @@
             // trackContext_remove_button
             // 
             this.trackContext_remove_button.Name = "trackContext_remove_button";
-            this.trackContext_remove_button.Size = new System.Drawing.Size(117, 22);
+            this.trackContext_remove_button.Size = new System.Drawing.Size(180, 22);
             this.trackContext_remove_button.Text = "Remove";
             this.trackContext_remove_button.Click += new System.EventHandler(this.trackContext_remove_button_Click);
             // 
@@ -484,7 +485,7 @@
             this.folderToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.trackContext_vegas_button});
             this.folderToolStripMenuItem1.Name = "folderToolStripMenuItem1";
-            this.folderToolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
+            this.folderToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.folderToolStripMenuItem1.Text = "Folder";
             this.folderToolStripMenuItem1.Click += new System.EventHandler(this.folderToolStripMenuItem1_Click);
             // 
@@ -500,7 +501,7 @@
             this.undoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.undoStateIndex});
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.undoToolStripMenuItem.Text = "Undo";
             this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
@@ -515,7 +516,7 @@
             this.redoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.redoStateIndex});
             this.redoToolStripMenuItem1.Name = "redoToolStripMenuItem1";
-            this.redoToolStripMenuItem1.Size = new System.Drawing.Size(117, 22);
+            this.redoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.redoToolStripMenuItem1.Text = "Redo";
             this.redoToolStripMenuItem1.Click += new System.EventHandler(this.redoToolStripMenuItem1_Click);
             // 
@@ -528,7 +529,7 @@
             // trackContext_play_button
             // 
             this.trackContext_play_button.Name = "trackContext_play_button";
-            this.trackContext_play_button.Size = new System.Drawing.Size(117, 22);
+            this.trackContext_play_button.Size = new System.Drawing.Size(180, 22);
             this.trackContext_play_button.Text = "Play";
             this.trackContext_play_button.Click += new System.EventHandler(this.trackContext_play_button_Click);
             // 
@@ -538,7 +539,7 @@
             this.trackContext_goToTop_button,
             this.trackContext_goToBottom_button});
             this.trackContext_goTo_button.Name = "trackContext_goTo_button";
-            this.trackContext_goTo_button.Size = new System.Drawing.Size(117, 22);
+            this.trackContext_goTo_button.Size = new System.Drawing.Size(180, 22);
             this.trackContext_goTo_button.Text = "Go to...";
             this.trackContext_goTo_button.Click += new System.EventHandler(this.goToEndToolStripMenuItem_Click);
             // 
@@ -559,9 +560,23 @@
             // iD3TagToolStripMenuItem
             // 
             this.iD3TagToolStripMenuItem.Name = "iD3TagToolStripMenuItem";
-            this.iD3TagToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.iD3TagToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.iD3TagToolStripMenuItem.Text = "ID3 Tag";
             this.iD3TagToolStripMenuItem.Click += new System.EventHandler(this.iD3TagToolStripMenuItem_Click);
+            // 
+            // copyToolStripMenuItem
+            // 
+            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.copyToolStripMenuItem.Text = "Copy";
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
+            // 
+            // pasteToolStripMenuItem
+            // 
+            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pasteToolStripMenuItem.Text = "Paste";
+            this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // musicFileContext
             // 
@@ -723,6 +738,162 @@
             this.fileContainer.SplitterDistance = 288;
             this.fileContainer.TabIndex = 0;
             // 
+            // mainToolStrip
+            // 
+            this.mainToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.mainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1,
+            this.toolStripDropDownButton2,
+            this.optionsStripDropDownButton});
+            this.mainToolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.mainToolStrip.Location = new System.Drawing.Point(0, 3);
+            this.mainToolStrip.Name = "mainToolStrip";
+            this.mainToolStrip.Size = new System.Drawing.Size(288, 25);
+            this.mainToolStrip.TabIndex = 1;
+            this.mainToolStrip.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addDirectoryToolStripMenuItem,
+            this.editDirectroriesToolStripMenuItem,
+            this.reloadToolStripMenuItem1});
+            this.toolStripDropDownButton1.ForeColor = System.Drawing.Color.Black;
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(76, 22);
+            this.toolStripDropDownButton1.Text = "Directories";
+            // 
+            // addDirectoryToolStripMenuItem
+            // 
+            this.addDirectoryToolStripMenuItem.Name = "addDirectoryToolStripMenuItem";
+            this.addDirectoryToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.addDirectoryToolStripMenuItem.Text = "Add Directory";
+            this.addDirectoryToolStripMenuItem.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem_Click);
+            // 
+            // editDirectroriesToolStripMenuItem
+            // 
+            this.editDirectroriesToolStripMenuItem.Name = "editDirectroriesToolStripMenuItem";
+            this.editDirectroriesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.editDirectroriesToolStripMenuItem.Text = "Edit Directrories";
+            this.editDirectroriesToolStripMenuItem.Click += new System.EventHandler(this.editDirectroriesToolStripMenuItem_Click);
+            // 
+            // reloadToolStripMenuItem1
+            // 
+            this.reloadToolStripMenuItem1.Name = "reloadToolStripMenuItem1";
+            this.reloadToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
+            this.reloadToolStripMenuItem1.Text = "Reload";
+            this.reloadToolStripMenuItem1.Click += new System.EventHandler(this.reloadToolStripMenuItem1_Click);
+            // 
+            // toolStripDropDownButton2
+            // 
+            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addDirectoryToolStripMenuItem1,
+            this.editDirectoriesToolStripMenuItem,
+            this.reloadToolStripMenuItem,
+            this.setDefaultDirectoryToolStripMenuItem});
+            this.toolStripDropDownButton2.ForeColor = System.Drawing.Color.Black;
+            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
+            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(62, 22);
+            this.toolStripDropDownButton2.Text = "Playlists";
+            // 
+            // addDirectoryToolStripMenuItem1
+            // 
+            this.addDirectoryToolStripMenuItem1.Name = "addDirectoryToolStripMenuItem1";
+            this.addDirectoryToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
+            this.addDirectoryToolStripMenuItem1.Text = "Add Directory";
+            this.addDirectoryToolStripMenuItem1.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem1_Click);
+            // 
+            // editDirectoriesToolStripMenuItem
+            // 
+            this.editDirectoriesToolStripMenuItem.Name = "editDirectoriesToolStripMenuItem";
+            this.editDirectoriesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.editDirectoriesToolStripMenuItem.Text = "Edit Directories";
+            this.editDirectoriesToolStripMenuItem.Click += new System.EventHandler(this.editDirectoriesToolStripMenuItem_Click);
+            // 
+            // reloadToolStripMenuItem
+            // 
+            this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
+            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.reloadToolStripMenuItem.Text = "Reload";
+            this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
+            // 
+            // setDefaultDirectoryToolStripMenuItem
+            // 
+            this.setDefaultDirectoryToolStripMenuItem.Name = "setDefaultDirectoryToolStripMenuItem";
+            this.setDefaultDirectoryToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.setDefaultDirectoryToolStripMenuItem.Text = "Set Default Directory";
+            this.setDefaultDirectoryToolStripMenuItem.Click += new System.EventHandler(this.setDefaultDirectoryToolStripMenuItem_Click);
+            // 
+            // optionsStripDropDownButton
+            // 
+            this.optionsStripDropDownButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.optionsStripDropDownButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consoleToolStripMenuItem,
+            this.openTempDirectoryToolStripMenuItem,
+            this.openAlbumArtFolderToolStripMenuItem});
+            this.optionsStripDropDownButton.ForeColor = System.Drawing.Color.Black;
+            this.optionsStripDropDownButton.Image = ((System.Drawing.Image)(resources.GetObject("optionsStripDropDownButton.Image")));
+            this.optionsStripDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.optionsStripDropDownButton.Name = "optionsStripDropDownButton";
+            this.optionsStripDropDownButton.Size = new System.Drawing.Size(62, 22);
+            this.optionsStripDropDownButton.Text = "Options";
+            // 
+            // consoleToolStripMenuItem
+            // 
+            this.consoleToolStripMenuItem.Name = "consoleToolStripMenuItem";
+            this.consoleToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.consoleToolStripMenuItem.Text = "Console";
+            this.consoleToolStripMenuItem.Click += new System.EventHandler(this.consoleToolStripMenuItem_Click);
+            // 
+            // openTempDirectoryToolStripMenuItem
+            // 
+            this.openTempDirectoryToolStripMenuItem.Name = "openTempDirectoryToolStripMenuItem";
+            this.openTempDirectoryToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.openTempDirectoryToolStripMenuItem.Text = "Open Temp Directory";
+            this.openTempDirectoryToolStripMenuItem.Click += new System.EventHandler(this.openTempDirectoryToolStripMenuItem_Click);
+            // 
+            // openAlbumArtFolderToolStripMenuItem
+            // 
+            this.openAlbumArtFolderToolStripMenuItem.Name = "openAlbumArtFolderToolStripMenuItem";
+            this.openAlbumArtFolderToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.openAlbumArtFolderToolStripMenuItem.Text = "Open Album Art Folder";
+            this.openAlbumArtFolderToolStripMenuItem.Click += new System.EventHandler(this.openAlbumArtFolderToolStripMenuItem_Click);
+            // 
+            // splitter1
+            // 
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(288, 3);
+            this.splitter1.TabIndex = 2;
+            this.splitter1.TabStop = false;
+            // 
+            // playlistControlContainer
+            // 
+            this.playlistControlContainer.BackColor = System.Drawing.Color.PowderBlue;
+            this.playlistControlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.playlistControlContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.playlistControlContainer.Location = new System.Drawing.Point(0, 0);
+            this.playlistControlContainer.Name = "playlistControlContainer";
+            this.playlistControlContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // playlistControlContainer.Panel1
+            // 
+            this.playlistControlContainer.Panel1.BackColor = System.Drawing.Color.LightBlue;
+            // 
+            // playlistControlContainer.Panel2
+            // 
+            this.playlistControlContainer.Panel2.Controls.Add(this.songControl1);
+            this.playlistControlContainer.Size = new System.Drawing.Size(881, 428);
+            this.playlistControlContainer.SplitterDistance = 174;
+            this.playlistControlContainer.TabIndex = 0;
+            // 
             // squashBoxControl1
             // 
             // 
@@ -780,180 +951,8 @@
             this.fileViewLabel.Name = "fileViewLabel";
             this.fileViewLabel.Size = new System.Drawing.Size(283, 39);
             this.fileViewLabel.TabIndex = 0;
-            this.fileViewLabel.Text = "See Music Files";
+            this.fileViewLabel.Text = "Music Files";
             this.fileViewLabel.Click += new System.EventHandler(this.fileViewLabel_Click);
-            // 
-            // mainToolStrip
-            // 
-            this.mainToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.mainToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1,
-            this.toolStripDropDownButton2,
-            this.optionsStripDropDownButton});
-            this.mainToolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.mainToolStrip.Location = new System.Drawing.Point(0, 3);
-            this.mainToolStrip.Name = "mainToolStrip";
-            this.mainToolStrip.Size = new System.Drawing.Size(288, 25);
-            this.mainToolStrip.TabIndex = 1;
-            this.mainToolStrip.Text = "toolStrip1";
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addDirectoryToolStripMenuItem,
-            this.editDirectroriesToolStripMenuItem,
-            this.reloadToolStripMenuItem1});
-            this.toolStripDropDownButton1.ForeColor = System.Drawing.Color.Black;
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(76, 22);
-            this.toolStripDropDownButton1.Text = "Directories";
-            // 
-            // addDirectoryToolStripMenuItem
-            // 
-            this.addDirectoryToolStripMenuItem.Name = "addDirectoryToolStripMenuItem";
-            this.addDirectoryToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.addDirectoryToolStripMenuItem.Text = "Add Directory";
-            this.addDirectoryToolStripMenuItem.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem_Click);
-            // 
-            // editDirectroriesToolStripMenuItem
-            // 
-            this.editDirectroriesToolStripMenuItem.Name = "editDirectroriesToolStripMenuItem";
-            this.editDirectroriesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.editDirectroriesToolStripMenuItem.Text = "Edit Directrories";
-            this.editDirectroriesToolStripMenuItem.Click += new System.EventHandler(this.editDirectroriesToolStripMenuItem_Click);
-            // 
-            // reloadToolStripMenuItem1
-            // 
-            this.reloadToolStripMenuItem1.Name = "reloadToolStripMenuItem1";
-            this.reloadToolStripMenuItem1.Size = new System.Drawing.Size(157, 22);
-            this.reloadToolStripMenuItem1.Text = "Reload";
-            this.reloadToolStripMenuItem1.Click += new System.EventHandler(this.reloadToolStripMenuItem1_Click);
-            // 
-            // toolStripDropDownButton2
-            // 
-            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addDirectoryToolStripMenuItem1,
-            this.editDirectoriesToolStripMenuItem,
-            this.reloadToolStripMenuItem,
-            this.findPlaylistDirectoryToolStripMenuItem,
-            this.setDefaultDirectoryToolStripMenuItem});
-            this.toolStripDropDownButton2.ForeColor = System.Drawing.Color.Black;
-            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(62, 22);
-            this.toolStripDropDownButton2.Text = "Playlists";
-            // 
-            // addDirectoryToolStripMenuItem1
-            // 
-            this.addDirectoryToolStripMenuItem1.Name = "addDirectoryToolStripMenuItem1";
-            this.addDirectoryToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
-            this.addDirectoryToolStripMenuItem1.Text = "Add Directory";
-            this.addDirectoryToolStripMenuItem1.Click += new System.EventHandler(this.addDirectoryToolStripMenuItem1_Click);
-            // 
-            // editDirectoriesToolStripMenuItem
-            // 
-            this.editDirectoriesToolStripMenuItem.Name = "editDirectoriesToolStripMenuItem";
-            this.editDirectoriesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.editDirectoriesToolStripMenuItem.Text = "Edit Directories";
-            this.editDirectoriesToolStripMenuItem.Click += new System.EventHandler(this.editDirectoriesToolStripMenuItem_Click);
-            // 
-            // reloadToolStripMenuItem
-            // 
-            this.reloadToolStripMenuItem.Name = "reloadToolStripMenuItem";
-            this.reloadToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.reloadToolStripMenuItem.Text = "Reload";
-            this.reloadToolStripMenuItem.Click += new System.EventHandler(this.reloadToolStripMenuItem_Click);
-            // 
-            // findPlaylistDirectoryToolStripMenuItem
-            // 
-            this.findPlaylistDirectoryToolStripMenuItem.Name = "findPlaylistDirectoryToolStripMenuItem";
-            this.findPlaylistDirectoryToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.findPlaylistDirectoryToolStripMenuItem.Text = "Find Playlist Directory";
-            this.findPlaylistDirectoryToolStripMenuItem.Click += new System.EventHandler(this.findPlaylistDirectoryToolStripMenuItem_Click);
-            // 
-            // setDefaultDirectoryToolStripMenuItem
-            // 
-            this.setDefaultDirectoryToolStripMenuItem.Name = "setDefaultDirectoryToolStripMenuItem";
-            this.setDefaultDirectoryToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.setDefaultDirectoryToolStripMenuItem.Text = "Set Default Directory";
-            this.setDefaultDirectoryToolStripMenuItem.Click += new System.EventHandler(this.setDefaultDirectoryToolStripMenuItem_Click);
-            // 
-            // optionsStripDropDownButton
-            // 
-            this.optionsStripDropDownButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.optionsStripDropDownButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consoleToolStripMenuItem,
-            this.openTempDirectoryToolStripMenuItem,
-            this.openAlbumArtFolderToolStripMenuItem,
-            this.setSongInfoFontToolStripMenuItem});
-            this.optionsStripDropDownButton.ForeColor = System.Drawing.Color.Black;
-            this.optionsStripDropDownButton.Image = ((System.Drawing.Image)(resources.GetObject("optionsStripDropDownButton.Image")));
-            this.optionsStripDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.optionsStripDropDownButton.Name = "optionsStripDropDownButton";
-            this.optionsStripDropDownButton.Size = new System.Drawing.Size(62, 22);
-            this.optionsStripDropDownButton.Text = "Options";
-            // 
-            // consoleToolStripMenuItem
-            // 
-            this.consoleToolStripMenuItem.Name = "consoleToolStripMenuItem";
-            this.consoleToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.consoleToolStripMenuItem.Text = "Console";
-            this.consoleToolStripMenuItem.Click += new System.EventHandler(this.consoleToolStripMenuItem_Click);
-            // 
-            // openTempDirectoryToolStripMenuItem
-            // 
-            this.openTempDirectoryToolStripMenuItem.Name = "openTempDirectoryToolStripMenuItem";
-            this.openTempDirectoryToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.openTempDirectoryToolStripMenuItem.Text = "Open Temp Directory";
-            this.openTempDirectoryToolStripMenuItem.Click += new System.EventHandler(this.openTempDirectoryToolStripMenuItem_Click);
-            // 
-            // openAlbumArtFolderToolStripMenuItem
-            // 
-            this.openAlbumArtFolderToolStripMenuItem.Name = "openAlbumArtFolderToolStripMenuItem";
-            this.openAlbumArtFolderToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.openAlbumArtFolderToolStripMenuItem.Text = "Open Album Art Folder";
-            this.openAlbumArtFolderToolStripMenuItem.Click += new System.EventHandler(this.openAlbumArtFolderToolStripMenuItem_Click);
-            // 
-            // setSongInfoFontToolStripMenuItem
-            // 
-            this.setSongInfoFontToolStripMenuItem.Name = "setSongInfoFontToolStripMenuItem";
-            this.setSongInfoFontToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.setSongInfoFontToolStripMenuItem.Text = "Set Song Info Font";
-            this.setSongInfoFontToolStripMenuItem.Click += new System.EventHandler(this.setSongInfoFontToolStripMenuItem_Click);
-            // 
-            // splitter1
-            // 
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(288, 3);
-            this.splitter1.TabIndex = 2;
-            this.splitter1.TabStop = false;
-            // 
-            // playlistControlContainer
-            // 
-            this.playlistControlContainer.BackColor = System.Drawing.Color.PowderBlue;
-            this.playlistControlContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.playlistControlContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.playlistControlContainer.Location = new System.Drawing.Point(0, 0);
-            this.playlistControlContainer.Name = "playlistControlContainer";
-            this.playlistControlContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // playlistControlContainer.Panel1
-            // 
-            this.playlistControlContainer.Panel1.BackColor = System.Drawing.Color.LightBlue;
-            // 
-            // playlistControlContainer.Panel2
-            // 
-            this.playlistControlContainer.Panel2.Controls.Add(this.songControl1);
-            this.playlistControlContainer.Size = new System.Drawing.Size(881, 428);
-            this.playlistControlContainer.SplitterDistance = 174;
-            this.playlistControlContainer.TabIndex = 0;
             // 
             // songControl1
             // 
@@ -1029,15 +1028,15 @@
             this.fileContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fileContainer)).EndInit();
             this.fileContainer.ResumeLayout(false);
-            this.squashBoxControl1.TopPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.squashBoxControl1.MainSplitContainer)).EndInit();
-            this.squashBoxControl1.MainSplitContainer.ResumeLayout(false);
-            this.squashBoxControl1.ResumeLayout(false);
             this.mainToolStrip.ResumeLayout(false);
             this.mainToolStrip.PerformLayout();
             this.playlistControlContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.playlistControlContainer)).EndInit();
             this.playlistControlContainer.ResumeLayout(false);
+            this.squashBoxControl1.TopPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.squashBoxControl1.MainSplitContainer)).EndInit();
+            this.squashBoxControl1.MainSplitContainer.ResumeLayout(false);
+            this.squashBoxControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1123,7 +1122,6 @@
         public System.Windows.Forms.ToolStripMenuItem addDirectoryToolStripMenuItem1;
         public System.Windows.Forms.ToolStripMenuItem editDirectoriesToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem reloadToolStripMenuItem;
-        public System.Windows.Forms.ToolStripMenuItem findPlaylistDirectoryToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem setDefaultDirectoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton optionsStripDropDownButton;
         private System.Windows.Forms.ToolStripMenuItem openTempDirectoryToolStripMenuItem;
@@ -1135,7 +1133,8 @@
         private SongControl songControl1;
         private System.Windows.Forms.ToolStripMenuItem openAlbumArtFolderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iD3TagToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem setSongInfoFontToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
         // private SongControl songControl1;
     }
 }

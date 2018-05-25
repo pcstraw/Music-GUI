@@ -5,6 +5,7 @@ using System.Windows.Forms;
 
 namespace Glaxion.Music
 {
+    public delegate void TextChangedDelegate();
     [Designer(typeof(Glaxion.Music.Designers.TestControlDesigner))]
     public partial class EntryBox : UserControl
     {
@@ -15,6 +16,8 @@ namespace Glaxion.Music
             textBox1.MouseWheel += TextBox1_MouseWheel;
         }
         public bool _textChanged;
+        
+        public TextChangedDelegate DelegateTextChanged;
         //increment the end splitter distance using the mouse wheel
         private void TextBox1_MouseWheel(object sender, MouseEventArgs e)
         {
@@ -45,9 +48,18 @@ namespace Glaxion.Music
             textBox1.Text = text;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        public void TextHasChanged()
         {
             _textChanged = true;
+            if (textBox1.Focused && DelegateTextChanged != null)
+            {
+                DelegateTextChanged.Invoke();
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            TextHasChanged();
         }
 
         public string GetEntry()

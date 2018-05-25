@@ -44,42 +44,11 @@ namespace Glaxion.Music
             titleLabel.Text = s.title;
         }
 
-        [DllImport("gdi32.dll")]
-        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, 
-            uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
-
-        FontFamily ff;
-        Font font;
         
-        public void LoadFont()
-        {
-            // Use this if you can not find your resource System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceNames();
-
-            byte[] fontArray = Properties.Resources.Exo2_RegularExpanded;
-            int dataLength = Properties.Resources.Exo2_RegularExpanded.Length; //use font array length instead
-
-            IntPtr ptr = Marshal.AllocCoTaskMem(dataLength);
-            Marshal.Copy(fontArray, 0, ptr, dataLength);
-
-            uint cFont = 0;
-
-            AddFontMemResourceEx(ptr, (uint)fontArray.Length, IntPtr.Zero, ref cFont);
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddMemoryFont(ptr, dataLength);
-
-            Marshal.FreeCoTaskMem(ptr);
-
-            ff = pfc.Families[0];
-            font = new Font(ff, 20f, FontStyle.Regular);
-
-        }
-
         private void SongControl_Load(object sender, EventArgs e)
         {
             iD3Control1.BringToFront();
             picturePanel1.BringToFront();
-            LoadFont();
-            titleLabel.Font = font;
         }
 
         private void picturePanel1_PictureChangedEvent(object sender, EventArgs args)
@@ -87,6 +56,7 @@ namespace Glaxion.Music
             if (iD3Control1.song == null)
                 return;
             iD3Control1.song.SetPictureFromImage(picturePanel1.BackgroundImage);
+            iD3Control1.OnDelegateTextChanged();
         }
 
         private void titleLabel_Click(object sender, EventArgs e)

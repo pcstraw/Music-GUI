@@ -174,25 +174,27 @@ namespace Glaxion.Music
             int current_track_index = MusicPlayer.Player.currentTrack;
             //find the item who's first subtag is 1.  this is the currently playing track
             //storing it on the item allows us to track the last played song as the user re-orders the playlist
-            foreach (VItem item in Items)
+            for(int index =0; index < Items.Count; index++)
             {
-                //null tags have not been played.  Skip
-                if (item.State == 0)
-                    continue;
+                VItem item = Items[index];
+                //if (item.State == 0)
+                //    continue;
                 int i = item.State;
                 if (i == 1)
                 {
-                    string s = item.Columns[1];
+                    string s = item.name;
                     if (s == MusicPlayer.Player.currentTrackString) //double check to see if is still the current track
                     {
                         //grab the new index
-                        current_track_index = item.Index;
+                        current_track_index = index;
                         break;
                     }
                 }
             }
             CurrentList.tracks = GetTrackItems();
-            MusicPlayer.Player.PlayPlaylist(CurrentList, current_track_index);
+            MusicPlayer.Player.UpdateMusicPlayer(CurrentList, current_track_index);
+            //MusicPlayer.Player.playlist = CurrentList;
+           // MusicPlayer.Player.currentTrack = current_track_index;
         }
 
         private List<string> GetTrackItems()
@@ -200,7 +202,7 @@ namespace Glaxion.Music
             List<string> list = new List<string>();
             foreach (VItem li in Items)
             {
-                list.Add(li.Columns[1]);
+                list.Add(li.name);
             }
             return list;
         }

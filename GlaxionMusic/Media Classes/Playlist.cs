@@ -88,16 +88,24 @@ namespace Glaxion.Music
         
         public Playlist(string filePath, bool readFile)
         {
-            path = filePath;
+            
             debugSave = true;
-
-            if (readFile && File.Exists(filePath))
+            path = filePath;
+            if (tool.IsPlaylistFile(filePath))
             {
-                ReadFile();
-            }
-            if (!File.Exists(filePath))
+                if(readFile)
+                    ReadFile();
+            }else
             {
-                if(DefaultPlaylistDirectory != null)
+                if(tool.IsAudioFile(filePath))
+                {
+                    filePath = Path.GetDirectoryName(filePath);
+                }
+                if (readFile && Directory.Exists(filePath))
+                {
+                    tracks = tool.LoadAudioFiles(filePath, SearchOption.TopDirectoryOnly);
+                }
+                if (DefaultPlaylistDirectory != null)
                 {
                     path = DefaultPlaylistDirectory + @"\" + filePath + ext;
                 }
@@ -121,6 +129,16 @@ namespace Glaxion.Music
         {
             path = fullpath;
             ReadFile();
+        }
+
+        internal void LoadSongs()
+        {
+            songs.Clear();
+            foreach(string s in tracks)
+            {
+                Song song = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(s);
+                songs.Add(song);
+            }
         }
 
         public bool Save()

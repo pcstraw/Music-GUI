@@ -12,7 +12,7 @@ using System.IO;
 
 namespace Glaxion.Music
 {
-    public class TotalClipboard
+    public class InternalClipboard
     {
         public static List<string> Files = new List<string>();
         public static List<Playlist> Playlists = new List<Playlist>();
@@ -103,11 +103,11 @@ namespace Glaxion.Music
 
         public static void CopyItems(List<ListViewItem> items)
         {
-            TotalClipboard.Clear();
+            InternalClipboard.Clear();
             Clipboard.Clear();
             foreach (ListViewItem item in items)
             {
-                TotalClipboard.Add(item.SubItems[1].Text);
+                InternalClipboard.Add(item.SubItems[1].Text);
                 Clipboard.SetText(item.SubItems[1].Text);
             }
         }
@@ -131,7 +131,7 @@ namespace Glaxion.Music
             {
                 if (File.Exists(s))
                 {
-                    TotalClipboard.Add(s);
+                    InternalClipboard.Add(s);
                     return;
                 }
             }
@@ -145,7 +145,7 @@ namespace Glaxion.Music
                         continue;
                     Console.WriteLine(p);
                     if (File.Exists(p) && Path.HasExtension(p))
-                        TotalClipboard.Add(t.Tag as string);
+                        InternalClipboard.Add(t.Tag as string);
                     if (t.Nodes.Count > 0)
                     {
                         foreach (TreeNode tn in node.Nodes)
@@ -158,17 +158,29 @@ namespace Glaxion.Music
 
         public static void CopyTree(TreeViewMS tree)
         {
-            TotalClipboard.Clear();
-            List<string> list = new List<string>();
+            if (!IsEmpty)
+            {
+                tool.debugWarning("Clipboard copy TreeViewMS will be aborted:  make sure you clear the clipboard before adding files to it");
+                return;
+            }
             foreach (TreeNode t in tree.SelectedNodes)
             {
-                // tool.Show(t.Tag as string);
                 string s = t.Name;
                 if (string.IsNullOrEmpty(s))
                     continue;
+                //tool.show(2, s);
                 //List<string> ls = tool.GetAllAudioFiles(t);
                 //foreach (string text in ls)
                 Files.Add(s);
+            }
+            TestFiles();
+        }
+
+        public static void TestFiles()
+        {
+            foreach(string s in Files)
+            {
+                tool.debugWarning(s);
             }
         }
 
@@ -224,16 +236,7 @@ namespace Glaxion.Music
         {
             if (Files.Count == 0)
                 return true;
-            else
-                return false;
-        }
-
-        public static bool IsPlaylistEmpty()
-        {
-            if (Playlists.Count == 0)
-                return true;
-            else
-                return false;
+            return false;
         }
     }
 

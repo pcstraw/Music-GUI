@@ -55,22 +55,19 @@ namespace Glaxion.Music
         public bool failed;
         public static List<string> TagLoadingLog = new List<string>();
         
-        private void Construction()
+
+        public Song(string filePath)
         {
-            title = "Something";
             album = "Untitled";
             artist = "Someone";
             year = "Unknown";
             genres = new string[] { "" };
             loaded = false;
             failed = false;
-        }
-
-        public Song(string filePath)
-        {
             path = filePath;
             name = Path.GetFileNameWithoutExtension(filePath);
-            Construction();
+            title = name;
+            
         }
 
         private void Reset()
@@ -142,8 +139,7 @@ namespace Glaxion.Music
         {
             if (loaded)
                 return true;
-            
-            if(tool.IsAudioFile(path))
+            if (tool.IsAudioFile(path))
             {
                try
                {
@@ -151,13 +147,12 @@ namespace Glaxion.Music
                     file.GetTag(TagTypes.AllTags);
                     album = file.Tag.Album;
                     artist = file.Tag.FirstAlbumArtist;
+                    
                     track = file.Tag.Track;
                     lyrics = file.Tag.Lyrics;
                     pictures = file.Tag.Pictures;
-                    title = file.Tag.Title;
-
-                    if (string.IsNullOrWhiteSpace(title))
-                        title = Path.GetFileNameWithoutExtension(path);
+                    if (!string.IsNullOrEmpty(file.Tag.Title))
+                        title = file.Tag.Title;
 
                     genres = file.Tag.Genres;
                     if(genres.Count() == 0)

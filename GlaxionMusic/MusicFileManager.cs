@@ -25,6 +25,7 @@ namespace Glaxion.Music
             FileColor = Color.WhiteSmoke;
             loadID3Tags = true;
             Colors = colors;
+            listGUIcallack = new ListGUICallBack(ListGUIDelegateCallback);
         }
         public ColorScheme Colors;
         public FileLoader fileLoader;
@@ -50,7 +51,7 @@ namespace Glaxion.Music
         {
             foreach (VNode t in nodes)
             {
-                if (Path.HasExtension(t.Tag as string))
+                if (Path.HasExtension(t.name))
                 {
                     PlaySelectedNode(t);
                     return;
@@ -92,7 +93,7 @@ namespace Glaxion.Music
         public void DropDirectoriesFromClipboard()
         {
             bool addedDir = false;
-            if (!TotalClipboard.IsEmpty)
+            if (!InternalClipboard.IsEmpty)
             {
                 /*
                 foreach (string s in TotalClipboard.Files)
@@ -104,6 +105,8 @@ namespace Glaxion.Music
             else
             {
                 // TotalClipboard
+                tool.show(2, "External Drag Drop is not yet supported");
+                return;
                 StringCollection collection = Clipboard.GetFileDropList();
                 foreach (string s in collection)
                     addedDir = AddDirectoryFromFile(s);
@@ -126,7 +129,6 @@ namespace Glaxion.Music
             VNode rn = new VNode(Path.GetFileName(dir));
            // rn.Tag = dir;
             rn.name = dir;
-            rn.path = dir;
             rn.ForeColor = Colors.foreColor;
             rn.BackColor = Colors.backColor;
             bool containsAudio = false;
@@ -145,7 +147,6 @@ namespace Glaxion.Music
                     if (tn != null)
                     {
                         tn.name = s;
-                        tn.path = s;
                         tn.ForeColor = Colors.foreColor;
                         tn.BackColor = Colors.backColor;
                        // tn.Tag = s;
@@ -195,7 +196,6 @@ namespace Glaxion.Music
                 tn.Text = Path.GetFileName(f);
                 //tn.Tag  = f;
                 tn.name = f;
-                tn.path = f;
                 //tn.ForeColor = FileColor;
                 tn.isFile = true;
                 tn.ForeColor = FileColor;
@@ -232,6 +232,19 @@ namespace Glaxion.Music
             _view.PopulateTree(artistNodes);
            // SetTree(artistNodes, searchText);
         }
+        ListGUICallBack listGUIcallack;
+        void ListGUIDelegateCallback(bool ok)
+        {
+            if (ok)
+                LoadDirectoriesToTree();
+        }
+        //use delegate to reload library
+        public void EditMusicDirectories()
+        {
+            ListGUI lg = new ListGUI(fileLoader.MusicDirectories, true);
+            lg.callback = listGUIcallack;
+        }
+
         public void LoadAlbumNodesToView()
         {
             if (!fileLoader.HasLoadedTags())
@@ -267,7 +280,6 @@ namespace Glaxion.Music
                     if (tn == null)
                         continue;
                     tn.Text = s;
-                    tn.Tag = s;
                     tn.name = s;
                     //tn.StateImageIndex = -1;
                     if (tn.Nodes.Count > 0)
@@ -323,9 +335,7 @@ namespace Glaxion.Music
             foreach (string s in MusicPlayer.Player.fileLoader.trackInfoManager.albums)
             {
                 VNode tn = new VNode(s);
-                tn.Tag = s;
                 tn.name = s;
-                tn.path = s;
                 tn.ForeColor = Colors.foreColor;
                 tn.BackColor = Colors.backColor;
                 albumNodes.Add(tn);
@@ -339,8 +349,6 @@ namespace Glaxion.Music
                     if (t.Text == info.Value.album)
                     {
                         VNode tn = new VNode(info.Value.title);
-                        tn.Tag = info.Value.path;
-                        tn.path = info.Value.path;
                         tn.name = info.Value.path;
                         tn.ForeColor = FileColor;
                         tn.BackColor = Colors.backColor;
@@ -360,9 +368,7 @@ namespace Glaxion.Music
             foreach (string s in MusicPlayer.Player.fileLoader.trackInfoManager.artists)
             {
                 VNode tn = new VNode(s);
-                tn.Tag = s;
                 tn.name = s;
-                tn.path = s;
                 tn.ForeColor = Colors.foreColor;
                 tn.BackColor = Colors.backColor;
                 artistNodes.Add(tn);
@@ -375,8 +381,6 @@ namespace Glaxion.Music
                     if (t.Text == info.Value.artist)
                     {
                         VNode tn = new VNode(info.Value.title);
-                        tn.Tag = info.Value.path;
-                        tn.path = info.Value.path;
                         tn.name = info.Value.path;
                         tn.ForeColor = FileColor;
                         tn.BackColor = Colors.backColor;
@@ -396,9 +400,7 @@ namespace Glaxion.Music
             foreach (string s in MusicPlayer.Player.fileLoader.trackInfoManager.years)
             {
                 VNode tn = new VNode(s);
-                tn.Tag = s;
                 tn.name = s;
-                tn.path = s;
                 tn.ForeColor = Colors.foreColor;
                 tn.BackColor = Colors.backColor;
                 yearNodes.Add(tn);
@@ -411,8 +413,6 @@ namespace Glaxion.Music
                     if (t.Text == info.Value.year)
                     {
                         VNode tn = new VNode(info.Value.title);
-                        tn.Tag = info.Value.path;
-                        tn.path = info.Value.path;
                         tn.name = info.Value.path;
                         tn.ForeColor = FileColor;
                         tn.BackColor = Colors.backColor;
@@ -470,13 +470,13 @@ namespace Glaxion.Music
 
         public VNode SearchTreeView(VNode tree, string text)
         {
-            if ((string)tree.Tag == text)
+            if ((string)tree.name == text)
                 return tree;
             if (tree.Nodes.Count > 0)
             {
                 foreach (VNode t in tree.Nodes)
                 {
-                    if ((string)t.Tag == text)
+                    if ((string)t.name == text)
                     {
                         return t;
                     }
@@ -500,7 +500,7 @@ namespace Glaxion.Music
             {
                 foreach (VNode tn in node.Nodes)
                 {
-                    string s = tn.Tag as string;
+                    string s = tn.name;
                     if (tool.StringCheck(s))
                         l.Add(s);
                 }
@@ -530,15 +530,15 @@ namespace Glaxion.Music
         {
             if (node == null)
                 return;
-            if (tool.IsAudioFile(node.Tag as string))
+            if (tool.IsAudioFile(node.name))
             {
-                MusicPlayer.Player.PlayFile(node.Tag as string);
+                MusicPlayer.Player.PlayFile(node.name);
             }
         }
         
         public void GetNodesFolderJPG(VNode n)
         {
-            string path = n.Tag as string;
+            string path = n.name;
             if (!tool.StringCheck(path))
                 return;
             string result = tool.GetFolderJPGFile(path);

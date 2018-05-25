@@ -11,6 +11,8 @@ namespace Glaxion.Music
         public PlaylistFileManager(ITreeView TreeViewInterface)
         {
             _view = TreeViewInterface;
+            fileLoader = MusicPlayer.Player.fileLoader;
+            editDirectoriesGUIdelegate = new ListGUICallBack(EditDirectoriesCallback);
         }
 
         // List<string> playlistfiles = new List<string>();
@@ -46,7 +48,7 @@ namespace Glaxion.Music
             {
                 foreach(VNode t in Nodes)
                 {
-                    if (t.Tag as string == Playlist.FindDefaultDirectory())
+                    if (t.name == Playlist.FindDefaultDirectory())
                         t.Expand = true;
                 }
             }
@@ -77,11 +79,11 @@ namespace Glaxion.Music
                 string[] dirs = Directory.GetDirectories(dir);
                 PlaylistFiles.Clear();
                 VNode rn = new VNode(Path.GetFileName(dir));
-                rn.Tag = dir;
+                rn.name = dir;
                 foreach (string s in dirs)
                 {
                     VNode tn = LoadDirectoryToNode(s, fileExtention);
-                    tn.Tag = s;
+                    tn.name = s;
                     if (tn.Nodes.Count > 0)
                         rn.Nodes.Add(tn);
                 }
@@ -90,7 +92,7 @@ namespace Glaxion.Music
                 {
                     VNode tn = new VNode();
                     tn.Text = Path.GetFileName(f);
-                    tn.Tag = f;
+                    tn.name = f;
                     rn.Nodes.Add(tn);
                     Playlist p = fileLoader.GetPlaylist(f, true);
                     PlaylistFiles.Add(f, p.name);
@@ -98,7 +100,19 @@ namespace Glaxion.Music
                 return rn;
             }
         }
-        
+
+        ListGUICallBack editDirectoriesGUIdelegate;
+        public void EditDirectoriesCallback(bool ok)
+        {
+            //if(ok)
+            LoadPlaylistDirectories();
+        }
+        public void EditPlaylistDirectories()
+        {
+            ListGUI lg = new ListGUI(fileLoader.PlaylistDirectories, true);
+            lg.callback = editDirectoriesGUIdelegate;
+        }
+
         public void SelectDirectory()
         {
             List<string> sl = new List<string>();
@@ -119,14 +133,14 @@ namespace Glaxion.Music
             string dir = "Null";
             if (selectedNode != null)
             {
-                dir = Path.GetDirectoryName(selectedNode.Tag as string);
+                dir = Path.GetDirectoryName(selectedNode.name);
                 return dir;
             }
             else
             {
                 if (Nodes.Count > 0)
                 {
-                    string d = Nodes[0].Tag as string;
+                    string d = Nodes[0].name;
                     if (Directory.Exists(d))
                         return d;
                 }
@@ -139,7 +153,7 @@ namespace Glaxion.Music
             bool deleted = false;
             foreach (VNode node in SelectedNodes)
             {
-                string path = node.Tag as string;
+                string path = node.name;
 
                 if (tool.IsPlaylistFile(path) && File.Exists(path))
                 {
@@ -165,7 +179,7 @@ namespace Glaxion.Music
             List<string> list = new List<string>();
             foreach (VNode node in SelectedNodes)
             {
-                string s = node.Tag as string;
+                string s = node.name;
                 if (tool.IsPlaylistFile(s))
                     list.Add(s);
             }
@@ -176,7 +190,7 @@ namespace Glaxion.Music
         {
             if (selectedNode != null)
             {
-                string path = selectedNode.Tag as string;
+                string path = selectedNode.name;
                 string s = tool.AppendFileName(path, "+");
                 if (!File.Exists(s))
                     File.Copy(path, s);

@@ -15,9 +15,9 @@ namespace Glaxion.Music
             Text = text;
         }
         public List<VNode> Nodes = new List<VNode>();
-        public object Tag;
+        //public object Tag;
         public string Text;
-        public string path;
+        //public string path;
         public string name;
         public bool Expand;
         public bool selected;
@@ -28,8 +28,7 @@ namespace Glaxion.Music
         internal VNode Clone()
         {
             VNode node = new VNode(Text);
-            node.Tag = Tag;
-            node.path = path;
+            node.name = name;
             node.Expand = Expand;
             node.isFile = isFile;
             node.selected = selected;
@@ -175,6 +174,7 @@ namespace Glaxion.Music
         public int State;
         public bool Selected;
         public bool Checked;
+        public string name;
 
         public void HighLightColors(ColorScheme scheme)
         {

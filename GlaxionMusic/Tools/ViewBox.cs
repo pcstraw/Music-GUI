@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Glaxion.Tools;
 using System.IO;
 using System.Reflection;
 using item_ = System.Windows.Forms.ListViewItem;
+using System.Collections;
 
 namespace Glaxion.Music
 {
     public class EnhancedListView : System.Windows.Forms.ListView
     {
-
         [DllImport("user32")]
         private static extern bool ShowScrollBar(IntPtr hwnd, int wBar, bool bShow);
         private const uint SB_HORZ = 0;
@@ -35,11 +32,11 @@ namespace Glaxion.Music
         const int WM_VSCROLL = 277; // Vertical scroll
         const int SB_LINEUP = 0; // Scrolls one line up
         const int SB_LINEDOWN = 1; // Scrolls one line down
-        internal ListViewItem _selectedItem;
+       // internal ListViewItem _selectedItem;
         public  ListViewItem hoveredItem;
-        private ListViewItem oldhovereditem;
+        private ListViewItem oldhovereditem;  //used for restoring highlight color
         public List<List<ListViewItem>> states = new List<List<ListViewItem>>();
-        public List<ListViewItem> lastSelectedItems = new List<ListViewItem>();
+        //public List<ListViewItem> lastSelectedItems = new List<ListViewItem>();
         public List<ListViewItem> preContextSelection = new List<ListViewItem>();
         public List<int> lastSelectedIndices = new List<int>();
         public Panel panel;
@@ -56,8 +53,6 @@ namespace Glaxion.Music
         public bool trackup;
         public bool trackDown;
         public bool toBottom;
-        public bool HasFocus;
-        public bool doubleClicked;
         public bool AutoUpdateTracks;
         public string FilteredText;
         public Color PlayColor;
@@ -90,14 +85,14 @@ namespace Glaxion.Music
             bxh = 25;
             FullRowSelect = true;
             PlayColor = MusicPlayer.PlayColor;
-
+            AllowDrop = true;
             DragEnter += e_DragEnter;
             ItemMouseHover += e_ItemMouseHover;
             KeyUp += e_KeyUp;
             DragLeave += e_DragLeave;
+            AllowColumnReorder = true;
         }
-
-
+        
         public VItem GetVListItem(ListViewItem item)
         {
             VItem v_item = new VItem();
@@ -251,27 +246,24 @@ namespace Glaxion.Music
             this.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ForeColor = System.Drawing.Color.Aqua;
             this.View = System.Windows.Forms.View.Details;
-            this.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.ListBox_ItemCheck);
             this.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.e_ItemDrag);
-            this.Click += new System.EventHandler(this.e_Click);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.ViewBox_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.ListBox_DragEnter);
             this.DragOver += new System.Windows.Forms.DragEventHandler(this.ListViewBase_DragOver);
             this.DragLeave += new System.EventHandler(this.e_DragLeave);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ListBox_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.e_KeyUp);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ListBox_MouseDown);
             this.MouseEnter += new System.EventHandler(this.e_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ListBox_MouseLeave);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.e_MouseUp);
             this.ResumeLayout(false);
         }
-
+        
         public void RemoveSelectedItems()
         {
             foreach (ListViewItem i in SelectedItems)
                 RemoveItem(i);
         }
+        
         
         protected virtual void e_KeyUp(object sender, KeyEventArgs e)
         {
@@ -280,6 +272,7 @@ namespace Glaxion.Music
         }
 
         //use this function for copy/adding list view items
+        /*
         public ListViewItem InsertFileAt(int index,string file)
         {
             ListViewItem item = CreateItemFromFile(file);
@@ -288,6 +281,7 @@ namespace Glaxion.Music
         }
         
         //main one
+        
         public ListViewItem CopyItemTo(int index, ListViewItem item)
         {
             ListViewItem i= (ListViewItem)item.Clone();
@@ -296,6 +290,7 @@ namespace Glaxion.Music
         }
 
         //main one
+        
         public ListViewItem MoveFileTo(int index, string file)
         {
             Items.Remove(Items[index]);
@@ -310,6 +305,7 @@ namespace Glaxion.Music
             Items.Insert(index+1, item);
             return item;
         }
+        */
         
         public void HighlightItem(ListViewItem item)
         {
@@ -324,14 +320,16 @@ namespace Glaxion.Music
         }
         private void e_ItemMouseHover(object sender, ListViewItemMouseHoverEventArgs e)
         {
-            Focus();
+            //Focus();
             hoveredItem = e.Item;
             HighlightItem(hoveredItem);
         }
 
         private void e_DragEnter(object sender, DragEventArgs e)
         {
-            if (!TotalClipboard.IsEmpty)
+            e.Effect = DragDropEffects.All;
+            return;
+            if (!InternalClipboard.IsEmpty)
             {
                 e.Effect = DragDropEffects.All;
                 return;
@@ -522,7 +520,7 @@ namespace Glaxion.Music
                 item.ForeColor = ForeColor;
             }
         }
-        
+        /*
         public void UpdateTrackFilePaths()
         {
             foreach (ListViewItem li in Items)
@@ -530,6 +528,7 @@ namespace Glaxion.Music
                 UpdateTrackPath(li);
             }
         }
+        */
         
         public ListViewItem GetItemAtPoint(Point point)
         {
@@ -560,7 +559,7 @@ namespace Glaxion.Music
                 tmrLVScroll.Enabled = false;
             }
         }
-        
+        /*
         public void RestoreSelectedIndices(List<int> indices)
         {
             foreach (int i in indices)
@@ -568,12 +567,12 @@ namespace Glaxion.Music
                 Items[i].Selected = true;
             }
         }
-        
-        public void CacheLastSelectedIndices(EnhancedListView box)
+        */
+        public void CacheLastSelectedIndices()
         {
             lastSelectedIndices.Clear();
-            foreach (int i in box.SelectedIndices)
-                lastSelectedIndices.Add(i);
+            foreach (int i in SelectedIndices)
+                lastSelectedIndices.Add(i);  //store last selected items
         }
         
         public void ScrollToBottom()
@@ -588,7 +587,7 @@ namespace Glaxion.Music
             mintScrollDirection = SB_LINEUP;
             tmrLVScroll.Enabled = true;
         }
-        
+        //extention for scrolling while dragging
         private void tmrLVScroll_Tick(object sender, EventArgs e)
         {
             if (toBottom == true)
@@ -607,28 +606,21 @@ namespace Glaxion.Music
             }
             SendMessage(Handle, WM_VSCROLL, (IntPtr)mintScrollDirection, IntPtr.Zero);
         }
-
-        protected void e_BoxChange(object o, EventArgs e)
-        {
-            tool.debug("base calling boxed changed event");
-        }
         
-        private void MoveItem(int index, ListViewItem lvi)
-        {
-            lvi.Remove();
-            this.Items.Insert(index, lvi);
-        }
-
         public void SetDragMode(DragEventArgs e)
         {
-            if (!TotalClipboard.IsEmpty)
+            
+            if (!InternalClipboard.IsEmpty)
+            {
                 return;
+            }
             else
             {
                 e.Effect = e.AllowedEffect;
                 e.Effect = DragDropEffects.Move;
             }
         }
+        
 
         //drag start
         protected virtual void ListBox_DragEnter(object sender, DragEventArgs e)
@@ -638,126 +630,108 @@ namespace Glaxion.Music
 
         protected virtual void e_ItemDrag(object sender, ItemDragEventArgs e)
         {
-             DoDragDrop(e.Item, DragDropEffects.All);
+            DoDragDrop(SelectedItems,DragDropEffects.Move);
         }
+        
 
+        public void MoveSelectedItemsTo(int index)
+        {
+            ArrayList insertItems =
+                  new ArrayList(base.SelectedItems.Count);
+            foreach (ListViewItem item in base.SelectedItems)
+            {
+                ListViewItem i = (ListViewItem)item.Clone();
+                i.Tag = item.Tag;
+                i.Name = item.Name;
+                insertItems.Add(i);
+            }
+            
+            for (int i = insertItems.Count - 1; i >= 0; i--)
+            {
+                ListViewItem insertItem =
+                 (ListViewItem)insertItems[i];
+                base.Items.Insert(index, insertItem);
+            }
+
+            foreach (ListViewItem removeItem in base.SelectedItems)
+            {
+                base.Items.Remove(removeItem);
+            }
+
+            //SelectedItems.Clear();
+            foreach (ListViewItem insertItem in insertItems)
+            {
+                insertItem.Selected = true;
+            }
+        }
+        
         protected virtual void ViewBox_DragDrop(object sender, DragEventArgs e)
         {
-            int last = 0;
-            if (SelectedItems.Count > 0)
-            {
-                last = SelectedItems[SelectedItems.Count - 1].Index;
-            }
-            //seems a bit unnecessary just so wew can reverse the list
-            //write function to reverse list instead
-            ListViewItem[] list = new ListViewItem[SelectedItems.Count];
-            SelectedItems.CopyTo(list, 0);
-            List<ListViewItem> li = list.ToList();
-            if(targetItem == null)
-            {
-               // tool.show(100, "error: handle case where targetItem is null");
+            //check for internal drag drop first
+            if (!InternalClipboard.IsEmpty)
                 return;
-            }
-            if (targetItem.Index > last)
-                li.Reverse();
-               
-            foreach (ListViewItem lvi in li)
+            
+            if (e.Data.GetDataPresent(typeof(SelectedListViewItemCollection)))
             {
-                if (targetItem != null)
+                //if we sent our own selected nodes as arg then we are doing an internal drag drop
+                SelectedListViewItemCollection o = (SelectedListViewItemCollection)e.Data.GetData(typeof(SelectedListViewItemCollection));
+                if (o != SelectedItems)
+                    return;
+                if (SelectedItems.Count == 0)
+                    return;
+
+                Point cp = PointToClient(new Point(e.X, e.Y));
+                ListViewItem dragToItem = GetItemAt(cp.X, cp.Y);
+                int dropIndex = 0;
+                if (dragToItem == null)
                 {
-                    if (targetItem.Index != lvi.Index)
-                        MoveItem(targetItem.Index, lvi);
+                    dropIndex = Items.Count;
                 }
                 else
-                    MoveItem(this.Items.Count, lvi);
+                {
+                    dropIndex = dragToItem.Index;
+                    if (dropIndex > base.SelectedItems[0].Index)
+                    {
+                        dropIndex++;
+                    } 
+                }
+                MoveSelectedItemsTo(dropIndex);
             }
-
-            TotalClipboard.Clear();
-            //   BoxChanged(this, EventArgs.Empty);
             tmrLVScroll.Enabled = false;
+            return;
         }
         
         private void e_DragLeave(object sender, EventArgs e)
         {
             tmrLVScroll.Enabled = false;
-            if (TotalClipboard.IsEmpty)
-            {
-                if (SelectedItems.Count > 0)
-                {
-                    foreach (ListViewItem item in SelectedItems)
-                        TotalClipboard.Add(item.SubItems[1].Text);
-
-                   // TotalClipboard.Files.Reverse();
-                }
-            }
-        }
-        
-        private void ListBox_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            if (doubleClicked)
-            {
-                e.NewValue = e.CurrentValue;
-                doubleClicked = false;
-            }
-        }
-
-        private void ListBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            if ((e.Button == MouseButtons.Left) && (e.Clicks > 1))
-                doubleClicked = true;
-        }
-
-        private void ListBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            doubleClicked = false;
         }
         
         protected virtual void e_MouseEnter(object sender, EventArgs e)
         {
-            HasFocus = true;
             if (!Focused)
             {
                 Focus();
                 //restore last selected items to their normal color
-                foreach (int i in SelectedIndices)
+                foreach (int i in lastSelectedIndices)
                 {
-                    // Items[i].BackColor = this.BackColor;
-                    //Items[i].ForeColor = this.ForeColor;
-                    Items[i].SubItems[1].Tag = 1;
                     Items[i].Selected = true;
-                   // lastSelectedItems.Add(Items[i]);
+                    Items[i].BackColor = BackColor;
+                    Items[i].ForeColor = ForeColor;
                 }
             }
         }
 
         private void ListBox_MouseLeave(object sender, EventArgs e)
         {
-            lastSelectedItems.Clear();
             //remeber the last selected items as we leave the playlist
-            foreach (int i in SelectedIndices)
-            {
-                Items[i].SubItems[1].Tag = null;
-                // Items[i].BackColor = Color.DarkBlue;
-                //Items[i].ForeColor = Color.White;  //white colour isn't being retained after leaving
-                lastSelectedItems.Add(Items[i]);  //store last selected items
-            }
+            CacheLastSelectedIndices();
         }
-        
-        private void e_Click(object sender, EventArgs e)
-        {
-            foreach(ListViewItem i in lastSelectedItems)
-            {
-                i.BackColor = BackColor;
-                i.ForeColor = ForeColor;
-            }
-        }
-        
+        //when the left mouse button is store the selected items
+        //to show while the context menu is open
         protected virtual void e_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
-                foreach (ListViewItem i in preContextSelection)
-                    i.BackColor = this.BackColor;
                 preContextSelection.Clear();
                 foreach (ListViewItem i in SelectedItems)
                     preContextSelection.Add(i);

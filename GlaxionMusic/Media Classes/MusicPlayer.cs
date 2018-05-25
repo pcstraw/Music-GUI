@@ -273,12 +273,18 @@ namespace Glaxion.Music
                 tool.Show(5,"error: playlist is null", p.name);
                 return;
             }
-            playlist = p;
-            if (index > -1 && index < p.tracks.Count())
+            if (index < 0)
             {
-                currentTrack = index;
-                p.trackIndex = currentTrack;
+                index = 0;
             }
+            if (index > p.tracks.Count)
+                index = p.tracks.Count - 1;
+
+
+            playlist = p;
+            currentTrack = index;
+            p.trackIndex = currentTrack;
+            
             MusicUpdatedEvent(p, EventArgs.Empty);
         }
         
@@ -335,6 +341,8 @@ namespace Glaxion.Music
             
             if (index < 0)
                 index = 0;
+            if (index >= p.tracks.Count)
+                index = p.tracks.Count - 1;
             
             if (p != playlist)
             {
@@ -433,20 +441,21 @@ namespace Glaxion.Music
             int nextindex = currentTrack + 1;
             if (nextindex >= playlist.tracks.Count)
                 nextindex = 0;
-            else
+            
+            if (File.Exists(playlist.tracks[nextindex]))
             {
-                if (File.Exists(playlist.tracks[nextindex]))
+                if (IsPlaying)
                 {
                     Play(nextindex);
-                    NextEvent(null, EventArgs.Empty);
                     return;
                 }
                 else
                 {
                     currentTrack = nextindex;
-                    NextTrack();
                 }
+                NextEvent(null, EventArgs.Empty);
             }
+            //else call playback failed?
         }
 
         public void PrevTrack()
@@ -454,22 +463,18 @@ namespace Glaxion.Music
             if (playlist == null)
                 return;
 
-            int nextindex = currentTrack- 1;
+            int nextindex = currentTrack-1;
             if (nextindex < 0)
                 nextindex = playlist.tracks.Count-1;
             if (IsPlaying)
             {
-                if (File.Exists(playlist.tracks[nextindex]))
-                {
-                    Play(nextindex);
-                    PrevEvent(null, EventArgs.Empty);
-                    return;
-                }else
-                {
-                    currentTrack = nextindex;
-                    PrevTrack();
-                }
+                 Play(nextindex);
             }
+            else
+            {
+                currentTrack = nextindex;
+            }
+            PrevEvent(null, EventArgs.Empty);
         }
         public bool Play()
         {

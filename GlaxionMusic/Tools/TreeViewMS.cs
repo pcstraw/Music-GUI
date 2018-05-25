@@ -47,9 +47,11 @@ namespace Glaxion.Music
             tool.AllowDragEffect(e);
         }
 
-        private void TreeViewMS_DragLeave(object sender, EventArgs e)
+        protected virtual void TreeViewMS_DragLeave(object sender, EventArgs e)
         {
-            TotalClipboard.CopyTree(this);
+            if (!InternalClipboard.IsEmpty)
+                return;
+            InternalClipboard.CopyTree(this);
            //otalClipboard.Files.Reverse();
         }
 

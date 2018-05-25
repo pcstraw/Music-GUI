@@ -61,8 +61,6 @@ namespace Glaxion.Music
         //path to the playlist file
         public VItem AddPlaylistFromPath(string path)
         {
-            if (!File.Exists(path) || !tool.IsPlaylistFile(path))
-                return null;
             string name = Path.GetFileNameWithoutExtension(path);
             if (Playlists.ContainsKey(path))
             {
@@ -82,7 +80,7 @@ namespace Glaxion.Music
 
         public VItem AddItemFromPlaylist(Playlist p)
         {
-            if (p.path != "" && Playlists.ContainsKey(p.path))
+            if (!string.IsNullOrEmpty(p.path) && Playlists.ContainsKey(p.path))
             {
                 tool.show(1, "", p.name, "", " already contained in list", "", p.path);
                 VItem item = FindPlaylistItem(p);
