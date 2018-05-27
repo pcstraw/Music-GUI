@@ -78,7 +78,7 @@ namespace Glaxion.Music
         public bool AddDirectoryFromFile(string s)
         {
             string dir = s;
-            if (tool.IsAudioFile(s))
+            if (Path.HasExtension(s))
             {
                 dir = Path.GetDirectoryName(s);
             }
@@ -90,34 +90,18 @@ namespace Glaxion.Music
             return false;
         }
 
-        public void DropDirectoriesFromClipboard()
+        public void DropDirectoriesFromClipboard(string[] data)
         {
             bool addedDir = false;
-            if (!InternalClipboard.IsEmpty)
+            if (data.Length > 0)
             {
-                /*
-                foreach (string s in TotalClipboard.Files)
+                foreach (string s in data)
                 {
                     addedDir = AddDirectoryFromFile(s);
                 }
-                */
+                if (addedDir)
+                    LoadDirectoriesToTree();
             }
-            else
-            {
-                // TotalClipboard
-                tool.show(2, "External Drag Drop is not yet supported");
-                return;
-                StringCollection collection = Clipboard.GetFileDropList();
-                foreach (string s in collection)
-                    addedDir = AddDirectoryFromFile(s);
-            }
-            if (addedDir)
-                LoadDirectoriesToTree();
-        }
-
-        private void MusicFileManager_DragDrop(object sender, DragEventArgs e)
-        {
-            DropDirectoriesFromClipboard();
         }
 
         //careful.  seems to be flakey with parallel foreach

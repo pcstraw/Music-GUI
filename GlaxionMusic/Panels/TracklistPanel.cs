@@ -9,23 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Glaxion.Tools;
 using System.IO;
-using BrightIdeasSoftware;
 using System.Collections;
 
 namespace Glaxion.Music
 {
-    public partial class PlaylistPanel : UserControl
+    public partial class TracklistPanel : UserControl
     {
-        public PlaylistPanel()
+        public TracklistPanel()
         {
-            tracklistView = new TracklistView();
             InitializeComponent();
-            
              playlistChangedColor = Color.Orange;
             _backColor = this.BackColor;
-            //Controller = new PlaylistController(this);
             tracklistView.DoubleClick += PlaylistView_DoubleClick;
-            tracklistView.ItemDrag += TrackManager_ItemDrag;
+            tracklistView.manager.tracksChangedDelegate = TracksChangedCallBack;
         }
         
         public void PlayHoveredItem()
@@ -33,8 +29,7 @@ namespace Glaxion.Music
             ListViewItem item = tracklistView.hoveredItem;
             if (item != null)
             {
-                UpdateTracks();
-                MusicPlayer.Player.UpdateMusicPlayer(CurrentList, item.Index);
+                tracklistView.manager.UpdateMusicPlayer(item.Index);
                 MusicPlayer.Player.Play();
                 item.Selected = false;
             }
@@ -72,7 +67,7 @@ namespace Glaxion.Music
             }
         }
 
-        private void TrackManager_ItemDrag(object sender, ItemDragEventArgs e)
+        public void TracksChangedCallBack()
         {
             if (CurrentList == MusicPlayer.Player.playlist)
                 EnableUpdateMusicButton(true);
@@ -80,7 +75,6 @@ namespace Glaxion.Music
         
         public void CloseDockedPanel()
         {
-            tracklistView.ItemDrag -= TrackManager_ItemDrag;
             if (dockSplitter != null)
                 dockSplitter.Dispose();
 
@@ -102,7 +96,7 @@ namespace Glaxion.Music
 
         private void trackMenuStrip_Enter(object sender, EventArgs e)
         {
-            MessageBox.Show("Empty");
+            MessageBox.Show("Please Deprecate");
             closeButton.Visible = true;
         }
 
@@ -116,16 +110,11 @@ namespace Glaxion.Music
             closeButton.Visible = true;
         }
       
-
         internal void SetPlaylist(Playlist p)
         {
             CurrentList = p;
             tracklistView.manager.CurrentList = p;
             UpdatePlaylistTitle();
-            
-           // objectListView1.AddObjects(CurrentList.tracks);
-           
-            // objectListView1.RefreshSelectedObjects();
         }
 
         private void closeButton_MouseLeave(object sender, EventArgs e)
@@ -135,14 +124,14 @@ namespace Glaxion.Music
 
         private void saveAndCloseButton_Click(object sender, EventArgs e)
         {
-            UpdateTracks();
+            tracklistView.manager.UpdateTracks();
             CurrentList.Save();
             CloseDockedPanel();
         }
 
         private void UpdateAndCloseButton_Click(object sender, EventArgs e)
         {
-            UpdateTracks();
+            tracklistView.manager.UpdateTracks();
             CloseDockedPanel();
         }
 
@@ -167,13 +156,11 @@ namespace Glaxion.Music
         {
             MusicPlayer.Player.MusicUpdatedEvent += Player_MusicUpdatedEvent;
             MusicPlayer.Player.PlayEvent += tracklistView.MusicPlayer_PlayEvent;
+            playlistNameLabel.Font = new Font(CustomFont.Exo.ff, playlistNameLabel.Font.Size);
+            tracklistView.manager.Load();
         }
         
-        public void UpdateTracks()
-        {
-            CurrentList.tracks = tracklistView.GetTrackItems();
-        }
-
+        
         private void updateMusicPlayerButton_Click(object sender, EventArgs e)
         {
             tracklistView.manager.UpdateMusicPlayer();
@@ -187,6 +174,18 @@ namespace Glaxion.Music
         private void PlaylistPanel_MouseHover(object sender, EventArgs e)
         {
             textBox1.Visible = false;
+        }
+
+        private void tracklistView_MouseLeave(object sender, EventArgs e)
+        {
+            //tracklistView.ShowLastSelected();
+            
+        }
+
+        private void splitContainer1_SplitterMoving(object sender, SplitterCancelEventArgs e)
+        {
+            if (e.SplitY > 110)
+                e.Cancel = true;
         }
     }
 }

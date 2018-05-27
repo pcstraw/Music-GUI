@@ -67,7 +67,7 @@
             // squashBoxControl1.SplitContainer
             // 
             this.squashBoxControl1.MainSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.squashBoxControl1.MainSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.squashBoxControl1.MainSplitContainer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.squashBoxControl1.MainSplitContainer.Location = new System.Drawing.Point(0, 38);
             this.squashBoxControl1.MainSplitContainer.Name = "SplitContainer";
             this.squashBoxControl1.MainSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;

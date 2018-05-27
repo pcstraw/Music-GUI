@@ -6,6 +6,8 @@ using Glaxion.Tools;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
+using System.ComponentModel;
+using System.Reflection;
 
 namespace Glaxion.Music
 {
@@ -90,6 +92,7 @@ namespace Glaxion.Music
         public static Color MissingColor = Color.OrangeRed;
         public static Color RepeatColor = Color.DarkSlateBlue;
         public static Color ConflictColor = Color.MediumVioletRed;
+        internal static Color IsPlayingColor = Color.Yellow;
 
         public delegate void MusicUpdatedEventHandler(object sender, EventArgs args);
         public event MusicUpdatedEventHandler MusicUpdatedEvent;
@@ -284,7 +287,6 @@ namespace Glaxion.Music
             playlist = p;
             currentTrack = index;
             p.trackIndex = currentTrack;
-            
             MusicUpdatedEvent(p, EventArgs.Empty);
         }
         
@@ -515,13 +517,19 @@ namespace Glaxion.Music
             IsPlaying = true;
             Stopped = false;
             if (index != currentTrack)
-                TrackChangeEvent(null, EventArgs.Empty);
+            {
+                TrackChangeEvent(index, EventArgs.Empty);
+            }
 
             prevTrack = currentTrackString;
             currentTrack = index;
+            if (prevTrack == null)
+                prevTrack = file;
+            if (prevTrack != currentTrackString)
+                prevTrack = currentTrackString;
             currentTrackString = file;
             playlist.trackIndex = index;
-            PlayEvent(null, EventArgs.Empty);
+            PlayEvent(index, EventArgs.Empty);
             return true;
         }
 
@@ -566,7 +574,7 @@ namespace Glaxion.Music
             }
 
             currentTrackString = file;
-            PlayEvent(null, EventArgs.Empty);
+            PlayEvent(file, EventArgs.Empty);
             return true;
         }
         

@@ -49,6 +49,7 @@ namespace Glaxion.Music
         {
             iD3Control1.BringToFront();
             picturePanel1.BringToFront();
+            titleLabel.Font = new Font(CustomFont.Exo.ff, titleLabel.Font.Size);
         }
 
         private void picturePanel1_PictureChangedEvent(object sender, EventArgs args)

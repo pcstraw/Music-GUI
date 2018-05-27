@@ -37,7 +37,7 @@ namespace Glaxion.Music
         private ListViewItem oldhovereditem;  //used for restoring highlight color
         public List<List<ListViewItem>> states = new List<List<ListViewItem>>();
         //public List<ListViewItem> lastSelectedItems = new List<ListViewItem>();
-        public List<ListViewItem> preContextSelection = new List<ListViewItem>();
+       // public List<VItem> preContextSelection = new List<VItem>();
         public List<int> lastSelectedIndices = new List<int>();
         public Panel panel;
         public Timer tmrLVScroll;
@@ -105,6 +105,7 @@ namespace Glaxion.Music
             return v_item;
         }
 
+        /*
         public void RefreshList(List<VItem> VItems)
         {
             Items.Clear();
@@ -123,7 +124,7 @@ namespace Glaxion.Music
                 Items.Add(item);
             }
         }
-
+        */
         public void InvertSelection()
         {
             foreach (item_ i in Items)
@@ -254,21 +255,20 @@ namespace Glaxion.Music
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.e_KeyUp);
             this.MouseEnter += new System.EventHandler(this.e_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ListBox_MouseLeave);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.e_MouseUp);
             this.ResumeLayout(false);
         }
-        
+        /*
         public void RemoveSelectedItems()
         {
             foreach (ListViewItem i in SelectedItems)
                 RemoveItem(i);
         }
-        
+        */
         
         protected virtual void e_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Delete)
-                RemoveSelectedItems();
+            //if (e.KeyCode == Keys.Delete)
+            //    RemoveSelectedItems();
         }
 
         //use this function for copy/adding list view items
@@ -336,16 +336,6 @@ namespace Glaxion.Music
             }
             e.Effect = DragDropEffects.Copy;
             return;
-        }
-
-        public List<string> GetTrackItems()
-        {
-            List<string> list = new List<string>();
-            foreach (ListViewItem li in Items)
-            {
-                list.Add(li.Tag as string);
-            }
-            return list;
         }
         
         public static ListViewItem CreateAudioItem(string path)
@@ -491,7 +481,7 @@ namespace Glaxion.Music
         {
             foreach(ListViewItem i in Items)
             {
-                string s = i.Tag as string;
+                string s = i.Name;
                 if (tool.StringCheck(s))
                 {
                     if (s.ToLower().Contains(text.ToLower()))
@@ -630,10 +620,10 @@ namespace Glaxion.Music
 
         protected virtual void e_ItemDrag(object sender, ItemDragEventArgs e)
         {
-            DoDragDrop(SelectedItems,DragDropEffects.Move);
+            DoDragDrop(SelectedItems,DragDropEffects.Copy);
         }
         
-
+        
         public void MoveSelectedItemsTo(int index)
         {
             ArrayList insertItems =
@@ -665,6 +655,7 @@ namespace Glaxion.Music
             }
         }
         
+        
         protected virtual void ViewBox_DragDrop(object sender, DragEventArgs e)
         {
             //check for internal drag drop first
@@ -685,22 +676,27 @@ namespace Glaxion.Music
                 int dropIndex = 0;
                 if (dragToItem == null)
                 {
-                    dropIndex = Items.Count;
+                    dropIndex = Items.Count-1;
                 }
                 else
                 {
                     dropIndex = dragToItem.Index;
                     if (dropIndex > base.SelectedItems[0].Index)
                     {
-                        dropIndex++;
+                        //dropIndex--;
                     } 
                 }
-                MoveSelectedItemsTo(dropIndex);
+                SelfDragDrop(dropIndex);
             }
             tmrLVScroll.Enabled = false;
             return;
         }
-        
+
+        public virtual void SelfDragDrop(int dropIndex)
+        {
+
+        }
+
         private void e_DragLeave(object sender, EventArgs e)
         {
             tmrLVScroll.Enabled = false;
@@ -724,19 +720,10 @@ namespace Glaxion.Music
         private void ListBox_MouseLeave(object sender, EventArgs e)
         {
             //remeber the last selected items as we leave the playlist
-            CacheLastSelectedIndices();
+            //CacheLastSelectedIndices();
         }
         //when the left mouse button is store the selected items
         //to show while the context menu is open
-        protected virtual void e_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                preContextSelection.Clear();
-                foreach (ListViewItem i in SelectedItems)
-                    preContextSelection.Add(i);
-            }
-        }
     }
 
     public static class ControlExtensions

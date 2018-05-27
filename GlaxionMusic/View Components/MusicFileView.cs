@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Glaxion.Tools;
 using System.IO;
 using System.Diagnostics;
+using System.Drawing;
 
 namespace Glaxion.Music
 {
@@ -42,7 +43,13 @@ namespace Glaxion.Music
         
         private void MusicFileManager_DragDrop(object sender, DragEventArgs e)
         {
-            manager.DropDirectoriesFromClipboard();
+            if (InternalClipboard.IsEmpty)
+            {
+                string[] data = (string[])e.Data.GetData(DataFormats.FileDrop);
+                if (data == null)
+                    return;
+                manager.DropDirectoriesFromClipboard(data);
+            }
         }
         
         private void MusicControl_Load(object sender, EventArgs e)
@@ -182,6 +189,23 @@ namespace Glaxion.Music
             EndUpdate();
             //manager.CacheNodes(manager.Nodes);
             //Populate(nodes);
+        }
+
+        public void Find(string path)
+        {
+            if (!tool.StringCheck(path))
+                return;
+            TreeNode node = FindFileByPath(path, Nodes);
+            if (node != null)
+            {
+                SelectedNode = node;
+                Select();
+                Focus();
+                node.Parent.Expand();
+                node.BackColor = Color.DarkBlue;
+                node.ForeColor = Color.White;
+                node.EnsureVisible();
+            }
         }
     }
 }

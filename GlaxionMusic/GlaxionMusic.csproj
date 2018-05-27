@@ -101,7 +101,11 @@
     <Compile Include="Panels\ListGUI.Designer.cs">
       <DependentUpon>ListGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\Munger.cs" />
     <Compile Include="TrackManager.cs" />
+    <Compile Include="View Components\EnhancedListController.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View Components\MusicControl.cs" />
     <Compile Include="MusicControlGUI.cs">
       <SubType>Form</SubType>
@@ -160,7 +164,9 @@
       <DependentUpon>SquashBoxUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Tools\Tool.cs" />
-    <Compile Include="View Components\TracklistView.cs" />
+    <Compile Include="View Components\TracklistView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Panels\TracklistPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -322,12 +328,6 @@
     <None Include="Resources\cell.jpg" />
     <Resource Include="Resources\86423-200.png" />
     <Resource Include="Resources\2873-200.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\ObjectListView\ObjectListView\ObjectListView2012.csproj">
-      <Project>{18FEDA0C-D147-4286-B39A-01204808106A}</Project>
-      <Name>ObjectListView2012</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

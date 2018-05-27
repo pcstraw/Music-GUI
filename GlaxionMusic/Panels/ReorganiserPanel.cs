@@ -35,7 +35,7 @@ namespace Glaxion.Music
         {
             //if the node is tagged with an audio file 
             //then we can assume it has no children and return early
-            string check_current_node = node.Tag as string;
+            string check_current_node = node.Name;
             if (tool.IsAudioFile(check_current_node))
             {
                 if (!File.Exists(check_current_node))
@@ -50,7 +50,7 @@ namespace Glaxion.Music
 
             foreach (TreeNode t in node.Nodes)
             {
-                string s = t.Tag as string;
+                string s = t.Name;
                 if (!tool.IsAudioFile(s))
                     RetrieveAudioFiles(t);
                 else
@@ -170,7 +170,7 @@ namespace Glaxion.Music
                 t.BackColor = treeView.BackColor;
                 t.ImageIndex = 1;
                 t.SelectedImageIndex = 1;
-                t.Tag = s;
+                t.Name = s;
 
                 TreeNode rootNode = FindRootDirectorNode(s);
                 //Get ID3 Info
@@ -223,7 +223,7 @@ namespace Glaxion.Music
                 TreeNode t = (TreeNode)n.Clone();
                 t.ForeColor = treeView.ForeColor;
                 t.BackColor = treeView.BackColor;
-                string s = n.Tag as string;
+                string s = n.Name;
                 if (tool.IsAudioFile(s))
                 {
                     t.ImageIndex = 1;
@@ -256,7 +256,7 @@ namespace Glaxion.Music
                 TreeNode t = (TreeNode)n.Clone();
                 t.ForeColor = treeView.ForeColor;
                 t.BackColor = treeView.BackColor;
-                string s = n.Tag as string;
+                string s = n.Name;
                 if (tool.IsAudioFile(s))
                 {
                     t.ImageIndex = 1;
@@ -296,7 +296,7 @@ namespace Glaxion.Music
             if (t == null)
                 return;
 
-            string s = t.Tag as string;
+            string s = t.Name;
             if (tool.IsAudioFile(s))
             {
                 trackInfoUserControl.SetSong(s);
@@ -351,7 +351,7 @@ namespace Glaxion.Music
             foreach (TreeNode t in music_file_nodes)
             {
                 TreeNode n = t;
-                string s = n.Tag as string;
+                string s = n.Name;
                 //gets the full path of the file we want to create
                 //based on the node's parent
                 string text = GetParentPath(t);
@@ -377,7 +377,7 @@ namespace Glaxion.Music
             foreach (TreeNode t in music_file_nodes)
             {
                 TreeNode n = t;
-                string s = n.Tag as string;
+                string s = n.Name;
                 //gets the full path of the file we want to create
                 //based on the node's parent
                 string text = GetParentPath(t);
@@ -388,7 +388,7 @@ namespace Glaxion.Music
                 if (!new_dirs.Contains(dir))
                     new_dirs.Add(dir);
                 //force overwrite for now
-                File.Copy(n.Tag as string, text, true);
+                File.Copy(n.Name, text, true);
             }
             foreach (string dir in new_dirs)
             {

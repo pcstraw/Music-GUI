@@ -1,6 +1,6 @@
 ﻿namespace Glaxion.Music
 {
-    partial class PlaylistPanel
+    partial class TracklistPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -37,11 +37,10 @@
             this.close_save_toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.update_music_tooltip = new System.Windows.Forms.ToolTip(this.components);
             this.updateMusicPlayerButton = new System.Windows.Forms.Button();
-            this.hotItemStyle1 = new BrightIdeasSoftware.HotItemStyle();
-            this.tracklistView = new Glaxion.Music.TracklistView();
             this.playlistNameLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tracklistView = new Glaxion.Music.TracklistView();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -123,29 +122,6 @@
             this.updateMusicPlayerButton.Visible = false;
             this.updateMusicPlayerButton.Click += new System.EventHandler(this.updateMusicPlayerButton_Click);
             // 
-            // hotItemStyle1
-            // 
-            this.hotItemStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            // 
-            // tracklistView
-            // 
-            this.tracklistView.AllowColumnReorder = true;
-            this.tracklistView.AllowDrop = true;
-            this.tracklistView.BackColor = System.Drawing.Color.LemonChiffon;
-            this.tracklistView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tracklistView.Font = new System.Drawing.Font("Tw Cen MT", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tracklistView.ForeColor = System.Drawing.Color.Black;
-            this.tracklistView.FullRowSelect = true;
-            this.tracklistView.Location = new System.Drawing.Point(0, 0);
-            this.tracklistView.Name = "tracklistView";
-            this.tracklistView.OwnerDraw = true;
-            this.tracklistView.Size = new System.Drawing.Size(310, 273);
-            this.tracklistView.TabIndex = 3;
-            this.tracklistView.UseCompatibleStateImageBehavior = false;
-            this.tracklistView.View = System.Windows.Forms.View.Details;
-            this.tracklistView.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.TrackManager_ItemDrag);
-            this.tracklistView.MouseEnter += new System.EventHandler(this.trackManager_MouseEnter);
-            // 
             // playlistNameLabel
             // 
             this.playlistNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -189,18 +165,39 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tracklistView);
+            this.splitContainer1.Panel2MinSize = 250;
             this.splitContainer1.Size = new System.Drawing.Size(310, 337);
-            this.splitContainer1.SplitterDistance = 56;
+            this.splitContainer1.SplitterDistance = 75;
             this.splitContainer1.SplitterWidth = 8;
             this.splitContainer1.TabIndex = 6;
+            this.splitContainer1.SplitterMoving += new System.Windows.Forms.SplitterCancelEventHandler(this.splitContainer1_SplitterMoving);
             // 
-            // PlaylistPanel
+            // tracklistView
+            // 
+            this.tracklistView.AllowColumnReorder = true;
+            this.tracklistView.AllowDrop = true;
+            this.tracklistView.BackColor = System.Drawing.Color.LemonChiffon;
+            this.tracklistView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tracklistView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tracklistView.ForeColor = System.Drawing.Color.Black;
+            this.tracklistView.FullRowSelect = true;
+            this.tracklistView.Location = new System.Drawing.Point(0, 0);
+            this.tracklistView.Name = "tracklistView";
+            this.tracklistView.OwnerDraw = true;
+            this.tracklistView.Size = new System.Drawing.Size(310, 254);
+            this.tracklistView.TabIndex = 3;
+            this.tracklistView.UseCompatibleStateImageBehavior = false;
+            this.tracklistView.View = System.Windows.Forms.View.Details;
+            this.tracklistView.MouseEnter += new System.EventHandler(this.trackManager_MouseEnter);
+            this.tracklistView.MouseLeave += new System.EventHandler(this.tracklistView_MouseLeave);
+            // 
+            // TracklistPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.Controls.Add(this.splitContainer1);
-            this.Name = "PlaylistPanel";
+            this.Name = "TracklistPanel";
             this.Size = new System.Drawing.Size(310, 337);
             this.Load += new System.EventHandler(this.TrackUserControl_Load);
             this.MouseEnter += new System.EventHandler(this.TrackUserControl_MouseEnter);
@@ -223,7 +220,6 @@
         private System.Windows.Forms.ToolTip close_save_toolTip;
         private System.Windows.Forms.ToolTip update_music_tooltip;
         private System.Windows.Forms.Button updateMusicPlayerButton;
-        private BrightIdeasSoftware.HotItemStyle hotItemStyle1;
         private System.Windows.Forms.Label playlistNameLabel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.SplitContainer splitContainer1;

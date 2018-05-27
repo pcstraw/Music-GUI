@@ -1,4 +1,4 @@
-﻿using BrightIdeasSoftware;
+﻿
 using Glaxion.Tools;
 using System;
 using System.Collections.Generic;
@@ -8,88 +8,73 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Glaxion.Music
 {
-    public class SongItem : ListViewItem
-    {
-        public Song song;
-    }
-
-
-    public class TracklistView : EnhancedListView, ITracklistView
+    public class TracklistView : EnhancedListController, ITracklistView,IListView
     {
         public TracklistView()
         {
             InitializeComponent();
-           // lastSelectedIndidex = new SelectedIndexCollection(this);
-           // if(this.Columns[1] != null)
-           // this.Columns[1].Width = 100;
-           // ColumnHeader c1 = new ColumnHeader();
-            //c1.Text = "Name";
-           // ColumnHeader c2 = new ColumnHeader();
-           // c2.Text = "Path";
-            //this.Columns.Add(c2);
             OwnerDraw = true;
             AllowDrop = true;
-           // DragDrop += ViewBox_DragDrop;
             DragEnter += ListBox_DragEnter;
             DrawItem += TrackManager_CustomDraw;
             DrawColumnHeader += TrackManager_DrawColumnHeader;
-            ColumnClick += listbox_ColumnClick;
-            Leave += TracklistView_Leave;
             Columns.Clear();
-            //Columns.Add(new OLVColumn("Blank", "None where"));
-            Columns.Add(new OLVColumn("Title", "name"));
-            Columns.Add(new OLVColumn("Path", "path"));
-            Columns.Add(new OLVColumn("Artist", "artist"));
-            Columns.Add(new OLVColumn("Year", "year"));
-            Columns.Add(new OLVColumn("Genre", "genre"));
-            //Columns[0].Width = 0;
-            Columns[0].Width = 250;
+            Columns.Add(new ColumnHeader());
+            Columns.Add(new ColumnHeader());
+            Columns.Add(new ColumnHeader());
+            Columns.Add(new ColumnHeader());
+            Columns.Add(new ColumnHeader());
+            Columns[0].Width = 400;
             Columns[1].Width = 500;
             Columns[2].Width = 150;
             Columns[3].Width = 150;
-            manager = new TrackManager(this,new ColorScheme(ForeColor,BackColor));
-            wasSelectedColor = new ColorScheme(Color.Black,Color.Lavender);
-
+            Columns[3].Width = 150;
+            Columns[0].Text = "Title";
+            Columns[1].Text = "Path";
+            Columns[2].Text = "Artist";
+            Columns[3].Text = "Year";
+            Columns[4].Text = "Genre";
+            manager = new TrackManager(this,this,new ColorScheme(ForeColor,BackColor));
+            //wasSelectedColor = new ColorScheme(Color.Black, Color.LightSkyBlue);
+            wasSelectedColor = new ColorScheme(Color.Black, Color.PaleGoldenrod);
             this.DragLeave += TracklistView_DragLeave;
+            this.MouseUp += TracklistView_MouseUp;
+            this.MouseDown += TracklistView_MouseDown;
             this.MouseLeave += TracklistView_MouseLeave;
+            this.Click += TracklistView_Click;
+        }
+
+        private void TracklistView_Click(object sender, EventArgs e)
+        {
+            manager.UpdateColours();
+        }
+        
+        private void TracklistView_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ResetAllColors();
+            }
+            manager.UpdateColours();
+        }
+        private void TracklistView_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                CacheLastSelectedIndices();
+            }
+            manager.UpdateColours();
         }
 
         private void TracklistView_MouseLeave(object sender, EventArgs e)
         {
             ShowLastSelected();
-            this.Refresh();
         }
-
-        private void TracklistView_Leave(object sender, EventArgs e)
-        {
-            ShowLastSelected();
-        }
-
-        private void TracklistView_DragLeave(object sender, EventArgs e)
-        {
-            if (InternalClipboard.IsEmpty)
-            {
-                if (SelectedItems.Count > 0)
-                {
-                    foreach (ListViewItem item in SelectedItems)
-                    {
-                        SongItem s = (SongItem)item;
-                        InternalClipboard.Add(s.song.path);
-                    }
-                }
-            }
-            ShowLastSelected();
-        }
-
-        public delegate void FindTrackEventHander(object sender, EventArgs args);
-        public event FindTrackEventHander FindEvent;
-        //public ListViewItem rightClickedItem;
-        //public ListViewItem leftClickedItem;
-        public ColorScheme wasSelectedColor;
 
         new private void InitializeComponent()
         {
@@ -98,28 +83,56 @@ namespace Glaxion.Music
             // TracklistView
             // 
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.DragOver += new System.Windows.Forms.DragEventHandler(this.TrackManager_DragOver);
-            this.Enter += new System.EventHandler(this.TrackManager_Enter);
-            this.Validating += new System.ComponentModel.CancelEventHandler(this.TrackManager_Validating);
             this.ResumeLayout(false);
         }
 
-        public TrackManager manager;
+        internal void RemoveSelectedTracks()
+        {
+            BeginUpdate();
+            IEnumerable<int> list = GetSelected();
+            manager.RemoveSelectedTracks(list.ToList<int>());
+            SelectedIndices.Clear();
+            manager.ClearSelection();
+            EndUpdate();
+        }
+        
+        public void ResetAllColors()
+        {
+            for(int i =0;i<manager.Items.Count;i++)
+            {
+                //manager.Items[i].State = ItemState.Reset;
+            }
+        }
+        
+        private void TracklistView_DragLeave(object sender, EventArgs e)
+        {
+            if (InternalClipboard.IsEmpty)
+            {
+                if (SelectedItems.Count > 0)
+                {
+                    foreach (int item in SelectedIndices)
+                    {
+                        InternalClipboard.Add(manager.Items[item].Name);
+                    }
+                }
+            }
+            CacheLastSelectedIndices();
+            ShowLastSelected();
+        }
+
+        public delegate void FindTrackEventHander(object sender, EventArgs args);
+        public event FindTrackEventHander FindEvent;
+        //[Obsolete("This is not supported in this class.", true)]
+        public ColorScheme wasSelectedColor;
+        new public TrackManager manager;
         public Color prevRightClickedItemForeColor;
         public bool IsDockedPanel;
         public int lastVisible;
         public string editingProgram;
         public ContextMenuStrip currentListContext;
-        public void ResetItemColors()
-        {
-            foreach (ListViewItem i in Items)
-            {
-                i.ForeColor = manager.CurrentColors.foreColor;
-                i.BackColor = manager.CurrentColors.backColor;
-            }
-        }
         
         /*
         public void StoreTopVisibleItem()
@@ -133,24 +146,22 @@ namespace Glaxion.Music
         
         internal void MusicPlayer_PlayEvent(object sender, EventArgs args)
         {
-            //UpdateList();
-            manager.UpdateColours();
-            Invalidate();
-        }
-
-        protected void listbox_ColumnClick(object sender, ColumnClickEventArgs e)
-        {
-            manager.UpdateMusicPlayer();
+            Refresh();
         }
         
+
+        //move this derived class?
         protected override void e_KeyUp(object sender, KeyEventArgs e)
         {
-            base.e_KeyUp(sender, e);
-            //don't work well;
+            base.e_KeyUp(sender, e); //do we need to call base?
             if (e.KeyCode == Keys.Z)
                 RestoreLastState();
             if (e.KeyCode == Keys.X)
                 RestoreNextState();
+            if (e.KeyCode == Keys.Delete)
+            {
+                RemoveSelectedTracks();
+            }
         }
 
         private void TrackManager_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
@@ -161,37 +172,44 @@ namespace Glaxion.Music
 
         private void TrackManager_CustomDraw(object sender, DrawListViewItemEventArgs e)
         {
-            int i = manager.Items[e.Item.Index].State;
+            ItemState i = manager.Items[e.Item.Index].State;
             switch (i)
             {
-                case 1:
+                case ItemState.IsThePlayingTrack:
+                    e.Item.BackColor = MusicPlayer.IsPlayingColor;
+                    e.Item.ForeColor = Color.Black;
+                    break;
+                case ItemState.IsPlaying:
                     e.Item.BackColor = MusicPlayer.PlayColor;
                     e.Item.ForeColor = Color.Black;
                     break;
-                case 2:
+                case ItemState.WasPlaying:
                     e.Item.BackColor = MusicPlayer.OldPlayColor;
                     e.Item.ForeColor = Color.Black;
                     break;
-                case 10:
-                    e.Item.BackColor = Color.LightSteelBlue;
+                case ItemState.IsPlayingInOtherPanel:
+                    e.Item.BackColor = Color.PaleTurquoise;
                     e.Item.ForeColor = Color.Black;//show current playing item in playlists that are not being played
                     break;
-                case -1:
+                case ItemState.Missing:
                     e.Item.BackColor = MusicPlayer.MissingColor;
                     e.Item.ForeColor = Color.Black;//show current playing item in playlists that are not being played
                     break;
-                case 0: //set default
-                    e.Item.BackColor = manager.Items[e.Item.Index].CurrentColor.backColor;
-                    e.Item.ForeColor = manager.Items[e.Item.Index].CurrentColor.foreColor;
-                    manager.Items[e.Item.Index].State = -100; //set to 100 cose we don't need to check it next time
+                case ItemState.Reset: //set default
+                    e.Item.BackColor = BackColor; 
+                    e.Item.ForeColor = ForeColor;
+                    manager.Items[e.Item.Index].State = ItemState.Normal; //set to normal so the rendering is skipped
                     break;
+                case ItemState.WasSelected: //set default
+                    e.Item.BackColor = wasSelectedColor.backColor; //set to 100 cose we don't need to check it next time
+                    e.Item.ForeColor = wasSelectedColor.foreColor;
+                        break;
                 default:
                     break;
             }
             
             e.DrawBackground();
             e.DrawDefault = true;
-            
             //base.OnDrawItem(e);
         }
         
@@ -215,21 +233,18 @@ namespace Glaxion.Music
                 index = targetItem.Index;
             else
                 index = manager.Items.Count;
-            //perhaps files should be reverse before they are sent to
-            //totalclipboard?
-            //files.Reverse();
             InsertMusicFiles(files, index);
-            SyncManager();
         }
 
+        //guess we're not using this??
         private void InsertMusicFiles(List<string> files, int index)
         {
             foreach (string file in files)
             {
                 if (tool.IsAudioFile(file))
                 {
-                    ListViewItem i = CreateItemFromFile(file);
-                    Items.Insert(index, i);
+                    VItem i = manager.CreateItem(file);
+                    manager.Insert(index, i);
                     i.Selected = true;
                     continue;
                 }
@@ -241,6 +256,7 @@ namespace Glaxion.Music
                     InsertMusicFiles(dirf, index);
                 }
             }
+            UpdateColumnsAndColors();
         }
 
         protected override void e_ItemDrag(object sender, ItemDragEventArgs e)
@@ -248,93 +264,90 @@ namespace Glaxion.Music
             base.e_ItemDrag(sender, e);
         }
 
+        public override void SelfDragDrop(int dropIndex)
+        {
+            //can be simplified
+            List<int> list = new List<int>(SelectedIndices.Count);
+            foreach(int i in SelectedIndices)
+                list.Add(i);
+
+            manager.MoveSelectedItemsTo(dropIndex, list);
+        }
+
         protected override void ViewBox_DragDrop(object sender, DragEventArgs e)
         {
+            //external drag drop
+            //in future use tracklist clipboard so it doesn't interfer
+            //with copy/paste functions
             if (!InternalClipboard.IsEmpty)
             {
+                manager.ClearSelection();
+                SelectedIndices.Clear();
                 PasteFrom(InternalClipboard.Files.ToArray());
                 InternalClipboard.Clear();
-                SyncManager();
-                manager.UpdateColours();
                 this.Focus();
                 this.Refresh();
-                manager.UpdateColours();
                 return;
             }
             else
             {
                 base.ViewBox_DragDrop(sender, e);
                 InternalClipboard.Clear();
-                SyncManager();
-                manager.UpdateColours();
-                this.Refresh();
             }
         }
         
-        public void currentListBox_MouseClick(object sender, MouseEventArgs e)
+        internal void MoveSelectedToTop()
         {
-           // doubleClicked = false;
-            /*
-            if (e.Button == MouseButtons.Right)
-            {
-                rightClickedItem = hoveredItem;
-            }
-            if (e.Button == MouseButtons.Left)
-            {
-                leftClickedItem = hoveredItem;
-            }
-            */
-            //_selectedItem = hoveredItem;
+            BeginUpdate();
+            List<int> indices = GetSelected().ToList();
+            manager.MoveIndicesTo(0, indices);
+            EndUpdate();
+            UpdateColumnsAndColors();
         }
 
         internal void MoveSelectedToBottom()
         {
-            foreach (ListViewItem i in SelectedItems)
-            {
-                i.Remove();
-                Items.Insert(Items.Count, i);
-            }
-            SyncManager();
-        }
-        internal void MoveSelectedTo(int index)
-        {
-            int count = preContextSelection.Count;
-            if (count == 0)
-                return;
-            int last_index = preContextSelection[count - 1].Index;
-            if (last_index > index)
-            {
-                preContextSelection.Reverse();
-                index += 1;
-            }
-            
-            foreach (ListViewItem item in preContextSelection)
-            {
-                item.Remove();
-                Items.Insert(index, item);
-            }
-            SyncManager();
+            BeginUpdate();
+            List<int> indices = GetSelected().ToList();
+            manager.MoveIndicesTo(manager.ItemCount,indices);
+            EndUpdate();
+            UpdateColumnsAndColors();
         }
 
+        internal void MovePreSelectedTo(int index)
+        {
+            int count = lastSelectedIndices.Count;
+            if (count == 0)
+                return;
+            
+            index += 1;
+            lastSelectedIndices.Reverse();
+            
+            List<int> removedItems = new List<int>();
+            foreach (int i in lastSelectedIndices)
+            {
+
+                VItem newi = manager.Items[i].Clone();
+                newi.Selected = true;
+                manager.Insert(index, newi);
+                removedItems.Add(i);
+            }
+            
+            foreach(int i in removedItems)
+                manager.Remove(i);
+
+            UpdateColumnsAndColors();
+        }
+
+     
         internal void TextSearch(string text)
         {
             if (text.Length > 1)
                 SearchFor(text, SearchColor, Color.White);
             else
                 ResetAllBackColor(SearchColor);
-
         }
-
-        internal void MoveSelectedToTop()
-        {
-            foreach (ListViewItem i in SelectedItems)
-            {
-                i.Remove();
-                Items.Insert(0, i);
-            }
-            SyncManager();
-        }
-
+        
         public void OpenVegas()
         {
             if (editingProgram == null)
@@ -351,62 +364,25 @@ namespace Glaxion.Music
             if (editingProgram != null)
                 Process.Start(editingProgram);
         }
+        
+        internal void CheckForRepeat()
+        {
+            List<int> list = GetSelected().ToList();
+            manager.CheckForRepeat(list);
+        }
 
         public void vegasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenVegas();
         }
         
-        public void currentListBox_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            /*
-            if (doubleClicked)
-            {
-                e.NewValue = e.CurrentValue;
-                doubleClicked = false;
-            }
-            */
-        }
-
-        public void currentListBox_MouseDown(object sender, MouseEventArgs e)
-        {
-            /*
-            if (e.Button == MouseButtons.Left)
-            {
-                if (e.Clicks > 1)
-                {
-                    doubleClicked = true;
-                }
-                if (hoveredItem != null && hoveredItem.Selected == true)
-                {
-                    unselectClick = true;
-                }
-
-                if (SelectedItems.Count == 1)
-                {
-                    unselectItem = SelectedItems[0];
-                }
-            }
-            */
-        }
-
-        //deprecate
-        public void currentListBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            /*
-            doubleClicked = false;
-            if (e.KeyCode == Keys.ControlKey)
-            {
-                //ControlDown = true;
-            }
-            */
-        }
-
         public void SelectSearchedMenu()
         {
-            foreach (ListViewItem item in Items)
+            tool.show(5, "Please review this fucntion");
+            throw new Exception("Please review this fucntion");
+            foreach (VItem item in manager.Items)
             {
-                if (item.BackColor == Color.Violet)
+                if (item.CurrentColor.backColor == Color.Violet)
                 {
                     item.Selected = true;
                 }
@@ -424,66 +400,12 @@ namespace Glaxion.Music
         {
             SelectSearchedMenu();
         }
-
-        //deprecate
-        public void currentListBox_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                /*
-                if (unselectClick)
-                {
-                    unselectClick = false;
-                }
-                */
-            }
-        }
-        //dep? move to trackmanager and call refreshUI
-        public void MoveItem(ListViewItem item, int position)
-        {
-            Items.Remove(item);
-            item.Selected = true;
-            switch (position)
-            {
-                case 0:
-                    Items.Insert(hoveredItem.Index + 1, item);
-                    break;
-                case 1: //move to the top
-                    Items.Insert(0, item);
-                    break;
-                case 2:
-                    Items.Insert(Items.Count, item);
-                    break;
-                case 3:
-                    {
-                        ListViewItem i = FindItemByPath(MusicPlayer.Player.currentTrackString);
-                        if (i != null)
-                        {
-                            Items.Insert(i.Index + 1, item);
-                        }
-                        else
-                        {
-                            Items.Insert(Items.Count, item);
-                        }
-                        break;
-                    }
-                default:
-                    break;
-            }
-            SyncManager();
-        }
-
+        
         public void updateMusicPlayerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             manager.UpdateMusicPlayer();
         }
-        /*
-        public void updateFilePathsToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            UpdateTrackFilePaths();
-        }
-        */
-        
+
         public void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem item in SelectedItems)
@@ -492,39 +414,48 @@ namespace Glaxion.Music
                     File.Delete(item.SubItems[1].Text);
             }
         }
-
-        public void copyToolStripMenuItem1_Click(object sender, EventArgs e)
+        
+        private void InternalDragDrop(DragEventArgs e)
         {
-            ListViewItem[] items = new ListViewItem[SelectedItems.Count];
-            SelectedItems.CopyTo(items, 0);
-            InternalClipboard.CopyItems(items.ToList());
-            InternalClipboard.CopyToSystemClipboard(items.ToList());
+            //check for internal drag drop first
+            if (!InternalClipboard.IsEmpty)
+                return;
+
+            if (e.Data.GetDataPresent(typeof(SelectedListViewItemCollection)))
+            {
+                //if we sent our own selected nodes as arg then we are doing an internal drag drop
+                SelectedListViewItemCollection o = (SelectedListViewItemCollection)e.Data.GetData(typeof(SelectedListViewItemCollection));
+                if (o != SelectedItems)
+                    return;
+                if (SelectedItems.Count == 0)
+                    return;
+
+                Point cp = PointToClient(new Point(e.X, e.Y));
+                ListViewItem dragToItem = GetItemAt(cp.X, cp.Y);
+                int dropIndex = 0;
+                if (dragToItem == null)
+                {
+                    dropIndex = Items.Count;
+                }
+                else
+                {
+                    dropIndex = dragToItem.Index;
+                    if (dropIndex > base.SelectedItems[0].Index)
+                    {
+                        dropIndex++;
+                    }
+                }
+            }
+            tmrLVScroll.Enabled = false;
+            return;
         }
         
         protected override void ListBox_DragEnter(object sender, DragEventArgs e)
         {
-            if(!InternalClipboard.Empty())
-            {
-                e.Effect = e.AllowedEffect;
-                e.Effect = DragDropEffects.All;
-            }
-            else
-            {
-                e.Effect = e.AllowedEffect;
-                e.Effect = DragDropEffects.Move;
-            }
-            /*
-            if (!TotalClipboard.IsEmpty)
-            {
-                e.Effect = e.AllowedEffect;
-                e.Effect = DragDropEffects.All;
-            }
-            else
-            {
-                e.Effect = e.AllowedEffect;
-                e.Effect = DragDropEffects.Move;
-            }
-            */
+            ResetAllColors();
+            CacheLastSelectedIndices();
+            e.Effect = e.AllowedEffect;
+            e.Effect = DragDropEffects.All;
         }
 
         //move to drag leave surely?
@@ -550,149 +481,57 @@ namespace Glaxion.Music
             */
         }
         
-        //move this to onLeave
-        private void TrackManager_Validating(object sender, CancelEventArgs e)
-        {
-           // ShowLastSelected();
-        }
 
-        private void ShowLastSelected()
+        public void ShowLastSelected()
         {
-            lastSelectedIndices.Clear();
-            foreach (int i in SelectedIndices)
-            {
-                Items[i].ForeColor = wasSelectedColor.foreColor;
-                Items[i].BackColor = wasSelectedColor.backColor;
-                lastSelectedIndices.Add(i);
-            }
+            ShowLastSelected(lastSelectedIndices, wasSelectedColor);
             Refresh();
         }
+
+        private void ShowLastSelected(List<int> lastSelected, ColorScheme wasSelectedColor)
+        {
+            foreach(int i in lastSelected)
+            {
+                if (i > manager.ItemCount)
+                    continue;
+                manager.Items[i].State = ItemState.WasSelected;
+                //Items[i].BackColor = Color.LightSkyBlue;
+            }
+        }
+
+        public void ClearLastSelectedDisplay()
+        {
+            foreach (int i in lastSelectedIndices)
+                manager.Items[i].State = ItemState.Reset;
+        }
         
-        private void TrackManager_Enter(object sender, EventArgs e)
+        public void UpdateColumnsAndColors()
         {
-            manager.ClearLastSelectedDisplay();
-        }
-
-        //move to enhance viewbox?
-        private ListViewItem.ListViewSubItem MakeSubItem(ListViewItem i,object rowObject, OLVColumn column)
-        {
-            object cellValue = column.GetValue(rowObject);
-            ListViewItem.ListViewSubItem subItem = new ListViewItem.ListViewSubItem(i, column.ValueToString(cellValue), ForeColor, BackColor,this.Font);
-            return subItem;
-        }
-
-        public void GetColumnInfo(ListViewItem item,object o)
-        {
-            item.SubItems.Clear();
-            //item.SubItems[0] = this.MakeSubItem(item, o, Columns[0] as OLVColumn);
-            for (int i = 0; i < Columns.Count; i++)
-            {
-                OLVColumn col = Columns[i] as OLVColumn;
-                ListViewItem.ListViewSubItem subItem = this.MakeSubItem(item, o, col);
-                //if (subItem == null)
-                 //   return;
-                if(i==0)
-                    item.SubItems[0] = subItem;
-                else
-                item.SubItems.Add(subItem);
-            }
-        }
-    
-        public void UpdateColumns()
-        {
-            foreach (ListViewItem i in Items)
-            {
-                GetColumnInfo(i,((SongItem)i).song);
-            }
+            manager.UpdateColours();
         }
         
         public void DisplayPlaylist()
         {
             manager.CurrentList.UpdatePaths();
-            //manager.CurrentList.LoadSongs();
             manager.Items.Clear();
             foreach(string s in manager.CurrentList.tracks)
             {
-                SongItem i = CreateSongItem(s);
-                if (i == null)
-                    continue;
-                ListViewItem item = (ListViewItem)i;
-                item.Name = s;
-                Items.Add(item);
+                VItem i = manager.CreateItem(s);
+                manager.Add(i);
             }
-            SyncManager();
-            UpdateColumns();
-        }
-
-        SongItem CreateSongItem(string s)
-        {
-            SongItem i = new SongItem();
-            Song song = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(s);
-            if (song != null)
-            {
-                i.Name = song.path;
-                i.Tag = song.path;
-                i.song = song;
-            }
-            else
-                return null;
-            return i;
-        }
-
-
-        public void SyncView()
-        {
-
-        }
-        
-        public void SyncManager()
-        {
-            manager.Items.Clear();
-            foreach(ListViewItem item in Items)
-            {
-                VItem vi = WinFormUtils.GetVItem(item as SongItem);
-                manager.Items.Add(vi);
-            }
-            GetSelectedItems();
-            manager.UpdateColours();
-            Update();
-        }
-
-        public void GetSelectedItems()
-        {
-            manager.SelectedItems.Clear();
-            foreach (int i in SelectedIndices)
-            {
-                manager.SelectedItems.Add(manager.Items[i]);
-            }
+            UpdateColumnsAndColors();
         }
 
         internal void CopySelectedToClipboard()
         {
-            StringCollection arr = new StringCollection();
+            InternalClipboard.Files.Clear();
             foreach (int i in lastSelectedIndices)
-            {
-                SongItem si = (SongItem)Items[i];
-                arr.Add(si.song.path);
-            }
-           // Clipboard.SetFileDropList(arr);
-            Clipboard.SetData("String_Array", arr);
+                InternalClipboard.Add(manager.Items[i].Name);
         }
-        /*
-        SongItem GetSongItem(string s)
-        {
-            Song song = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(s);
-            if (song == null)
-                return null;
-            //   tool.show(2, "Song is NUll");
-            SongItem i = CreateSongItem(song);
-            return i;
-        }
-        */
 
-        public void MoveSelectedItemsTo(int dropIndex, string[] arr)
+        public void AddFiles(int dropIndex, string[] arr)
         {
-            List<ListViewItem> insertItems = new List<ListViewItem>();
+            List<VItem> insertItems = new List<VItem>();
             foreach (string s in arr)
             {
                 if(Directory.Exists(s))
@@ -700,76 +539,130 @@ namespace Glaxion.Music
                     List<string> s_array = tool.LoadAudioFiles(s,SearchOption.TopDirectoryOnly);
                     foreach(string s2 in s_array)
                     {
-                        SongItem i1 = CreateSongItem(s2);
+                        VItem i1 = manager.CreateItem(s2);
                         if (i1 == null)
                             continue;
                         insertItems.Add(i1);
                     }
                     continue;
                 }
-                else{
-                    SongItem i2 = CreateSongItem(s);
+                else
+                { 
+                    VItem i2 = manager.CreateItem(s);
                     if (i2 == null)
                         continue;
                     insertItems.Add(i2);
                 }
             }
-
-            for (int i = insertItems.Count - 1; i >= 0; i--)
+            insertItems.Reverse();
+            foreach(VItem item in insertItems)
             {
-                var insertItem = insertItems[i];
-                insertItem.Selected = true;
-                base.Items.Insert(dropIndex, insertItem);
+                item.Selected = true;
+                manager.Insert(dropIndex, item);
             }
         }
 
         internal void PasteFrom(string[] files)
         {
-                int dropIndex = 0;
-                if (hoveredItem != null)
-                {
-                    hoveredItem.Selected = false;
-                    dropIndex = hoveredItem.Index + 1;
-                }
-                else
-                {
-                    dropIndex = Items.Count;
-                }
-                MoveSelectedItemsTo(dropIndex, files);
-                UpdateColumns();
-                SyncManager();
-                manager.UpdateColours();
-                this.Invalidate();
-                return;
+            int dropIndex = 0;
+            if (hoveredItem != null)
+            {
+                dropIndex = hoveredItem.Index + 1;
+            }
+            else
+            {
+                dropIndex = manager.ItemCount;
+            }
+            AddFiles(dropIndex, files);
+            UpdateColumnsAndColors();
+            this.Invalidate();
+            return;
         }
 
-        internal void PasteFromClipboard()
+
+        internal void PasteFromInternalClipboard()
         {
-            IDataObject d = Clipboard.GetDataObject();
-            if (d.GetDataPresent("String_Array"))
-            {
-                int dropIndex = 0;
-                if (hoveredItem != null)
-                {
-                    hoveredItem.Selected = false;
-                    dropIndex = hoveredItem.Index+1;
-                }
-                else
-                {
-                    dropIndex = Items.Count;
-                }
-
-                string[] arr = (string[])d.GetData("String_Array");
-                
-
-                MoveSelectedItemsTo(dropIndex, arr);
-                //Clipboard.Clear();
-                UpdateColumns();
-                SyncManager();
-                manager.UpdateColours();
+            if (InternalClipboard.IsEmpty)
                 return;
+            int dropIndex = 0;
+            if (hoveredItem != null)
+            {
+                // hoveredItem.Selected = false;
+                dropIndex = hoveredItem.Index + 1;
+            }
+            else
+            {
+                dropIndex = manager.ItemCount;
             }
             
+            AddFiles(dropIndex, InternalClipboard.Files.ToArray());
+            UpdateColumnsAndColors();
+            return;
+        }
+        
+        public void Add(VItem item)
+        {
+            ListViewItem i = new ListViewItem();
+            GetColumnInfo(i, item.Tag);
+            WinFormUtils.GetItem(i,item);
+            Items.Add(i);
+        }
+
+        public void Insert(int index, VItem item)
+        {
+            ListViewItem i = new ListViewItem();
+            GetColumnInfo(i, item.Tag);
+            WinFormUtils.GetItem(i, item);
+            Items.Insert(index,i);
+        }
+
+        public void Remove(int index)
+        {
+            Items.RemoveAt(index);
+        }
+
+        public void OpenSelectedID3Tags()
+        {
+            foreach (int i in SelectedIndices)
+            {
+                string path = manager.Items[i].Name;
+                SongControl sc = SongControl.CreateTagEditor(path, MusicPlayer.WinFormApp);
+                sc.squashBoxControl1.Swap();
+            } 
+        }
+
+        public void RefreshColors()
+        {
+            this.Invalidate();
+        }
+
+        internal void RestoreOldSelections()
+        {
+            for(int i=0;i<Items.Count;i++)
+            {
+                VItem item = manager.Items[i];
+                if(item.State == ItemState.WasSelected)
+                {
+                    item.Selected = true;
+                    Items[i].Selected = true;
+                }
+
+            }
+        }
+
+        internal void ClearOldSelections()
+        {
+            for (int i = 0; i < Items.Count; i++)
+            {
+                VItem item = manager.Items[i];
+                if (item.State == ItemState.WasSelected)
+                {
+                    item.State = ItemState.Reset;
+                    item.Selected = false;
+                    Items[i].Selected = false;
+                }
+
+            }
         }
     }
 }

@@ -311,11 +311,16 @@ namespace Glaxion.Music
 
         public void AddInfo(Song info)
         {
+            if (info == null)
+                return;
+            if (trackInfos.ContainsKey(info.path))
+                return;
+            trackInfos.Add(info.path, info);
             AddAlbum(info.album);
             AddArtist(info.artist);
             AddYear(info.year);
             AddGenre(info.genre);
-            trackInfos.Add(info.path, info);
+            
         }
 
         public string AddAlbum(string albumName)

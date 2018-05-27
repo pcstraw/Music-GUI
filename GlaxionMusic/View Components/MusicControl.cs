@@ -37,10 +37,10 @@ namespace Glaxion.Music
 
         public PlaylistFileView playlistFileView;
         public PlaylistManagerView playlistView;
-        public PlaylistPanel CurrentPlaylistPanel;
+        public TracklistPanel CurrentPlaylistPanel;
         public ContextMenuStrip trackContext;
         public MusicFileView musicFileView;
-        public List<PlaylistPanel> dockedTrackManagers = new List<PlaylistPanel>();
+        public List<TracklistPanel> dockedTrackManagers = new List<TracklistPanel>();
        // private Process _vegas_process;
 
         public TracklistView trackManager
@@ -68,13 +68,14 @@ namespace Glaxion.Music
         
         public void RemoveSelectedTracks()
         {
-            CurrentPlaylistPanel.tracklistView.manager.RemoveSelectedTracks();
+            CurrentPlaylistPanel.tracklistView.RemoveSelectedTracks();
+            //trackManager.RemoveSelectedTracks();
             //CurrentPlaylistPanel.UpdateTracks();
         }
         
         public void UpdateDockedPlaylistNames()
         {
-            foreach (PlaylistPanel tm in dockedTrackManagers)
+            foreach (TracklistPanel tm in dockedTrackManagers)
             {
                 tm.UpdatePlaylistTitle();
             }
@@ -82,7 +83,7 @@ namespace Glaxion.Music
 
         public void UpdateDockedPlaylistTracks()
         {
-            foreach (PlaylistPanel tm in dockedTrackManagers)
+            foreach (TracklistPanel tm in dockedTrackManagers)
             {
                 if (tm.CurrentList.dirty)
                 {
@@ -94,9 +95,9 @@ namespace Glaxion.Music
         }
 
         //used to create a panel playlistPanel embedded in the right of the control
-        public PlaylistPanel CreatePlaylistPanel(Control control, Playlist p)
+        public TracklistPanel CreatePlaylistPanel(Control control, Playlist p)
         {
-            PlaylistPanel dp = new PlaylistPanel();
+            TracklistPanel dp = new TracklistPanel();
             dp.SetPlaylist(p);
             dp.tracklistView.ContextMenuStrip = trackContext;
             dp.Dock = DockStyle.Right;
@@ -141,7 +142,7 @@ namespace Glaxion.Music
                 //playlistView.SelectedItems.Clear();
                 foreach (Playlist p in list)
                 {
-                    VItem item = playlistView.manager.AddItemFromPlaylist(p);
+                    VItem item = playlistView.manager.AddItemFromPlaylist(0,p);
                     item.Selected = true;
                     MusicPlayer.WinFormApp.DockPlaylist(MusicPlayer.WinFormApp.musicPanel, p);
                 }
@@ -158,33 +159,16 @@ namespace Glaxion.Music
                 string path = n.Name;
                 Playlist p = new Playlist(path, true);
                 CreatePlaylistPanel(MusicPlayer.WinFormApp.musicPanel, p);
-                playlistView.manager.AddItemFromPlaylist(p);
+                playlistView.manager.AddItemFromPlaylist(0,p);
             }
         }
         
         public void FindTrackInMusicFiles()
         {
-            string S = trackManager.hoveredItem.Name;
-            if (tool.StringCheck(S))
-            {
-                TreeNode node = musicFileView.FindFileByPath(S,musicFileView.Nodes);
-                //musicFileView.ExpandAll();
-                if (node != null)
-                {
-                    //musicFileView.BeginUpdate();
-                    
-                    musicFileView.SelectedNode = node;
-                    musicFileView.Select();
-                    musicFileView.Focus();
-                    node.Parent.Expand();
-                    node.BackColor = Color.DarkBlue;
-                    node.ForeColor = Color.White;
-                    node.EnsureVisible();
-                    //musicFileView.EndUpdate();
-                }
-                //musicFileView.SearchForText(null);
-                //musicFileView.manager.FindTrack(S);
-            }
+            ListViewItem i = trackManager.hoveredItem;
+            if(i== null)return;
+            string path = i.Name;
+            musicFileView.Find(path);
         }
 
         private void TrackManager_FindEvent(object sender, EventArgs args)
@@ -367,139 +351,11 @@ namespace Glaxion.Music
             Playlist newplaylist = new Playlist(Path.GetFileName(Path.GetDirectoryName(selectedFiles[0])), false);
             newplaylist.path = "";
             newplaylist.tracks = selectedFiles;
-            playlistView.manager.AddItemFromPlaylist(newplaylist);
+            playlistView.manager.AddItemFromPlaylist(0,newplaylist);
             MusicPlayer.WinFormApp.DockPlaylist(MusicPlayer.WinFormApp.musicPanel, newplaylist);
 
         }
-
-        public void FilterFolder(item_ item)
-        {
-            if (item == null)
-                return;
-
-            string path = item.Name;
-
-            if (!tool.StringCheck(path))
-                return;
-
-            string folder = Path.GetDirectoryName(path);
-
-            foreach (item_ i in trackManager.Items)
-            {
-                string s = i.Name;
-                if (!tool.StringCheck(s))
-                    continue;
-
-                string d = Path.GetDirectoryName(s);
-                if (d == folder)
-                    i.Selected = true;
-            }
-        }
-
-        public void FilterArtist(item_ item)
-        {
-            if (item == null)
-                return;
-
-            string path = item.Name;
-
-            if (!tool.StringCheck(path))
-                return;
-
-            Song info = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(path);
-            string artist = info.artist;
-
-            foreach (item_ i in trackManager.Items)
-            {
-                string s = i.Name;
-                if (!tool.StringCheck(s))
-                    continue;
-                Song s_info = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(s);
-                string a = s_info.artist;
-                if (a == artist)
-                    i.Selected = true;
-            }
-        }
-
-        public void FilterAlbum(item_ item)
-        {
-            if (item == null)
-                return;
-
-            string path = item.Name;
-
-            if (!tool.StringCheck(path))
-                return;
-
-            Song info = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(path);
-            string album = info.album;
-
-            foreach (item_ i in trackManager.Items)
-            {
-                string s = i.Name;
-                if (!tool.StringCheck(s))
-                    continue;
-                Song s_info = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(s);
-                string a = s_info.album;
-                if (a == album)
-                    i.Selected = true;
-            }
-        }
-
-        public void FilterByFolder()
-        {
-            if (trackManager.hoveredItem == null)
-                return;
-
-            if (trackManager.SelectedItems.Count == 0)
-            {
-                FilterFolder(trackManager.hoveredItem);
-            }
-            else
-            {
-                foreach (item_ i in trackManager.SelectedItems)
-                {
-                    FilterFolder(i);
-                }
-            }
-        }
-
-        public void FilterByArtist()
-        {
-            if (trackManager.hoveredItem == null)
-                return;
-
-            if (trackManager.SelectedItems.Count == 0)
-            {
-                FilterArtist(trackManager.hoveredItem);
-            }
-            else
-            {
-                foreach (item_ i in trackManager.SelectedItems)
-                {
-                    FilterArtist(i);
-                }
-            }
-        }
-
-        public void FilterByAlbum()
-        {
-            if (trackManager.hoveredItem == null)
-                return;
-
-            if (trackManager.SelectedItems.Count == 0)
-            {
-                FilterAlbum(trackManager.hoveredItem);
-            }
-            else
-            {
-                foreach (item_ i in trackManager.SelectedItems)
-                {
-                    FilterAlbum(i);
-                }
-            }
-        }
-
+        
         public void EditSolutionLink()
         {
             OpenFileDialog ofd = new OpenFileDialog();

@@ -78,22 +78,28 @@
             // 
             // copyButton
             // 
-            this.copyButton.Location = new System.Drawing.Point(179, 42);
+            this.copyButton.BackColor = System.Drawing.Color.DimGray;
+            this.copyButton.Font = new System.Drawing.Font("OCR A Extended", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.copyButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.copyButton.Location = new System.Drawing.Point(116, 15);
             this.copyButton.Name = "copyButton";
-            this.copyButton.Size = new System.Drawing.Size(75, 23);
+            this.copyButton.Size = new System.Drawing.Size(75, 36);
             this.copyButton.TabIndex = 3;
-            this.copyButton.Text = "Copy";
-            this.copyButton.UseVisualStyleBackColor = true;
+            this.copyButton.Text = "COPY";
+            this.copyButton.UseVisualStyleBackColor = false;
             this.copyButton.Click += new System.EventHandler(this.copyButton_Click);
             // 
             // moveButton
             // 
-            this.moveButton.Location = new System.Drawing.Point(79, 42);
+            this.moveButton.BackColor = System.Drawing.Color.DimGray;
+            this.moveButton.Font = new System.Drawing.Font("OCR A Extended", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moveButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.moveButton.Location = new System.Drawing.Point(229, 15);
             this.moveButton.Name = "moveButton";
-            this.moveButton.Size = new System.Drawing.Size(75, 23);
+            this.moveButton.Size = new System.Drawing.Size(75, 36);
             this.moveButton.TabIndex = 4;
             this.moveButton.Text = "Move";
-            this.moveButton.UseVisualStyleBackColor = true;
+            this.moveButton.UseVisualStyleBackColor = false;
             this.moveButton.Click += new System.EventHandler(this.moveButton_Click);
             // 
             // trackInfoUserControl
@@ -109,7 +115,7 @@
             // add_year_checkbox
             // 
             this.add_year_checkbox.AutoSize = true;
-            this.add_year_checkbox.Location = new System.Drawing.Point(3, 57);
+            this.add_year_checkbox.Location = new System.Drawing.Point(16, 26);
             this.add_year_checkbox.Name = "add_year_checkbox";
             this.add_year_checkbox.Size = new System.Drawing.Size(70, 17);
             this.add_year_checkbox.TabIndex = 5;
@@ -132,17 +138,18 @@
             this.treeView.Indent = 15;
             this.treeView.ItemHeight = 16;
             this.treeView.LabelEdit = true;
-            this.treeView.Location = new System.Drawing.Point(3, 77);
+            this.treeView.Location = new System.Drawing.Point(3, 57);
             this.treeView.Name = "treeView";
             this.treeView.SelectedImageIndex = 0;
             this.treeView.SelectedNodes = ((System.Collections.ArrayList)(resources.GetObject("treeView.SelectedNodes")));
-            this.treeView.Size = new System.Drawing.Size(344, 391);
+            this.treeView.Size = new System.Drawing.Size(344, 411);
             this.treeView.TabIndex = 1;
             this.treeView.BeforeLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.treeView_BeforeLabelEdit);
             this.treeView.Click += new System.EventHandler(this.treeView_Click);
             // 
             // splitContainerBack
             // 
+            this.splitContainerBack.BackColor = System.Drawing.Color.LightGray;
             this.splitContainerBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerBack.Location = new System.Drawing.Point(0, 0);
             this.splitContainerBack.Name = "splitContainerBack";

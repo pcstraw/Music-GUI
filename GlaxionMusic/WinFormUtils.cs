@@ -89,20 +89,21 @@ namespace Glaxion.Music
             n.Expand = node.IsExpanded;
             return n;
         }
-
-        static public VItem GetVItem(SongItem item)
+        /*
+        static public VItem GetVItem(ListViewItem item)
         {
             VItem vi = new VItem();
             vi.Columns.Add(item.song.name);
             vi.Columns.Add(item.song.path);
             vi.Tag = item.Tag;
-            vi.name = item.Name;
+            vi.Name = item.Name;
            // vi.Selected = item.Selected;
             vi.Checked = item.Checked;
             vi.Index = item.Index;
             vi.SetColors(new Tools.ColorScheme(item.ForeColor, item.BackColor));
             return vi;
         }
+        */
 
         public static TreeNode GetTreeNode(VNode node)
         {
@@ -132,13 +133,13 @@ namespace Glaxion.Music
             return i;
         }
 
-        public static ListViewItem GetItem(VItem track)
+        public static ListViewItem GetItem(ListViewItem i,VItem track)
         {
-            ListViewItem i = new ListViewItem();
             i.SubItems[0].Text = Path.GetFileNameWithoutExtension(track.Columns[0]);
             i.SubItems.Add(track.Columns[1]);
-            i.Tag = track.Columns[1];
-            i.Name = track.Columns[1];
+            i.Tag = track.Tag;
+            i.Name = track.Name;
+            i.Selected = track.Selected;
            // i.Selected = track.Selected;
             //i.Checked = track.Checked;
             i.ForeColor = track.CurrentColor.foreColor;

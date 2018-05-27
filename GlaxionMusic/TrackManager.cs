@@ -1,6 +1,7 @@
 ﻿using Glaxion.Tools;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 
@@ -9,53 +10,40 @@ namespace Glaxion.Music
 
     public interface ITracklistView
     {
-        void GetSelectedItems();
+        //void GetSelectedItems();
         void DisplayPlaylist();
         //void RefreshUI();
     }
 
     public class TrackManager : VListView
     {
-        public void Construction()
+        public TrackManager(ITracklistView trackInterface, IListView view,ColorScheme scheme) : base(view)
         {
-           // lastSelectedIndidex = new SelectedIndexCollection(this);
-            /*
-            OwnerDraw = true;
-            DrawItem += TrackManager_CustomDraw;
-            DrawColumnHeader += TrackManager_DrawColumnHeader;
-            DragDrop += TrackManager_DragDrop;
-            DragEnter += ListBox_DragEnter;
-            DrawItem += TrackManager_CustomDraw;
-            DrawColumnHeader += TrackManager_DrawColumnHeader;
-            ColumnClick += listbox_ColumnClick;
-            this.Columns[1].Width = 1000;
-            */
+            _trackview = trackInterface;
+            CurrentColors = scheme;
         }
-
-        public TrackManager(ITracklistView trackInterface,ColorScheme colors)
-        {
-            Construction();
-            _view = trackInterface;
-            CurrentColors = colors;
-        }
-
+        
+        
         public delegate void FindTrackEventHander(object sender, EventArgs args);
         public event FindTrackEventHander FindEvent;
         //public VItem rightClickedItem;
         //public VItem leftClickedItem;
-        ITracklistView _view;
+        ITracklistView _trackview;
         public List<VItem> preContextSelection = new List<VItem>();
-        public ColorScheme CurrentColors;
+        private bool playing_track_changed;
+        private string last_playing_track;
+
         public Playlist CurrentList { get; set; }
+        public VItem IsPlayingItem { get; private set; }
 
         //public Color prevRightClickedItemForeColor;
         //public string currentTrack;
         //public bool autoUpdateTracks;
-       // public bool autoUpdateMusicPlayer;
-       // public bool IsDockedPanel;
-       // public bool ControlDown;
-       // public bool currentListChanged;
-       // bool unselectClick;
+        // public bool autoUpdateMusicPlayer;
+        // public bool IsDockedPanel;
+        // public bool ControlDown;
+        // public bool currentListChanged;
+        // bool unselectClick;
         //public int lastVisible;
         //public string editingProgram;
         // ListViewItem unselectItem;
@@ -66,50 +54,76 @@ namespace Glaxion.Music
         public void Load()
         {
             MusicPlayer.Player.PlayEvent += MusicPlayer_PlayEvent;
+            MusicPlayer.Player.TrackChangeEvent += Player_TrackChangeEvent;
         }
-        
+
+        private void Player_TrackChangeEvent(object sender, EventArgs args)
+        {
+            int current_index = (int)sender;
+            if (current_index < 0)
+                return; //no track
+        }
+
         public void UpdateColours()
         {
             //find the current playing item
-            foreach (VItem i in Items)
+            if (last_playing_track != MusicPlayer.Player.currentTrackString)
             {
-                string track_path = i.Columns[1];
+                last_playing_track = MusicPlayer.Player.currentTrackString;
+                playing_track_changed = true;
+            }
+            for(int index = 0;index < ItemCount; index++)
+            {
+                VItem i = Items[index];
+                string track_path = i.Name;
                 if (!File.Exists(track_path))
                 {
-                    i.State = -1; //track does not exist
+                    i.State = ItemState.Missing; //track does not exist
                     //i.HighLightColors(new ColorScheme(Color.Black, Color.Orange));
                     continue;
                 }
                 if (track_path == MusicPlayer.Player.currentTrackString)
                 {
-                    if (CurrentList == MusicPlayer.Player.playlist && i.Index == MusicPlayer.Player.currentTrack)
+                    if (CurrentList == MusicPlayer.Player.playlist)
                     {
-                        i.State = 1;
+                        //if (index == MusicPlayer.Player.currentTrack)
+                        i.State = ItemState.IsThePlayingTrack;
+                        //else
+                         //   i.State = ItemState.IsPlaying;
                         //i.HighLightColors(new ColorScheme(Color.Black, MusicPlayer.PlayColor));
                         continue;
                     }
-                    i.State = 10; //track is playing in another docked panel
+                    i.State = ItemState.IsPlayingInOtherPanel; //track is playing in another docked panel
                     continue;
                 }
                 //last played tracks from 0-3 with 0 being the current track
-                else if (i.State != 0)
+                if (i.State != ItemState.Normal)
                 {
-                    int index = i.State;
-                    switch (index)
+                    ItemState _i = i.State;
+                    switch (_i)
                     {
-                        case 1:
-                            i.State = 2;
+                        case ItemState.IsThePlayingTrack:
+                            if (playing_track_changed)
+                                i.State = ItemState.IsPlaying;
                             break;
-                        case 2:
+                        case ItemState.IsPlaying:
+                            if(playing_track_changed)
+                                i.State = ItemState.WasPlaying;
+                            break;
+                        case ItemState.WasPlaying:
                             {
-                                i.State = 0;
+                                if(playing_track_changed)
+                                {
+                                    i.State = ItemState.Reset;
+                                }
+                                //if(track_path != last_string)
+                                 //   i.State = ItemState.Reset;
                                 //i.RestoreColors();
                             }
                             break;
-                        case 10:
+                        case ItemState.IsPlayingInOtherPanel:
                             {
-                                i.State = 0;
-                               // i.RestoreColors();
+                                i.State = ItemState.Reset;
                             }
                             break;
                         default:
@@ -117,119 +131,69 @@ namespace Glaxion.Music
                     }
                 }
             }
-            //_view.RefreshColors();
-        }
-
-        internal void MusicPlayer_PlayEvent(object sender, EventArgs args)
-        {
-            UpdateColours();
+            playing_track_changed = false;
+            _view.RefreshColors();
         }
         
-        public void CheckForRepeat()
-        {
-            foreach (VItem item in SelectedItems)
-            {
-                if (item == null)
-                    continue;
-                string file = item.Columns[1];
-                if (!tool.StringCheck(file))
-                    continue;
-
-                foreach (VItem other in Items)
-                {
-                    string s = other.Columns[1];
-                    if (!tool.StringCheck(s))
-                        continue;
-                    if (s == file)
-                        other.Selected = true;
-                }
-            }
-        }
-        
-        public void MoveSelectedTracksTo(int index)
-        {
-            //preContextSelection.Reverse();
-            _view.GetSelectedItems();
-            foreach (VItem i in SelectedItems)
-            {
-                Items.Remove(i);
-                Items.Insert(index + 1, i);
-                i.Selected = true;
-               // i.BackColor = this.BackColor;
-            }
-            //_view.RefreshUI();
-        }
-
-        public void RemoveSelectedTracks()
-        {
-            //StoreCurrentState();
-            foreach (VItem item in SelectedItems)
-                Items.Remove(item);
-            SelectedItems.Clear();
-        }
-
-        public void UpdateMusicPlayer()
-        {
-            //load the list view items into the playlist
-            int current_track_index = MusicPlayer.Player.currentTrack;
-            //find the item who's first subtag is 1.  this is the currently playing track
-            //storing it on the item allows us to track the last played song as the user re-orders the playlist
-            for(int index =0; index < Items.Count; index++)
-            {
-                VItem item = Items[index];
-                //if (item.State == 0)
-                //    continue;
-                int i = item.State;
-                if (i == 1)
-                {
-                    string s = item.name;
-                    if (s == MusicPlayer.Player.currentTrackString) //double check to see if is still the current track
-                    {
-                        //grab the new index
-                        current_track_index = index;
-                        break;
-                    }
-                }
-            }
-            CurrentList.tracks = GetTrackItems();
-            MusicPlayer.Player.UpdateMusicPlayer(CurrentList, current_track_index);
-            //MusicPlayer.Player.playlist = CurrentList;
-           // MusicPlayer.Player.currentTrack = current_track_index;
-        }
-
-        private List<string> GetTrackItems()
+        public List<string> GetTrackItems()
         {
             List<string> list = new List<string>();
             foreach (VItem li in Items)
             {
-                list.Add(li.name);
+                list.Add(li.Name);
             }
             return list;
         }
-
+        
+        internal void MusicPlayer_PlayEvent(object sender, EventArgs args)
+        {
+            
+            if (base.Items.Count == 0)
+            {
+                tool.show(3,"Check item count...possibly empty subscribers");
+                return;
+            }
+            if (CurrentList == MusicPlayer.Player.playlist)
+            {
+                if (sender is int)
+                {
+                    int index = (int)sender;
+                    IsPlayingItem = this.Items[index];
+                    IsPlayingItem.State = ItemState.IsThePlayingTrack;
+                }
+            }
+            UpdateColours();
+        }
+        
+        //dep?
+        public void UpdateMusicPlayer(int currentTrackIndex)
+        {
+            UpdateTracks();
+            //load the list view items into the playlist
+            int current_track_index = currentTrackIndex;
+            MusicPlayer.Player.UpdateMusicPlayer(CurrentList, current_track_index);
+        }
+        
         //call when changing the playlist name.  This will not save the file, only uipdate the name
         public void UpdatePlaylistName(string name)
         {
             CurrentList.UpdateName(name);
         }
-        
-
+        //require override derived method instead?
         public void DropMusicFiles(List<string> files, int index)
         {
             //StoreCurrentState();
             // 
             // tool.show(5, "Show");
             //SelectedItems.Clear();
-            bool filesdropped = false;
             foreach (string file in files)
             {
                 if (tool.IsAudioFile(file))
                 {
                     VItem item = CreateItem(file);
-                    Items.Insert(index, item);
-                    item.Index = Items.IndexOf(item);
-                    SelectedItems.Add(item);
-                    filesdropped = true;
+                    base.Insert(index, item);
+                    int i= base.IndexOf(item);
+                    item.Selected = true;
                     continue;
                 }
                 
@@ -241,61 +205,45 @@ namespace Glaxion.Music
                 }
             }
         }
-
-        public VItem CreateItem(string file)
+        //required overrided  method
+        public override VItem CreateItem(string file)
         {
             VItem i = new VItem();
-            i.Columns.Add(Path.GetFileNameWithoutExtension(file));
-            i.Columns.Add(file);
-            i.Tag = file; //use song instead
+            i.Columns[0] = Path.GetFileNameWithoutExtension(file);
+            i.Columns[1] = file;
             i.SetColors(CurrentColors);
+            i.Name = file;
+            Song song = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(file);
+            if (song != null)
+            {
+                i.Tag = song;
+            }
             return i;
         }
 
-        public void FindMissingFiles()
+        public void UpdateTracks()
         {
-            foreach (VItem i in Items)
-            {
-                if (i.Tag.GetType() != typeof(string))
-                    throw new Exception("No file path set");
-
-                if (!File.Exists(i.Tag as string))
-                    i.SetColors(new ColorScheme(Color.Black,MusicPlayer.MissingColor));
-            }
-        }
-        
-        internal void MoveSelectedToBottom()
-        {
-            foreach (VItem i in SelectedItems)
-            {
-                Items.Remove(i);
-                Items.Insert(Items.Count, i);
-            }
+            CurrentList.tracks = GetTrackItems();
         }
 
-        internal void MoveSelectedToTop()
+        internal void UpdateMusicPlayer()
         {
-            foreach (VItem i in SelectedItems)
-            {
-                Items.Remove(i);
-                Items.Insert(0, i);
-            }
+            int index = Items.IndexOf(IsPlayingItem);
+            UpdateMusicPlayer(index);
         }
-      
-        public void ShowLastSelected(ColorScheme colors)
+
+        internal void OpenChromeSearch(int index)
         {
-            foreach (VItem i in SelectedItems)
-            {
-                i.HighLightColors(colors);
-            }
+            if (index > Items.Count)
+                return;
+            
+            VItem item = Items[index];
+            Song s = item.Tag as Song;
+            var t= s.artist;
+            Process.Start("http://google.com/search?q=" + t);
         }
-        
-        public void ClearLastSelectedDisplay()
-        {
-            foreach (VItem i in SelectedItems)
-                i.RestoreColors();
-        }
-        
+
+
         /*
         public void DisplayPlaylist()
         {

@@ -785,7 +785,7 @@ namespace Glaxion.Tools
 
         public static bool IsAudioFile(string path)
         {
-            if (!StringCheck(path))
+            if (string.IsNullOrEmpty(path))
                 return false;
             if (!Path.HasExtension(path))
                 return false;
