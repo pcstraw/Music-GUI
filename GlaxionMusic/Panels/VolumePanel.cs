@@ -23,7 +23,7 @@ namespace Glaxion.Music
 
         private void trackBar_Scroll(object sender, EventArgs e)
         {
-            MusicPlayer.Player.SetVolume(gTrackBarMain.Value);
+            MusicPlayer.Instance.SetVolume(gTrackBarMain.Value);
             volumeString = gTrackBarMain.Value.ToString();
         }
         private string volumeString;
@@ -33,9 +33,9 @@ namespace Glaxion.Music
 
         private void PlaybackVolumeControl_Load(object sender, EventArgs e)
         {
-            if (!DesignMode && MusicPlayer.Player != null)
+            if (!DesignMode && MusicPlayer.Instance != null)
             {
-                MusicPlayer.Player.SetVolume(gTrackBarMain.Value);
+                MusicPlayer.Instance.SetVolume(gTrackBarMain.Value);
                 volumeString = gTrackBarMain.Value.ToString();
                 gTrackBarMain.Label = volumeString;
                 mutedScheme = new ColorScheme(Color.Red,Color.Yellow);
@@ -48,7 +48,7 @@ namespace Glaxion.Music
             double dblValue;
             dblValue = ((double)e.X / (double)gTrackBarMain.Width) * (gTrackBarMain.MaxValue - gTrackBarMain.MinValue);
             gTrackBarMain.Value = Convert.ToInt32(dblValue);
-            MusicPlayer.Player.SetVolume(gTrackBarMain.Value);
+            MusicPlayer.Instance.SetVolume(gTrackBarMain.Value);
         }
         
         private void gTrackBarMain_ValueChanged(object sender, EventArgs e)
@@ -58,9 +58,9 @@ namespace Glaxion.Music
 
         private void gTrackBarMain_Scroll(object sender, ScrollEventArgs e)
         {
-            if (MusicPlayer.Player != null)
+            if (MusicPlayer.Instance != null)
             {
-                MusicPlayer.Player.SetVolume(gTrackBarMain.Value);
+                MusicPlayer.Instance.SetVolume(gTrackBarMain.Value);
                 volumeString = gTrackBarMain.Value.ToString();
             }
         }
@@ -70,12 +70,12 @@ namespace Glaxion.Music
             double dblValue;
             dblValue = ((double)e.X / (double)gTrackBarMain.Width) * (gTrackBarMain.MaxValue - gTrackBarMain.MinValue);
             gTrackBarMain.Value = Convert.ToInt32(dblValue);
-            MusicPlayer.Player.SetVolume(gTrackBarMain.Value);
+            MusicPlayer.Instance.SetVolume(gTrackBarMain.Value);
         }
 
         void Mute()
         {
-            bool  muted = MusicPlayer.Player.Mute();
+            bool  muted = MusicPlayer.Instance.Mute();
             if(muted)
             {
                 unmutedScheme.backColor = gTrackBarMain.SliderColorLow.ColorA;

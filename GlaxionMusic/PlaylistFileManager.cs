@@ -11,7 +11,6 @@ namespace Glaxion.Music
         public PlaylistFileManager(ITreeView TreeViewInterface)
         {
             _view = TreeViewInterface;
-            fileLoader = MusicPlayer.Player.fileLoader;
             editDirectoriesGUIdelegate = new ListGUICallBack(EditDirectoriesCallback);
         }
 
@@ -21,10 +20,9 @@ namespace Glaxion.Music
         public Dictionary<string, string> PlaylistFiles = new Dictionary<string, string>();
         public FileLoader fileLoader;
 
-        public void LoadManager()
+        public void Load()
         {
-            fileLoader = MusicPlayer.Player.fileLoader;
-            LoadPlaylistDirectories();
+            fileLoader = fileLoader = FileLoader.Instance;
             //  AssignEventHandlers();
         }
         /*
@@ -110,6 +108,7 @@ namespace Glaxion.Music
         public void EditPlaylistDirectories()
         {
             ListGUI lg = new ListGUI(fileLoader.PlaylistDirectories, true);
+            lg.Text = nameof(fileLoader.PlaylistDirectories);
             lg.callback = editDirectoriesGUIdelegate;
         }
 

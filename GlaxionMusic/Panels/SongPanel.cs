@@ -36,7 +36,7 @@ namespace Glaxion.Music
 
         public void SetSong(string v)
         {
-            Song s = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(v);
+            Song s = MusicInfo.Instance.GetInfo(v);
             if (s == null)
             return;
             iD3Control1.SetSong(s);

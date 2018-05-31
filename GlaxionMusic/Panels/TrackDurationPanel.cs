@@ -15,24 +15,24 @@ namespace Glaxion.Music
 
         public void Pause()
         {
-            MusicPlayer.Player.Pause();
+            MusicPlayer.Instance.Pause();
         }
 
         public void Resume()
         {
-            if (currentTrack == MusicPlayer.Player.currentTrack)
+            if (currentTrack == MusicPlayer.Instance.currentTrack)
             {
-                MusicPlayer.Player.Resume(MusicPlayer.Player.currentTrackString, MusicPlayer.Player.positionIndex);
+                MusicPlayer.Instance.Resume(MusicPlayer.Instance.currentTrackString, MusicPlayer.Instance.positionIndex);
             }
             else
             {
-                MusicPlayer.Player.Play(currentTrack);
+                MusicPlayer.Instance.Play(currentTrack);
             }
         }
 
         public void Play()
         {
-            MusicPlayer.Player.PlayFile(MusicPlayer.Player.currentTrackString);
+            MusicPlayer.Instance.PlayFile(MusicPlayer.Instance.currentTrackString);
         }
 
         public void SetPauseIcon()
@@ -46,13 +46,13 @@ namespace Glaxion.Music
 
         private void PlaybackTrackbarControl_Load(object sender, EventArgs e)
         {
-            if (!DesignMode && MusicPlayer.Player != null)
+            if (!DesignMode && MusicPlayer.Instance != null)
             {
-                MusicPlayer.Player.PlayEvent += Player_PlayEvent;
-                MusicPlayer.Player.ResumeEvent += Player_ResumeEvent;
-                MusicPlayer.Player.PauseEvent += Player_PauseEvent;
-                MusicPlayer.Player.MediaLoadedEvent += Player_MediaLoadedEvent;
-                MusicPlayer.Player.TickEvent += t_Tick;
+                MusicPlayer.Instance.PlayEvent += Player_PlayEvent;
+                MusicPlayer.Instance.ResumeEvent += Player_ResumeEvent;
+                MusicPlayer.Instance.PauseEvent += Player_PauseEvent;
+                MusicPlayer.Instance.MediaLoadedEvent += Player_MediaLoadedEvent;
+                MusicPlayer.Instance.TickEvent += t_Tick;
                 DoubleBuffered = true;
             }
         }
@@ -80,15 +80,15 @@ namespace Glaxion.Music
         void t_Tick(object sender, EventArgs e)
         {
             SetTrackBarStatus();
-            if(MusicPlayer.Player.IsPaused && gTrackBarMain.SliderShape != gTrackBar.gTrackBar.eShape.ArrowDown)
+            if(MusicPlayer.Instance.IsPaused && gTrackBarMain.SliderShape != gTrackBar.gTrackBar.eShape.ArrowDown)
             {
                 gTrackBarMain.SliderShape = gTrackBar.gTrackBar.eShape.ArrowDown;
             }
-            if (MusicPlayer.Player.IsPlaying && gTrackBarMain.SliderShape != gTrackBar.gTrackBar.eShape.ArrowRight)
+            if (MusicPlayer.Instance.IsPlaying && gTrackBarMain.SliderShape != gTrackBar.gTrackBar.eShape.ArrowRight)
             {
                 gTrackBarMain.SliderShape = gTrackBar.gTrackBar.eShape.ArrowRight;
             }
-            if (MusicPlayer.Player.HasStopped() && gTrackBarMain.SliderShape != gTrackBar.gTrackBar.eShape.Rectangle)
+            if (MusicPlayer.Instance.HasStopped() && gTrackBarMain.SliderShape != gTrackBar.gTrackBar.eShape.Rectangle)
             {
                 gTrackBarMain.SliderShape = gTrackBar.gTrackBar.eShape.Rectangle;
             }
@@ -96,18 +96,18 @@ namespace Glaxion.Music
         
         public void SetTrackBarStatus()
         {
-            if (MusicPlayer.Player != null)
+            if (MusicPlayer.Instance != null)
             {
-                if (MusicPlayer.Player.windowsMediaPlayer != null && MusicPlayer.Player.windowsMediaPlayer.currentMedia != null)
+                if (MusicPlayer.Instance.windowsMediaPlayer != null && MusicPlayer.Instance.windowsMediaPlayer.currentMedia != null)
                 {
                  //   tool.debug("current media loaded");
-                    endLabel2.Text = MusicPlayer.Player.windowsMediaPlayer.currentMedia.durationString;
+                    endLabel2.Text = MusicPlayer.Instance.windowsMediaPlayer.currentMedia.durationString;
                   //  scaleFont(endLabel2);
-                    gTrackBarMain.MaxValue = (int)MusicPlayer.Player.windowsMediaPlayer.currentMedia.duration;
-                    int value = (int)MusicPlayer.Player.windowsMediaPlayer.controls.currentPosition;
+                    gTrackBarMain.MaxValue = (int)MusicPlayer.Instance.windowsMediaPlayer.currentMedia.duration;
+                    int value = (int)MusicPlayer.Instance.windowsMediaPlayer.controls.currentPosition;
                     if (value <= gTrackBarMain.MaxValue)
                         gTrackBarMain.Value = value;
-                    startLabel.Text = MusicPlayer.Player.windowsMediaPlayer.controls.currentPositionString;
+                    startLabel.Text = MusicPlayer.Instance.windowsMediaPlayer.controls.currentPositionString;
                    
                     // label1.Location = new Point((int)gTrackBarMain.SliderFocalPt.X, label1.Location.Y);
                 }
@@ -131,8 +131,8 @@ namespace Glaxion.Music
 
         public void SetTrackPosition()
         {
-            MusicPlayer.Player.windowsMediaPlayer.controls.currentPosition = gTrackBarMain.Value;
-            startLabel.Text = MusicPlayer.Player.windowsMediaPlayer.controls.currentPositionString;
+            MusicPlayer.Instance.windowsMediaPlayer.controls.currentPosition = gTrackBarMain.Value;
+            startLabel.Text = MusicPlayer.Instance.windowsMediaPlayer.controls.currentPositionString;
         }
 
         private void trackBar_Scroll(object sender, EventArgs e)
@@ -142,11 +142,11 @@ namespace Glaxion.Music
         
         private void axWindowsMediaPlayer1_OpenStateChange(object sender, WMPLib.WMPOpenState e)
         {
-            if (MusicPlayer.Player.windowsMediaPlayer.openState == WMPLib.WMPOpenState.wmposMediaOpen)
+            if (MusicPlayer.Instance.windowsMediaPlayer.openState == WMPLib.WMPOpenState.wmposMediaOpen)
             {
-                startLabel.Text = MusicPlayer.Player.windowsMediaPlayer.controls.currentPositionString;
-                gTrackBarMain.MaxValue = (int)MusicPlayer.Player.trackDuration/100;
-                startLabel.Text = MusicPlayer.Player.windowsMediaPlayer.currentMedia.durationString;
+                startLabel.Text = MusicPlayer.Instance.windowsMediaPlayer.controls.currentPositionString;
+                gTrackBarMain.MaxValue = (int)MusicPlayer.Instance.trackDuration/100;
+                startLabel.Text = MusicPlayer.Instance.windowsMediaPlayer.currentMedia.durationString;
             }
         }
 
@@ -183,54 +183,54 @@ namespace Glaxion.Music
 
         private void resumeButton_Click(object sender, EventArgs e)
         {
-            if (MusicPlayer.Player.IsPlaying)
+            if (MusicPlayer.Instance.IsPlaying)
             {
                 Pause();
                 return;
             }
 
-            if (MusicPlayer.Player.IsPaused)
+            if (MusicPlayer.Instance.IsPaused)
             {
                 Resume();
                 return;
             }
-            if (MusicPlayer.Player.HasStopped())
+            if (MusicPlayer.Instance.HasStopped())
             {
-                Play(MusicPlayer.Player.currentTrackString);
+                Play(MusicPlayer.Instance.currentTrackString);
                 return;
             }
         }
 
         public void Play(string track)
         {
-            MusicPlayer.Player.PlayFile(track);
+            MusicPlayer.Instance.PlayFile(track);
         }
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-            MusicPlayer.Player.NextTrack();
-            // currentTrack = MusicPlayer.Player.currentTrack;
-            if (MusicPlayer.Player.IsPlaying)
+            MusicPlayer.Instance.NextTrack();
+            // currentTrack = MusicPlayer.Instance.currentTrack;
+            if (MusicPlayer.Instance.IsPlaying)
                 resumeButton.BackgroundImage = Properties.Resources.Icons8_Windows_8_Media_Controls_Pause.ToBitmap();
 
         }
 
         private void prevButton_Click(object sender, EventArgs e)
         {
-            MusicPlayer.Player.PrevTrack();
-            currentTrack = MusicPlayer.Player.currentTrack;
+            MusicPlayer.Instance.PrevTrack();
+            currentTrack = MusicPlayer.Instance.currentTrack;
             resumeButton.BackgroundImage = Properties.Resources.Icons8_Windows_8_Media_Controls_Pause.ToBitmap();
         }
 
         private void stopButton_Click(object sender, EventArgs e)
         {
-            MusicPlayer.Player.Stop();
+            MusicPlayer.Instance.Stop();
             SetPlayIcon();
         }
 
         private void fileButton_Click(object sender, EventArgs e)
         {
-            tool.OpenFileDirectory(MusicPlayer.Player.currentTrackString);
+            tool.OpenFileDirectory(MusicPlayer.Instance.currentTrackString);
         }
 
         private void gTrackBarMain_MouseUp(object sender, MouseEventArgs e)

@@ -20,19 +20,85 @@ namespace Glaxion.Music
 
     public class PlaylistManager : VListView
     {
-        public PlaylistManager(IPlaylistManager PlaylistInterface,IListView listViewInterface,ColorScheme colors) : base(listViewInterface)
+        public PlaylistManager(IPlaylistManager PlaylistInterface,IListView listViewInterface,ColorScheme colors) : base(listViewInterface,colors)
         {
             _playlist_view = PlaylistInterface;
-            CurrentColorScheme = colors;
-            //SetListViewInterface(listViewInterface);
+            CurrentColors = colors;
         }
 
         public Dictionary<string, string> tmpPlaylists = new Dictionary<string, string>();
         public ColorScheme ContainsTrackColor = new ColorScheme(Color.Black,Color.SkyBlue);
         public bool ClearTMPFiles = false;
-        public Dictionary<string, Playlist> Playlists = new Dictionary<string, Playlist>();
-        public ColorScheme CurrentColorScheme;
+        //public Dictionary<string, Playlist> Playlists = new Dictionary<string, Playlist>();
+       // public ColorScheme CurrentColorScheme;
         IPlaylistManager _playlist_view;
+        
+        public override VItem CreateItem(string file)
+        {
+            Playlist p = FileLoader.Instance.GetPlaylist(file, true);
+            VItem v = base.CreateItem(file);
+            v.Tag = p;
+            return v;
+        }
+
+        public override VItem Insert(int index, VItem item)
+        {
+            Playlist p = item.Tag as Playlist;
+            //if(!Playlists.ContainsKey(p.path))
+             //   Playlists.Add(p.path, p);
+            return base.Insert(index, item);
+        }
+
+        public override VItem Add(VItem item)
+        {
+            Playlist p = item.Tag as Playlist;
+            if (p == null)
+                return null;
+            /*
+            if(Playlists.ContainsKey(p.path))
+            {
+                tool.show(2, "Playlist Already in Manager");
+                return null;
+            }
+            Playlists.Add(p.path, p);
+            */
+            return base.Add(item);
+        }
+
+        public override VItem Remove(int index)
+        {
+            VItem i = Items[index];
+            if (i == null)
+                return null;
+            Playlist p = i.Tag as Playlist;
+            //Playlists.Remove(p.path);
+            return base.Remove(index);
+        }
+
+        //add external files
+        public override void AddFiles(int dropIndex, string[] arr)
+        {
+            List<VItem> insertItems = new List<VItem>();
+            foreach (string s in arr)
+            {
+                string dir_path = s;
+                if (!Directory.Exists(s))
+                dir_path = Path.GetDirectoryName(s);
+                if (!Directory.Exists(dir_path))
+                    continue;
+                VItem i1 = CreateItem(s);
+                if (i1 == null)
+                    continue;
+                insertItems.Add(i1);
+                continue;
+            }
+            insertItems.Reverse();
+            foreach (VItem item in insertItems)
+            {
+                item.Selected = true;
+                Insert(dropIndex, item);
+            }
+        }
 
         public VItem FindPlaylistItem(Playlist list)
         {
@@ -57,6 +123,7 @@ namespace Glaxion.Music
         }
 
         //path to the playlist file
+        /*
         public VItem AddPlaylistFromPath(int InsertionIndex,string path)
         {
             string name = Path.GetFileNameWithoutExtension(path);
@@ -68,14 +135,12 @@ namespace Glaxion.Music
                     tool.show(1, "", name, "", "...something might be wrong, playlist is in the list but there is no viewBox item", "", path);
                 return item;
             }
-
-            Playlist p = MusicPlayer.Player.fileLoader.GetPlaylist(path, true);
+            Playlist p = MusicPlayer.Instance.fileLoader.GetPlaylist(path, true);
             VItem i = AddItemFromPlaylist(InsertionIndex,p);
-            //not the most optinal place for this
-            //_playlist_view.UpdateInterface();
             return i;
         }
-
+        */
+        /*
         public VItem AddItemFromPlaylist(int index,Playlist p)
         {
             if (!string.IsNullOrEmpty(p.path) && Playlists.ContainsKey(p.path))
@@ -94,28 +159,23 @@ namespace Glaxion.Music
             i.Name = p.path;
             i.SetColors(CurrentColorScheme);
             Insert(index, i);
-           // if (p.path != "")
-                Playlists.Add(p.path, p);
-            //_playlist_view.UpdateInterface();  //not the most optimal place for this
+            Playlists.Add(p.path, p);
             return i;
         }
+        */
 
         public Playlist SavePlaylist(string s)
         {
-            Playlist p = MusicPlayer.Player.fileLoader.GetPlaylist(s, false);
+            Playlist p = FileLoader.Instance.GetPlaylist(s, false);
             p.Save();
             return p;
         }
-
-        //should revist the function.  Could be modular
-        public void DeleteSelectedPlaylists(bool AllowConfirmation, IEnumerable<int> SelectedIndices)
+        
+        public void DeleteSelectedPlaylists(bool AllowConfirmation, List<int> SelectedIndices)
         {
-            //deprecated get selection callback
-            //_playlist_view.GetSelectedItems();
-            foreach (int i in SelectedIndices)
+            foreach(int i in SelectedIndices)
             {
                 Playlist p_item = Items[i].Tag as Playlist;
-
                 if (File.Exists(p_item.path))
                 {
                     if (AllowConfirmation)
@@ -124,14 +184,12 @@ namespace Glaxion.Music
                         if (!result)
                             continue;
                     }
-
-                    MusicPlayer.Player.fileLoader.RemovePlaylist(p_item);
+                    FileLoader.Instance.RemovePlaylist(p_item);
                     File.Delete(p_item.path);
                     tool.show(2, "File deleted:", p_item.path);
                 }
-                base.Remove(i);
+                Remove(i);
             }
-            //_playlist_view.UpdateInterface();
         }
 
         public void SaveAll()
@@ -142,16 +200,6 @@ namespace Glaxion.Music
                 p_item.Save();
             }
         }
-        /*
-        public void SaveChecked()
-        {
-            foreach (VListItem i in CheckedItems)
-            {
-                Playlist p = i.Tag as Playlist;
-                p.Save();
-            }
-        }
-        */
 
         public void LoadTmpPlaylists()
         {
@@ -159,28 +207,26 @@ namespace Glaxion.Music
             if (Directory.Exists(directory)) //does the directory exist?
             {
                 List<string> files = tool.LoadFiles(directory, ".m3u"); //if so, grab the files
-
                 //search for corresponding playlist
                 foreach (string file in files) //load each file into the listview
                 {
-                    Playlist tmp = new Playlist(file, true);
-                    AddItemFromPlaylist(0,tmp);
+                    VItem i = CreateItem(file);
+                    Add(i);
                 }
             }
         }
 
         public void LoadManager()
         {
-            MusicPlayer.Player.fileLoader.PlaylistDirectories = tool.GetPropertyList(Properties.Settings.Default.PlaylistDirectories);
+            FileLoader.Instance.PlaylistDirectories = tool.GetPropertyList(Properties.Settings.Default.PlaylistDirectories);
             LoadTmpPlaylists();
             AssignEventHandlers();
-            //HideHorizontalScrollBar();
         }
 
         public void AssignEventHandlers()
         {
-            MusicPlayer.Player.TrackChangeEvent += PlaylistManager_TrackChangeEvent;
-            MusicPlayer.Player.PlayEvent += Player_PlayEvent;
+            MusicPlayer.Instance.TrackChangeEvent += PlaylistManager_TrackChangeEvent;
+            MusicPlayer.Instance.PlayEvent += Player_PlayEvent;
         }
 
         private void Player_PlayEvent(object sender, EventArgs args)
@@ -190,6 +236,7 @@ namespace Glaxion.Music
         
         //recursively check the dictionary until
         //we have generated a new name
+        /*
         public Playlist AppendPlaylistPath(Playlist p)
         {
             if (Playlists.ContainsKey(p.path))
@@ -210,6 +257,7 @@ namespace Glaxion.Music
             }
             return p;
         }
+        */
 
         public void DisplayTrackInfo()
         {
@@ -221,10 +269,10 @@ namespace Glaxion.Music
                 item.RestoreColors();
                 if (p != null)
                 {
-                    if (p.tracks.Contains(MusicPlayer.Player.currentTrackString))
+                    if (p.tracks.Contains(MusicPlayer.Instance.currentTrackString))
                     {
-                        //item.OldColor = item.CurrentColor;
-                        if (MusicPlayer.Player.playlist.path == p.path)
+                        if (MusicPlayer.Instance.playlist != null 
+                            && MusicPlayer.Instance.playlist.path == p.path)
                             item.HighLightColors(new ColorScheme(Color.Black, Color.Yellow));
                         else
                             item.HighLightColors(ContainsTrackColor);
@@ -232,9 +280,11 @@ namespace Glaxion.Music
                     }
                 }
             }
+            //dep?
             _playlist_view.RefreshUI();
         }
 
+        //send tracks a playlist in the manager
         public void SendToCheckedPlaylists(string file)
         {
             foreach (VItem item in CheckedItems)
@@ -258,7 +308,6 @@ namespace Glaxion.Music
                 Directory.CreateDirectory(directory);
 
             di = new DirectoryInfo(directory);
-
             foreach (FileInfo file in di.GetFiles())
                 file.Delete();
 
@@ -301,24 +350,14 @@ namespace Glaxion.Music
         {
             DisplayTrackInfo();
         }
-        
+        //dep?
         void RemovePlaylist(VItem item)
         {
-            Playlist p = item.Tag as Playlist;
-            if (p != null)
-            {
-                if (Playlists.ContainsKey(p.path))
-                    Playlists.Remove(p.path);
-            }
-            tool.debug(3, "Playlist " + p.name + " removed from Playlist View");
             Remove(item);
         }
 
         public void RemoveSelectedPlaylists(List<int> selectedIndices)
         {
-            //dep
-            //_playlist_view.GetSelectedItems();
-            // List<int> l = selectedIndices.
             List<VItem> removed_playlists = new List<VItem>();
 
             foreach (int i in selectedIndices)
@@ -327,7 +366,22 @@ namespace Glaxion.Music
             {
                 RemovePlaylist(i);
             }
-            //_playlist_view.UpdateInterface();
+        }
+
+        public VItem InsertPlaylistAt(int index,string file)
+        {
+            Playlist p = FileLoader.Instance.GetPlaylist(file, true);
+            VItem v_item = base.CreateItem(file);
+            v_item.Tag = p;
+            Insert(index, v_item);
+            return v_item;
+        }
+
+        public VItem InsertPlaylistAt(int index, Playlist newplaylist)
+        {
+            VItem i = CreateItem(newplaylist.path);
+            Insert(index, i);
+            return i;
         }
 
         public void LabelEdit(int Index,string NewName)

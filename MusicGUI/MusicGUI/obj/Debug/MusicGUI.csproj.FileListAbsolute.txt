@@ -90,6 +90,7 @@ C:\Users\Solo\Desktop\Music Controller 24 May\Music-GUI\MusicGUI\MusicGUI\obj\De
 C:\Users\Solo\Desktop\Music Controller 24 May\Music-GUI\MusicGUI\MusicGUI\obj\Debug\MusicGUI.csproj.CopyComplete
 C:\Users\Solo\Desktop\Music Controller 24 May\Music-GUI\MusicGUI\MusicGUI\obj\Debug\MusicGUI.exe
 C:\Users\Solo\Desktop\Music Controller 24 May\Music-GUI\MusicGUI\MusicGUI\obj\Debug\MusicGUI.pdb
+C:\Users\Solo\Desktop\Music Controller 27 May\Music-GUI\MusicGUI\MusicGUI\obj\Debug\MusicGUI.csproj.CoreCompileInputs.cache
 C:\Users\Solo\Desktop\Music Controller 27 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\MusicGUI.exe.config
 C:\Users\Solo\Desktop\Music Controller 27 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\MusicGUI.exe
 C:\Users\Solo\Desktop\Music Controller 27 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\MusicGUI.pdb
@@ -100,7 +101,6 @@ C:\Users\Solo\Desktop\Music Controller 27 May\Music-GUI\MusicGUI\MusicGUI\bin\De
 C:\Users\Solo\Desktop\Music Controller 27 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\MusicController.pdb
 C:\Users\Solo\Desktop\Music Controller 27 May\Music-GUI\MusicGUI\MusicGUI\bin\Debug\MusicController.dll.config
 C:\Users\Solo\Desktop\Music Controller 27 May\Music-GUI\MusicGUI\MusicGUI\obj\Debug\MusicGUI.csprojResolveAssemblyReference.cache
-C:\Users\Solo\Desktop\Music Controller 27 May\Music-GUI\MusicGUI\MusicGUI\obj\Debug\MusicGUI.csproj.CoreCompileInputs.cache
 C:\Users\Solo\Desktop\Music Controller 27 May\Music-GUI\MusicGUI\MusicGUI\obj\Debug\MusicGUI.csproj.CopyComplete
 C:\Users\Solo\Desktop\Music Controller 27 May\Music-GUI\MusicGUI\MusicGUI\obj\Debug\MusicGUI.exe
 C:\Users\Solo\Desktop\Music Controller 27 May\Music-GUI\MusicGUI\MusicGUI\obj\Debug\MusicGUI.pdb

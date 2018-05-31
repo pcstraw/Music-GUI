@@ -67,6 +67,8 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Media Classes\Log.cs" />
+    <Compile Include="Media Classes\MusicInfo.cs" />
     <Compile Include="MusicFileManager.cs" />
     <Compile Include="Panels\SquasherControlDesigner.cs" />
     <Compile Include="Media Classes\Album.cs" />

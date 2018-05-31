@@ -71,7 +71,8 @@ namespace Glaxion.Music
         private void PicturePanel_DragDrop(object sender, DragEventArgs e)
         {
             //get the drop data
-            string[] data = (string[])e.Data.GetData(DataFormats.FileDrop);
+            
+            string[] data = WinFormUtils.GetExternalDragDrop(e);
             if (data == null)
                 return;
             if (data.Length > 0)
@@ -98,7 +99,7 @@ namespace Glaxion.Music
                     }
                 }
             }
-            InternalClipboard.Clear();
+           // InternalClipboard.Clear();
         }
         public static string GetAlbumArtDirectory()
         {
@@ -107,32 +108,38 @@ namespace Glaxion.Music
                 Directory.CreateDirectory(dir);
             return dir;
         }
-
+        
         public static void CopyToDirectory(string file)
         {
             string dir = GetAlbumArtDirectory();
             string ext = Path.GetExtension(file);
             string name = Path.GetFileNameWithoutExtension(file);
-            //int count = 1;
-            string newFullPath = file;
+            string newFullPath = string.Concat(dir, name, ext);
             if (File.Exists(newFullPath))
             {
-                SaveFileDialog od = new SaveFileDialog();
-                od.InitialDirectory = dir;
-                od.Title = "File Already Exists. Make a New File Name";
-                //od.Multiselect = false;
-                string tmp = string.Format("{0}({1})", name, 1);
-                od.FileName = tmp+ext;
-
-                if (od.ShowDialog() == DialogResult.OK)
+                string new_name = string.Format("{0}({1})", name, 1);
+                if (name.ToLower() == "download")
                 {
-                    newFullPath = od.FileName;
+                    newFullPath = string.Concat(dir, new_name, ext);
                 }
-                else
-                    return;
+                else{ 
+                    SaveFileDialog od = new SaveFileDialog();
+                    od.Title = "File Already Exists. Make a New File Name";
+                    od.FileName = new_name;
+                    od.AddExtension = true;
+                    od.DefaultExt = ext;
+                    od.InitialDirectory = dir;
+                    if (od.ShowDialog() == DialogResult.OK)
+                    {
+                        newFullPath = od.FileName;
+                    }
+                    else
+                        return;
+                }
             }
-
-            File.Copy(file, newFullPath,true);
+            File.Copy(file, newFullPath, true);
+            //used for testing
+            //tool.OpenFileDirectory(newFullPath);
         }
 
         public static void OpenAlbumArtFolder()

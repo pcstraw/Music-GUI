@@ -10,9 +10,12 @@ namespace Glaxion.Music
 {
     public class FileLoader
     {
-        public FileLoader()
+        private FileLoader() { }////lazy singleton
+        public static FileLoader Instance { get { return Nested.instance; } }
+        private class Nested
         {
-            trackInfoManager = new TrackInfoManager();
+            static Nested() { }
+            internal static readonly FileLoader instance = new FileLoader();
         }
 
         bool tagsLoaded;
@@ -22,10 +25,11 @@ namespace Glaxion.Music
         public List<string> MusicDirectories = new List<string>();
         public Dictionary<string, Playlist> Playlists = new Dictionary<string, Playlist>();
         public Dictionary<string, string> MusicFiles = new Dictionary<string, string>();
-        public TrackInfoManager trackInfoManager = new TrackInfoManager();
+        private MusicInfo musicInfo;
 
         public void Load()
         {
+            musicInfo = MusicInfo.Instance;
             GetSavedDirectories();
             PlaylistDirectories = tool.GetPropertyList(Properties.Settings.Default.PlaylistDirectories);
         }
@@ -75,7 +79,7 @@ namespace Glaxion.Music
             {
                 string ext = Path.GetExtension(f.Key);
                 if (tool.IsAudioFile(f.Key))
-                    trackInfoManager.GetInfo(f.Key);
+                    musicInfo.GetInfo(f.Key);
             }
             return;
         }
@@ -118,17 +122,16 @@ namespace Glaxion.Music
             Console.WriteLine(string.Concat("Total Music Files: ", MusicFiles.Count));
 
             tagsLoaded = false;
-            if (trackInfoManager.trackInfos.Count == 0)
+            if (musicInfo.trackInfos.Count == 0)
                 await BuildID3TagsAsync();
+
             tagsLoaded = true;
             tool.SetConsoleErrorState();
             foreach (string s in Song.TagLoadingLog)
-            {
-                
                 Console.WriteLine(string.Concat(s,"\n"));
-            }
+
             tool.ResetConsoleColor();
-            tool.debug("...Finished Loading tags:  ", "Tag count: " + trackInfoManager.trackInfos.Count());
+            tool.debug("...Finished Loading tags:  ", "Tag count: " + musicInfo.trackInfos.Count());
         }
 
         public void AddMusicDirectory(string directory)
@@ -148,8 +151,6 @@ namespace Glaxion.Music
             //string playlistFolder2 = tool.SearchDirectoryForFolder(googleDriveFolder, Properties.Settings.Default.tt);
             AddMusicDirectory(musicFolder);
             AddMusicDirectory(googleDriveFolder);
-            //AddPlaylistDirectory(playlistFolder);
-            //AddPlaylistDirectory(playlistFolder2);
         }
 
         public bool HasLoadedTags()

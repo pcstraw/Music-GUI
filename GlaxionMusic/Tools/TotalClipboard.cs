@@ -168,12 +168,9 @@ namespace Glaxion.Music
                 string s = t.Name;
                 if (string.IsNullOrEmpty(s))
                     continue;
-                //tool.show(2, s);
-                //List<string> ls = tool.GetAllAudioFiles(t);
-                //foreach (string text in ls)
                 Files.Add(s);
             }
-            TestFiles();
+           // TestFiles();
         }
 
         public static void TestFiles()

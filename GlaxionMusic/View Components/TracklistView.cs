@@ -85,15 +85,14 @@ namespace Glaxion.Music
             this.BackColor = System.Drawing.SystemColors.Info;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
-            this.DragOver += new System.Windows.Forms.DragEventHandler(this.TrackManager_DragOver);
             this.ResumeLayout(false);
         }
 
         internal void RemoveSelectedTracks()
         {
             BeginUpdate();
-            IEnumerable<int> list = GetSelected();
-            manager.RemoveSelectedTracks(list.ToList<int>());
+            List<int> list = GetSelected().ToList();
+            manager.RemoveSelectedTracks(list);
             SelectedIndices.Clear();
             manager.ClearSelection();
             EndUpdate();
@@ -151,17 +150,15 @@ namespace Glaxion.Music
         
 
         //move this derived class?
-        protected override void e_KeyUp(object sender, KeyEventArgs e)
+        protected override void EnhancedListView_KeyUp(object sender, KeyEventArgs e)
         {
-            base.e_KeyUp(sender, e); //do we need to call base?
+            base.EnhancedListView_KeyUp(sender, e); //do we need to call base?
             if (e.KeyCode == Keys.Z)
                 RestoreLastState();
             if (e.KeyCode == Keys.X)
                 RestoreNextState();
             if (e.KeyCode == Keys.Delete)
-            {
                 RemoveSelectedTracks();
-            }
         }
 
         private void TrackManager_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
@@ -248,7 +245,8 @@ namespace Glaxion.Music
                     i.Selected = true;
                     continue;
                 }
-
+                //if the file is a directory, find any audio files
+                //and add them recursively
                 if (!Path.HasExtension(file))
                 {
                     List<string> dirf = tool.LoadAudioFiles(file, SearchOption.TopDirectoryOnly);
@@ -270,11 +268,12 @@ namespace Glaxion.Music
             List<int> list = new List<int>(SelectedIndices.Count);
             foreach(int i in SelectedIndices)
                 list.Add(i);
-
+            BeginUpdate();
             manager.MoveSelectedItemsTo(dropIndex, list);
+            EndUpdate();
         }
 
-        protected override void ViewBox_DragDrop(object sender, DragEventArgs e)
+        protected override void EnhancedListBox_DragDrop(object sender, DragEventArgs e)
         {
             //external drag drop
             //in future use tracklist clipboard so it doesn't interfer
@@ -285,14 +284,26 @@ namespace Glaxion.Music
                 SelectedIndices.Clear();
                 PasteFrom(InternalClipboard.Files.ToArray());
                 InternalClipboard.Clear();
-                this.Focus();
-                this.Refresh();
+                Focus();
+                Refresh();
                 return;
             }
             else
             {
-                base.ViewBox_DragDrop(sender, e);
-                InternalClipboard.Clear();
+                string[] data = WinFormUtils.GetExternalDragDrop(e);
+                if (data == null)
+                {
+                    base.EnhancedListBox_DragDrop(sender, e);
+                    InternalClipboard.Clear();
+                }
+                else
+                {
+                    PasteFrom(data);
+                    InternalClipboard.Clear();
+                    this.Focus();
+                    this.Refresh();
+                    return;
+                }
             }
         }
         
@@ -376,31 +387,6 @@ namespace Glaxion.Music
             OpenVegas();
         }
         
-        public void SelectSearchedMenu()
-        {
-            tool.show(5, "Please review this fucntion");
-            throw new Exception("Please review this fucntion");
-            foreach (VItem item in manager.Items)
-            {
-                if (item.CurrentColor.backColor == Color.Violet)
-                {
-                    item.Selected = true;
-                }
-            }
-            Select();
-        }
-
-        public bool ToggleAutoUpdatePaths(bool toggle)
-        {
-            AutoUpdateTracks = toggle;
-            return toggle;
-        }
-
-        public void selectSearchedMenu_Click(object sender, EventArgs e)
-        {
-            SelectSearchedMenu();
-        }
-        
         public void updateMusicPlayerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             manager.UpdateMusicPlayer();
@@ -410,11 +396,11 @@ namespace Glaxion.Music
         {
             foreach (ListViewItem item in SelectedItems)
             {
-                if (File.Exists(item.SubItems[1].Text))
-                    File.Delete(item.SubItems[1].Text);
+                if (File.Exists(item.Name))
+                    File.Delete(item.Name);
             }
         }
-        
+        /*
         private void InternalDragDrop(DragEventArgs e)
         {
             //check for internal drag drop first
@@ -449,6 +435,7 @@ namespace Glaxion.Music
             tmrLVScroll.Enabled = false;
             return;
         }
+        */
         
         protected override void ListBox_DragEnter(object sender, DragEventArgs e)
         {
@@ -457,31 +444,7 @@ namespace Glaxion.Music
             e.Effect = e.AllowedEffect;
             e.Effect = DragDropEffects.All;
         }
-
-        //move to drag leave surely?
-        private void TrackManager_DragOver(object sender, DragEventArgs e)
-        {
-            Point cp = base.PointToClient(new Point(e.X, e.Y));
-            hoveredItem = base.GetItemAt(cp.X, cp.Y);
-            /*
-            e.Effect = DragDropEffects.All;
-            //return;
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-            {
-                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-                //DropMusicFiles(files.ToList(), new Point(e.X, e.Y));
-                TotalClipboard.Files.Clear();
-                TotalClipboard.Files = files.ToList();
-                try
-                {
-                    e.Data.SetData(null);
-                }
-                catch { }
-            }
-            */
-        }
         
-
         public void ShowLastSelected()
         {
             ShowLastSelected(lastSelectedIndices, wasSelectedColor);
@@ -524,45 +487,11 @@ namespace Glaxion.Music
 
         internal void CopySelectedToClipboard()
         {
-            InternalClipboard.Files.Clear();
-            foreach (int i in lastSelectedIndices)
-                InternalClipboard.Add(manager.Items[i].Name);
+            List<int> list = GetSelected().ToList();
+            manager.CopyToInternalClipboard(list);
         }
-
-        public void AddFiles(int dropIndex, string[] arr)
-        {
-            List<VItem> insertItems = new List<VItem>();
-            foreach (string s in arr)
-            {
-                if(Directory.Exists(s))
-                {
-                    List<string> s_array = tool.LoadAudioFiles(s,SearchOption.TopDirectoryOnly);
-                    foreach(string s2 in s_array)
-                    {
-                        VItem i1 = manager.CreateItem(s2);
-                        if (i1 == null)
-                            continue;
-                        insertItems.Add(i1);
-                    }
-                    continue;
-                }
-                else
-                { 
-                    VItem i2 = manager.CreateItem(s);
-                    if (i2 == null)
-                        continue;
-                    insertItems.Add(i2);
-                }
-            }
-            insertItems.Reverse();
-            foreach(VItem item in insertItems)
-            {
-                item.Selected = true;
-                manager.Insert(dropIndex, item);
-            }
-        }
-
-        internal void PasteFrom(string[] files)
+        
+        public void PasteFrom(string[] files)
         {
             int dropIndex = 0;
             if (hoveredItem != null)
@@ -573,13 +502,11 @@ namespace Glaxion.Music
             {
                 dropIndex = manager.ItemCount;
             }
-            AddFiles(dropIndex, files);
+            manager.AddFiles(dropIndex, files);
             UpdateColumnsAndColors();
             this.Invalidate();
-            return;
         }
-
-
+        
         internal void PasteFromInternalClipboard()
         {
             if (InternalClipboard.IsEmpty)
@@ -587,7 +514,6 @@ namespace Glaxion.Music
             int dropIndex = 0;
             if (hoveredItem != null)
             {
-                // hoveredItem.Selected = false;
                 dropIndex = hoveredItem.Index + 1;
             }
             else
@@ -595,9 +521,9 @@ namespace Glaxion.Music
                 dropIndex = manager.ItemCount;
             }
             
-            AddFiles(dropIndex, InternalClipboard.Files.ToArray());
+            manager.AddFiles(dropIndex, InternalClipboard.Files.ToArray());
             UpdateColumnsAndColors();
-            return;
+            Invalidate();
         }
         
         public void Add(VItem item)

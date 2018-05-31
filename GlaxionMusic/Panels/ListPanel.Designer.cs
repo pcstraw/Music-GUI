@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.treeView = new TreeViewMS();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListControl));
+            this.treeView = new Glaxion.Music.TreeViewMS();
             this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.fromFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fromFileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,9 +48,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.treeView.ContextMenuStrip = this.contextMenu;
-            this.treeView.Location = new System.Drawing.Point(0, 0);
+            this.treeView.Location = new System.Drawing.Point(93, 0);
             this.treeView.Name = "treeView";
-            this.treeView.Size = new System.Drawing.Size(135, 156);
+            this.treeView.SelectedNodes = ((System.Collections.ArrayList)(resources.GetObject("treeView.SelectedNodes")));
+            this.treeView.Size = new System.Drawing.Size(123, 156);
             this.treeView.TabIndex = 0;
             this.treeView.Click += new System.EventHandler(this.treeView_Click);
             // 
@@ -77,19 +79,17 @@
             // 
             // newButton
             // 
-            this.newButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.newButton.Location = new System.Drawing.Point(138, 3);
+            this.newButton.Location = new System.Drawing.Point(12, 14);
             this.newButton.Name = "newButton";
             this.newButton.Size = new System.Drawing.Size(75, 23);
             this.newButton.TabIndex = 2;
-            this.newButton.Text = "New";
+            this.newButton.Text = "Add";
             this.newButton.UseVisualStyleBackColor = true;
             this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
             // removeButton
             // 
-            this.removeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.removeButton.Location = new System.Drawing.Point(138, 32);
+            this.removeButton.Location = new System.Drawing.Point(12, 43);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(75, 23);
             this.removeButton.TabIndex = 3;
@@ -99,8 +99,7 @@
             // 
             // openButton
             // 
-            this.openButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.openButton.Location = new System.Drawing.Point(138, 62);
+            this.openButton.Location = new System.Drawing.Point(12, 73);
             this.openButton.Name = "openButton";
             this.openButton.Size = new System.Drawing.Size(75, 23);
             this.openButton.TabIndex = 4;
@@ -110,8 +109,7 @@
             // 
             // okButton
             // 
-            this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.okButton.Location = new System.Drawing.Point(154, 112);
+            this.okButton.Location = new System.Drawing.Point(30, 102);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(44, 31);
             this.okButton.TabIndex = 5;
@@ -124,6 +122,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.openButton);
             this.Controls.Add(this.removeButton);

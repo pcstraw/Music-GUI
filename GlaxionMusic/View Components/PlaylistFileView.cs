@@ -65,7 +65,13 @@ namespace Glaxion.Music
             if (tool.StringCheck(n.Tag as string))
                 tool.OpenFileDirectory(n.Tag as string);
         }
-        
+
+        internal void LoadManager()
+        {
+            manager.Load();
+            LoadPlaylistDirectories();
+        }
+
         private void playlistFileView_ItemDrag(object sender, ItemDragEventArgs e)
         {
             DoDragDrop(sender, DragDropEffects.Copy);
@@ -121,6 +127,15 @@ namespace Glaxion.Music
         private void PlaylistFileView_DragDrop(object sender, DragEventArgs e)
         {
             
+        }
+
+        internal void LoadPlaylistDirectories()
+        {
+            manager.LoadPlaylistDirectories();
+            if(Nodes.Count > 0)
+            {
+                Nodes[0].Expand();
+            }
         }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.MainLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -49,16 +49,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.AliceBlue;
-            this.textBox1.Font = new System.Drawing.Font("Tw Cen MT", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(168, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(360, 37);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "No text";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox.BackColor = System.Drawing.Color.AliceBlue;
+            this.textBox.Font = new System.Drawing.Font("Tw Cen MT", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox.Location = new System.Drawing.Point(168, 3);
+            this.textBox.Name = "textBox1";
+            this.textBox.Size = new System.Drawing.Size(360, 37);
+            this.textBox.TabIndex = 0;
+            this.textBox.Text = "No text";
+            this.textBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // splitContainer1
             // 
@@ -69,7 +69,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.textBox);
             this.splitContainer1.Panel1.Controls.Add(this.MainLabel);
             this.splitContainer1.Panel1MinSize = 10;
             this.splitContainer1.Panel2MinSize = 10;
@@ -95,7 +95,7 @@
 
         #endregion
         public System.Windows.Forms.Label MainLabel;
-        private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

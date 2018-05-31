@@ -55,7 +55,6 @@ namespace Glaxion.Music
         }
         private string aspectToStringFormat;
         
-
         public string ValueToString(object value)
         {
             // Give the installed converter a chance to work (even if the value is null)
@@ -72,10 +71,8 @@ namespace Glaxion.Music
             else
                 return String.Format(fmt, value);
         }
-
     }
-
-
+    
     public class VNode
     {
         public VNode()
@@ -239,7 +236,7 @@ namespace Glaxion.Music
             Columns.Add("name");
             Columns.Add("path");
         }
-        public int Index; //dep
+       // public int Index; //dep
         public ColorScheme CurrentColor;
         public ColorScheme OldColor;
         public List<string> Columns = new List<string>();
@@ -273,7 +270,6 @@ namespace Glaxion.Music
             item.Tag = Tag;
             item.CurrentColor = CurrentColor;
             item.OldColor = OldColor;
-            item.Index = Index;
             item.Selected = Selected;
             item.State = State;
             item.Checked = Checked;
@@ -287,14 +283,16 @@ namespace Glaxion.Music
         void Insert(int index, VItem item);
         void RefreshColors();
         void Remove(int index);
+        //void PasteFrom(int index,string[] files);
        // void Remove(VItem item);
     }
 
     public class VListView
     {
-        public VListView(IListView ListViewInterface)
+        public VListView(IListView ListViewInterface,ColorScheme colors)
         {
             SetListViewInterface(ListViewInterface);
+            CurrentColors = colors;
         }
         void SetListViewInterface(IListView ListViewInterface)
         {
@@ -314,53 +312,48 @@ namespace Glaxion.Music
             i.Columns[1] = file;
             i.SetColors(CurrentColors);
             i.Name = file;
-            Song song = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(file);
+            //move this to derived createItem.  See playlistManager CreateItem
+            Song song = MusicInfo.Instance.GetInfo(file);
             if (song != null)
-            {
                 i.Tag = song;
-            }
             return i;
         }
 
-        public VItem Add(VItem item)
+        public virtual VItem Add(VItem item)
         {
-            item.Index = _items.Count;
             _items.Add(item);
             _view.Add(item);
             return item;
         }
 
-        public VItem Insert(int index, VItem item)
+        public virtual VItem Insert(int index, VItem item)
         {
             _items.Insert(index, item);
             _view.Insert(index, item);
-            //SortIndices(index);
             return item;
         }
 
-        public VItem Remove(int index)
+        public virtual VItem Remove(int index)
         {
 
             VItem item = _items[index];
             _items.Remove(item);
             _view.Remove(index);
-            //SortIndices(index);
             return item;
         }
-        public VItem Remove(VItem item)
+        public virtual VItem Remove(VItem item)
         {
             if (!_items.Contains(item))
             {
                 tool.show(5, "Crash averted:  getting the index of an item not in Items");
-                //return null;
+                return null;
             }
             int index = IndexOf(item);
             _view.Remove(index);
             _items.Remove(item);
             return item;
         }
-
-        //dep?
+        
         public void MoveIndicesTo(int insertionIndex,List<int> indices)
         {
             List<VItem> removedItems = new List<VItem>();
@@ -454,20 +447,44 @@ namespace Glaxion.Music
             foreach (VItem i in list)
                 Remove(i);
             CallTracksChangedDelegate();
-            //ClearSelection();
         }
-        /*
-        public void MoveSelectedTracksTo(int index, IEnumerable<int> SelectedIndices)
+        //add external files
+        public virtual void AddFiles(int dropIndex, string[] arr)
         {
-            foreach (int i in SelectedIndices)
+            List<VItem> insertItems = new List<VItem>();
+            foreach (string s in arr)
             {
-                Remove(i);
-                Insert(index + 1, Items[i]);
-                Items[i].Selected = true;
+                //fix:  if the file is a directory
+                //then load as a playlist in playlistManager. 
+                //virtual function
+                if (Directory.Exists(s))
+                {
+                    List<string> s_array = tool.LoadAudioFiles(s, SearchOption.TopDirectoryOnly);
+                    foreach (string s2 in s_array)
+                    {
+                        VItem i1 = CreateItem(s2);
+                        if (i1 == null)
+                            continue;
+                        insertItems.Add(i1);
+                    }
+                    continue;
+                }
+                else
+                {
+                    VItem i2 = CreateItem(s);
+                    if (i2 == null)
+                        continue;
+                    insertItems.Add(i2);
+                }
             }
-            //_view.RefreshUI();
+            insertItems.Reverse();
+            foreach (VItem item in insertItems)
+            {
+                item.Selected = true;
+                Insert(dropIndex, item);
+            }
         }
-        */
+        //resturn list of indices instead
         public void CheckForRepeat(List<int> SelectedIndices)
         {
             foreach (int item in SelectedIndices)
@@ -507,20 +524,7 @@ namespace Glaxion.Music
             }
             CallTracksChangedDelegate();
         }
-        //rename method
-        /*
-        public void ShowLastSelected(IEnumerable<int> SelectedIndices, ColorScheme colors)
-        {
-            foreach (int i in SelectedIndices)
-            {
-                //tool.show(2, i);
-                Items[i].State = ItemState.WasSelected;
-                Items[i].CurrentColor.backColor = Color.LightSkyBlue;
-                //Items[i].HighLightColors(colors);
-            }
-        }
-        */
-        //use enumerbale instead of list
+        
         public void MoveSelectedItemsTo(int index,List<int> selectedIndices)
         {
             List<VItem> insertItems = new List<VItem>(selectedIndices.Count);
@@ -549,8 +553,6 @@ namespace Glaxion.Music
                 
             }
             
-            //else
-            //    index--;
             foreach (VItem removeItem in removedItems)
             {
                 Remove(removeItem);
@@ -633,14 +635,6 @@ namespace Glaxion.Music
                     return i;
             }
             return -1;
-        }
-
-        private void SortIndices(int startIndex)
-        {
-            for(int i =startIndex;i<_items.Count;i++)
-            {
-                _items[i].Index = i;
-            }
         }
     }
 }

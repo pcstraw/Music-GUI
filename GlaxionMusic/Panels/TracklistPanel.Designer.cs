@@ -51,8 +51,10 @@
             // 
             this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.closeButton.BackColor = System.Drawing.Color.DarkRed;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeButton.ForeColor = System.Drawing.Color.White;
-            this.closeButton.Location = new System.Drawing.Point(282, 0);
+            this.closeButton.Location = new System.Drawing.Point(279, 3);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(25, 23);
             this.closeButton.TabIndex = 1;
@@ -65,8 +67,10 @@
             // 
             this.updateAndCloseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.updateAndCloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.updateAndCloseButton.FlatAppearance.BorderSize = 0;
+            this.updateAndCloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateAndCloseButton.ForeColor = System.Drawing.Color.White;
-            this.updateAndCloseButton.Location = new System.Drawing.Point(251, 0);
+            this.updateAndCloseButton.Location = new System.Drawing.Point(239, 3);
             this.updateAndCloseButton.Name = "updateAndCloseButton";
             this.updateAndCloseButton.Size = new System.Drawing.Size(25, 23);
             this.updateAndCloseButton.TabIndex = 1;
@@ -80,8 +84,10 @@
             // 
             this.saveAndCloseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.saveAndCloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.saveAndCloseButton.FlatAppearance.BorderSize = 0;
+            this.saveAndCloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveAndCloseButton.ForeColor = System.Drawing.Color.White;
-            this.saveAndCloseButton.Location = new System.Drawing.Point(220, 0);
+            this.saveAndCloseButton.Location = new System.Drawing.Point(196, 3);
             this.saveAndCloseButton.Name = "saveAndCloseButton";
             this.saveAndCloseButton.Size = new System.Drawing.Size(25, 23);
             this.saveAndCloseButton.TabIndex = 1;
@@ -111,8 +117,10 @@
             this.updateMusicPlayerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.updateMusicPlayerButton.BackColor = System.Drawing.Color.Blue;
             this.updateMusicPlayerButton.Enabled = false;
+            this.updateMusicPlayerButton.FlatAppearance.BorderSize = 0;
+            this.updateMusicPlayerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateMusicPlayerButton.ForeColor = System.Drawing.Color.White;
-            this.updateMusicPlayerButton.Location = new System.Drawing.Point(189, 0);
+            this.updateMusicPlayerButton.Location = new System.Drawing.Point(155, 3);
             this.updateMusicPlayerButton.Name = "updateMusicPlayerButton";
             this.updateMusicPlayerButton.Size = new System.Drawing.Size(25, 23);
             this.updateMusicPlayerButton.TabIndex = 1;
@@ -189,7 +197,6 @@
             this.tracklistView.UseCompatibleStateImageBehavior = false;
             this.tracklistView.View = System.Windows.Forms.View.Details;
             this.tracklistView.MouseEnter += new System.EventHandler(this.trackManager_MouseEnter);
-            this.tracklistView.MouseLeave += new System.EventHandler(this.tracklistView_MouseLeave);
             // 
             // TracklistPanel
             // 

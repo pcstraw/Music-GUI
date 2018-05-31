@@ -13,33 +13,23 @@ namespace Glaxion.Music
 {
     public class PlaylistManagerView : EnhancedListController, IPlaylistManager,IListView
     {
-        private ColumnHeader columnHeader1;
         new public PlaylistManager manager;
 
         public PlaylistManagerView()
         {
             InitializeComponent();
-            //CheckBoxes = true;
             AllowDrop = true;
             Columns[1].Width = 1000;
-            AssignEventHandlers();
             manager = new PlaylistManager(this,this,new ColorScheme(ForeColor,BackColor));
         }
 
         private new void InitializeComponent()
         {
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Ext";
             // 
             // PlaylistManagerView
             // 
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Click += new System.EventHandler(this.PlaylistManagerView_Click);
@@ -49,13 +39,17 @@ namespace Glaxion.Music
         
         public void AssignEventHandlers()
         {
-            MusicPlayer.Player.TrackChangeEvent += PlaylistManager_TrackChangeEvent;
+            MusicPlayer.Instance.TrackChangeEvent += PlaylistManager_TrackChangeEvent;
             this.AfterLabelEdit += PlaylistManager_AfterLabelEdit;
-            this.DragOver += PlaylistManager_DragOver;
             this.DragEnter += PlaylistManager_DragEnter;
-            //this.DragDrop += PlaylistManager_DragDrop;
             this.DragLeave += PlaylistManager_DragLeave;
-           // Font = new Font(CustomFont.Exo.ff, Font.Size);
+        }
+
+        internal void Load()
+        {
+            //manager.CurrentColor = new ColorScheme(ForeColor, BackColor);
+            manager.LoadManager();
+            AssignEventHandlers();
         }
 
         private void PlaylistManager_DragLeave(object sender, EventArgs e)
@@ -84,38 +78,47 @@ namespace Glaxion.Music
             MoveSelectedItemsTo(dropIndex);
         }
         
-        internal void Load()
-        {
-            manager.CurrentColorScheme = new ColorScheme(ForeColor,BackColor);
-            manager.LoadManager();
-            AssignEventHandlers();
-            //RefreshList(manager.Items);
-        }
-        
-        protected override void ViewBox_DragDrop(object sender, DragEventArgs e)
+        protected override void EnhancedListBox_DragDrop(object sender, DragEventArgs e)
         {
             if (!InternalClipboard.IsEmpty)
             {
-               // SelectedItems.Clear();
-                foreach (string file in InternalClipboard.Files)
-                {
-                    Point cp = PointToClient(new Point(e.X, e.Y));
-                    ListViewItem dragToItem = GetItemAt(cp.X, cp.Y);
-                    int dropindex = manager.ItemCount;
-                    if (dragToItem != null)
-                        dropindex = dragToItem.Index;
-                    VItem i = manager.AddPlaylistFromPath(dropindex,file);
-                    if (i == null)
-                        continue;
-                    i.Selected = true;
-                }
+                Point cp = PointToClient(new Point(e.X, e.Y));
+                ListViewItem dragToItem = GetItemAt(cp.X, cp.Y);
+                int dropindex = manager.ItemCount;
+                if (dragToItem != null)
+                    dropindex = dragToItem.Index;
+                manager.AddFiles(dropindex, InternalClipboard.Files.ToArray());
                 InternalClipboard.Files.Clear();
-                //UpdateList();
+                this.Focus();
                 return;
             }
             else
             {
-                base.ViewBox_DragDrop(sender, e);
+                string[] data = WinFormUtils.GetExternalDragDrop(e);
+                if (data == null)
+                {
+                    base.EnhancedListBox_DragDrop(sender, e);
+                    InternalClipboard.Clear();
+                }
+                else
+                {
+                    foreach (string file in data)
+                    {
+                        Point cp = PointToClient(new Point(e.X, e.Y));
+                        ListViewItem dragToItem = GetItemAt(cp.X, cp.Y);
+                        int dropindex = manager.ItemCount;
+                        if (dragToItem != null)
+                            dropindex = dragToItem.Index;
+                        VItem i = manager.InsertPlaylistAt(dropindex, file);
+                        if (i == null)
+                            continue;
+                        i.Selected = true;
+                    }
+                    InternalClipboard.Clear();
+                    this.Focus();
+                    this.Refresh();
+                    return;
+                }
             }
         }
 
@@ -131,12 +134,7 @@ namespace Glaxion.Music
             {
             }
         }
-
-        private void PlaylistManager_DragOver(object sender, DragEventArgs e)
-        {
-            hoveredItem = GetItemAtPoint(new Point(e.X, e.Y));
-        }
-
+        
         private void PlaylistManager_TrackChangeEvent(object sender, EventArgs args)
         {
             manager.DisplayTrackInfo();
@@ -154,14 +152,10 @@ namespace Glaxion.Music
             manager.DisplayTrackInfo();
         }
 
-        protected override void e_KeyUp(object sender, KeyEventArgs e)
+        protected override void EnhancedListView_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete)
-            {
-                List<int> list = GetSelected().ToList();
-                
-                manager.RemoveSelectedPlaylists(list);
-            }
+                RemoveSelectedItems();
         }
 
         protected override void e_MouseEnter(object sender, EventArgs e)
@@ -206,15 +200,17 @@ namespace Glaxion.Music
             }
         }
         */
-
+        //replace with custom draw
         public void RefreshUI()
         {
             //RefreshList(manager.Items);
-            for(int i=0;i<manager.Items.Count;i++)
+            
+            for(int i=0;i<manager.ItemCount;i++)
             {
                 ListViewItem item = Items[i];
-                item.ForeColor = manager.Items[i].CurrentColor.foreColor;
-                item.BackColor = manager.Items[i].CurrentColor.backColor;
+                VItem vitem = manager.Items[i];
+                item.ForeColor = vitem.CurrentColor.foreColor;
+                item.BackColor = vitem.CurrentColor.backColor;
             }
         }
         //quick hack for keeping item colour updated
@@ -237,18 +233,27 @@ namespace Glaxion.Music
 
         public void Add(VItem item)
         {
+            if (item.CurrentColor == null)
+                tool.show(5, "Current Color hasn't been set");
             ListViewItem i = new ListViewItem();
             i.Name = item.Name;
             i.Tag = item.Tag;
+            i.Selected = item.Selected;
             GetColumnInfo(i, i.Tag); //tag is the playlist
             Items.Add(i);
         }
 
         public void Insert(int index, VItem item)
         {
+            if (item.CurrentColor == null)
+            {
+                tool.show(5, "Ooops, Current Color hasn't been set");
+                return;
+            } 
             ListViewItem i = new ListViewItem();
             i.Name = item.Name;
             i.Tag = item.Tag;
+            i.Selected = item.Selected;
             GetColumnInfo(i, i.Tag); //tag is the playlist
             Items.Insert(index, i);
         }
@@ -261,6 +266,14 @@ namespace Glaxion.Music
         public void RefreshColors()
         {
             this.Invalidate();
+        }
+
+        internal void RemoveSelectedItems()
+        {
+            List<int> list = GetSelected().ToList();
+            BeginUpdate();
+            manager.RemoveSelectedPlaylists(list);
+            EndUpdate();
         }
     }
 }

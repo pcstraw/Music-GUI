@@ -12,8 +12,8 @@ namespace Glaxion.Music
         public EntryBox()
         {
             InitializeComponent();
-            this.textBox1.AutoSize = false;
-            textBox1.MouseWheel += TextBox1_MouseWheel;
+            textBox.AutoSize = false;
+            textBox.MouseWheel += TextBox1_MouseWheel;
         }
         public bool _textChanged;
         
@@ -32,7 +32,7 @@ namespace Glaxion.Music
         public void SetFont(Font f)
         {
             MainLabel.Font = f;
-            textBox1.Font = f;
+            textBox.Font = f;
         }
         
         //[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
@@ -45,13 +45,13 @@ namespace Glaxion.Music
         
         public void SetTextbox(string text)
         {
-            textBox1.Text = text;
+            textBox.Text = text;
         }
 
         public void TextHasChanged()
         {
             _textChanged = true;
-            if (textBox1.Focused && DelegateTextChanged != null)
+            if (textBox.Focused && DelegateTextChanged != null)
             {
                 DelegateTextChanged.Invoke();
             }
@@ -64,7 +64,7 @@ namespace Glaxion.Music
 
         public string GetEntry()
         {
-            string s = textBox1.Text;
+            string s = textBox.Text;
             _textChanged = false;
             return s;
         }
@@ -76,7 +76,7 @@ namespace Glaxion.Music
             this.BringToFront();
             MainLabel.BringToFront();
             //hack to ensure textbox height is matches the control height
-            textBox1.Height = this.Height;
+            textBox.Height = this.Height;
         }
     }
 }

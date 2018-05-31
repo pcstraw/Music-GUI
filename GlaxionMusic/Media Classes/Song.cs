@@ -36,7 +36,7 @@ namespace Glaxion.Music
     public class Song
     {
         public string path;
-        public string[] genres;
+        public string genres;
         public string genre;
         public string album;
         public string artist;
@@ -55,13 +55,12 @@ namespace Glaxion.Music
         public bool failed;
         public static List<string> TagLoadingLog = new List<string>();
         
-
         public Song(string filePath)
         {
             album = "Untitled";
             artist = "Someone";
             year = "Unknown";
-            genres = new string[] { "" };
+            genres = "A genre";
             loaded = false;
             failed = false;
             path = filePath;
@@ -141,24 +140,22 @@ namespace Glaxion.Music
                 return true;
             if (tool.IsAudioFile(path))
             {
+               title = Path.GetFileNameWithoutExtension(path);
                try
                {
                     file = TagLib.File.Create(path);
                     file.GetTag(TagTypes.AllTags);
                     album = file.Tag.Album;
                     artist = file.Tag.FirstAlbumArtist;
-                    
                     track = file.Tag.Track;
                     lyrics = file.Tag.Lyrics;
                     pictures = file.Tag.Pictures;
+                    year = file.Tag.Year.ToString();
+                    if (!string.IsNullOrEmpty(file.Tag.FirstGenre))
+                        genres = file.Tag.FirstGenre; //genre loading appers tp be broken
                     if (!string.IsNullOrEmpty(file.Tag.Title))
                         title = file.Tag.Title;
-
-                    genres = file.Tag.Genres;
-                    if(genres.Count() == 0)
-                        genres = new string[] { "" };
-
-                    year = file.Tag.Year.ToString();
+                    
                     return loaded = true;
                 }
                 catch (Exception e)
@@ -166,6 +163,10 @@ namespace Glaxion.Music
                     TagLoadingLog.Add(string.Concat("--> Failed to Get All Tags: \n", e.Message, "\n", path));
                     failed = true;
                     return loaded = false;
+                }
+                finally
+                {
+                    if (file != null) file.Dispose();
                 }
             }
             failed = true;
@@ -189,19 +190,13 @@ namespace Glaxion.Music
         //https://stackoverflow.com/questions/3801275/how-to-convert-image-to-byte-array/16576471#16576471
         public void LoadAlbumArt()
         {
-            if(!loaded)
-                MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(path);
-            if (failed)
-            {
-                //tool.show(1, "failed to load ID3 tag: ", failed);
+            if (!loaded)
                 return;
-            }
 
             image = null;
             if (pictures.Length > 0)
             {
                 byte[] bytes = pictures[0].Data.Data;
-
                 ImageConverter ic = new ImageConverter();
                 image = (Image)ic.ConvertFrom(bytes);
             }
@@ -216,15 +211,13 @@ namespace Glaxion.Music
 
         public void SaveInfo()
         {
-            //try/catch?
             try
             {
                 file.Save();
-                
             }
             catch(Exception e)
             {
-                tool.show(5, e.Message);
+                TagLoadingLog.Add(e.Message);
                 return;
             }
             Reset();
@@ -242,15 +235,18 @@ namespace Glaxion.Music
         }
         public void SetArtist(string text)
         {
-            List<string> art = new List<string>();
-            art.Add(text);
-            file.Tag.AlbumArtists = art.ToArray();
-            //throw new NotImplementedException(text);
+            List<string> alb = file.Tag.AlbumArtists.ToList();
+            alb.Clear();
+            alb.Add(text);
+            file.Tag.AlbumArtists = alb.ToArray();
         }
         public void SetGenre(string text)
         {
-            genres = new string[] { text };
-            //throw new NotImplementedException(text);
+            List<string> gen = file.Tag.Genres.ToList();
+            gen.Clear(); //force the array to reset
+            gen.Add(text);
+            file.Tag.Genres = gen.ToArray();
+            //genres = text;
         }
         public void SetYear(uint num)
         {
@@ -271,100 +267,9 @@ namespace Glaxion.Music
         {
             file.Tag.Track = num;
         }
-
         public void SetLyrics(string text)
         {
             file.Tag.Lyrics = text;
-        }
-    }
-
-    public class TrackInfoManager
-    {
-        public TrackInfoManager()
-        {
-        }
-
-        public List<string> artists = new List<string>();
-        public List<string> albums = new List<string>();
-        public List<string> years = new List<string>();
-        public List<int> genreIDs = new List<int>();
-        public List<string> genres = new List<string>();
-        public Dictionary<string, Song> trackInfos = new Dictionary<string, Song>();
-        
-        //TODO:  Handle path being null and read tag failer
-        public Song GetInfo(string path)
-        {
-            if (!tool.IsAudioFile(path))
-                return null;
-            if (trackInfos.ContainsKey(path))
-            {
-                //if the id3 info has been modified then should be set to false, reload the id3 tag
-                if(!trackInfos[path].loaded)
-                    trackInfos[path].ReadID3Info();
-                return trackInfos[path];
-            }
-            Song ti = new Song(path);
-            ti.ReadID3Info();
-            AddInfo(ti);
-            return ti;
-        }
-
-        public void AddInfo(Song info)
-        {
-            if (info == null)
-                return;
-            if (trackInfos.ContainsKey(info.path))
-                return;
-            trackInfos.Add(info.path, info);
-            AddAlbum(info.album);
-            AddArtist(info.artist);
-            AddYear(info.year);
-            AddGenre(info.genre);
-            
-        }
-
-        public string AddAlbum(string albumName)
-        {
-            if (!tool.StringCheck(albumName))
-                return albumName;
-            if (!albums.Contains(albumName))
-                albums.Add(albumName);
-                return albumName;
-        }
-
-        public string AddArtist(string artistName)
-        {
-            if (!tool.StringCheck(artistName))
-                return artistName;
-            if (!artists.Contains(artistName))
-                artists.Add(artistName);
-            return artistName;
-        }
-
-        public string AddYear(string year)
-        {
-            if (!tool.StringCheck(year))
-                return year;
-            if (!years.Contains(year))
-               years.Add(year);
-            return year;
-        }
-
-        public string AddGenre(string genre)
-        {
-            if (!tool.StringCheck(genre))
-                return genre;
-            if (!genres.Contains(genre))
-                genres.Add(genre);
-            return genre;
-        }
-        public int AddGenreID(int genreID)
-        {
-            if (genreID == 0)
-                return 0;
-            if (!genreIDs.Contains(genreID))
-                genreIDs.Add(genreID);
-            return genreID;
         }
     }
 }

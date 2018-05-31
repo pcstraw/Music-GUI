@@ -118,7 +118,7 @@ namespace Glaxion.Music
                 tool.show(5, "Problem in Reorganiser: queiried node has an invalid tag");
                 return null;
             }
-            List<string> dirs = MusicPlayer.Player.fileLoader.MusicDirectories;
+            List<string> dirs = FileLoader.Instance.MusicDirectories;
             foreach (string d in dirs)
             {
                 if (filePath.Contains(d))
@@ -174,7 +174,7 @@ namespace Glaxion.Music
 
                 TreeNode rootNode = FindRootDirectorNode(s);
                 //Get ID3 Info
-                Song info = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(s);
+                Song info = MusicInfo.Instance.GetInfo(s);
 
                 if (addYearNodes)
                 {

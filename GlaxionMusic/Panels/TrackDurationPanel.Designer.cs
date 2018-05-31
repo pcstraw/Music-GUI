@@ -120,7 +120,7 @@
             this.stopButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.stopButton.BackgroundImage = global::Glaxion.Music.Properties.Resources.stop;
             this.stopButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.stopButton.Location = new System.Drawing.Point(224, 46);
+            this.stopButton.Location = new System.Drawing.Point(224, 50);
             this.stopButton.Name = "stopButton";
             this.stopButton.Size = new System.Drawing.Size(30, 30);
             this.stopButton.TabIndex = 13;
@@ -132,7 +132,7 @@
             this.fileButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.fileButton.BackgroundImage = global::Glaxion.Music.Properties.Resources.undo_file_318_30946;
             this.fileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.fileButton.Location = new System.Drawing.Point(260, 46);
+            this.fileButton.Location = new System.Drawing.Point(260, 50);
             this.fileButton.Name = "fileButton";
             this.fileButton.Size = new System.Drawing.Size(30, 30);
             this.fileButton.TabIndex = 12;
@@ -144,7 +144,7 @@
             this.nextButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nextButton.BackgroundImage = global::Glaxion.Music.Properties.Resources.last_512;
             this.nextButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.nextButton.Location = new System.Drawing.Point(152, 46);
+            this.nextButton.Location = new System.Drawing.Point(152, 50);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(30, 30);
             this.nextButton.TabIndex = 11;
@@ -156,7 +156,7 @@
             this.prevButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.prevButton.BackgroundImage = global::Glaxion.Music.Properties.Resources.first_256;
             this.prevButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.prevButton.Location = new System.Drawing.Point(188, 46);
+            this.prevButton.Location = new System.Drawing.Point(188, 50);
             this.prevButton.Name = "prevButton";
             this.prevButton.Size = new System.Drawing.Size(30, 30);
             this.prevButton.TabIndex = 10;
@@ -168,7 +168,7 @@
             this.resumeButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.resumeButton.BackgroundImage = global::Glaxion.Music.Properties.Resources.media_play_pause_resume;
             this.resumeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.resumeButton.Location = new System.Drawing.Point(116, 46);
+            this.resumeButton.Location = new System.Drawing.Point(116, 50);
             this.resumeButton.Name = "resumeButton";
             this.resumeButton.Size = new System.Drawing.Size(30, 30);
             this.resumeButton.TabIndex = 9;

@@ -76,7 +76,7 @@ namespace Glaxion.Music
                 }
                 if (s == "genre")
                 {
-                    entry.SetTextbox(song.genres[0]);
+                    entry.SetTextbox(song.genre);
                 }
             }
         }
@@ -95,19 +95,19 @@ namespace Glaxion.Music
                 switch (s)
                 {
                     case "artist":
-                        AssignEntry(entry, "Artist");
+                        song.SetArtist(entry.textBox.Text);
                         break;
                     case "album":
-                        AssignEntry(entry, "Album");
+                        song.SetAlbum(entry.textBox.Text);
                         break;
                     case "title":
-                        AssignEntry(entry, "Title");
+                        song.SetTitle(entry.textBox.Text);
                         break;
                     case "year":
-                        AssignEntry(entry, "Year");
+                        song.SetYear(entry.textBox.Text);
                         break;
                     case "genre":
-                        AssignEntry(entry, "Genre");
+                        song.SetGenre(entry.textBox.Text);
                         break;
                 }
                 

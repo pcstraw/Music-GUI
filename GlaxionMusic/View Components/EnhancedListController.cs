@@ -1,6 +1,7 @@
 ﻿using Glaxion.Tools;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,8 +9,19 @@ using System.Windows.Forms;
 
 namespace Glaxion.Music
 {
-    public class EnhancedListController : EnhancedListView
+    public class EnhancedListController : ExtraListView
     {
+        public EnhancedListController():base()
+        {
+            DragOver += EnhancedListController_DragOver;
+        }
+
+        private void EnhancedListController_DragOver(object sender, DragEventArgs e)
+        {
+            Point cp = base.PointToClient(new Point(e.X, e.Y));
+            hoveredItem = base.GetItemAt(cp.X, cp.Y);
+        }
+
         public VListView manager;
         
         public IEnumerable<int> GetSelected()
@@ -42,7 +54,6 @@ namespace Glaxion.Music
                     else
                         item.SubItems.Add(this.MakeSubItem(item, o, col));
                 }
-                //if (subItem == null)
             }
         }
     }

@@ -63,6 +63,7 @@
             this.trackContext_vegas_button = new System.Windows.Forms.ToolStripMenuItem();
             this.trackContext_search_button = new System.Windows.Forms.ToolStripMenuItem();
             this.trackContext_search_textBox = new System.Windows.Forms.ToolStripTextBox();
+            this.chromeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trackContext_filter_button = new System.Windows.Forms.ToolStripMenuItem();
             this.trackContext_filter_artist_button = new System.Windows.Forms.ToolStripMenuItem();
             this.trackContext_filter_album_button = new System.Windows.Forms.ToolStripMenuItem();
@@ -103,6 +104,8 @@
             this.playToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.iD3TagToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fileContainer = new System.Windows.Forms.SplitContainer();
+            this.fileSquashBox = new Glaxion.Music.SquashBoxControl();
+            this.fileViewLabel = new System.Windows.Forms.Label();
             this.mainToolStrip = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.addDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -119,13 +122,11 @@
             this.openAlbumArtFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.playlistControlContainer = new System.Windows.Forms.SplitContainer();
-            this.chromeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileSquashBox = new Glaxion.Music.SquashBoxControl();
-            this.fileViewLabel = new System.Windows.Forms.Label();
             this.songControl1 = new Glaxion.Music.SongControl();
             this.playbackTrackbarControl = new Glaxion.Music.PlaybackTrackbarControl();
             this.playbackVolumeControl = new Glaxion.Music.PlaybackVolumeControl();
             this.playbackVolumeControl1 = new Glaxion.Music.PlaybackVolumeControl();
+            this.displayLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playlistFileContext.SuspendLayout();
             this.playlistContext.SuspendLayout();
             this.trackContext.SuspendLayout();
@@ -134,14 +135,14 @@
             this.fileContainer.Panel1.SuspendLayout();
             this.fileContainer.Panel2.SuspendLayout();
             this.fileContainer.SuspendLayout();
-            this.mainToolStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.playlistControlContainer)).BeginInit();
-            this.playlistControlContainer.Panel2.SuspendLayout();
-            this.playlistControlContainer.SuspendLayout();
             this.fileSquashBox.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSquashBox.MainSplitContainer)).BeginInit();
             this.fileSquashBox.MainSplitContainer.SuspendLayout();
             this.fileSquashBox.SuspendLayout();
+            this.mainToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.playlistControlContainer)).BeginInit();
+            this.playlistControlContainer.Panel2.SuspendLayout();
+            this.playlistControlContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // playlistFileContext
@@ -430,6 +431,13 @@
             this.trackContext_search_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.trackContext_search_textBox_KeyUp);
             this.trackContext_search_textBox.TextChanged += new System.EventHandler(this.trackContext_search_textBox_TextChanged);
             // 
+            // chromeToolStripMenuItem
+            // 
+            this.chromeToolStripMenuItem.Name = "chromeToolStripMenuItem";
+            this.chromeToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.chromeToolStripMenuItem.Text = "Chrome";
+            this.chromeToolStripMenuItem.Click += new System.EventHandler(this.chromeToolStripMenuItem_Click);
+            // 
             // trackContext_filter_button
             // 
             this.trackContext_filter_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -582,14 +590,14 @@
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // fullSaveToolStripMenuItem
             // 
             this.fullSaveToolStripMenuItem.Name = "fullSaveToolStripMenuItem";
-            this.fullSaveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fullSaveToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.fullSaveToolStripMenuItem.Text = "Save To Default";
             this.fullSaveToolStripMenuItem.Click += new System.EventHandler(this.fullSaveToolStripMenuItem_Click);
             // 
@@ -614,13 +622,13 @@
             this.playToolStripMenuItem2,
             this.iD3TagToolStripMenuItem1});
             this.musicFileContext.Name = "musicFileContext";
-            this.musicFileContext.Size = new System.Drawing.Size(181, 224);
+            this.musicFileContext.Size = new System.Drawing.Size(133, 202);
             this.musicFileContext.Opening += new System.ComponentModel.CancelEventHandler(this.musicFileContext_Opening);
             // 
             // musicfileContext_dock_button
             // 
             this.musicfileContext_dock_button.Name = "musicfileContext_dock_button";
-            this.musicfileContext_dock_button.Size = new System.Drawing.Size(180, 22);
+            this.musicfileContext_dock_button.Size = new System.Drawing.Size(132, 22);
             this.musicfileContext_dock_button.Text = "Dock";
             this.musicfileContext_dock_button.Click += new System.EventHandler(this.musicfileContext_dock_button_Click);
             // 
@@ -629,7 +637,7 @@
             this.musicFileContext_search_button.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.musicFileContext_search_textBox});
             this.musicFileContext_search_button.Name = "musicFileContext_search_button";
-            this.musicFileContext_search_button.Size = new System.Drawing.Size(180, 22);
+            this.musicFileContext_search_button.Size = new System.Drawing.Size(132, 22);
             this.musicFileContext_search_button.Text = "Search";
             // 
             // musicFileContext_search_textBox
@@ -648,7 +656,7 @@
             this.yearToolStripMenuItem,
             this.musicfileContext_view_files_button});
             this.musicfileContext_view_button.Name = "musicfileContext_view_button";
-            this.musicfileContext_view_button.Size = new System.Drawing.Size(180, 22);
+            this.musicfileContext_view_button.Size = new System.Drawing.Size(132, 22);
             this.musicfileContext_view_button.Text = "Filter";
             // 
             // musicfileContext_view_album_button
@@ -682,7 +690,7 @@
             // reloadToolStripMenuItem3
             // 
             this.reloadToolStripMenuItem3.Name = "reloadToolStripMenuItem3";
-            this.reloadToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.reloadToolStripMenuItem3.Size = new System.Drawing.Size(132, 22);
             this.reloadToolStripMenuItem3.Text = "Reload";
             this.reloadToolStripMenuItem3.Click += new System.EventHandler(this.reloadToolStripMenuItem3_Click);
             // 
@@ -692,7 +700,7 @@
             this.removeFolderArtToolStripMenuItem,
             this.editTagToolStripMenuItem});
             this.musicfileContext_folder_button.Name = "musicfileContext_folder_button";
-            this.musicfileContext_folder_button.Size = new System.Drawing.Size(180, 22);
+            this.musicfileContext_folder_button.Size = new System.Drawing.Size(132, 22);
             this.musicfileContext_folder_button.Text = "Folder";
             this.musicfileContext_folder_button.Click += new System.EventHandler(this.musicfileContext_folder_button_Click);
             // 
@@ -713,28 +721,28 @@
             // reorganiseToolStripMenuItem
             // 
             this.reorganiseToolStripMenuItem.Name = "reorganiseToolStripMenuItem";
-            this.reorganiseToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reorganiseToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.reorganiseToolStripMenuItem.Text = "Reorganise";
             this.reorganiseToolStripMenuItem.Click += new System.EventHandler(this.reorganiseToolStripMenuItem_Click);
             // 
             // musicFilContext_send_button
             // 
             this.musicFilContext_send_button.Name = "musicFilContext_send_button";
-            this.musicFilContext_send_button.Size = new System.Drawing.Size(180, 22);
+            this.musicFilContext_send_button.Size = new System.Drawing.Size(132, 22);
             this.musicFilContext_send_button.Text = "Send To";
             this.musicFilContext_send_button.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.musicFilContext_send_button_DropDownItemClicked);
             // 
             // playToolStripMenuItem2
             // 
             this.playToolStripMenuItem2.Name = "playToolStripMenuItem2";
-            this.playToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.playToolStripMenuItem2.Size = new System.Drawing.Size(132, 22);
             this.playToolStripMenuItem2.Text = "Play";
             this.playToolStripMenuItem2.Click += new System.EventHandler(this.musicfileContext_play_button_Click);
             // 
             // iD3TagToolStripMenuItem1
             // 
             this.iD3TagToolStripMenuItem1.Name = "iD3TagToolStripMenuItem1";
-            this.iD3TagToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.iD3TagToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
             this.iD3TagToolStripMenuItem1.Text = "ID3 Tag";
             this.iD3TagToolStripMenuItem1.Click += new System.EventHandler(this.iD3TagToolStripMenuItem1_Click);
             // 
@@ -759,6 +767,66 @@
             this.fileContainer.Size = new System.Drawing.Size(1173, 428);
             this.fileContainer.SplitterDistance = 288;
             this.fileContainer.TabIndex = 0;
+            // 
+            // fileSquashBox
+            // 
+            // 
+            // 
+            // 
+            this.fileSquashBox.BackPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fileSquashBox.BackPanel.Location = new System.Drawing.Point(0, 0);
+            this.fileSquashBox.BackPanel.Name = "backPanel";
+            this.fileSquashBox.BackPanel.Size = new System.Drawing.Size(288, 90);
+            this.fileSquashBox.BackPanel.TabIndex = 0;
+            this.fileSquashBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            // 
+            // fileSquashBox.Panel
+            // 
+            this.fileSquashBox.TopPanel.BackColor = System.Drawing.Color.Silver;
+            this.fileSquashBox.TopPanel.Controls.Add(this.fileViewLabel);
+            this.fileSquashBox.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fileSquashBox.TopPanel.Location = new System.Drawing.Point(0, 0);
+            this.fileSquashBox.TopPanel.Name = "Panel";
+            this.fileSquashBox.TopPanel.Size = new System.Drawing.Size(288, 38);
+            this.fileSquashBox.TopPanel.TabIndex = 0;
+            this.fileSquashBox.TopPanel.Click += new System.EventHandler(this.squashBoxControl1_TopPanel_Click_1);
+            this.fileSquashBox.Location = new System.Drawing.Point(0, 28);
+            // 
+            // fileSquashBox.SplitContainer
+            // 
+            this.fileSquashBox.MainSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fileSquashBox.MainSplitContainer.Location = new System.Drawing.Point(0, 38);
+            this.fileSquashBox.MainSplitContainer.Name = "SplitContainer";
+            this.fileSquashBox.MainSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // fileSquashBox.SplitContainer.Panel1
+            // 
+            this.fileSquashBox.MainSplitContainer.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.fileSquashBox.MainSplitContainer.Panel1MinSize = 0;
+            // 
+            // fileSquashBox.SplitContainer.Panel2
+            // 
+            this.fileSquashBox.MainSplitContainer.Panel2.BackColor = System.Drawing.Color.Gray;
+            this.fileSquashBox.MainSplitContainer.Panel2MinSize = 0;
+            this.fileSquashBox.MainSplitContainer.Size = new System.Drawing.Size(288, 362);
+            this.fileSquashBox.MainSplitContainer.SplitterDistance = 90;
+            this.fileSquashBox.MainSplitContainer.TabIndex = 2;
+            this.fileSquashBox.Name = "fileSquashBox";
+            this.fileSquashBox.Size = new System.Drawing.Size(288, 400);
+            this.fileSquashBox.TabIndex = 3;
+            this.fileSquashBox.OnSwapEvent += new Glaxion.Music.SquashBoxControl.OnSwapEventHandler(this.squashBoxControl1_OnSwapEvent);
+            this.fileSquashBox.Load += new System.EventHandler(this.squashBoxControl1_Load);
+            // 
+            // fileViewLabel
+            // 
+            this.fileViewLabel.Font = new System.Drawing.Font("OCR A Extended", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileViewLabel.ForeColor = System.Drawing.Color.Black;
+            this.fileViewLabel.Location = new System.Drawing.Point(3, 0);
+            this.fileViewLabel.Name = "fileViewLabel";
+            this.fileViewLabel.Size = new System.Drawing.Size(283, 39);
+            this.fileViewLabel.TabIndex = 0;
+            this.fileViewLabel.Text = "Music Files";
+            this.fileViewLabel.Click += new System.EventHandler(this.fileViewLabel_Click);
             // 
             // mainToolStrip
             // 
@@ -858,7 +926,8 @@
             this.optionsStripDropDownButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consoleToolStripMenuItem,
             this.openTempDirectoryToolStripMenuItem,
-            this.openAlbumArtFolderToolStripMenuItem});
+            this.openAlbumArtFolderToolStripMenuItem,
+            this.displayLogToolStripMenuItem});
             this.optionsStripDropDownButton.ForeColor = System.Drawing.Color.Black;
             this.optionsStripDropDownButton.Image = ((System.Drawing.Image)(resources.GetObject("optionsStripDropDownButton.Image")));
             this.optionsStripDropDownButton.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -916,73 +985,6 @@
             this.playlistControlContainer.SplitterDistance = 174;
             this.playlistControlContainer.TabIndex = 0;
             // 
-            // chromeToolStripMenuItem
-            // 
-            this.chromeToolStripMenuItem.Name = "chromeToolStripMenuItem";
-            this.chromeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.chromeToolStripMenuItem.Text = "Chrome";
-            this.chromeToolStripMenuItem.Click += new System.EventHandler(this.chromeToolStripMenuItem_Click);
-            // 
-            // fileSquashBox
-            // 
-            // 
-            // 
-            // 
-            this.fileSquashBox.BackPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fileSquashBox.BackPanel.Location = new System.Drawing.Point(0, 0);
-            this.fileSquashBox.BackPanel.Name = "backPanel";
-            this.fileSquashBox.BackPanel.Size = new System.Drawing.Size(288, 90);
-            this.fileSquashBox.BackPanel.TabIndex = 0;
-            this.fileSquashBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            // 
-            // fileSquashBox.Panel
-            // 
-            this.fileSquashBox.TopPanel.BackColor = System.Drawing.Color.Silver;
-            this.fileSquashBox.TopPanel.Controls.Add(this.fileViewLabel);
-            this.fileSquashBox.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fileSquashBox.TopPanel.Location = new System.Drawing.Point(0, 0);
-            this.fileSquashBox.TopPanel.Name = "Panel";
-            this.fileSquashBox.TopPanel.Size = new System.Drawing.Size(288, 38);
-            this.fileSquashBox.TopPanel.TabIndex = 0;
-            this.fileSquashBox.TopPanel.Click += new System.EventHandler(this.squashBoxControl1_TopPanel_Click_1);
-            this.fileSquashBox.Location = new System.Drawing.Point(0, 28);
-            // 
-            // fileSquashBox.SplitContainer
-            // 
-            this.fileSquashBox.MainSplitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fileSquashBox.MainSplitContainer.Location = new System.Drawing.Point(0, 38);
-            this.fileSquashBox.MainSplitContainer.Name = "SplitContainer";
-            this.fileSquashBox.MainSplitContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // fileSquashBox.SplitContainer.Panel1
-            // 
-            this.fileSquashBox.MainSplitContainer.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.fileSquashBox.MainSplitContainer.Panel1MinSize = 0;
-            // 
-            // fileSquashBox.SplitContainer.Panel2
-            // 
-            this.fileSquashBox.MainSplitContainer.Panel2.BackColor = System.Drawing.Color.Gray;
-            this.fileSquashBox.MainSplitContainer.Panel2MinSize = 0;
-            this.fileSquashBox.MainSplitContainer.Size = new System.Drawing.Size(288, 362);
-            this.fileSquashBox.MainSplitContainer.SplitterDistance = 90;
-            this.fileSquashBox.MainSplitContainer.TabIndex = 2;
-            this.fileSquashBox.Name = "fileSquashBox";
-            this.fileSquashBox.Size = new System.Drawing.Size(288, 400);
-            this.fileSquashBox.TabIndex = 3;
-            this.fileSquashBox.OnSwapEvent += new Glaxion.Music.SquashBoxControl.OnSwapEventHandler(this.squashBoxControl1_OnSwapEvent);
-            this.fileSquashBox.Load += new System.EventHandler(this.squashBoxControl1_Load);
-            // 
-            // fileViewLabel
-            // 
-            this.fileViewLabel.Font = new System.Drawing.Font("OCR A Extended", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fileViewLabel.ForeColor = System.Drawing.Color.Black;
-            this.fileViewLabel.Location = new System.Drawing.Point(3, 0);
-            this.fileViewLabel.Name = "fileViewLabel";
-            this.fileViewLabel.Size = new System.Drawing.Size(283, 39);
-            this.fileViewLabel.TabIndex = 0;
-            this.fileViewLabel.Text = "Music Files";
-            this.fileViewLabel.Click += new System.EventHandler(this.fileViewLabel_Click);
-            // 
             // songControl1
             // 
             this.songControl1.BackColor = System.Drawing.Color.Black;
@@ -1023,6 +1025,13 @@
             this.playbackVolumeControl1.Size = new System.Drawing.Size(372, 111);
             this.playbackVolumeControl1.TabIndex = 0;
             // 
+            // displayLogToolStripMenuItem
+            // 
+            this.displayLogToolStripMenuItem.Name = "displayLogToolStripMenuItem";
+            this.displayLogToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.displayLogToolStripMenuItem.Text = "Display Log";
+            this.displayLogToolStripMenuItem.Click += new System.EventHandler(this.displayLogToolStripMenuItem_Click);
+            // 
             // MusicControlGUI
             // 
             this.AllowDrop = true;
@@ -1057,15 +1066,15 @@
             this.fileContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.fileContainer)).EndInit();
             this.fileContainer.ResumeLayout(false);
+            this.fileSquashBox.TopPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fileSquashBox.MainSplitContainer)).EndInit();
+            this.fileSquashBox.MainSplitContainer.ResumeLayout(false);
+            this.fileSquashBox.ResumeLayout(false);
             this.mainToolStrip.ResumeLayout(false);
             this.mainToolStrip.PerformLayout();
             this.playlistControlContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.playlistControlContainer)).EndInit();
             this.playlistControlContainer.ResumeLayout(false);
-            this.fileSquashBox.TopPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.fileSquashBox.MainSplitContainer)).EndInit();
-            this.fileSquashBox.MainSplitContainer.ResumeLayout(false);
-            this.fileSquashBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1167,6 +1176,7 @@
         private System.Windows.Forms.ToolStripMenuItem selectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clearOldSelectionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chromeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem displayLogToolStripMenuItem;
         // private SongControl songControl1;
     }
 }

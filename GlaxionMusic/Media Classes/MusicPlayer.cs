@@ -6,13 +6,22 @@ using Glaxion.Tools;
 using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
-using System.ComponentModel;
-using System.Reflection;
 
 namespace Glaxion.Music
 {
     public class MusicPlayer
     {
+        private MusicPlayer()
+        {
+            Construction();
+        }
+        public static MusicPlayer Instance { get { return Nested.instance; } }
+        private class Nested
+        {
+            static Nested() { }//lazy singleton
+            internal static readonly MusicPlayer instance = new MusicPlayer();
+        }
+
         private void Construction()
         {
             windowsMediaPlayer = new WindowsMediaPlayer();
@@ -35,28 +44,20 @@ namespace Glaxion.Music
             _isRunning = false;
             //initialise to -1.  If we start at 0 then loading trackmanager
             //will highlight the  first track of the playlist before we start playing anything
-            currentTrack = -1; 
+            currentTrack = 0; 
         }
         //used to call updatePlayliststate in trackmanager
         private void MusicPlayer_BeforePlayEvent(object sender, EventArgs args)
         {
         }
-
         
         public static void Create(string[] args)
         {
-            Player = new MusicPlayer();
+            //Player = new MusicPlayer();
            // Player._startPlayer = true;
-            Player.startArguments = args;
+            Instance.startArguments = args;
         }
-
-        public MusicPlayer()
-        {
-            Construction();
-        }
-
         
-        public static MusicPlayer Player;
         public static MusicControlGUI WinFormApp;
         public static Image MusicGUILogo = Glaxion.Music.Properties.Resources.music_gui_logo;
         public bool CreateTempPlaybackFiles { get; private set; }
@@ -72,7 +73,6 @@ namespace Glaxion.Music
         public bool NodeDrop;
         public bool Loop;
         public bool Muted;
-        //bool _startPlayer;
         public bool InitializeDirectories;
         public bool Initialized;
         bool _isRunning;
@@ -84,7 +84,7 @@ namespace Glaxion.Music
         private int prevVolume;
         public int Volume;
         public Playlist playlist;
-        public FileLoader fileLoader;
+        private FileLoader fileLoader;
         public System.Windows.Forms.Timer timer;
         public static Color PlayColor = Color.Aquamarine;
         public static Color PreviousPlayColor = Color.DarkCyan;
@@ -94,6 +94,7 @@ namespace Glaxion.Music
         public static Color ConflictColor = Color.MediumVioletRed;
         internal static Color IsPlayingColor = Color.Yellow;
 
+        //event handlers
         public delegate void MusicUpdatedEventHandler(object sender, EventArgs args);
         public event MusicUpdatedEventHandler MusicUpdatedEvent;
         protected void MusicPlayer_MusicUpdated(object sender, EventArgs e)
@@ -206,7 +207,8 @@ namespace Glaxion.Music
         {
             //needs to be called from music file manager
             //GetSavedDirectories();
-            fileLoader = new FileLoader();
+            //maybe be more explicit and loading the file loader
+            fileLoader = FileLoader.Instance;
             fileLoader.Load();
             timer.Start();
             return true;

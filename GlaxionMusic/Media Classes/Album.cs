@@ -13,11 +13,11 @@ namespace Glaxion.Music
 
         }
 
-        void AddSong()
+        void AddSong(Song s)
         {
-
+            tracks.Add(s);
         }
 
-        List<Song> tracks = new List<Song>();
+        public List<Song> tracks = new List<Song>();
     }
 }

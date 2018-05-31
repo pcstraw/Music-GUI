@@ -20,6 +20,7 @@ namespace Glaxion.Music
         public int lastVisible = 0;
         public bool dirty;
         public bool debugSave;
+        private bool failed;
         private List<List<String>> StoredLists = new List<List<String>>();
         public List<string> tracks = new List<string>();
         public List<Song> songs = new List<Song>();
@@ -116,13 +117,34 @@ namespace Glaxion.Music
         public void ReadFile()
         {
             tracks.Clear();
-            StreamReader sr = new StreamReader(path);
-            string line = "";
-            while ((line = sr.ReadLine()) != null)
+            StreamReader sr = null;
+            try
             {
-                tracks.Add(line);
+                sr = new StreamReader(path);
+                tracks.Clear();
+                string line = "";
+                while ((line = sr.ReadLine()) != null)
+                {
+                    tracks.Add(line);
+                }
+                sr.Close();
             }
-            sr.Close();
+            catch (FileNotFoundException)
+            {
+                Log.Message(string.Concat("Could not find file: ", path));
+            }
+            catch (IOException)
+            {
+                Log.Message(string.Concat("File I/O Exception: ", path));
+            }
+            catch (OutOfMemoryException)
+            {
+                Log.Message(string.Concat("Out of Memory while loading playlist file:  ", path));
+            }
+            finally
+            {
+                if (sr != null) sr.Dispose();
+            }
         }
 
         public void GetFromFile(string fullpath)
@@ -136,7 +158,7 @@ namespace Glaxion.Music
             songs.Clear();
             foreach(string s in tracks)
             {
-                Song song = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(s);
+                Song song = MusicInfo.Instance.GetInfo(s);
                 songs.Add(song);
             }
         }
@@ -271,7 +293,7 @@ namespace Glaxion.Music
                 string t = tracks[i];
                 if (File.Exists(t))
                     continue;
-                List<string> l = MusicPlayer.Player.SearchMusicFiles(Path.GetFileNameWithoutExtension(t));
+                List<string> l = MusicPlayer.Instance.SearchMusicFiles(Path.GetFileNameWithoutExtension(t));
                 if (l.Count  >0)
                 {
                     string firstFound = l[0];

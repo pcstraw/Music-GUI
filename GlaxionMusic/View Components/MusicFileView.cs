@@ -54,12 +54,12 @@ namespace Glaxion.Music
         
         private void MusicControl_Load(object sender, EventArgs e)
         {
-            if (MusicPlayer.Player != null)
+            if (MusicPlayer.Instance != null)
             {
                 manager.LoadDirectoriesToTree();
                 if (!String.IsNullOrEmpty(Properties.Settings.Default.LastTrack))
                 {
-                    MusicPlayer.Player.currentTrackString = Properties.Settings.Default.LastTrack;
+                    MusicPlayer.Instance.currentTrackString = Properties.Settings.Default.LastTrack;
                 }
             }
         }

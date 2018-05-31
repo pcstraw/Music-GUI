@@ -24,6 +24,7 @@ namespace Glaxion.Music
             this.Controls.Add(listControl);
             listControl.Show();
             this.Show();
+            if(tool.GlobalForm != null)
             this.Owner = tool.GlobalForm;
         }
 

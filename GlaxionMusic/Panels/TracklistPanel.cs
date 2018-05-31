@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Glaxion.Tools;
-using System.IO;
-using System.Collections;
 
 namespace Glaxion.Music
 {
@@ -24,35 +15,27 @@ namespace Glaxion.Music
             tracklistView.manager.tracksChangedDelegate = TracksChangedCallBack;
         }
         
-        public void PlayHoveredItem()
-        {
-            ListViewItem item = tracklistView.hoveredItem;
-            if (item != null)
-            {
-                tracklistView.manager.UpdateMusicPlayer(item.Index);
-                MusicPlayer.Player.Play();
-                item.Selected = false;
-            }
-        }
-
-        private void PlaylistView_DoubleClick(object sender, EventArgs e)
-        {
-            PlayHoveredItem();
-        }
-
         public Splitter dockSplitter;
         public Color playlistChangedColor;
         private Color _backColor;
         public Playlist CurrentList { get; set; }
 
-        private void Player_MusicUpdatedEvent(object sender, EventArgs args)
+        public void PlayHoveredItem()
         {
-            if (CurrentList == MusicPlayer.Player.playlist)
-            {
-                EnableUpdateMusicButton(false);
-            }
+            ListViewItem item = tracklistView.hoveredItem;
+            if (item == null)
+                return;
+            tracklistView.manager.UpdateMusicPlayer(item.Index);
+            MusicPlayer.Instance.Play();
+            item.Selected = false;
         }
         
+        private void Player_MusicUpdatedEvent(object sender, EventArgs args)
+        {
+            if (CurrentList == MusicPlayer.Instance.playlist)
+                EnableUpdateMusicButton(false);
+        }
+        //show/disable the update music player button
         public void EnableUpdateMusicButton(bool show)
         {
             if(show)
@@ -66,10 +49,10 @@ namespace Glaxion.Music
                 updateMusicPlayerButton.Visible = false;
             }
         }
-
+        //callback function for whenever the manager modifies the track list
         public void TracksChangedCallBack()
         {
-            if (CurrentList == MusicPlayer.Player.playlist)
+            if (CurrentList == MusicPlayer.Instance.playlist)
                 EnableUpdateMusicButton(true);
         }
         
@@ -77,39 +60,21 @@ namespace Glaxion.Music
         {
             if (dockSplitter != null)
                 dockSplitter.Dispose();
-
+            MusicPlayer.Instance.MusicUpdatedEvent -= Player_MusicUpdatedEvent;
+            MusicPlayer.Instance.PlayEvent -= tracklistView.MusicPlayer_PlayEvent;
             if (MusicPlayer.WinFormApp.dockedTrackManagers.Contains(this))
                 MusicPlayer.WinFormApp.dockedTrackManagers.Remove(this);
             tracklistView.Dispose();
             this.Dispose();
         }
+        
 
         private void closeButton_Click(object sender, EventArgs e)
         {
             CloseDockedPanel();
         }
 
-        private void menuStrip1_MouseLeave(object sender, EventArgs e)
-        {
-            closeButton.Visible = false;
-        }
-
-        private void trackMenuStrip_Enter(object sender, EventArgs e)
-        {
-            MessageBox.Show("Please Deprecate");
-            closeButton.Visible = true;
-        }
-
-        private void trackMenuStrip_MouseHover(object sender, EventArgs e)
-        {
-            closeButton.Visible = true;
-        }
-        
-        private void closeButton_MouseEnter(object sender, EventArgs e)
-        {
-            closeButton.Visible = true;
-        }
-      
+        //main method used for setting the playlist
         internal void SetPlaylist(Playlist p)
         {
             CurrentList = p;
@@ -117,11 +82,13 @@ namespace Glaxion.Music
             UpdatePlaylistTitle();
         }
 
-        private void closeButton_MouseLeave(object sender, EventArgs e)
+        //update playlist name
+        public void UpdatePlaylistTitle()
         {
-            closeButton.Visible = false;
+            playlistNameLabel.Text = CurrentList.name;
         }
 
+        //button for saving and closing the playlist
         private void saveAndCloseButton_Click(object sender, EventArgs e)
         {
             tracklistView.manager.UpdateTracks();
@@ -129,59 +96,55 @@ namespace Glaxion.Music
             CloseDockedPanel();
         }
 
+        //button for updating and closing the playlist without saving
         private void UpdateAndCloseButton_Click(object sender, EventArgs e)
         {
             tracklistView.manager.UpdateTracks();
             CloseDockedPanel();
         }
-
-        public void UpdatePlaylistTitle()
+        
+        private void MakeActiveTrackPanel()
         {
-            playlistNameLabel.Text = CurrentList.name;
+            if (MusicPlayer.WinFormApp != null && MusicPlayer.WinFormApp.musicControl.CurrentPlaylistPanel != this)
+                MusicPlayer.WinFormApp.musicControl.CurrentPlaylistPanel = this;
         }
 
         private void TrackUserControl_MouseEnter(object sender, EventArgs e)
         {
-            if (MusicPlayer.WinFormApp != null && MusicPlayer.WinFormApp.musicControl.CurrentPlaylistPanel != this)
-                MusicPlayer.WinFormApp.musicControl.CurrentPlaylistPanel = this;
+            MakeActiveTrackPanel();
         }
 
         private void trackManager_MouseEnter(object sender, EventArgs e)
         {
-            if (MusicPlayer.WinFormApp != null && MusicPlayer.WinFormApp.musicControl.CurrentPlaylistPanel != this)
-                MusicPlayer.WinFormApp.musicControl.CurrentPlaylistPanel = this;
+            MakeActiveTrackPanel();
         }
         
         private void TrackUserControl_Load(object sender, EventArgs e)
         {
-            MusicPlayer.Player.MusicUpdatedEvent += Player_MusicUpdatedEvent;
-            MusicPlayer.Player.PlayEvent += tracklistView.MusicPlayer_PlayEvent;
+            if (MusicPlayer.Instance == null || DesignMode)
+                return;
+            MusicPlayer.Instance.MusicUpdatedEvent += Player_MusicUpdatedEvent;
+            MusicPlayer.Instance.PlayEvent += tracklistView.MusicPlayer_PlayEvent;
             playlistNameLabel.Font = new Font(CustomFont.Exo.ff, playlistNameLabel.Font.Size);
             tracklistView.manager.Load();
         }
-        
         
         private void updateMusicPlayerButton_Click(object sender, EventArgs e)
         {
             tracklistView.manager.UpdateMusicPlayer();
         }
 
+        private void PlaylistView_DoubleClick(object sender, EventArgs e)
+        {
+            PlayHoveredItem();
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             tracklistView.TextSearch(textBox1.Text);
         }
-
-        private void PlaylistPanel_MouseHover(object sender, EventArgs e)
-        {
-            textBox1.Visible = false;
-        }
-
-        private void tracklistView_MouseLeave(object sender, EventArgs e)
-        {
-            //tracklistView.ShowLastSelected();
-            
-        }
-
+        //used to clock the search box splitter.  The splitter should be clamped
+        //to just below the search box
         private void splitContainer1_SplitterMoving(object sender, SplitterCancelEventArgs e)
         {
             if (e.SplitY > 110)

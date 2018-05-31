@@ -8,6 +8,7 @@ using System.Collections.Specialized;
 using System.Drawing;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using Glaxion.Music;
 
 namespace Glaxion.Tools
 {
@@ -63,7 +64,9 @@ namespace Glaxion.Tools
     
     public class tool
     {
-
+        static int _count; //count debug console writelines
+        public static string musicEditingProgram;
+        public static Form GlobalForm { get; internal set; }
         public static float clamp(float value, float min, float max)
         {
             if (value > max)
@@ -90,6 +93,7 @@ namespace Glaxion.Tools
                 return min;
             return value;
         }
+
         public static long clamp(long value, long min, long max)
         {
             if (value > max)
@@ -194,28 +198,7 @@ namespace Glaxion.Tools
                 return true;
             }
         }
-
-        public static Form _globalForm;
-
-        public static Form GlobalForm
-        {
-            get
-            {
-                return _getGlobalForm();
-            }
-        }
-
-        private static Form _getGlobalForm()
-        {
-            if (_globalForm == null)
-            {
-                Form f = new Form();
-                return f;
-            }
-            else
-                return _globalForm;
-        }
-
+        
         public static Color AddColor(Color color,int value)
         {
             int r = color.R + value;
@@ -230,31 +213,27 @@ namespace Glaxion.Tools
 
             if (b > 255)
                 b = 255;
-
-
+            
             return Color.FromArgb(r,g,b);
         }
 
-        public static int Count;
-
+        
         public static void DebugText(params string[] text)
         {
             for (int i = 0; i < text.Length; i++)
-            {
                 Console.Write(text[i]);
-            }
         }
 
         public static void Test()
         {
-            Console.WriteLine("Tool-> " + Count++);
+            Console.WriteLine("Tool-> " + _count++);
         }
 
         public static void Test(params object[] text)
         {
             for (int i = 0; i < text.Length; i++)
             {
-                Console.WriteLine(Count++.ToString() + ": Tool-> " + text[i].ToString());
+                Console.WriteLine(_count++.ToString() + ": Tool-> " + text[i].ToString());
             }
         }
 
@@ -271,19 +250,14 @@ namespace Glaxion.Tools
             bool isDir = (File.GetAttributes(path) & FileAttributes.Directory)
                                     == FileAttributes.Directory;
             if (!isDir)
-            {
                 return true;
-            }
             else
-            {
                 return false;
-            }
         }
 
         public static void SearchForFolder()
         {
             string[] drives = System.Environment.GetLogicalDrives();
-
             foreach (string drive in drives)
             {
                 System.IO.DriveInfo dr = new System.IO.DriveInfo(drive);
@@ -294,13 +268,10 @@ namespace Glaxion.Tools
                 }
             }
         }
-
         
-
         public static string SearchDirectoryForFolder(string directory, string folder)
         {
             string[] dirs = Directory.GetDirectories(directory);
-
             foreach (string s in dirs)
             {
                 string name = Path.GetFileName(s);
@@ -314,25 +285,26 @@ namespace Glaxion.Tools
             return null;
         }
 
+        static public void DisplayLog(int timeout)
+        {
+            if (Log.Messages.Count == 0)
+            {
+                tool.show(timeout, "The Message Log is Empty");
+                return;
+            }
+            foreach(string s in Log.Messages)
+                tool.show(timeout, s);
+        }
+
+        public static void googleSearch(string text)
+        {
+            Process.Start("http://google.com/search?q=" + text);
+        }
+
         public static string SearchDesktopFolder(string folder)
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             return SearchDirectoryForFolder(path, folder);
-            /*
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string[] dirs = Directory.GetDirectories(path);
-
-            foreach(string s in dirs)
-            {
-                string name = Path.GetFileName(s);
-                if(name.ToLower() == folder.ToLower())
-                {
-                    Tool.Debug("Directory found!",name);
-                    return s;
-                }
-            }
-            return null;
-            */
         }
 
         //local to environment executable
@@ -1176,9 +1148,7 @@ namespace Glaxion.Tools
                 }
             }
         }
-
-        public static string musicEditingProgram;
-
+        
         public static void SetVegas()
         {
             OpenFileDialog ofd = new OpenFileDialog();

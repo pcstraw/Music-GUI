@@ -17,7 +17,7 @@ namespace Glaxion.Music
 
     public class TrackManager : VListView
     {
-        public TrackManager(ITracklistView trackInterface, IListView view,ColorScheme scheme) : base(view)
+        public TrackManager(ITracklistView trackInterface, IListView view,ColorScheme scheme) : base(view,scheme)
         {
             _trackview = trackInterface;
             CurrentColors = scheme;
@@ -53,23 +53,64 @@ namespace Glaxion.Music
 
         public void Load()
         {
-            MusicPlayer.Player.PlayEvent += MusicPlayer_PlayEvent;
-            MusicPlayer.Player.TrackChangeEvent += Player_TrackChangeEvent;
+            MusicPlayer.Instance.PlayEvent += MusicPlayer_PlayEvent;
+            MusicPlayer.Instance.TrackChangeEvent += Player_TrackChangeEvent;
+        }
+        
+        //add external files
+        public override void AddFiles(int dropIndex, string[] arr)
+        {
+            List<VItem> insertItems = new List<VItem>();
+            foreach (string s in arr)
+            {
+                //fix:  if the file is a directory
+                //then load as a playlist in playlistManager. 
+                //virtual function
+                if (Directory.Exists(s))
+                {
+                    List<string> s_array = tool.LoadAudioFiles(s, SearchOption.TopDirectoryOnly);
+                    foreach (string s2 in s_array)
+                    {
+                        VItem i1 = CreateItem(s2);
+                        if (i1 == null)
+                            continue;
+                        insertItems.Add(i1);
+                    }
+                    continue;
+                }
+                else
+                {
+                    VItem i2 = CreateItem(s);
+                    if (i2 == null)
+                        continue;
+                    insertItems.Add(i2);
+                }
+            }
+            insertItems.Reverse();
+            foreach (VItem item in insertItems)
+            {
+                item.Selected = true;
+                Insert(dropIndex, item);
+            }
         }
 
         private void Player_TrackChangeEvent(object sender, EventArgs args)
         {
-            int current_index = (int)sender;
-            if (current_index < 0)
-                return; //no track
+            if (sender is int)
+            {
+                int i = (int)sender;
+                if (i < 0)
+                    return; //no track
+                int current_index = i;
+            }
         }
 
         public void UpdateColours()
         {
             //find the current playing item
-            if (last_playing_track != MusicPlayer.Player.currentTrackString)
+            if (last_playing_track != MusicPlayer.Instance.currentTrackString)
             {
-                last_playing_track = MusicPlayer.Player.currentTrackString;
+                last_playing_track = MusicPlayer.Instance.currentTrackString;
                 playing_track_changed = true;
             }
             for(int index = 0;index < ItemCount; index++)
@@ -82,11 +123,11 @@ namespace Glaxion.Music
                     //i.HighLightColors(new ColorScheme(Color.Black, Color.Orange));
                     continue;
                 }
-                if (track_path == MusicPlayer.Player.currentTrackString)
+                if (track_path == MusicPlayer.Instance.currentTrackString)
                 {
-                    if (CurrentList == MusicPlayer.Player.playlist)
+                    if (CurrentList == MusicPlayer.Instance.playlist)
                     {
-                        //if (index == MusicPlayer.Player.currentTrack)
+                        //if (index == MusicPlayer.Instance.currentTrack)
                         i.State = ItemState.IsThePlayingTrack;
                         //else
                          //   i.State = ItemState.IsPlaying;
@@ -153,7 +194,7 @@ namespace Glaxion.Music
                 tool.show(3,"Check item count...possibly empty subscribers");
                 return;
             }
-            if (CurrentList == MusicPlayer.Player.playlist)
+            if (CurrentList == MusicPlayer.Instance.playlist)
             {
                 if (sender is int)
                 {
@@ -171,10 +212,10 @@ namespace Glaxion.Music
             UpdateTracks();
             //load the list view items into the playlist
             int current_track_index = currentTrackIndex;
-            MusicPlayer.Player.UpdateMusicPlayer(CurrentList, current_track_index);
+            MusicPlayer.Instance.UpdateMusicPlayer(CurrentList, current_track_index);
         }
         
-        //call when changing the playlist name.  This will not save the file, only uipdate the name
+        //call when changing the playlist name. 
         public void UpdatePlaylistName(string name)
         {
             CurrentList.UpdateName(name);
@@ -213,7 +254,7 @@ namespace Glaxion.Music
             i.Columns[1] = file;
             i.SetColors(CurrentColors);
             i.Name = file;
-            Song song = MusicPlayer.Player.fileLoader.trackInfoManager.GetInfo(file);
+            Song song = MusicInfo.Instance.GetInfo(file);
             if (song != null)
             {
                 i.Tag = song;
@@ -232,32 +273,27 @@ namespace Glaxion.Music
             UpdateMusicPlayer(index);
         }
 
-        internal void OpenChromeSearch(int index)
+        public void CopyToInternalClipboard(List<int> list)
+        {
+            InternalClipboard.Files.Clear();
+            foreach (int i in list)
+                InternalClipboard.Add(Items[i].Name);
+        }
+
+        public void OpenChromeSearch(int index)
         {
             if (index > Items.Count)
                 return;
             
             VItem item = Items[index];
             Song s = item.Tag as Song;
-            var t= s.artist;
-            Process.Start("http://google.com/search?q=" + t);
-        }
-
-
-        /*
-        public void DisplayPlaylist()
-        {
-            Items.Clear();
-            CurrentList.UpdatePaths();
-            foreach (string track in CurrentList.tracks)
+            if (s == null)
             {
-                VItem i = CreateItem(track);
-                Items.Add(i);
-                if (!File.Exists(track))
-                    i.State = -1; //track does not exist
+                tool.show(5,"Failed to get song data");
+                return;
             }
-            UpdateColours();
+            string t= s.album;
+            tool.googleSearch(t);
         }
-        */
     }
 }

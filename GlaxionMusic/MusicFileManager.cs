@@ -19,8 +19,8 @@ namespace Glaxion.Music
             //suppose to help prevent start up crash by loading in the handle.
             //mayeb stick this in the base class as well?
             //var foo = this.Handle;
-            if (MusicPlayer.Player != null)
-                MusicPlayer.Player.DirectoriesAddedEvent += DirectoryAdded;
+            if (MusicPlayer.Instance != null)
+                MusicPlayer.Instance.DirectoriesAddedEvent += DirectoryAdded;
             _view = ViewInterface;
             FileColor = Color.WhiteSmoke;
             loadID3Tags = true;
@@ -38,13 +38,12 @@ namespace Glaxion.Music
 
         public void Load()
         {
-            fileLoader = MusicPlayer.Player.fileLoader;
+            fileLoader = FileLoader.Instance;
             LoadDirectoriesToTree();
         }
 
         protected void DirectoryAdded(object o, EventArgs e)
         {
-
         }
 
         public void PlayDirectory(List<VNode> nodes)
@@ -227,6 +226,7 @@ namespace Glaxion.Music
         {
             ListGUI lg = new ListGUI(fileLoader.MusicDirectories, true);
             lg.callback = listGUIcallack;
+            lg.Text = nameof(fileLoader.musicDirectories);
         }
 
         public void LoadAlbumNodesToView()
@@ -316,7 +316,7 @@ namespace Glaxion.Music
             albumNodes.Clear();
             Console.WriteLine("Music File Manager: Building Album Tree...");
             int i = 0;
-            foreach (string s in MusicPlayer.Player.fileLoader.trackInfoManager.albums)
+            foreach (string s in MusicInfo.Instance.albums)
             {
                 VNode tn = new VNode(s);
                 tn.name = s;
@@ -328,7 +328,7 @@ namespace Glaxion.Music
 
             foreach (VNode t in albumNodes)
             {
-                foreach (KeyValuePair<string, Song> info in MusicPlayer.Player.fileLoader.trackInfoManager.trackInfos)
+                foreach (KeyValuePair<string, Song> info in MusicInfo.Instance.trackInfos)
                 {
                     if (t.Text == info.Value.album)
                     {
@@ -349,7 +349,7 @@ namespace Glaxion.Music
         {
             artistNodes.Clear();
             Console.WriteLine("Music File Manager:", "Building Artist Tree...");
-            foreach (string s in MusicPlayer.Player.fileLoader.trackInfoManager.artists)
+            foreach (string s in MusicInfo.Instance.artists)
             {
                 VNode tn = new VNode(s);
                 tn.name = s;
@@ -360,7 +360,7 @@ namespace Glaxion.Music
 
             foreach (VNode t in artistNodes)
             {
-                foreach (KeyValuePair<string, Song> info in MusicPlayer.Player.fileLoader.trackInfoManager.trackInfos)
+                foreach (KeyValuePair<string, Song> info in MusicInfo.Instance.trackInfos)
                 {
                     if (t.Text == info.Value.artist)
                     {
@@ -381,7 +381,7 @@ namespace Glaxion.Music
         {
             yearNodes.Clear();
             Console.WriteLine("Music File Manager:", "Building Year Tree...");
-            foreach (string s in MusicPlayer.Player.fileLoader.trackInfoManager.years)
+            foreach (string s in MusicInfo.Instance.years)
             {
                 VNode tn = new VNode(s);
                 tn.name = s;
@@ -392,7 +392,7 @@ namespace Glaxion.Music
 
             foreach (VNode t in yearNodes)
             {
-                foreach (KeyValuePair<string, Song> info in MusicPlayer.Player.fileLoader.trackInfoManager.trackInfos)
+                foreach (KeyValuePair<string, Song> info in MusicInfo.Instance.trackInfos)
                 {
                     if (t.Text == info.Value.year)
                     {
@@ -412,21 +412,21 @@ namespace Glaxion.Music
         //save all components
         public void Save()
         {
-            if (!String.IsNullOrEmpty(MusicPlayer.Player.currentTrackString))
+            if (!String.IsNullOrEmpty(MusicPlayer.Instance.currentTrackString))
             {
-                Properties.Settings.Default.LastTrack = MusicPlayer.Player.currentTrackString;
+                Properties.Settings.Default.LastTrack = MusicPlayer.Instance.currentTrackString;
             }
             fileLoader.SaveDirectories();
         }
 
         private void MusicControl_Load(object sender, EventArgs e)
         {
-            if (MusicPlayer.Player != null)
+            if (MusicPlayer.Instance != null)
             {
                 LoadDirectoriesToTree();
                 if (!String.IsNullOrEmpty(Properties.Settings.Default.LastTrack))
                 {
-                    MusicPlayer.Player.currentTrackString = Properties.Settings.Default.LastTrack;
+                    MusicPlayer.Instance.currentTrackString = Properties.Settings.Default.LastTrack;
                 }
             }
         }
@@ -516,7 +516,7 @@ namespace Glaxion.Music
                 return;
             if (tool.IsAudioFile(node.name))
             {
-                MusicPlayer.Player.PlayFile(node.name);
+                MusicPlayer.Instance.PlayFile(node.name);
             }
         }
         

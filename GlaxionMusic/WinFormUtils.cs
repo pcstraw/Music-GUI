@@ -74,6 +74,11 @@ namespace Glaxion.Music
             return new DataObject(DataFormats.FileDrop, InternalClipboard.Files.ToArray());
         }
 
+        internal static string[] GetExternalDragDrop(DragEventArgs e)
+        {
+            return (string[])e.Data.GetData(DataFormats.FileDrop);
+        }
+
         public static void DoDrop(Control control,string[] files, DragDropEffects DropMode)
         {
             control.DoDragDrop(GetDataObject(files),
@@ -135,8 +140,8 @@ namespace Glaxion.Music
 
         public static ListViewItem GetItem(ListViewItem i,VItem track)
         {
-            i.SubItems[0].Text = Path.GetFileNameWithoutExtension(track.Columns[0]);
-            i.SubItems.Add(track.Columns[1]);
+           // i.SubItems[0].Text = Path.GetFileNameWithoutExtension(track.Columns[0]);
+           // i.SubItems.Add(track.Columns[1]);
             i.Tag = track.Tag;
             i.Name = track.Name;
             i.Selected = track.Selected;

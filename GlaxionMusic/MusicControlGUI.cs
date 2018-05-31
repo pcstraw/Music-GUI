@@ -83,7 +83,7 @@ namespace Glaxion.Music
 
             this.DoubleBuffering(true);
             */
-            MusicPlayer.Player.PlayEvent += MusicPlayer_PlayEvent;
+            MusicPlayer.Instance.PlayEvent += MusicPlayer_PlayEvent;
             
             //restored that last state of the window, (normal or maximized)
             SetWindowState();
@@ -102,6 +102,8 @@ namespace Glaxion.Music
             fileSquashBox.splitContainer.SplitterMoving += fileSplitContainer_SplitterMoving;
             CustomFont.LoadCustomFonts();
             fileViewLabel.Font = CustomFont.Exo.font;
+
+            tool.GlobalForm = this;
             /*
             typeof(Panel).InvokeMember("DoubleBuffered",
     BindingFlags.SetProperty | BindingFlags.Instance | BindingFlags.NonPublic,
@@ -218,7 +220,7 @@ namespace Glaxion.Music
                 Properties.Settings.Default.VegasPath = tool.musicEditingProgram;
                 Properties.Settings.Default.Save();
             }
-            MusicPlayer.Player.Stop();
+            MusicPlayer.Instance.Stop();
             SaveMaximisedState();
             musicControl.Save();
         }
@@ -233,7 +235,7 @@ namespace Glaxion.Music
 
         private void addDirectoryToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MusicPlayer.Player.fileLoader.SelectPlayListDirectories();
+            FileLoader.Instance.SelectPlayListDirectories();
             musicControl.playlistFileView.manager.LoadPlaylistDirectories();
         }
 
@@ -244,8 +246,7 @@ namespace Glaxion.Music
         
         private void playlistContext_removeItem_Click(object sender, EventArgs e)
         {
-            IEnumerable<int> list = musicControl.playlistView.GetSelected();
-            musicControl.playlistView.manager.RemoveSelectedPlaylists(list.ToList());
+            musicControl.playlistView.RemoveSelectedItems();
         }
 
         private void saveAllToolStripMenuItem_Click(object sender, EventArgs e)
@@ -255,7 +256,8 @@ namespace Glaxion.Music
         
         private void playlistContext_deleteItem_Click(object sender, EventArgs e)
         {
-            musicControl.playlistView.manager.DeleteSelectedPlaylists(true,(IEnumerable<int>)musicControl.playlistView.SelectedIndices);
+            List<int> lst = musicControl.playlistView.GetSelected().ToList();
+            musicControl.playlistView.manager.DeleteSelectedPlaylists(true,lst);
         }
 
         private void trackContext_remove_button_Click(object sender, EventArgs e)
@@ -332,8 +334,8 @@ namespace Glaxion.Music
             List<string> pl = Playlist.SelectPlaylistFile();
             foreach(string s in pl)
             {
-                Playlist p = MusicPlayer.Player.fileLoader.GetPlaylist(s, true);
-                musicControl.playlistView.manager.AddItemFromPlaylist(0,p);
+                Playlist p = FileLoader.Instance.GetPlaylist(s, true);
+                musicControl.playlistView.manager.InsertPlaylistAt(0,p);
             }
         }
 
@@ -444,7 +446,7 @@ namespace Glaxion.Music
 
         private void reloadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            musicControl.playlistFileView.manager.LoadPlaylistDirectories();
+            musicControl.playlistFileView.LoadPlaylistDirectories();
         }
         
         private void reloadToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -521,7 +523,7 @@ namespace Glaxion.Music
                 if (item == null)
                 {
                     pm.UpdatePlaylistTitle();
-                    musicControl.playlistView.manager.AddItemFromPlaylist(0,pm.CurrentList);
+                    musicControl.playlistView.manager.InsertPlaylistAt(0,pm.CurrentList);
                     musicControl.playlistFileView.manager.LoadPlaylistDirectories();
                 }else
                 {
@@ -572,7 +574,6 @@ namespace Glaxion.Music
 
         private void MusicControlGUI_DragEnter(object sender, DragEventArgs e)
         {
-            
             /*
             e.Effect = DragDropEffects.Copy;
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
@@ -683,7 +684,7 @@ namespace Glaxion.Music
 
         private void playingToSelectedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SendFilePathToPlaylist(MusicPlayer.Player.currentTrackString);
+            SendFilePathToPlaylist(MusicPlayer.Instance.currentTrackString);
         }
 
         public void SendSelectedTracksToPlaylists()
@@ -959,7 +960,7 @@ namespace Glaxion.Music
             {
                 string output = cd.FileName;
                 Properties.Settings.Default.DefaultPlaylistDirectory = output;
-                MusicPlayer.Player.fileLoader.AddPlaylistDirectory(output);
+                FileLoader.Instance.AddPlaylistDirectory(output);
                 tool.Show("Set default playlist directory to: ",output);
                 musicControl.playlistFileView.manager.LoadPlaylistDirectories();
             }
@@ -1122,6 +1123,7 @@ namespace Glaxion.Music
         
         private void MusicControlGUI_DragLeave(object sender, EventArgs e)
         {
+            return;
             if (!InternalClipboard.IsEmpty)
             {
                 StringCollection fileList = new StringCollection();
@@ -1133,11 +1135,6 @@ namespace Glaxion.Music
             //TotalClipboard.Files.Clear();
         }
         
-        private void mainTrackInfo_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void Player_BeforePlayEvent(object sender, EventArgs args)
         {
             string track = sender as string;
@@ -1214,9 +1211,9 @@ namespace Glaxion.Music
 
         private void songControl1_Load(object sender, EventArgs e)
         {
-            if (MusicPlayer.Player != null)
+            if (MusicPlayer.Instance != null)
             {
-                MusicPlayer.Player.BeforePlayEvent += Player_BeforePlayEvent;
+                MusicPlayer.Instance.BeforePlayEvent += Player_BeforePlayEvent;
                 songControl1.squashBoxControl1.splitContainer.SplitterDistance = 0;
                 // songControl1.squashBoxControl1.Swap();
             }
@@ -1270,7 +1267,7 @@ namespace Glaxion.Music
         
         private void MusicControlGUI_KeyUp(object sender, KeyEventArgs e)
         {
-            MusicPlayer.Player.UseMediaKeys(e.KeyCode);
+            MusicPlayer.Instance.UseMediaKeys(e.KeyCode);
         }
 
         private void playlistContext_rename_button_DropDownOpening(object sender, EventArgs e)
@@ -1324,6 +1321,11 @@ namespace Glaxion.Music
                 return;
             int index = item.Index;
             musicControl.CurrentPlaylistPanel.tracklistView.manager.OpenChromeSearch(index);
+        }
+
+        private void displayLogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tool.DisplayLog(3);
         }
     }
 }

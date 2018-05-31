@@ -31,7 +31,7 @@ namespace Glaxion.Music
             foreach (string s in args)
             {
                 if (tool.IsPlaylistFile(s))
-                    playlistView.AddFileAsItem(s);
+                    playlistView.manager.InsertPlaylistAt(0,s);
             }
         }
 
@@ -59,8 +59,8 @@ namespace Glaxion.Music
         public void LoadMusicControl()
         {
             //string s = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Music";
-            MusicPlayer.Player.Start();
-            playlistFileView.manager.LoadManager();
+            MusicPlayer.Instance.Start();
+            playlistFileView.LoadManager();
             musicFileView.LoadManager();
             playlistView.Load();
             AssignEventHanders();
@@ -142,7 +142,7 @@ namespace Glaxion.Music
                 //playlistView.SelectedItems.Clear();
                 foreach (Playlist p in list)
                 {
-                    VItem item = playlistView.manager.AddItemFromPlaylist(0,p);
+                    VItem item = playlistView.manager.InsertPlaylistAt(0,p);
                     item.Selected = true;
                     MusicPlayer.WinFormApp.DockPlaylist(MusicPlayer.WinFormApp.musicPanel, p);
                 }
@@ -159,7 +159,7 @@ namespace Glaxion.Music
                 string path = n.Name;
                 Playlist p = new Playlist(path, true);
                 CreatePlaylistPanel(MusicPlayer.WinFormApp.musicPanel, p);
-                playlistView.manager.AddItemFromPlaylist(0,p);
+                playlistView.manager.InsertPlaylistAt(0,p);
             }
         }
         
@@ -178,13 +178,13 @@ namespace Glaxion.Music
         
         public void Save()
         {
-            if (MusicPlayer.Player != null && !String.IsNullOrEmpty(MusicPlayer.Player.currentTrackString))
+            if (MusicPlayer.Instance != null && !String.IsNullOrEmpty(MusicPlayer.Instance.currentTrackString))
             {
-                Properties.Settings.Default.LastTrack = MusicPlayer.Player.currentTrackString;
+                Properties.Settings.Default.LastTrack = MusicPlayer.Instance.currentTrackString;
             }
             playlistView.manager.SaveTmp();
-            MusicPlayer.Player.fileLoader.SavePlaylistDirectories();
-            MusicPlayer.Player.fileLoader.SaveDirectories();
+            FileLoader.Instance.SavePlaylistDirectories();
+            FileLoader.Instance.SaveDirectories();
             Properties.Settings.Default.Save();
         }
         
@@ -351,7 +351,7 @@ namespace Glaxion.Music
             Playlist newplaylist = new Playlist(Path.GetFileName(Path.GetDirectoryName(selectedFiles[0])), false);
             newplaylist.path = "";
             newplaylist.tracks = selectedFiles;
-            playlistView.manager.AddItemFromPlaylist(0,newplaylist);
+            playlistView.manager.InsertPlaylistAt(0,newplaylist);
             MusicPlayer.WinFormApp.DockPlaylist(MusicPlayer.WinFormApp.musicPanel, newplaylist);
 
         }

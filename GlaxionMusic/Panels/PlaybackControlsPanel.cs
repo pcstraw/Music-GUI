@@ -33,8 +33,8 @@ namespace Glaxion.Music
 
         protected void On_MediaLoaded(object o, EventArgs e)
         {
-            if(MusicPlayer.Player  != null && currentTrack != MusicPlayer.Player.currentTrack)
-                currentTrack = MusicPlayer.Player.currentTrack;
+            if(MusicPlayer.Instance  != null && currentTrack != MusicPlayer.Instance.currentTrack)
+                currentTrack = MusicPlayer.Instance.currentTrack;
         }
         
         protected void On_Resume(object o, EventArgs e)
@@ -55,57 +55,57 @@ namespace Glaxion.Music
 
         public void UpdateName()
         {
-            if (MusicPlayer.Player  != null)
+            if (MusicPlayer.Instance  != null)
             {
-                nameLabel.Text = Path.GetFileNameWithoutExtension(MusicPlayer.Player.currentTrackString);
+                nameLabel.Text = Path.GetFileNameWithoutExtension(MusicPlayer.Instance.currentTrackString);
             }
         }
 
         public void Play(int track)
         {
-            MusicPlayer.Player.Play(track);
-            if (currentTrack != MusicPlayer.Player.currentTrack)
+            MusicPlayer.Instance.Play(track);
+            if (currentTrack != MusicPlayer.Instance.currentTrack)
                  UpdateName();
         }
 
         public void Resume()
         {
-            if (currentTrack == MusicPlayer.Player.currentTrack)
+            if (currentTrack == MusicPlayer.Instance.currentTrack)
             {
-                MusicPlayer.Player.Resume(MusicPlayer.Player.currentTrackString, MusicPlayer.Player.positionIndex);
+                MusicPlayer.Instance.Resume(MusicPlayer.Instance.currentTrackString, MusicPlayer.Instance.positionIndex);
             }
             else
             {
-                MusicPlayer.Player.Play(currentTrack);
+                MusicPlayer.Instance.Play(currentTrack);
             }
         }
 
         public void Play(string track)
         {
-            MusicPlayer.Player.PlayFile(track);
+            MusicPlayer.Instance.PlayFile(track);
         }
 
         public void Pause()
         {
-            MusicPlayer.Player.Pause();
+            MusicPlayer.Instance.Pause();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MusicPlayer.Player.IsPlaying)
+            if (MusicPlayer.Instance.IsPlaying)
             {
                 Pause();
                 return;
             }
             
-            if (MusicPlayer.Player.IsPaused)
+            if (MusicPlayer.Instance.IsPaused)
             {
                 Resume();
                 return;
             }
-            if (MusicPlayer.Player.HasStopped())
+            if (MusicPlayer.Instance.HasStopped())
             {
-                Play(MusicPlayer.Player.currentTrackString);
+                Play(MusicPlayer.Instance.currentTrackString);
                 return;
             }
         }
@@ -113,14 +113,14 @@ namespace Glaxion.Music
         //replay?
         private void button2_Click(object sender, EventArgs e)
         {
-            MusicPlayer.Player.Replay();
+            MusicPlayer.Instance.Replay();
         }
 
         private void nextButton_Click(object sender, EventArgs e)
         {
-                MusicPlayer.Player.NextTrack();
-               // currentTrack = MusicPlayer.Player.currentTrack;
-                if(MusicPlayer.Player.IsPlaying)
+                MusicPlayer.Instance.NextTrack();
+               // currentTrack = MusicPlayer.Instance.currentTrack;
+                if(MusicPlayer.Instance.IsPlaying)
                     resumeButton.BackgroundImage = Properties.Resources.Icons8_Windows_8_Media_Controls_Pause.ToBitmap();
   
             
@@ -128,26 +128,26 @@ namespace Glaxion.Music
 
         private void prevButton_Click(object sender, EventArgs e)
         {
-            MusicPlayer.Player.PrevTrack();
-            currentTrack = MusicPlayer.Player.currentTrack;
+            MusicPlayer.Instance.PrevTrack();
+            currentTrack = MusicPlayer.Instance.currentTrack;
             resumeButton.BackgroundImage = Properties.Resources.Icons8_Windows_8_Media_Controls_Pause.ToBitmap();
         }
 
         private void PlaybackStateControl_Load(object sender, EventArgs e)
         {
-            if (!DesignMode && MusicPlayer.Player != null)
+            if (!DesignMode && MusicPlayer.Instance != null)
             {
-                MusicPlayer.Player.PlayEvent += new MusicPlayer.PlayEventHandler(On_Play);
-                MusicPlayer.Player.PauseEvent += new MusicPlayer.PauseEventHandler(On_Pause);
-                MusicPlayer.Player.ResumeEvent += new MusicPlayer.ResumeEventHandler(On_Resume);
-                MusicPlayer.Player.MediaLoadedEvent += new MusicPlayer.MediaLoadedEventHandler(On_MediaLoaded);
+                MusicPlayer.Instance.PlayEvent += new MusicPlayer.PlayEventHandler(On_Play);
+                MusicPlayer.Instance.PauseEvent += new MusicPlayer.PauseEventHandler(On_Pause);
+                MusicPlayer.Instance.ResumeEvent += new MusicPlayer.ResumeEventHandler(On_Resume);
+                MusicPlayer.Instance.MediaLoadedEvent += new MusicPlayer.MediaLoadedEventHandler(On_MediaLoaded);
                 hideNameButton.BackColor = this.BackColor;
             }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            tool.OpenFileDirectory(MusicPlayer.Player.currentTrackString);
+            tool.OpenFileDirectory(MusicPlayer.Instance.currentTrackString);
             //MusicPlayer.Stop();
             //SetPlayIcon();
         }
@@ -166,21 +166,21 @@ namespace Glaxion.Music
 
         private void stopButton_Click(object sender, EventArgs e)
         {
-            MusicPlayer.Player.Stop();
+            MusicPlayer.Instance.Stop();
             SetPlayIcon();
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            MusicPlayer.Player.PlayPlaylist(MusicPlayer.Player.playlist, MusicPlayer.Player.playlist.trackIndex);
+            MusicPlayer.Instance.PlayPlaylist(MusicPlayer.Instance.playlist, MusicPlayer.Instance.playlist.trackIndex);
         }
 
         private void loopCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             if (loopCheckBox.Checked == true)
-                MusicPlayer.Player.Loop = true;
+                MusicPlayer.Instance.Loop = true;
             else
-                MusicPlayer.Player.Loop = false;
+                MusicPlayer.Instance.Loop = false;
         }
 
         private void PlaybackStateControl_MouseHover(object sender, EventArgs e)

@@ -44,9 +44,10 @@
             // updateButton
             // 
             this.updateButton.BackColor = System.Drawing.Color.DarkGreen;
+            this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateButton.ForeColor = System.Drawing.Color.White;
-            this.updateButton.Location = new System.Drawing.Point(61, 3);
+            this.updateButton.Location = new System.Drawing.Point(56, 14);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(104, 36);
             this.updateButton.TabIndex = 5;
@@ -58,7 +59,7 @@
             // 
             this.entryBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.entryBox5.Location = new System.Drawing.Point(0, 320);
+            this.entryBox5.Location = new System.Drawing.Point(0, 365);
             this.entryBox5.Name = "entryBox5";
             this.entryBox5.Size = new System.Drawing.Size(666, 47);
             this.entryBox5.TabIndex = 6;
@@ -67,7 +68,7 @@
             // 
             this.entryBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.entryBox4.Location = new System.Drawing.Point(0, 247);
+            this.entryBox4.Location = new System.Drawing.Point(0, 287);
             this.entryBox4.Name = "entryBox4";
             this.entryBox4.Size = new System.Drawing.Size(666, 47);
             this.entryBox4.TabIndex = 6;
@@ -76,7 +77,7 @@
             // 
             this.entryBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.entryBox3.Location = new System.Drawing.Point(0, 181);
+            this.entryBox3.Location = new System.Drawing.Point(0, 210);
             this.entryBox3.Name = "entryBox3";
             this.entryBox3.Size = new System.Drawing.Size(666, 47);
             this.entryBox3.TabIndex = 6;
@@ -85,7 +86,7 @@
             // 
             this.entryBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.entryBox2.Location = new System.Drawing.Point(0, 108);
+            this.entryBox2.Location = new System.Drawing.Point(0, 131);
             this.entryBox2.Name = "entryBox2";
             this.entryBox2.Size = new System.Drawing.Size(666, 47);
             this.entryBox2.TabIndex = 6;
@@ -94,7 +95,7 @@
             // 
             this.entryBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.entryBox1.Location = new System.Drawing.Point(0, 45);
+            this.entryBox1.Location = new System.Drawing.Point(0, 56);
             this.entryBox1.Name = "entryBox1";
             this.entryBox1.Size = new System.Drawing.Size(666, 47);
             this.entryBox1.TabIndex = 6;
